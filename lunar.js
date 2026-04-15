@@ -4157,4 +4157,4382 @@
         '{jz.dingSi}',
         '{jz.wuWu}',
         '{jz.jiWei}',
-        '{
+        '{jz.gengShen}',
+        '{jz.xinYou}',
+        '{jz.renXu}',
+        '{jz.guiHai}'
+      ],
+      TIAN_SHEN:['', '{sn.qingLong}', '{sn.mingTang}', '{sn.tianXing}', '{sn.zhuQue}', '{sn.jinKui}', '{sn.tianDe}', '{sn.baiHu}', '{sn.yuTang}', '{sn.tianLao}', '{sn.xuanWu}', '{sn.siMing}', '{sn.gouChen}'],
+      ZHI_TIAN_SHEN_OFFSET: {
+        '{dz.zi}': 4,
+        '{dz.chou}': 2,
+        '{dz.yin}': 0,
+        '{dz.mao}': 10,
+        '{dz.chen}': 8,
+        '{dz.si}': 6,
+        '{dz.wu}': 4,
+        '{dz.wei}': 2,
+        '{dz.shen}': 0,
+        '{dz.you}': 10,
+        '{dz.xu}': 8,
+        '{dz.hai}': 6
+      },
+      TIAN_SHEN_TYPE: {
+        '{sn.qingLong}': '{s.huangDao}',
+        '{sn.mingTang}': '{s.huangDao}',
+        '{sn.jinKui}': '{s.huangDao}',
+        '{sn.tianDe}': '{s.huangDao}',
+        '{sn.yuTang}': '{s.huangDao}',
+        '{sn.siMing}': '{s.huangDao}',
+        '{sn.tianXing}': '{s.heiDao}',
+        '{sn.zhuQue}': '{s.heiDao}',
+        '{sn.baiHu}': '{s.heiDao}',
+        '{sn.tianLao}': '{s.heiDao}',
+        '{sn.xuanWu}': '{s.heiDao}',
+        '{sn.gouChen}': '{s.heiDao}'
+      },
+      TIAN_SHEN_TYPE_LUCK:{
+        '{s.huangDao}': '{s.goodLuck}',
+        '{s.heiDao}': '{s.badLuck}'
+      },
+      PENGZU_GAN:['', '{tg.jia}不开仓财物耗散', '{tg.yi}不栽植千株不长', '{tg.bing}不修灶必见灾殃', '{tg.ding}不剃头头必生疮', '{tg.wu}不受田田主不祥', '{tg.ji}不破券二比并亡', '{tg.geng}不经络织机虚张', '{tg.xin}不合酱主人不尝', '{tg.ren}不泱水更难提防', '{tg.gui}不词讼理弱敌强'],
+      PENGZU_ZHI:['', '{dz.zi}不问卜自惹祸殃', '{dz.chou}不冠带主不还乡', '{dz.yin}不祭祀神鬼不尝', '{dz.mao}不穿井水泉不香', '{dz.chen}不哭泣必主重丧', '{dz.si}不远行财物伏藏', '{dz.wu}不苫盖屋主更张', '{dz.wei}不服药毒气入肠', '{dz.shen}不安床鬼祟入房', '{dz.you}不会客醉坐颠狂', '{dz.xu}不吃犬作怪上床', '{dz.hai}不嫁娶不利新郎'],
+      NUMBER:['{n.zero}', '{n.one}', '{n.two}', '{n.three}', '{n.four}', '{n.five}', '{n.six}', '{n.seven}', '{n.eight}', '{n.nine}', '{n.ten}', '{n.eleven}', '{n.twelve}'],
+      MONTH:[
+        '',
+        '{m.one}',
+        '{m.two}',
+        '{m.three}',
+        '{m.four}',
+        '{m.five}',
+        '{m.six}',
+        '{m.seven}',
+        '{m.eight}',
+        '{m.nine}',
+        '{m.ten}',
+        '{m.eleven}',
+        '{m.twelve}'
+      ],
+      SEASON:[
+        '',
+        '{od.first}{sz.chun}',
+        '{od.second}{sz.chun}',
+        '{od.third}{sz.chun}',
+        '{od.first}{sz.xia}',
+        '{od.second}{sz.xia}',
+        '{od.third}{sz.xia}',
+        '{od.first}{sz.qiu}',
+        '{od.second}{sz.qiu}',
+        '{od.third}{sz.qiu}',
+        '{od.first}{sz.dong}',
+        '{od.second}{sz.dong}',
+        '{od.third}{sz.dong}'
+      ],
+      SHENGXIAO:['', '{sx.rat}', '{sx.ox}', '{sx.tiger}', '{sx.rabbit}', '{sx.dragon}', '{sx.snake}', '{sx.horse}', '{sx.goat}', '{sx.monkey}', '{sx.rooster}', '{sx.dog}', '{sx.pig}'],
+      DAY:[
+        '',
+        '{d.one}',
+        '{d.two}',
+        '{d.three}',
+        '{d.four}',
+        '{d.five}',
+        '{d.six}',
+        '{d.seven}',
+        '{d.eight}',
+        '{d.nine}',
+        '{d.ten}',
+        '{d.eleven}',
+        '{d.twelve}',
+        '{d.thirteen}',
+        '{d.fourteen}',
+        '{d.fifteen}',
+        '{d.sixteen}',
+        '{d.seventeen}',
+        '{d.eighteen}',
+        '{d.nighteen}',
+        '{d.twenty}',
+        '{d.twentyOne}',
+        '{d.twentyTwo}',
+        '{d.twentyThree}',
+        '{d.twentyFour}',
+        '{d.twentyFive}',
+        '{d.twentySix}',
+        '{d.twentySeven}',
+        '{d.twentyEight}',
+        '{d.twentyNine}',
+        '{d.thirty}'
+      ],
+      YUE_XIANG:[
+        '',
+        '{yx.shuo}',
+        '{yx.jiShuo}',
+        '{yx.eMeiXin}',
+        '{yx.eMeiXin}',
+        '{yx.eMei}',
+        '{yx.xi}',
+        '{yx.shangXian}',
+        '{yx.shangXian}',
+        '{yx.jiuYe}',
+        '{yx.night}',
+        '{yx.night}',
+        '{yx.night}',
+        '{yx.jianYingTu}',
+        '{yx.xiaoWang}',
+        '{yx.wang}',
+        '{yx.jiWang}',
+        '{yx.liDai}',
+        '{yx.juDai}',
+        '{yx.qinDai}',
+        '{yx.gengDai}',
+        '{yx.jianKuiTu}',
+        '{yx.xiaXian}',
+        '{yx.xiaXian}',
+        '{yx.youMing}',
+        '{yx.youMing}',
+        '{yx.eMeiCan}',
+        '{yx.eMeiCan}',
+        '{yx.can}',
+        '{yx.xiao}',
+        '{yx.hui}'
+      ],
+      XIU: {
+        '{dz.shen}1': '{xx.bi}',
+        '{dz.shen}2': '{xx.yi}',
+        '{dz.shen}3': '{xx.ji}',
+        '{dz.shen}4': '{xx.kui}',
+        '{dz.shen}5': '{xx.gui}',
+        '{dz.shen}6': '{xx.di}',
+        '{dz.shen}0': '{xx.xu}',
+        '{dz.zi}1': '{xx.bi}',
+        '{dz.zi}2': '{xx.yi}',
+        '{dz.zi}3': '{xx.ji}',
+        '{dz.zi}4': '{xx.kui}',
+        '{dz.zi}5': '{xx.gui}',
+        '{dz.zi}6': '{xx.di}',
+        '{dz.zi}0': '{xx.xu}',
+        '{dz.chen}1': '{xx.bi}',
+        '{dz.chen}2': '{xx.yi}',
+        '{dz.chen}3': '{xx.ji}',
+        '{dz.chen}4': '{xx.kui}',
+        '{dz.chen}5': '{xx.gui}',
+        '{dz.chen}6': '{xx.di}',
+        '{dz.chen}0': '{xx.xu}',
+        '{dz.si}1': '{xx.wei}',
+        '{dz.si}2': '{xx.zi}',
+        '{dz.si}3': '{xx.zhen}',
+        '{dz.si}4': '{xx.dou}',
+        '{dz.si}5': '{xx.lou}',
+        '{dz.si}6': '{xx.liu}',
+        '{dz.si}0': '{xx.fang}',
+        '{dz.you}1': '{xx.wei}',
+        '{dz.you}2': '{xx.zi}',
+        '{dz.you}3': '{xx.zhen}',
+        '{dz.you}4': '{xx.dou}',
+        '{dz.you}5': '{xx.lou}',
+        '{dz.you}6': '{xx.liu}',
+        '{dz.you}0': '{xx.fang}',
+        '{dz.chou}1': '{xx.wei}',
+        '{dz.chou}2': '{xx.zi}',
+        '{dz.chou}3': '{xx.zhen}',
+        '{dz.chou}4': '{xx.dou}',
+        '{dz.chou}5': '{xx.lou}',
+        '{dz.chou}6': '{xx.liu}',
+        '{dz.chou}0': '{xx.fang}',
+        '{dz.yin}1': '{xx.xin}',
+        '{dz.yin}2': '{xx.shi}',
+        '{dz.yin}3': '{xx.can}',
+        '{dz.yin}4': '{xx.jiao}',
+        '{dz.yin}5': '{xx.niu}',
+        '{dz.yin}6': '{xx.vei}',
+        '{dz.yin}0': '{xx.xing}',
+        '{dz.wu}1': '{xx.xin}',
+        '{dz.wu}2': '{xx.shi}',
+        '{dz.wu}3': '{xx.can}',
+        '{dz.wu}4': '{xx.jiao}',
+        '{dz.wu}5': '{xx.niu}',
+        '{dz.wu}6': '{xx.vei}',
+        '{dz.wu}0': '{xx.xing}',
+        '{dz.xu}1': '{xx.xin}',
+        '{dz.xu}2': '{xx.shi}',
+        '{dz.xu}3': '{xx.can}',
+        '{dz.xu}4': '{xx.jiao}',
+        '{dz.xu}5': '{xx.niu}',
+        '{dz.xu}6': '{xx.vei}',
+        '{dz.xu}0': '{xx.xing}',
+        '{dz.hai}1': '{xx.zhang}',
+        '{dz.hai}2': '{xx.tail}',
+        '{dz.hai}3': '{xx.qiang}',
+        '{dz.hai}4': '{xx.jing}',
+        '{dz.hai}5': '{xx.kang}',
+        '{dz.hai}6': '{xx.nv}',
+        '{dz.hai}0': '{xx.mao}',
+        '{dz.mao}1': '{xx.zhang}',
+        '{dz.mao}2': '{xx.tail}',
+        '{dz.mao}3': '{xx.qiang}',
+        '{dz.mao}4': '{xx.jing}',
+        '{dz.mao}5': '{xx.kang}',
+        '{dz.mao}6': '{xx.nv}',
+        '{dz.mao}0': '{xx.mao}',
+        '{dz.wei}1': '{xx.zhang}',
+        '{dz.wei}2': '{xx.tail}',
+        '{dz.wei}3': '{xx.qiang}',
+        '{dz.wei}4': '{xx.jing}',
+        '{dz.wei}5': '{xx.kang}',
+        '{dz.wei}6': '{xx.nv}',
+        '{dz.wei}0': '{xx.mao}'
+      },
+      XIU_LUCK:{
+        '{xx.jiao}': '{s.goodLuck}',
+        '{xx.kang}': '{s.badLuck}',
+        '{xx.di}': '{s.badLuck}',
+        '{xx.fang}': '{s.goodLuck}',
+        '{xx.xin}': '{s.badLuck}',
+        '{xx.tail}': '{s.goodLuck}',
+        '{xx.ji}': '{s.goodLuck}',
+        '{xx.dou}': '{s.goodLuck}',
+        '{xx.niu}': '{s.badLuck}',
+        '{xx.nv}': '{s.badLuck}',
+        '{xx.xu}': '{s.badLuck}',
+        '{xx.wei}': '{s.badLuck}',
+        '{xx.shi}': '{s.goodLuck}',
+        '{xx.qiang}': '{s.goodLuck}',
+        '{xx.kui}': '{s.badLuck}',
+        '{xx.lou}': '{s.goodLuck}',
+        '{xx.vei}': '{s.goodLuck}',
+        '{xx.mao}': '{s.badLuck}',
+        '{xx.bi}': '{s.goodLuck}',
+        '{xx.zi}': '{s.badLuck}',
+        '{xx.can}': '{s.goodLuck}',
+        '{xx.jing}': '{s.goodLuck}',
+        '{xx.gui}': '{s.badLuck}',
+        '{xx.liu}': '{s.badLuck}',
+        '{xx.xing}': '{s.badLuck}',
+        '{xx.zhang}': '{s.goodLuck}',
+        '{xx.yi}': '{s.badLuck}',
+        '{xx.zhen}': '{s.goodLuck}'
+      },
+      XIU_SONG:{
+        '{xx.jiao}': '角星造作主荣昌，外进田财及女郎，嫁娶婚姻出贵子，文人及第见君王，惟有埋葬不可用，三年之后主瘟疫，起工修筑坟基地，堂前立见主人凶。',
+        '{xx.kang}': '亢星造作长房当，十日之中主有殃，田地消磨官失职，接运定是虎狼伤，嫁娶婚姻用此日，儿孙新妇守空房，埋葬若还用此日，当时害祸主重伤。',
+        '{xx.di}': '氐星造作主灾凶，费尽田园仓库空，埋葬不可用此日，悬绳吊颈祸重重，若是婚姻离别散，夜招浪子入房中，行船必定遭沉没，更生聋哑子孙穷。',
+        '{xx.fang}': '房星造作田园进，钱财牛马遍山岗，更招外处田庄宅，荣华富贵福禄康，埋葬若然用此日，高官进职拜君王，嫁娶嫦娥至月殿，三年抱子至朝堂。',
+        '{xx.xin}': '心星造作大为凶，更遭刑讼狱囚中，忤逆官非宅产退，埋葬卒暴死相从，婚姻若是用此日，子死儿亡泪满胸，三年之内连遭祸，事事教君没始终。',
+        '{xx.tail}': '尾星造作主天恩，富贵荣华福禄增，招财进宝兴家宅，和合婚姻贵子孙，埋葬若能依此日，男清女正子孙兴，开门放水招田宅，代代公侯远播名。',
+        '{xx.ji}': '箕星造作主高强，岁岁年年大吉昌，埋葬修坟大吉利，田蚕牛马遍山岗，开门放水招田宅，箧满金银谷满仓，福荫高官加禄位，六亲丰禄乐安康。',
+        '{xx.dou}': '斗星造作主招财，文武官员位鼎台，田宅家财千万进，坟堂修筑贵富来，开门放水招牛马，旺蚕男女主和谐，遇此吉宿来照护，时支福庆永无灾。',
+        '{xx.niu}': '牛星造作主灾危，九横三灾不可推，家宅不安人口退，田蚕不利主人衰，嫁娶婚姻皆自损，金银财谷渐无之，若是开门并放水，牛猪羊马亦伤悲。',
+        '{xx.nv}': '女星造作损婆娘，兄弟相嫌似虎狼，埋葬生灾逢鬼怪，颠邪疾病主瘟惶，为事遭官财失散，泻利留连不可当，开门放水用此日，全家财散主离乡。',
+        '{xx.xu}': '虚星造作主灾殃，男女孤眠不一双，内乱风声无礼节，儿孙媳妇伴人床，开门放水遭灾祸，虎咬蛇伤又卒亡，三三五五连年病，家破人亡不可当。',
+        '{xx.wei}': '危星不可造高楼，自遭刑吊见血光，三年孩子遭水厄，后生出外永不还，埋葬若还逢此日，周年百日取高堂，三年两载一悲伤，开门放水到官堂。',
+        '{xx.shi}': '室星修造进田牛，儿孙代代近王侯，家贵荣华天上至，寿如彭祖八千秋，开门放水招财帛，和合婚姻生贵儿，埋葬若能依此日，门庭兴旺福无休。',
+        '{xx.qiang}': '壁星造作主增财，丝蚕大熟福滔天，奴婢自来人口进，开门放水出英贤，埋葬招财官品进，家中诸事乐陶然，婚姻吉利主贵子，早播名誉著祖鞭。',
+        '{xx.kui}': '奎星造作得祯祥，家内荣和大吉昌，若是埋葬阴卒死，当年定主两三伤，看看军令刑伤到，重重官事主瘟惶，开门放水遭灾祸，三年两次损儿郎。',
+        '{xx.lou}': '娄星修造起门庭，财旺家和事事兴，外进钱财百日进，一家兄弟播高名，婚姻进益生贵子，玉帛金银箱满盈，放水开门皆吉利，男荣女贵寿康宁。',
+        '{xx.vei}': '胃星造作事如何，家贵荣华喜气多，埋葬贵临官禄位，夫妇齐眉永保康，婚姻遇此家富贵，三灾九祸不逢他，从此门前多吉庆，儿孙代代拜金阶。',
+        '{xx.mao}': '昴星造作进田牛，埋葬官灾不得休，重丧二日三人死，尽卖田园不记增，开门放水招灾祸，三岁孩儿白了头，婚姻不可逢此日，死别生离是可愁。',
+        '{xx.bi}': '毕星造作主光前，买得田园有余钱，埋葬此日添官职，田蚕大熟永丰年，开门放水多吉庆，合家人口得安然，婚姻若得逢此日，生得孩儿福寿全。',
+        '{xx.zi}': '觜星造作有徒刑，三年必定主伶丁，埋葬卒死多因此，取定寅年使杀人，三丧不止皆由此，一人药毒二人身，家门田地皆退败，仓库金银化作尘。',
+        '{xx.can}': '参星造作旺人家，文星照耀大光华，只因造作田财旺，埋葬招疾哭黄沙，开门放水加官职，房房子孙见田加，婚姻许遁遭刑克，男女朝开幕落花。',
+        '{xx.jing}': '井星造作旺蚕田，金榜题名第一光，埋葬须防惊卒死，狂颠风疾入黄泉，开门放水招财帛，牛马猪羊旺莫言，贵人田塘来入宅，儿孙兴旺有余钱。',
+        '{xx.gui}': '鬼星起造卒人亡，堂前不见主人郎，埋葬此日官禄至，儿孙代代近君王，开门放水须伤死，嫁娶夫妻不久长，修土筑墙伤产女，手扶双女泪汪汪。',
+        '{xx.liu}': '柳星造作主遭官，昼夜偷闭不暂安，埋葬瘟惶多疾病，田园退尽守冬寒，开门放水遭聋瞎，腰驼背曲似弓弯，更有棒刑宜谨慎，妇人随客走盘桓。',
+        '{xx.xing}': '星宿日好造新房，进职加官近帝王，不可埋葬并放水，凶星临位女人亡，生离死别无心恋，要自归休别嫁郎，孔子九曲殊难度，放水开门天命伤。',
+        '{xx.zhang}': '张星日好造龙轩，年年并见进庄田，埋葬不久升官职，代代为官近帝前，开门放水招财帛，婚姻和合福绵绵，田蚕人满仓库满，百般顺意自安然。',
+        '{xx.yi}': '翼星不利架高堂，三年二载见瘟惶，埋葬若还逢此日，子孙必定走他乡，婚姻此日不宜利，归家定是不相当，开门放水家须破，少女恋花贪外郎。',
+        '{xx.zhen}': '轸星临水造龙宫，代代为官受皇封，富贵荣华增寿禄，库满仓盈自昌隆，埋葬文昌来照助，宅舍安宁不见凶，更有为官沾帝宠，婚姻龙子入龙宫。'
+      },
+      ZHENG:{
+        '{xx.jiao}': '{wx.mu}',
+        '{xx.jing}': '{wx.mu}',
+        '{xx.kui}': '{wx.mu}',
+        '{xx.dou}': '{wx.mu}',
+        '{xx.kang}': '{wx.jin}',
+        '{xx.gui}': '{wx.jin}',
+        '{xx.lou}': '{wx.jin}',
+        '{xx.niu}': '{wx.jin}',
+        '{xx.di}': '{wx.tu}',
+        '{xx.liu}': '{wx.tu}',
+        '{xx.vei}': '{wx.tu}',
+        '{xx.nv}': '{wx.tu}',
+        '{xx.fang}': '{wx.ri}',
+        '{xx.xing}': '{wx.ri}',
+        '{xx.mao}': '{wx.ri}',
+        '{xx.xu}': '{wx.ri}',
+        '{xx.xin}': '{wx.yue}',
+        '{xx.zhang}': '{wx.yue}',
+        '{xx.bi}': '{wx.yue}',
+        '{xx.wei}': '{wx.yue}',
+        '{xx.tail}': '{wx.huo}',
+        '{xx.yi}': '{wx.huo}',
+        '{xx.zi}': '{wx.huo}',
+        '{xx.shi}': '{wx.huo}',
+        '{xx.ji}': '{wx.shui}',
+        '{xx.zhen}': '{wx.shui}',
+        '{xx.can}': '{wx.shui}',
+        '{xx.qiang}': '{wx.shui}'
+      },
+      ANIMAL:{
+        '{xx.jiao}': '{dw.jiao}',
+        '{xx.dou}': '{dw.xie}',
+        '{xx.kui}': '{dw.lang}',
+        '{xx.jing}': '{dw.han}',
+        '{xx.kang}': '{dw.long}',
+        '{xx.niu}': '{dw.niu}',
+        '{xx.lou}': '{dw.gou}',
+        '{xx.gui}': '{dw.yang}',
+        '{xx.nv}': '{dw.fu}',
+        '{xx.di}': '{dw.he}',
+        '{xx.vei}': '{dw.zhi}',
+        '{xx.liu}': '{dw.zhang}',
+        '{xx.fang}': '{dw.tu}',
+        '{xx.xu}': '{dw.shu}',
+        '{xx.mao}': '{dw.ji}',
+        '{xx.xing}': '{dw.ma}',
+        '{xx.xin}': '{dw.huLi}',
+        '{xx.wei}': '{dw.yan}',
+        '{xx.bi}': '{dw.wu}',
+        '{xx.zhang}': '{dw.lu}',
+        '{xx.tail}': '{dw.hu}',
+        '{xx.shi}': '{dw.zhu}',
+        '{xx.zi}': '{dw.hou}',
+        '{xx.yi}': '{dw.she}',
+        '{xx.ji}': '{dw.bao}',
+        '{xx.qiang}': '{dw.xu}',
+        '{xx.can}': '{dw.yuan}',
+        '{xx.zhen}': '{dw.yin}'
+      },
+      GONG:{
+        '{xx.jiao}': '{ps.dong}',
+        '{xx.jing}': '{ps.nan}',
+        '{xx.kui}': '{ps.xi}',
+        '{xx.dou}': '{ps.bei}',
+        '{xx.kang}': '{ps.dong}',
+        '{xx.gui}': '{ps.nan}',
+        '{xx.lou}': '{ps.xi}',
+        '{xx.niu}': '{ps.bei}',
+        '{xx.di}': '{ps.dong}',
+        '{xx.liu}': '{ps.nan}',
+        '{xx.vei}': '{ps.xi}',
+        '{xx.nv}': '{ps.bei}',
+        '{xx.fang}': '{ps.dong}',
+        '{xx.xing}': '{ps.nan}',
+        '{xx.mao}': '{ps.xi}',
+        '{xx.xu}': '{ps.bei}',
+        '{xx.xin}': '{ps.dong}',
+        '{xx.zhang}': '{ps.nan}',
+        '{xx.bi}': '{ps.xi}',
+        '{xx.wei}': '{ps.bei}',
+        '{xx.tail}': '{ps.dong}',
+        '{xx.yi}': '{ps.nan}',
+        '{xx.zi}': '{ps.xi}',
+        '{xx.shi}': '{ps.bei}',
+        '{xx.ji}': '{ps.dong}',
+        '{xx.zhen}': '{ps.nan}',
+        '{xx.can}': '{ps.xi}',
+        '{xx.qiang}': '{ps.bei}'
+      },
+      SHOU:{
+        '{ps.dong}':'{sn.qingLong}',
+        '{ps.nan}':'{sn.zhuQue}',
+        '{ps.xi}':'{sn.baiHu}',
+        '{ps.bei}':'{sn.xuanWu}'
+      },
+      FESTIVAL:{
+        '1-1':'{jr.chunJie}',
+        '1-15':'{jr.yuanXiao}',
+        '2-2':'{jr.longTou}',
+        '5-5':'{jr.duanWu}',
+        '7-7':'{jr.qiXi}',
+        '8-15':'{jr.zhongQiu}',
+        '9-9':'{jr.chongYang}',
+        '12-8':'{jr.laBa}'
+      },
+      OTHER_FESTIVAL:{'1-4':['接神日'],'1-5':['隔开日'],'1-7':['人日'],'1-8':['谷日','顺星节'],'1-9':['天日'],'1-10':['地日'],'1-20':['天穿节'],'1-25':['填仓节'],'1-30':['正月晦'],'2-1':['中和节'],'2-2':['社日节'],'3-3':['上巳节'],'5-20':['分龙节'],'5-25':['会龙节'],'6-6':['天贶节'],'6-24':['观莲节'],'6-25':['五谷母节'],'7-15':['中元节'],'7-22':['财神节'],'7-29':['地藏节'],'8-1':['天灸日'],'10-1':['寒衣节'],'10-10':['十成节'],'10-15':['下元节'],'12-7':['驱傩日'],'12-16':['尾牙'],'12-24':['祭灶日']},
+      CHONG:['{dz.wu}', '{dz.wei}', '{dz.shen}', '{dz.you}', '{dz.xu}', '{dz.hai}', '{dz.zi}', '{dz.chou}', '{dz.yin}', '{dz.mao}', '{dz.chen}', '{dz.si}'],
+      CHONG_GAN:['{tg.wu}', '{tg.ji}', '{tg.geng}', '{tg.xin}', '{tg.ren}', '{tg.gui}', '{tg.jia}', '{tg.yi}', '{tg.bing}', '{tg.ding}'],
+      CHONG_GAN_TIE:['{tg.ji}', '{tg.wu}', '{tg.xin}', '{tg.geng}', '{tg.gui}', '{tg.ren}', '{tg.yi}', '{tg.jia}', '{tg.ding}', '{tg.bing}'],
+      CHONG_GAN_4:['{tg.geng}', '{tg.xin}', '{tg.ren}', '{tg.gui}', '', '', '{tg.jia}', '{tg.yi}', '{tg.bing}', '{tg.ding}'],
+      HE_GAN_5:['{tg.ji}', '{tg.geng}', '{tg.xin}', '{tg.ren}', '{tg.gui}', '{tg.jia}', '{tg.yi}', '{tg.bing}', '{tg.ding}', '{tg.wu}'],
+      HE_ZHI_6:['{dz.chou}', '{dz.zi}', '{dz.hai}', '{dz.xu}', '{dz.you}', '{dz.shen}', '{dz.wei}', '{dz.wu}', '{dz.si}', '{dz.chen}', '{dz.mao}', '{dz.yin}'],
+      SHA:{
+        '{dz.zi}':'{ps.nan}',
+        '{dz.chou}':'{ps.dong}',
+        '{dz.yin}':'{ps.bei}',
+        '{dz.mao}':'{ps.xi}',
+        '{dz.chen}':'{ps.nan}',
+        '{dz.si}':'{ps.dong}',
+        '{dz.wu}':'{ps.bei}',
+        '{dz.wei}':'{ps.xi}',
+        '{dz.shen}':'{ps.nan}',
+        '{dz.you}':'{ps.dong}',
+        '{dz.xu}':'{ps.bei}',
+        '{dz.hai}':'{ps.xi}'
+      },
+      POSITION_DESC:{
+        '{bg.kan}':'{ps.zhengBei}',
+        '{bg.gen}':'{ps.dongBei}',
+        '{bg.zhen}':'{ps.zhengDong}',
+        '{bg.xun}':'{ps.dongNan}',
+        '{bg.li}':'{ps.zhengNan}',
+        '{bg.kun}':'{ps.xiNan}',
+        '{bg.dui}':'{ps.zhengXi}',
+        '{bg.qian}':'{ps.xiBei}',
+        '{ps.center}':'{ps.zhong}'
+      },
+      NAYIN:{
+        '{jz.jiaZi}': '{ny.haiZhong}{wx.jin}',
+        '{jz.jiaWu}': '{ny.shaZhong}{wx.jin}',
+        '{jz.bingYin}': '{ny.luZhong}{wx.huo}',
+        '{jz.bingShen}': '{ny.shanXia}{wx.huo}',
+        '{jz.wuChen}': '{ny.daLin}{wx.mu}',
+        '{jz.wuXu}': '{ny.pingDi}{wx.mu}',
+        '{jz.gengWu}': '{ny.luPang}{wx.tu}',
+        '{jz.gengZi}': '{ny.biShang}{wx.tu}',
+        '{jz.renShen}': '{ny.jianFeng}{wx.jin}',
+        '{jz.renYin}': '{ny.jinBo}{wx.jin}',
+        '{jz.jiaXu}': '{ny.shanTou}{wx.huo}',
+        '{jz.jiaChen}': '{ny.fuDeng}{wx.huo}',
+        '{jz.bingZi}': '{ny.jianXia}{wx.shui}',
+        '{jz.bingWu}': '{ny.tianHe}{wx.shui}',
+        '{jz.wuYin}': '{ny.chengTou}{wx.tu}',
+        '{jz.wuShen}': '{ny.daYi}{wx.tu}',
+        '{jz.gengChen}': '{ny.baiLa}{wx.jin}',
+        '{jz.gengXu}': '{ny.chaiChuan}{wx.jin}',
+        '{jz.renWu}': '{ny.yangLiu}{wx.mu}',
+        '{jz.renZi}': '{ny.sangZhe}{wx.mu}',
+        '{jz.jiaShen}': '{ny.quanZhong}{wx.shui}',
+        '{jz.jiaYin}': '{ny.daXi}{wx.shui}',
+        '{jz.bingXu}': '{ny.wuShang}{wx.tu}',
+        '{jz.bingChen}': '{ny.shaZhong}{wx.tu}',
+        '{jz.wuZi}': '{ny.piLi}{wx.huo}',
+        '{jz.wuWu}': '{ny.tianShang}{wx.huo}',
+        '{jz.gengYin}': '{ny.songBo}{wx.mu}',
+        '{jz.gengShen}': '{ny.shiLiu}{wx.mu}',
+        '{jz.renChen}': '{ny.changLiu}{wx.shui}',
+        '{jz.renXu}': '{ny.daHai}{wx.shui}',
+        '{jz.yiChou}': '{ny.haiZhong}{wx.jin}',
+        '{jz.yiWei}': '{ny.shaZhong}{wx.jin}',
+        '{jz.dingMao}': '{ny.luZhong}{wx.huo}',
+        '{jz.dingYou}': '{ny.shanXia}{wx.huo}',
+        '{jz.jiSi}': '{ny.daLin}{wx.mu}',
+        '{jz.jiHai}': '{ny.pingDi}{wx.mu}',
+        '{jz.xinWei}': '{ny.luPang}{wx.tu}',
+        '{jz.xinChou}': '{ny.biShang}{wx.tu}',
+        '{jz.guiYou}': '{ny.jianFeng}{wx.jin}',
+        '{jz.guiMao}': '{ny.jinBo}{wx.jin}',
+        '{jz.yiHai}': '{ny.shanTou}{wx.huo}',
+        '{jz.yiSi}': '{ny.fuDeng}{wx.huo}',
+        '{jz.dingChou}': '{ny.jianXia}{wx.shui}',
+        '{jz.dingWei}': '{ny.tianHe}{wx.shui}',
+        '{jz.jiMao}': '{ny.chengTou}{wx.tu}',
+        '{jz.jiYou}': '{ny.daYi}{wx.tu}',
+        '{jz.xinSi}': '{ny.baiLa}{wx.jin}',
+        '{jz.xinHai}': '{ny.chaiChuan}{wx.jin}',
+        '{jz.guiWei}': '{ny.yangLiu}{wx.mu}',
+        '{jz.guiChou}': '{ny.sangZhe}{wx.mu}',
+        '{jz.yiYou}': '{ny.quanZhong}{wx.shui}',
+        '{jz.yiMao}': '{ny.daXi}{wx.shui}',
+        '{jz.dingHai}': '{ny.wuShang}{wx.tu}',
+        '{jz.dingSi}': '{ny.shaZhong}{wx.tu}',
+        '{jz.jiChou}': '{ny.piLi}{wx.huo}',
+        '{jz.jiWei}': '{ny.tianShang}{wx.huo}',
+        '{jz.xinMao}': '{ny.songBo}{wx.mu}',
+        '{jz.xinYou}': '{ny.shiLiu}{wx.mu}',
+        '{jz.guiSi}': '{ny.changLiu}{wx.shui}',
+        '{jz.guiHai}': '{ny.daHai}{wx.shui}'
+      },
+      WU_XING_GAN:{
+        '{tg.jia}':'{wx.mu}',
+        '{tg.yi}':'{wx.mu}',
+        '{tg.bing}':'{wx.huo}',
+        '{tg.ding}':'{wx.huo}',
+        '{tg.wu}':'{wx.tu}',
+        '{tg.ji}':'{wx.tu}',
+        '{tg.geng}':'{wx.jin}',
+        '{tg.xin}':'{wx.jin}',
+        '{tg.ren}':'{wx.shui}',
+        '{tg.gui}':'{wx.shui}'
+      },
+      WU_XING_ZHI:{
+        '{dz.yin}':'{wx.mu}',
+        '{dz.mao}':'{wx.mu}',
+        '{dz.si}':'{wx.huo}',
+        '{dz.wu}':'{wx.huo}',
+        '{dz.chen}':'{wx.tu}',
+        '{dz.chou}':'{wx.tu}',
+        '{dz.xu}':'{wx.tu}',
+        '{dz.wei}':'{wx.tu}',
+        '{dz.shen}':'{wx.jin}',
+        '{dz.you}':'{wx.jin}',
+        '{dz.hai}':'{wx.shui}',
+        '{dz.zi}':'{wx.shui}'
+      },
+      SHI_SHEN:{
+        '{tg.jia}{tg.jia}':'{ss.biJian}',
+        '{tg.jia}{tg.yi}':'{ss.jieCai}',
+        '{tg.jia}{tg.bing}':'{ss.shiShen}',
+        '{tg.jia}{tg.ding}':'{ss.shangGuan}',
+        '{tg.jia}{tg.wu}':'{ss.pianCai}',
+        '{tg.jia}{tg.ji}':'{ss.zhengCai}',
+        '{tg.jia}{tg.geng}':'{ss.qiSha}',
+        '{tg.jia}{tg.xin}':'{ss.zhengGuan}',
+        '{tg.jia}{tg.ren}':'{ss.pianYin}',
+        '{tg.jia}{tg.gui}':'{ss.zhengYin}',
+        '{tg.yi}{tg.yi}':'{ss.biJian}',
+        '{tg.yi}{tg.jia}':'{ss.jieCai}',
+        '{tg.yi}{tg.ding}':'{ss.shiShen}',
+        '{tg.yi}{tg.bing}':'{ss.shangGuan}',
+        '{tg.yi}{tg.ji}':'{ss.pianCai}',
+        '{tg.yi}{tg.wu}':'{ss.zhengCai}',
+        '{tg.yi}{tg.xin}':'{ss.qiSha}',
+        '{tg.yi}{tg.geng}':'{ss.zhengGuan}',
+        '{tg.yi}{tg.gui}':'{ss.pianYin}',
+        '{tg.yi}{tg.ren}':'{ss.zhengYin}',
+        '{tg.bing}{tg.bing}':'{ss.biJian}',
+        '{tg.bing}{tg.ding}':'{ss.jieCai}',
+        '{tg.bing}{tg.wu}':'{ss.shiShen}',
+        '{tg.bing}{tg.ji}':'{ss.shangGuan}',
+        '{tg.bing}{tg.geng}':'{ss.pianCai}',
+        '{tg.bing}{tg.xin}':'{ss.zhengCai}',
+        '{tg.bing}{tg.ren}':'{ss.qiSha}',
+        '{tg.bing}{tg.gui}':'{ss.zhengGuan}',
+        '{tg.bing}{tg.jia}':'{ss.pianYin}',
+        '{tg.bing}{tg.yi}':'{ss.zhengYin}',
+        '{tg.ding}{tg.ding}':'{ss.biJian}',
+        '{tg.ding}{tg.bing}':'{ss.jieCai}',
+        '{tg.ding}{tg.ji}':'{ss.shiShen}',
+        '{tg.ding}{tg.wu}':'{ss.shangGuan}',
+        '{tg.ding}{tg.xin}':'{ss.pianCai}',
+        '{tg.ding}{tg.geng}':'{ss.zhengCai}',
+        '{tg.ding}{tg.gui}':'{ss.qiSha}',
+        '{tg.ding}{tg.ren}':'{ss.zhengGuan}',
+        '{tg.ding}{tg.yi}':'{ss.pianYin}',
+        '{tg.ding}{tg.jia}':'{ss.zhengYin}',
+        '{tg.wu}{tg.wu}':'{ss.biJian}',
+        '{tg.wu}{tg.ji}':'{ss.jieCai}',
+        '{tg.wu}{tg.geng}':'{ss.shiShen}',
+        '{tg.wu}{tg.xin}':'{ss.shangGuan}',
+        '{tg.wu}{tg.ren}':'{ss.pianCai}',
+        '{tg.wu}{tg.gui}':'{ss.zhengCai}',
+        '{tg.wu}{tg.jia}':'{ss.qiSha}',
+        '{tg.wu}{tg.yi}':'{ss.zhengGuan}',
+        '{tg.wu}{tg.bing}':'{ss.pianYin}',
+        '{tg.wu}{tg.ding}':'{ss.zhengYin}',
+        '{tg.ji}{tg.ji}':'{ss.biJian}',
+        '{tg.ji}{tg.wu}':'{ss.jieCai}',
+        '{tg.ji}{tg.xin}':'{ss.shiShen}',
+        '{tg.ji}{tg.geng}':'{ss.shangGuan}',
+        '{tg.ji}{tg.gui}':'{ss.pianCai}',
+        '{tg.ji}{tg.ren}':'{ss.zhengCai}',
+        '{tg.ji}{tg.yi}':'{ss.qiSha}',
+        '{tg.ji}{tg.jia}':'{ss.zhengGuan}',
+        '{tg.ji}{tg.ding}':'{ss.pianYin}',
+        '{tg.ji}{tg.bing}':'{ss.zhengYin}',
+        '{tg.geng}{tg.geng}':'{ss.biJian}',
+        '{tg.geng}{tg.xin}':'{ss.jieCai}',
+        '{tg.geng}{tg.ren}':'{ss.shiShen}',
+        '{tg.geng}{tg.gui}':'{ss.shangGuan}',
+        '{tg.geng}{tg.jia}':'{ss.pianCai}',
+        '{tg.geng}{tg.yi}':'{ss.zhengCai}',
+        '{tg.geng}{tg.bing}':'{ss.qiSha}',
+        '{tg.geng}{tg.ding}':'{ss.zhengGuan}',
+        '{tg.geng}{tg.wu}':'{ss.pianYin}',
+        '{tg.geng}{tg.ji}':'{ss.zhengYin}',
+        '{tg.xin}{tg.xin}':'{ss.biJian}',
+        '{tg.xin}{tg.geng}':'{ss.jieCai}',
+        '{tg.xin}{tg.gui}':'{ss.shiShen}',
+        '{tg.xin}{tg.ren}':'{ss.shangGuan}',
+        '{tg.xin}{tg.yi}':'{ss.pianCai}',
+        '{tg.xin}{tg.jia}':'{ss.zhengCai}',
+        '{tg.xin}{tg.ding}':'{ss.qiSha}',
+        '{tg.xin}{tg.bing}':'{ss.zhengGuan}',
+        '{tg.xin}{tg.ji}':'{ss.pianYin}',
+        '{tg.xin}{tg.wu}':'{ss.zhengYin}',
+        '{tg.ren}{tg.ren}':'{ss.biJian}',
+        '{tg.ren}{tg.gui}':'{ss.jieCai}',
+        '{tg.ren}{tg.jia}':'{ss.shiShen}',
+        '{tg.ren}{tg.yi}':'{ss.shangGuan}',
+        '{tg.ren}{tg.bing}':'{ss.pianCai}',
+        '{tg.ren}{tg.ding}':'{ss.zhengCai}',
+        '{tg.ren}{tg.wu}':'{ss.qiSha}',
+        '{tg.ren}{tg.ji}':'{ss.zhengGuan}',
+        '{tg.ren}{tg.geng}':'{ss.pianYin}',
+        '{tg.ren}{tg.xin}':'{ss.zhengYin}',
+        '{tg.gui}{tg.gui}':'{ss.biJian}',
+        '{tg.gui}{tg.ren}':'{ss.jieCai}',
+        '{tg.gui}{tg.yi}':'{ss.shiShen}',
+        '{tg.gui}{tg.jia}':'{ss.shangGuan}',
+        '{tg.gui}{tg.ding}':'{ss.pianCai}',
+        '{tg.gui}{tg.bing}':'{ss.zhengCai}',
+        '{tg.gui}{tg.ji}':'{ss.qiSha}',
+        '{tg.gui}{tg.wu}':'{ss.zhengGuan}',
+        '{tg.gui}{tg.xin}':'{ss.pianYin}',
+        '{tg.gui}{tg.geng}':'{ss.zhengYin}'
+      },
+      ZHI_HIDE_GAN:{
+        '{dz.zi}': ['{tg.gui}'],
+        '{dz.chou}': ['{tg.ji}', '{tg.gui}', '{tg.xin}'],
+        '{dz.yin}': ['{tg.jia}', '{tg.bing}', '{tg.wu}'],
+        '{dz.mao}': ['{tg.yi}'],
+        '{dz.chen}': ['{tg.wu}', '{tg.yi}', '{tg.gui}'],
+        '{dz.si}': ['{tg.bing}', '{tg.geng}', '{tg.wu}'],
+        '{dz.wu}': ['{tg.ding}', '{tg.ji}'],
+        '{dz.wei}': ['{tg.ji}', '{tg.ding}', '{tg.yi}'],
+        '{dz.shen}': ['{tg.geng}', '{tg.ren}', '{tg.wu}'],
+        '{dz.you}': ['{tg.xin}'],
+        '{dz.xu}': ['{tg.wu}', '{tg.xin}', '{tg.ding}'],
+        '{dz.hai}': ['{tg.ren}', '{tg.jia}']
+      },
+      YI_JI:[
+        '{yj.jiSi}',
+        '{yj.qiFu}',
+        '{yj.qiuSi}',
+        '{yj.kaiGuang}',
+        '{yj.suHui}',
+        '{yj.qiJiao}',
+        '{yj.zhaiJiao}',
+        '{yj.muYu}',
+        '{yj.chouShen}',
+        '{yj.zaoMiao}',
+        '{yj.siZhao}',
+        '{yj.fenXiang}',
+        '{yj.xieTu}',
+        '{yj.chuHuo}',
+        '{yj.diaoKe}',
+        '{yj.jiaQu}',
+        '{yj.DingHun}',
+        '{yj.naCai}',
+        '{yj.wenMing}',
+        '{yj.naXu}',
+        '{yj.guiNing}',
+        '{yj.anChuang}',
+        '{yj.heZhang}',
+        '{yj.guanJi}',
+        '{yj.dingMeng}',
+        '{yj.jinRenKou}',
+        '{yj.caiYi}',
+        '{yj.wanMian}',
+        '{yj.kaiRong}',
+        '{yj.xiuFen}',
+        '{yj.qiZuan}',
+        '{yj.poTu}',
+        '{yj.anZang}',
+        '{yj.liBei}',
+        '{yj.chengFu}',
+        '{yj.chuFu}',
+        '{yj.kaiShengFen}',
+        '{yj.heShouMu}',
+        '{yj.ruLian}',
+        '{yj.yiJiu}',
+        '{yj.puDu}',
+        '{yj.ruZhai}',
+        '{yj.anXiang}',
+        '{yj.anMen}',
+        '{yj.xiuZao}',
+        '{yj.qiJi}',
+        '{yj.dongTu}',
+        '{yj.shangLiang}',
+        '{yj.shuZhu}',
+        '{yj.kaiJing}',
+        '{yj.zuoBei}',
+        '{yj.chaiXie}',
+        '{yj.poWu}',
+        '{yj.huaiYuan}',
+        '{yj.buYuan}',
+        '{yj.faMuZuoLiang}',
+        '{yj.zuoZhao}',
+        '{yj.jieChu}',
+        '{yj.kaiZhuYan}',
+        '{yj.chuanPing}',
+        '{yj.gaiWuHeJi}',
+        '{yj.kaiCe}',
+        '{yj.zaoCang}',
+        '{yj.saiXue}',
+        '{yj.pingZhi}',
+        '{yj.zaoQiao}',
+        '{yj.zuoCe}',
+        '{yj.zhuDi}',
+        '{yj.kaiChi}',
+        '{yj.faMu}',
+        '{yj.kaiQu}',
+        '{yj.jueJing}',
+        '{yj.saoShe}',
+        '{yj.fangShui}',
+        '{yj.zaoWu}',
+        '{yj.heJi}',
+        '{yj.zaoChuChou}',
+        '{yj.xiuMen}',
+        '{yj.dingSang}',
+        '{yj.zuoLiang}',
+        '{yj.xiuShi}',
+        '{yj.jiaMa}',
+        '{yj.kaiShi}',
+        '{yj.guaBian}',
+        '{yj.naChai}',
+        '{yj.qiuCai}',
+        '{yj.kaiCang}',
+        '{yj.maiChe}',
+        '{yj.zhiChan}',
+        '{yj.guYong}',
+        '{yj.chuHuoCai}',
+        '{yj.anJiXie}',
+        '{yj.zaoCheQi}',
+        '{yj.jingLuo}',
+        '{yj.yunNiang}',
+        '{yj.zuoRan}',
+        '{yj.guZhu}',
+        '{yj.zaoChuan}',
+        '{yj.geMi}',
+        '{yj.zaiZhong}',
+        '{yj.quYu}',
+        '{yj.jieWang}',
+        '{yj.muYang}',
+        '{yj.anDuiWei}',
+        '{yj.xiYi}',
+        '{yj.ruXue}',
+        '{yj.liFa}',
+        '{yj.tanBing}',
+        '{yj.jianGui}',
+        '{yj.chengChuan}',
+        '{yj.duShui}',
+        '{yj.zhenJiu}',
+        '{yj.chuXing}',
+        '{yj.yiXi}',
+        '{yj.fenJu}',
+        '{yj.TiTou}',
+        '{yj.zhengShou}',
+        '{yj.naChu}',
+        '{yj.buZhuo}',
+        '{yj.tianLie}',
+        '{yj.jiaoNiuMa}',
+        '{yj.huiQinYou}',
+        '{yj.fuRen}',
+        '{yj.qiuYi}',
+        '{yj.zhiBing}',
+        '{yj.ciSong}',
+        '{yj.qiJiDongTu}',
+        '{yj.poWuHuaiYuan}',
+        '{yj.gaiWu}',
+        '{yj.zaoCangKu}',
+        '{yj.liQuanJiaoYi}',
+        '{yj.jiaoYi}',
+        '{yj.liQuan}',
+        '{yj.anJi}',
+        '{yj.huiYou}',
+        '{yj.qiuYiLiaoBing}',
+        '{yj.zhuShi}',
+        '{yj.yuShi}',
+        '{yj.xingSang}',
+        '{yj.duanYi}',
+        '{yj.guiXiu}',
+        '{s.none}'
+      ],
+      LU:{
+        '{tg.jia}':'{dz.yin}',
+        '{tg.yi}':'{dz.mao}',
+        '{tg.bing}':'{dz.si}',
+        '{tg.ding}':'{dz.wu}',
+        '{tg.wu}':'{dz.si}',
+        '{tg.ji}':'{dz.wu}',
+        '{tg.geng}':'{dz.shen}',
+        '{tg.xin}':'{dz.you}',
+        '{tg.ren}':'{dz.hai}',
+        '{tg.gui}':'{dz.zi}',
+        '{dz.yin}':'{tg.jia}',
+        '{dz.mao}':'{tg.yi}',
+        '{dz.si}':'{tg.bing},{tg.wu}',
+        '{dz.wu}':'{tg.ding},{tg.ji}',
+        '{dz.shen}':'{tg.geng}',
+        '{dz.you}':'{tg.xin}',
+        '{dz.hai}':'{tg.ren}',
+        '{dz.zi}':'{tg.gui}'
+      },
+      DAY_YI_JI:'30=192531010D:838454151A4C200C1E23221D212726,030F522E1F00=2430000C18:8319000776262322200C1E1D,06292C2E1F04=32020E1A26:7917155B0001025D,0F522E38201D=162E3A0A22:790F181113332C2E2D302F1554,7001203810=0E1A263202:79026A17657603,522E201F05=0D19250131:7911192C2E302F00030401060F1571292A75,707C20522F=0C18243000:4F2C2E2B383F443D433663,0F01478A20151D=0E1A320226:3840,0001202B892F=14202C3808:3807504089,8829=0E1A263202:383940,6370018A75202B454F6605=32020E1A26:38394089,0001202B22=16223A0A2E:384C,8A2020=2B3707131F:2C2E5B000739337C38802D44484C2425201F1E272621,5229701535=121E2A3606:2C2E2D2B156343364C,0F4729710D708A20036A1904=0D19250131:5040262789,0F7129033B=202C380814:5040000738,0F7D7C584F012063452B35=1A2632020E:50400089,8813=1A2632020E:69687011180F791966762627201E,0352292E8034=182430000C:291503000D332E53261F2075,0F5238584F450B=000C182430:297170192C2E2D2F2B3E363F4C,0F521563200103470B=131F2B3707:297115030102195283840D332C2E,0F1F5863201D8A02=222E3A0A16:261F1E20232289,52290058363F32=16222E3A0A:261F201E232289,8D39=0D19310125:262322271E201D21,52450F4F09=0D19253101:262322271E202189,1F4526=16222E3A0A:262322271F1E20,712906=0F1B273303:17262322274050,80387C6B2C=0915212D39:1707702C2E71291F20,0F52000106111D15=16222E3A0A:170007386A7448363F261F1E,030F79636F2026=030F1B2733:1784832C2E5B26201F,0F010D2913=182430000C:175447440D15838477656A49,2B2E1F8A202228=101C283404:70504C7889,8803=0D19250131:700F181126151E20001A7919,8D2F=0915212D39:705283845B0D2F71,0F202E4106=3606121E2A:70786289,06802E1F23=1824000C30:70076A363F,292017=202C380814:700718111A302F717566,0F2B2E2026=3B0B17232F:70545283842E71291A7933192A5D5A5040,090C384F45208A1D6B38=212D390915:7039170F45513A2C2E7129242526271F201D,00010352153A=15212D3909:703911170E2C2E2D2F4B15712952633D,092B8A2027=010D192531:702D155483840F63262720,53292F017D4F38442B2E1F4717=16222E3A0A:705C4C39171A4F0E7971295B5248,0F2E1F1D37=1A2632020E:2E260F27201F,523815292F1A22=0E1A260232:64262322271F2021,0F2F293822=2F3B0B1723:161A0F1526271F4C,586103473818=2430000C18:161A7889,292E1F0F386131=17232F3B0B:04795B3F651A5D,0F5201062016=14202C3808:04170F79195D1A637566363F76,01522E8A2039=132B37071F:0470170F191A134C8384662426232227201E,8D08=0D19253101:040370181123220F1326271E2021,29153B=0D19310125:040307177938494C,0F26207017=0E2632021A:0403010218111A17332C2E2D2B15713E6575,45382064291D=142C380820:04033918110F0D2C2E7129332D2B72528384547566,8D1C=1830000C24:040318111A17332C15290D200C7A,4745063835=0F2733031B:040318111A16175B795452848315302F6563395D,387029202E=14202C3808:04031975363F6366,0F5401202C5283842E2F1E=0E1A320226:0403080618111A16332E2F152A09537919702C5445490D75072B,8063203820=182430000C:04067033392C7161262322271E1D210C,8D2F=101C283404:3F4889,881C=2733030F1B:3F74397677658988,0F3847201D=293505111D:3F8B657789,0F2029702E7D35=111D293505:3F8B6589,1F200A=020E1A2632:3F656477,0F2B71292005=111D290535:3F6589,8810=0F1B273303:3F88,2B38200F1C=293505111D:0F83843D363F776424,15462F2C520329712A=0F1B273303:0F17795B54838458,52807C3811=121E2A3606:0F172C2E387129363F7566512D4E4461,01034752203A=172F3B0B23:0F171511793F76584C,0347200C1D20=2D39091521:0F175B3975660745514F2B4825201E211D,010352292E2E=0F1B273303:0F170070792C2E261F,040341232228=05111D2935:0F1700707129385C363F3D1F1E232226,80412B202F14=14202C3808:0F17000728705448757A,522E1F15562F05=30000C1824:0F17000102061979454F3A15477677,241F8A2021=2F3B0B1723:0F17000102060370392E52838453331F,452F2C266A79292B203810=0C18243000:0F170001020E032A70692C2E302F802D2B0D7129474C201F2322,5211183809615D34=1A2632020E:0F171170792F5B1566770001032C2B802D,29387C207134=14202C3808:0F0D33000103452E528384297115752620,63386F7014=15212D3909:0F7045332C2E71201F1D21,4701155229530327=101C283404:0F70161715232238838426271F20,7D035219=121E2A3606:0F705B0004037C5D15653F1F26,522B473809=131F2B0737:0F705215261E20,012E1F25=182430000C:0F707B7C00012F75,52201B=2531010D19:0F706A151E201D528384544466,47010C2E292F2C3820=14202C3808:0F707500261E20,382E1F05=3606121E2A:0F161A17452F0D33712C2E2B5443633F,150170208A0327=0E1A263202:0F150370002E0D3979528384532971331F1E20,477D0D=06121E2A36:0F5B8370000102060403161A494447,386A418A201A=17232F3B0B:0F03700D332C2E2971152F52838463,01004547380C26=101C283404:0F03700D33195284835329711563,01260038206B0E=131F2B3707:0F03706A4F0D332C528384532E29711563,4500750F=131F2B3707:0F0370010239332E2C19528384532971156375262720,8D18=17232F3B0B:0F0370390D332C192E2971637547202322,581528=0E1A263202:0F0302791566046F,29710D722A38528384202E4530=0E1A263202:0F030102392E15634447001F1E,293845200D707538=1E2A360612:0F0300017039712952542D2C302F80380D2A363F3349483E616320,1118150C1F2E20=33030F1B27:0F03000102700D29713963451F0C20,528338542F15806128=121E2A3606:0F030001027039452971150D332C2F6327,2052838403=2C38081420:0F030001022A0D3945297115528384637020,476A382E1F4426=010D192531:0F03390D332C1929711563261D2E2322,382000521118750C706B15=131F2B3707:0F033915666A52261E272048,382E2F6329712C0114=0D19253101:0F52838403700D332C29712E1F27201E2322,1545017505=131F2B3707:0F528400012E7129,092026=3707131F2B:0F528471295B795D2B155333565A446375661F201E272621,00016B0C4113=14202C3808:0F280001363F8B4326232220,2E1F47032F7D35=16222E3A0A:0F0211195465756679,2F384570202B6A10=15212D3909:0F0102700D332C2E2F0319528384531529716345261F2322,8D32=101C283404:0F0102037039330D5284832971152E1F0C,0026206B37=16222E3A0A:0F003854,20521D2106=020E1A2632:0F00175058,5D6B80382E16=1B2733030F:0F00701784831952712C2E1526271F,033806201F=2B3707131F:0F00701A17830E544C5C78,7129632E1F38208A452F16=15212D3909:0F00040370396A742E15444948,458A384F2021=16222E3A0A:0F005B261F20,2E2F1D=2531010D19:0F0003450D3329712C2E2F1575,528A63705A20587D7C12=17232F3B0B:0F00030D70332C2E3952838453542971156375,6B2019=1B2733030F:0F000301020D297115332E1F0C,165220262E=121E2A3606:0F00030102700D332E2C192971155383846375261F1E20,8D1F=33030F1B27:0F00030102700D19297115332C2B535448,2E45208A00=2632020E1A:0F00030102705283842E544779,2920454F754C3836=16222E3A0A:0F0052037029710D332C15,7545584F8A201D2121=121E2A3606:0F00074850,8A2036=0D25310119:0F00071A706A717677492923221E202726,80522E1F39=1E2A360612:0F006A385040740717,1F70631E=212D390915:0F006A1938271779,565A4575522F801F1E632B=121E2A3606:0F00010D0302703352838453297115632E,208A454F2B=0E1A263202:0F000170390D332E2971152F63751F1E20,52846A381F=14202C3808:0F000106387129,2E1F24=14202C3808:0F0001062E7129,522010=0814202C38:0F0001062871292E7C528384032C5C2A15767765,11185D8A206B08=131F2B0737:0F0001067C1F20,522900=202C380814:0F0001020D700339332C192A83842971152E1F0C20262322,065256386110=111D293505:0F000102700D332C2E297115383F631F20,0347562B=14202C3808:0F000102700D332C712E15261F201E,80036A61473831=0C18243000:0F000102700D335283845329711563,38048A7D45202A=14202C3808:0F000102702E15471F1E,294F2B452C2F268011=0D19253101:0F0001022E792D3E75663D19,472063703852292B39=222E3A0A16:0F0001022E154826271F1E203874362322,036312=0D19253101:0F000102032971152C2E19,4720637038522B15=111D293505:0F000102030D70332E3919528384532971152B2F201F0C,8D1B=232F3B0B17:0F000102030D7033528384534529711520,63475814=131F2B3707:0F000102030D332C2E195283845329716375261E2322,8D19=15212D3909:0F00010203700D332C2E1929711552838453637526202322,8D09=111D293505:0F00010203700D332E2F192971152B52838453631F20,8D33=1A2632020E:0F00010203700D332E2F1929711552838453261F201E2322,8D03=2E3A0A1622:0F0001020370332C2E2F1575261F,2971476A458352380C=111D293505:0F0001020370332E2F0D19297115637566302B2C3979,8D08=000C182430:0F000102037039297175261F1D21,454F2E1563410F=17232F3B0B:0F0001020370390D3319297115632E2C752620212322,8D07=3606121E2A:0F0001020370390D332C1929712E157563548384534C,20248A38=16222E3A0A:0F0001020370390D1952838453542971631F0C,152036=14202C3808:0F00010203703915632719792322,80262045297158750F=111D293505:0F00010203528384157033,752971206B452F2B262E05=3404101C28:0F00010206030D7129302F79802D7C2B5C4744,11701D2052843833=111D293505:0F00010206181139702E1F686F6A792D2C304E153375664923221D21,52296B0D800D=15212D3909:0F000102070D70332C2E19528384297115637526201E2322,8D05=2C38081420:0F0001021A175D2C19152E302F7183846379,8A20704F7545410A=131F2B3707:0F001A651707,565A58202E1F476320=121E36062A:0F11707B7C5271291E20,2E1F39=111D293505:0F11700001522E71291F20,2B07=131F2B0737:0F11700001397129,2E2002=111D293505:0F11707129,2E1F2002=131F37072B:0F1152702E2F71291F20,000103=131F37072B:0F1152702E2F71291F20,7A3A=111D293505:0F117B7C2C2E71291F20,520300=111D350529:0F110001702E2F71291F20,0621=101C280434:0F11000170717B,522E1F0A=06121E2A36:0F110001708471292E1F20,03388051561C=121E2A3606:0F1100017B7C702E7129,522B22=2D39091521:0F110039702C2E522F1574487B7C2D4E804B,098A204538612B=05111D2935:0F1118795B65170002195D,52382E8A201E=2531010D19:0F111829711500010370390D332E750C201F,4552832F382B8004=2A3606121E:0F1118175C000301027039450D29332C2E2F15631F,8A582020=31010D1925:0F1118032A0D545283841A802D2C2E2B71296366774744201F26232221,010900150C06=2C38081420:0F11180300706A2E1549466319,292F26806B382B20754506=2E3A0A1622:0F1118528384530001035C702971152B332C2E63201F1E23222621,6B75452D4F802E=111D293505:0F1118060300017B7C792E39767566261F20,7129805136=232F3B0B17:0F111800171A454F514E3A3871157765443D23221E262720,80612E1F1C=212D390915:0F11180003706A4F0D332C2E192971155363751F20262322,524746416128=3B0B17232F:0F111800037039450D2971332C632026,1F2E2B38528327=3B0B17232F:0F11180006032A0D70332E011954838471152C202322,58477D630C=0814202C38:0F1118000106287129705B032C2E302F802D4E2B201F,528458384108=380814202C:0F11180001027039302971542F7526201E,63472E151F583A=1E2A360612:0F1118000102030D70332C2E192971158384535426201E2322,471F1B=1F2B370713:0F1118000102030D70332C2E195283845329711563261F0C20,4745752522=3505111D29:0F1118000102030D70332E2C192971153953631F0C262720,5284612528=390915212D:0F111800010203700D332C2E192971152F4B49471F270C2322,52562B2029=390915212D:0F111800010203391929710D1552838453,2075708A456309410F=0A16222E3A:0F111800010206032A0D097170292D302F1575761320,521F47251D=1F2B370713:0F18000102111A1703154F2C2E382D2F807566,7163708A1F207D2A=05111D2935:0F111800017C5C2C2E7129,527015382021=2B3707131F:0F11185C0370332D152322528384636626271E,2F292C2E1F00010601=2430000C18:0F11185C0001092A0D7014692983847B7C2C2E302F802D2B,06454F208A2E=0D19253101:0F11181200171A7919547638,5215201D09=3A0A16222E:0F1A1716007015713F261F2720,5263587D2B470304=111D293505:0F1A0070153871291F20,7A7629=010D192531:0F181179005B712980152D4E2A0D533358,5270208A11=0814202C38:0F181138171A7975665B52845415,47701F8A2013=121E2A3606:0F181117795B5C007054292A0D690403332D2C2E66632B3D,8A454F3822=121E2A3606:0F1811705200012E71291F20,382A=16222E0A3A:0F1811705200012E71291F20,062B27=14202C0838:0F18117052000171291E20,2E1F27=16222E0A3A:0F18117000012E71291F20,527A06=111D290535:0F1811700001062E2F1F20,712912=14202C3808:0F181100062839707952542C2E302F03565A7566441F1E,0D29802B2029=1824300C00:0F181100012C2E7129,522025=121E2A0636:0F18110001261F20,03522E=0915212D39:0F18110001702C2E7129,6F454F098A2025=030F1B2733:0F18110001702C2E71291F0D2B152F2127,5283162014=16222E3A0A:0F18110001707B7C0D7129,52565A152B2034=17232F3B0B:0F1811000104037115454F7677657B7C392023222726210C,52092E1F27=3707131F2B:0F181100010603797B7C802D302F2B6743441F202322,2952477D2528=14202C0838:0F181100017B7C2E71291F20,036F33=0D19253101:0F18110001027939706954528384685D15565A75201E1D26,29032E11=182430000C:0F1811000102062A0D2C2D804B2B672E2F7129,70471F8A2030=17232F3B0B:0F5C707971292C2E0E032A0D6A804B2D8C2B3348634C,52110915462031=15212D3909:0F5C5B0001032A0D7052842C2E71291F20,1118517D462B=0F1B273303:0F5C111800015B712952841F20,756A251A=2733030F1B:1545332C2E2F84836375662620,0F0003700D71292B1C=0E1A320226:1516291211020056,06382007=000C182430:1551000403706A454F3A3D771F262322271E1D21,382B41522016=17232F3B0B:1500443626271F1E,29710F47380D19520337=182430000C:150001021745512E443D65262322,2B63387C18=192531010D:151A83842627202322,580F7003632E1F297C26=0E1A263202:15391A302F83845475662627201E,0F702E4629004708=3606121E2A:5B000102073911522C302F3A678C363F33490D482425200C1E2322,0F15382E1F6116=1E2A360612:5B71297000010611182A0D39792C2E332D4E80151F202621,52454F3804=2C38081420:5B11180001020328700D332C2E195283847115632F751F2720,290F476630=0C18243000:201E27262322,8902=3404101C28:2A0D11180F52848353037039156358332C2E,3820002628=010D192531:4089,030F565A61206B27=1824300C00:4089,8836=1C28340410:0370833F0F6A5215,010D582E1F202C2F2938=112935051D:03700F,79192C2E2D715275262322271F201D2136=112935051D:0370110F45510D3371290941614C522623222720,8D3B=152D390921:03047039171A533852443D363F,8D11=0F1B273303:030402111A16175B4F3A2B153E0079015D54528483696A51,7006200F05=0F1B270333:03041A174533302F56795B3E808339528454,700F292026=121E2A3606:037B7C2E2F261F20,0F14=1E2A360612:030270170F45513A2C71295283842A0D532D24252623222720,155A382E1F2F=1B2733030F:03027011170D332D2C2E2F716152838454,010F201F2C=121E2A3606:03027039450D332C2F2D2971528384636626202322,581535=212D390915:03020E0F18110D332C2E2D2F4971293E615244756653,8A202531=1B2733030F:030102703945802D2C512B7129092322270C7566,112E528325=2D39091521:030102062C2E543E3D636679,380D19462971001F=293505111D:03111A171538193E3F,0F632C2E70454F200C19=17232F3B0B:031A2B7915656A,0F177001204529710D632E2F02=32020E1A26:033945302F838475262720,297071000F2E1F3810=17232F3B0B:0339332C2E1575201E26,0F520D631F29712A72473826=390915212D:0339332C2E302B66201D1F27,0D2971010015520F6B0E=15212D3909:03392D2E332F211D201F1E27,0F7015380029710D195824=16223A0A2E:036F791E20,522E1F31=1D29350511:5283845B79037B7C802D2C2E4E302F2B38493D4463664C1F2021,0F0D712917=15212D3909:5283845303702971150D2F,388A6A6D0F2012=111D293505:528384530370331929272E2B2F631F1D20,0F156B380E=0D19253101:528384530339454F0D297115332E2F637520,0F00705802=2A3606121E:528384530339332E152C2F58631F20,380D000F2900=283404101C:528384530003010215392C20,1112180F29560D2E1F754511=15212D3909:5283845300031929150D332C2E63,0F217045208A717521=3505111D29:5283845300010670802D2C2E4E155B201F1E232221,380F71296A0E=17232F3B0B:5283845354037029711575262720,631F58000F2E38010D=111D293505:528384000103451915332C2E631F2720,29716A0D0F7019=1D29350511:5283840001032E1570637566302F391F,0F4729712030=16222E3A0A:5283845479036A2627201E,0F380D70297115012F1A=1F2B370713:528384542E03700F111869565A7566631F1E2021,297138000C31=121E2A3606:52838454443D65002C2E15495D1F,0F417D712B38630F=0D19253101:5283845444360F11756415,2C2F29016B472E2B20381D=212D390915:528384545363000103332E15,0F1F197029710D757D2032=121E2A3606:528384546315332C2E2F26201F2322,0F0D45002971756B17=192531010D:52838454754C2971150301022E,0F63206A0938268A4117=1B2733030F:52848353000103297115332E2F19,0F8A514F6A6620754526=1824300C00:528403395B2F1E20,0F012D=0B17232F3B:5254700001020612692D4E584647336375662E1F1E,71290D262037=131F2B3707:525400045B17791A565D754C7866,2E1F207C34=0F2733031B:483F89,8838=232F3B0B17:767779392623222789,152B1F1D200E=0A16222E3A:767789,528300292025=14202C3808:7665261F20,0F291A=222E3A0A16:7665262322271F201E21,0F0029807124=1824000C30:7889,292E1F24=101C283404:8D,8832=1D29350511:63767789,522E0006206B31=131F2B3707:7B7C343589,0F7038=2632020E1A:7B7C343589,520F20=0E1A260232:7B34,8812=1C28340410:02703918110F7919155283756626232227201E,012C2E1F0C29=121E2A3606:020F11161A17454F2C2E2D302F2B38434C,2070016328=1824300C00:02060418110D332C2E415B637566262322271F20,520F23=142038082C:07504089,0F010C=15212D3909:07262723221F40,0F7129523B=2430000C18:0717363F1A2C4F3A67433D8B,71290F0103471A=2531010D19:0704031118528384542D2E4E49201F1E1D2127,292B000C3B=283404101C:073F7765644889,012014=111D293505:074048261F202322,0F71454F1500018008=111D293505:07404826271F1E2089,882C=0D19253101:07565A5283845463756677261F20,010F15296120=2F3B0B1723:07487677393F89,0F2952151F1D30=111D293505:074889,06520F3808=17232F3B0B:074889,883B=131F2B3707:074889,8832=15212D3909:07762623221F1E20,000F1552296B2F2A=0D19253101:0776776A742623221F200C211D1E,11180F2F5206802B0B=04101C2834:0776776564,000F29382011=101C283404:0706397B7C794C636A48,520F7129472026=14202C3808:077C343589,880A=380814202C:076A79040363660F5D363F,52292E1F20382F15560123=16223A0A2E:076A696819,0F2918=222E3A0A16:076A171552847983546578,712970010F2D=182430000C:076A48,45752F29384C0F204F612B30=131F2B3707:076A7626271F1E20,0D0F29382F2E0E=0814202C38:07343589,065238=1C28340410:070039201F0C2789,06030F292F23=101C280434:076564,0F292002=0D19253101:073918111A17332C2E71292322271F1E20481D45548384,38002F702A=1824300C00:7C343589,8801=172F3B0B23:6A79363F65,0F292B7118=1B2733030F:6A170F19,5845754C201F4F382430=1B2733030F:6A170F1963766F,5452201F32=0C18243000:6A0339332C20528384531563,29713801000F0C47806B3B=2A3606121E:77766564000789,0F52201E8A01=202C380814:1F2027260076232289,0F29528339=0F1B330327:3435,8809=0F1B273303:34357B7C,8818=121E2A3606:34357B7C7789,0F291D=232F3B0B17:34357B7C89,0F2021=33030F1B27:34357B7C89,030F27=390915212D:34357B7C89,712917=1D29350511:3435073989,8802=2C38081420:34357C89,0111180F292006=30000C1824:34357C89,71291A=14202C3808:34357C89,8A2036=182430000C:3435000789,8835=232F3B0B17:34350089,0F2025=3707131F2B:34353989,0F2037=0D25310119:343589,0F52202D=0F1B273303:343589,0F7152290D=131F2B3707:343589,8830=121E2A3606:343589,881C=16222E3A0A:343589,8819=131F2B3707:343589,880F=15212D3909:343589,8832=14202C3808:343589,8813=0D19253101:343589,8811=17232F3B0B:343589,881E=142C380820:017018110F1A2E15495247838463462322271F,8D03=0F1B270333:0103040818111A155284262322271E20217A79708330,38472E631B=14202C3808:010670170F0E3A294152838454262322271F201E,2E1815442C=0F1B273303:01067071292C2E1F20,1103150F520A=17232F0B3B:010670181126271F202165,293816=182430000C:0106111839513A2C2E2D2F8C804B4723221F63,7152292037=0F2733031B:010203040618110F3315292A271D200C6339171A712C2E30491E21,7A21=0E1A260232:010206040318110F2E292A27200C70072C302F541F392B49,381512=1A2632020E:010206110F452C2E7129095B5226232227201F0C,58804B036B2B381C=142C380820:01023918112E2D493E52756624262322271F20,8D12=121E2A3606:008354,06462F2E1F27=030F1B2733:00797084831754,0F2E472D4E1F06=0D19250131:0079701811072C2E01060F33152627200C7A1A302F4576631F2B,8052382900=172F3B0B23:00790F072C2E0103047018111A262322271E7A302F5448637545,293815561E=101C340428:007952151E20,0F2E1F33=0F1B273303:007984831A160F1719,632E20471D6B01=152D390921:0079110F0304062A528423222627207A19701A2C2E2F5D83,294513=0F1B273303:0079181A165B332F2B262322271E2021030469702D4E49712930845D,454F05=152139092D:0079192E2F030417332D1552847A5D,4E201F=162E3A0A22:003826232277,632E20523A=0D19310125:0038262389,521513=1C28340410:00384089,0F202E157C07=04101C2834:00384089,152967631F=101C283404:00384740,0F2037=1C28340410:00387765504089,0F157C04=131F37072B:00385476,521F13=16222E3A0A:003854767789,2E1F522010=131F2B3707:003854637519,205D1D1F52151E210F=121E2A3606:003889,52201F1D4733=121E2A3606:003889,881F=212D390915:001D23221E2789,52290F2E1F202B=07131F2B37:002C7080305C784C62,2E1F472001=283404101C:004D64547589,0F292E=131F2B3707:005040,522E1F0F2C2004=3404101C28:005089,032C2E1F33=182430000C:005089,8815=192531010D:00261F23221E201D2189,8D12=131F2B3707:00261F2322271E200C89,8D1E=121E2A3606:0026271E20,2F2E1F33=16222E3A0A:002627241F1E20232289,8D33=14202C3808:002627651E20232289,881B=182430000C:00262789,292C2E1F2B2F2A=07131F2B37:00262322271F1E203F8B65,52290F038002=15212D3909:001779332D2322271E2007760304,38290F1C=1F2B370713:00173883546365756619,466115201F701D47522434=0D25310119:00170F79191A6540,712909387C2015=0E1A263202:00170F332C2E2D2F802952443F26232227201F,15637C383A=132B37071F:00170F7665776489,8D2A=390915212D:00177689,0F52804F2507=2E3A0A1622:00177179546A76,0F52443D1F2D=0915212D39:0070,0F292C2E791F13=131F2B3707:007083624C,0F38202E7D4F45471F7107=380814202C:00704F0D332C2E2D15363F261F20274C,0F2906036F4703=3404101C28:00702C2E164C157126271F1E202425363F,29386A032B0F=0F1B273303:00700F1715262720,472E386309=15212D0939:007022230726,2E17712952302F15=15212D3909:00704889,8834=1C28340410:0070784889,0345201F21=2D39091521:007007482089,2E1F58470B=0D19253101:0070071A010618110F5B52846775,6326202E=16222E3A0A:00701A17794C0F302F715475,2E454F8A20243A=0F1B330327:007018111A1617192E15382627201F656477,4F090A=0F1B273303:002E2F18110F5B3315292A26271F20210C7A70710102393E19,035A37=14202C3808:002E4344793F26271F20,03702C2F292B381A31=0E1A263202:00161A5D454F153826201E27,7D0D2904=152139092D:0004037039180F332D152952262322271F0C533A83,4117804735=1F2B370713:0004037B7C0F79494766754667,80293869208A1E=162E3A0A22:00040301067018111A0F332C15292A261E200C7A7919712F5D52838454,5617454F06=3404101C28:000403110F527079156523221E2027,0129802E1F6B1D=1830000C24:0004031A170F11332C2E302F1571292A657677451949,70201D5218=102834041C:0004031811171A5B332C2E155D52,0D29204504=17233B0B2F:00040318110F1519262322271E2021,52831F3825=3B0B17232F:00046A7966444C7765,010C202F38520F70292E31=14202C3808:003F261F202789,8836=131F2B3707:003F657789,7152290F032B3A=2632020E1A:003F651F0C2027232289,0F292B=16222E3A0A:003F89,8836=212D390915:000F76,032E1F522C292B22=2B3707131F:000F7765,2E1F7C4607=0F1B273303:000F01111A1615292A2627200C2C670279538384543E49,634512=0F1B273303:000F1320,6380382936=0F2733031B:000F1323222627,2E3829031535=0D25310119:00676589,0F200F=0C18243000:00401D232289,71290F47202B=101C283404:0040395089,8803=30000C1824:004023222089,0F291118470D=0A16222E3A:004089,0F5211=1A2632020E:004089,0F0147200B=3A0A16222E:00037039454F0D332971152C4C48,090F476341382E0A=111D293505:00037039041A26271F1E202322,0F2F2C335129452E0D3A3B=222E3A0A16:000370396A450D332F4B154C,0F208A7D41381F2E14=0F1B273303:00030401061A16170F332E71292627200C02696A45514F0D2C2D4E497A,2B0B=0F1B273303:000304111A33152D2E302F71292A5284530770022B,0F6345203B=0F1B330327:00030418111617332E2D2F292A52845407020D302B,090F452001=0F1B273303:000304080618110F1A2E2D0D3371292A2C302F7566010239454E802B,632039=2430000C18:00036A7415384878,45751F20240F522E834F2E=182430000C:000301394F2E154763751F27,0F707A802629710D192035=14202C3808:0003391983845475,2E1F0F6A702971722A0D04=0F1B270333:00483F,6338200F2A=3B0B17232F:00481F2023221E27262189,0F292C2E1B=122A36061E:0076645089,8819=202C380814:0076777566262322271F201E,0F111852290D=101C283404:00763989,0F2036=1E2A360612:00788B89,0671292E25=010D192531:00784C793989,0F29702E1F208A21=31010D1925:0006261F1E201D212322,0F2938111801=2A3606121E:00060403702C2E4C154947443D651F,0D2920=101C283404:0006522E261F20,0F712939=2632020E1A:00060724232227261F2025,520F157929382F22=31010D1925:0006547677,0F5229151F201B=0E1A320226:00061A161718110F292A0C26271F21797001022F49,470D=0814202C38:002876396577261F20,5283290F37=212D390915:0028397976771E232227,0F522E47442027=121E2A3606:006389,8822=101C280434:007B7C3989,881E=1830000C24:007B343589,8805=2E3A0A1622:00021719792B155D5466774962,010611180F292030=14202C3808:00020370454F0D3933192C2E2D156375261F202322,0F7123=0E1A260232:0002070818111A16175B153E445D5452848365647576,2038454F15=182430000C:0007385476771548,52061F2024=2D39091521:0007504089,0F29157030=15212D3909:0007504089,060F71702F2918=15212D3909:0007504089,880B=17232F0B3B:000770171989,0F2E20382F=0B17232F3B:00077089,522E1F8A202C=07131F2B37:000704036939487C4466,0F7011293821=1824000C30:000715547776,521F18=0E2632021A:0007030401021811171A0F2E2322271F1E706749528483,202F293800=0F1B330327:00077663,0F297138202C=0B17232F3B:000776776548,0F1118152E1F2017=121E2A3606:00077665776489,52830F208A14=1A2632020E:00077B7C4834353989,2952203B=2632020E1A:00076A386563,0F7D8A2066454F52754C15=1E2A360612:00076A0F3874485040,06707C2509=3606121E2A:00076A74504089,5229702C7D15=14202C3808:00076A74173926271F1E20,0F7029522B09=000C182430:00076A54196348767765,7920297115528A0D382B16=101C283404:000734357B7C3989,0F528329200C=06121E2A36:0007343589,290F7104=2E3A0A1622:0007343589,0F292F702012=182430000C:0007343589,0F71296B708003=15212D3909:0007343589,7129706300=0D19310125:0007010618111A332D302F15262322271E530270164C,560F712924=0E1A263202:000701020618111A1752848354230C7027,262038292C=111D293505:0007711F204840,010F29153814=17232F3B0B:00076527262322,1552835A201D0F382D=0D19253101:0007363F8B3989,09292C208A0F28=030F1B2733:000739483F66,0F208A2B0A=04101C2834:0007397B7C343589,0106522008=020E1A2632:0007396A48343589,0F203A=283404101C:00073934357B7C89,0F5223=3505111D29:000739343589,032010=0A16222E3A:000739343589,520F2F=111D293505:000739343589,8A200A=15212D0939:00077A7089,8817=17232F3B0B:000789,8D3B=172F3B0B23:000789,8815=1B2733030F:007C343589,881B=212D390915:007C343589,8812=15212D3909:006A79190F6F2627,6B46204538290B=380814202C:006A38075040,0F630141202B454F2D=121E2A3606:006A5040077448,702B2C0F2F292E=0B17232F3B:006A583F232227261F20,0F291547031C=232F3B0B17:006A6F391974,0F2E614447702C292F71201F38521F=31010D1925:0034353989,522E1F2B=0D19253101:00343589,060F5200=2A3606121E:00343589,7129565A01=131F2B3707:00343589,883B=111D350529:00343589,8800=152D390921:000150402627,0F292F2B1E=2733030F1B:00010F17505840,565A80385283846315=101C283404:000103020611187B7C2D4E616439201E0C26,522E474429=101C283404:0001030239450D297115332C2E4C,0F542070528438632C=101C283404:000103392E54837548,19700F58157A20381F=1830000C24:00010670175B71292A152322271E,03637C2B380F=0E1A263202:0001067052842E71291F20,030F38477533=131F2B3707:0001067011185B0D332C2E2D712909262322271F200C,0F5263250C=17232F0B3B:000106040318111A170F33292A26276A201D0C7A71077C1F1E74694F,520A=0D19253101:0001060403232226380F767754,568020152D=111D293505:000106025B75712904032D302F382B2A0D801E20,2E1F0F0C=0D19253101:00010607155B5C26271E2021165D83,38470F2920=16222E3A0A:000106073018110F3329271E0C7A0D75,3826201508=0F1B273303:00010618111A16332C2E2F2D27200C07483A450D,1552843825=0E1A263202:000102261E2027,03476F700F2971382E39=15212D3909:0001027007834878,2E388A201D17=131F2B3707:00010203450D3329152C2E2F5375,0F638A6A1D382D=0E1A263202:000102030D70332C2E29712F534426201F1E,0F38152F=121E2A3606:0001020370450D332C2E2D152971,0F52838A201D1B=1D29350511:0001020370528384631575712D2E4E3E581F1E1D,292C2B452620803A=222E3A0A16:0001020370392F2971152B54754C,458A1F0F20462C=14202C3808:0001020370392F80712B546675201E26,1F58472E152F=16222E3A0A:000102037039714515750D33,201D381F092E0F1103=32020E1A26:000102030F7039453319152E2D2F63751F0C1E20,71290D38472C=16222E3A0A:000102035270392E2D5863,0F381D2B2921201511=131F2B3707:0001020352666A,0F7020262938172F3A=2430000C18:00010203332C2E2F1558631F,0F1920707A2971264627=05111D2935:0001020311180F702E1F7952838468332D6749443E46630C1E1D21,292B2035=1C28340410:000102031118396375664819,1D4138702080291F=232F3B0B17:000102033945332C6375201D21,0F1929710D702D=101C283404:00010203390D3329152C2B751E20,2E1F54475352458316=111D293505:0001020339161745514F2C190F1A152E2D2F304979,8D13=17232F3B0B:00010203396A79637566201D211E,29387D71707A30=101C283404:000102033911170D3319152E2F0947442627201F,8D25=3505111D29:000102031811392E2D19528384543E4463751F20,152F1A290F0D=0E1A263202:0001020626232227201E,0F2E03801F0F=101C283404:0001020617385483,030F47202B6B1B=2733030F1B:000102060F17705283797823221E2027,2E712910=121E2A3606:000102062A397129797B7C2E1F2425,162F5D20262B=182430000C:0001020603691817452C2E2D498344,412B6A09633808=3A0A16222E:0001020603700F7B7C2E1F692D48302F565A586366240C21,2B151A292039=17232F3B0B:000102060717706A33392D2E4E674447482322271E210C,71292B4F2023=33030F1B27:0001020607036A5D397C2163664744,0F4E25208A08=04101C2834:000102060775261F20,71290F70150C=101C283404:00010206111803302F565A802D4E2B881F261E0C,0D0F521B=16222E3A0A:00010206090D5B7952838454685D7B7C443D77656366201F1E,030F47454F24=010D192531:000102071283542627201D210C4C78,29580F2E6352031F01=32020E1A26:00010275261E0C2322,6303706F0F292E1F19=0E2632021A:000102081A158483262322270C1E,700F292E1B=101C283404:00011A1615262322271F1E200C214C,472B0F1124=3707131F2B:00013974150726271F1E200C,0F06520D297170382B4507=17233B0B2F:000118111A16175B154C26271E200C232279302F5D528384547543,0F297C7A03=17232F3B0B:000118111A332C2E2D1571292A2627200C7A1979,387C02=172F3B0B23:000118111A332C2E2D1571292A23222627200C7A791970302F5D5283845456,387C454F1F=0E1A263202:0001081811171A160F1571292A26271E20396476452B0D,632E523813=15212D3909:00211D1E232289,8D16=0E2632021A:006526232227201F,8926=05111D2935:00657689,6B0F5225=16223A0A2E:00654C89,8D03=2A3606121E:006589,2970472008=15212D3909:001A170F5B332E2D7129261E203E5D,1503528306=152139092D:001A170F1379232227761926,71293833=1C28340410:001A1715838444363F261F1E200C2322,0F476B52036338=14202C3808:001A2B5448701938754C,152E20242510=0D19253101:0039504089,8D39=283404101C:003926271E20747677642322480C06,2E1F38=0F1B273303:0039262322271E201D210C0748766465776A,150F382939=202C380814:0039332C2E2D2F152B4644261F1E,0F7019382971637A31=192531010D:0039787989,1F2E2010=101C283404:0039787089,2E1F8A034F206B29=05111D2935:00398B7989,0F200C=131F2B3707:0039077426271F1E20,0F29713852832B632D=14202C3808:0039076A7426271F2048,0F79197029717A382C=0E1A263202:00397C343548,8929=3B0B17232F:003934357B7C89,0F2028=16222E0A3A:0039343589,8D34=16222E3A0A:0039343589,880B=111D293505:0039343589,8805=17233B0B2F:0039343589,882E=101C283404:0039343589,8806=17233B0B2F:00390103040618111A17332C2E262322271E157A7071302F45631F2075,807C2B=0915212D39:00396577647969271E2322,52012E1F2620612D=16222E3A0A:00391A6A15384C4943363F7448,0F0379472B6319=192531010D:00394C786F89,0F2E442035=182430000C:003989,882A=121E2A3606:003989,8816=13191F252B313701070D:003989,8801=0D19310125:003989,880D=0F1B273303:0018112C2E01040607332D292A09270C2322696870302F47023945,382052801C=101C340428:00190F153917701A48,472E1F200334=1F2B370713:00195475667689,5229152E2019=222E3A0A16:004C504089,0F5215470A=3A0A16222E:005C702C2F802B154C78,5A562E1F208A45466319=102834041C:0089,090F1538=131F2B3707:71297C790001062A0F802D,5215705D2F=0E1A263202:7100030170391959152E2D2F2B,0F201F4F75668A3824=030F1B2733:5483846376656419786A,298030201A=2430000C18:5452838479195D00012A0D7B7C2C2E3348156366242526201E,0F71292D=07131F2B37:54528384700001020339482D301571565A363F637566,06292B201F8A29=030F1B2733:54528384036F796A153E65,7129631D=2733030F1B:5452848303152F802C2D,2E1F208A7A700F29710C7D22=33030F1B27:118384155B20272E1F21,0F03380E=0E1A263202:1179302F842627201E,0071292E1F0E=06121E2A36:11177B7C52842C2E5B1F20,060071292F0F0E=101C283404:110F70528475660D7129,012E1F20262A=101C283404:110F03706A795215636626271E,0C012F38062C292B07=020E1A2632:110F0001702C2E7129201F,52060C=0E1A263202:110F00017052792E1F1E,71290D2B2020=293505111D:110F1A6A702C2E1952838453712F6375,45201500011D=101C340428:11037B7C2E2F7129,0F52200B=0E1A263202:11000170792C2E7129,0F52201F01=111D350529:110001527B7C2E75,0F2009=04101C2834:1100010206702D804E2B2620,0F52540D00=131F2B3707:110001392E1F20,0F712932=17232F3B0B:117154528384292C2E302D4E092A0D50407970443D,5680410023=2B3707131F:111879690001020370396A2E2D528384543E637566,0F380D58292000=222E3A0A16:111879076A1A171523221E272024,5229700F1D012E2B0C2F0B=06121E2A36:111817000106702C2E71292A0D33802D302F4E2B44,0F52252029=07131F2B37:11180F000704030D7C684580302F153867534775,70204119=2430000C18:11180F00012A0D70795D7B7C39332D2C2E4E4863664C,064F478A2037=1E2A360612:11180F000152548471702C2E2D4E303348492A156144474C63,8A201F38450618=202C380814:11180F000128032A0D7129302C2E2F2D802B09411F1E20,5284543824=2F3B0B1723:11180F0001020370391952845329712B632E7B7C792D2C8020,385D151E=293505111D:11180F0001020339700D29716375662E1F2620,3815568016=16222E3A0A:11180F000102587B7C5283847971302F804B2B497675,09612E1F201E=232F3B0B17:11180F00010E715229702E79692C2D2B15093954444C66,2F565A806132=131F2B3707:11180F71297052838454792A0D33802D153853201F1E212627,012F56476628=3707131F2B:11180F71297000010604032A0D793969302F33802D636675,201F52565A1E18=1D29350511:11180F5C000102030D332C2E195329711563261F202322,52843A=202C380814:11180370392A0D3329712C2F156375795B5D,450C8A00382E1F20010C=3A0A16222E:11185283847975661271393D692D15565A201E262322,292F060D0C02=30000C1824:111852838470795B302F404533802D152B39201E23221D212726,0F2E1F010D2923=2D39091521:111852838453546319297115030D332B2C,060F8A2E38201F38=0D19253101:111800020D041A796933483E5347446563751F1D212026,010F09150C17=2430000C18:1118000717161A2C2E3371292B56433D6375363F,0F010347208A09=020E1A2632:111800012A0D2C705271292E201F,1538617904=30000C1824:11180001032A0D70795B2C2E302F802D4E152B33714161201F26,520958470A=000C182430:11180001020439332C2E302F2B5844477515634C1F2721,0F520D19267A2971702037=232F3B0B17:111800010206037939695483845D2D2E4E446375661F262120,0F52290D7123=31010D1925:111800010206071979697C67474475664C,0F16298A2014=182430000C:11187129705B79000106032A0D397B6F7C802D2C2B61756627261E0C1D21,0F2E15414732=192531010D:111871545283842979397B7C69152B2A0D33485324251F1D1E26,6B00702F800C201E=1F2B370713:5D0007363F232227261E21,037C0F471F202E=0E1A263202:6526232227201F,880E=111D293505:653989,8806=131F2B3707:363F6526232227201E89,8832=1A2632020E:1A454F548384,881D=121E2A3606:1A38712975,0F201A=0E1A263202:1A162623227954,0001710F290C=0F1B273303:1A16170F13152654,3852204F32=0F1B273303:1A5D453A332C2E2F4B25262322271F201E1D21,000F704723=2F3B0B1723:3950177089,522E1F0F201A=1D29350511:39701117302F713819297566,004551152C2E201D1F34=121E2A3606:393589,881A=15212D3909:393589,882C=182430000C:393589,8825=101C283404:393589,881C=2531010D19:394089,71294709636F7C440D=0D19253101:3948007889,8D38=2430000C18:394889,8811=111D293505:394889,882A=0E1A263202:3907,8807=0D19253101:39343589,8831=101C283404:393489,8801=222E3A0A16:390050404C89,0F528329692018=131F2B3707:39006A26201F,0F520D38580629712B09=380814202C:390001022C2E302F1575804B2D261F20,0D0F0319707D5229717A15=17232F3B0B:3989,8D11=0A16222E3A:181179838454637566,0F5229012007=111D293505:18117915384C,52200E=0C18243000:1811795B032C2E302F802D4163754C27261E1D2120,010D0F29521F29=16222E0A3A:1811795B5466,01202F=192531010D:181179000607040D03302F5283844F3A45512B1533664C47,090F702E208A2B=0B17232F3B:18117900012C2E5B1F20,0F710D52291A=122A36061E:181179190E332C2E2D52637566262322271F20,8D02=0F1B273303:181117332C2E1526232227201F1E3E,38030F522922=142038082C:181170792C2F7129,52201F=121E36062A:18117001061579,71292023=121E2A3606:18117000012C2E7129,522024=3505111D29:18110F3900010203700D3329711563752E1F0C201D,38525D1A=101C283404:18110F197983842E230C271F1E7A70525463,2620291503=111D293505:1811002E1F8384,0F2022=1824000C30:181100012C2E2F1F,0F3821=142038082C:181100012C2E2F1F20,0F5229=14202C3808:181100015B3875,2E2034=15212D3909:181100012A0D2C2E2F2B2D304E447129841F,0F09416138200F=0814202C38:181100012A0D52842953411E20,2E1F0F47152F=131F2B3707:18110001032A0D845B7129302F791533536678,0F208A1F1D33=17232F3B0B:18115452840001712970802D2C2E302F2B2A0D78791F,0F204758610E=0F1B273303:18111A16175B3315262322271F1E201D215D838454433E363F754551,00030F290D=0C18243000:18115C0001702A2C2E2F5283847129795B6375802D154C,1F208A2407=15212D3909:88,262052830D=17232F3B0B:88,8D17=102834041C:88,8D0B=15212D0939:88,8D24=121E2A0636:88,8D09=17232F0B3B:88,8D13=111D293505:1979,3F2F2E45207D37=112935051D:1966583F6589,8831=16222E3A0A:4C4089,880C=0C18243000:4C78,297172380D2A2E0F47484112=16222E3A0A:5C0F1811790070528471291F20,2F0380512514=1C28340410:5C0001020652835B0E03804B2D4E2B752024210C,292E565A36=1A2632020E:5C11180001027170520D2984832B15200C,03802E386333=15212D3909:89,6B34=111D293505:89,8D',
+      TIME_YI_JI:'0D28=,2C2E2128=,2C2E0110=,2C2E0C1F=,2C2E7A701B1C=,01022308=,01026D003026=,000106037A702D02=,000106037A702802=,000106037A703131=,000106037A70341B=,000106087A701F0E=,000106087A702E15=,000106087A702C2E0E39=,000106087A702C2E0D2B=,881727=,88032D=,88352F=,882B2F=,882125=,882A22=,880C1E=,880220=,88161A=,882018=,883422=,880113=,880B11=,883315=,882915=,881F17=,88150D=,88122E=,88302A=,88262A=,883A28=,880826=,881C2C=,881905=,882303=,880F09=,88050B=,883701=,882D01=,88060C=,882410=,881A12=,882E0E=,88380E=,881010=,883630=,881834=,880E38=,882232=,882C30=,88043A=,881E0A=,880006=,883208=,880A04=,881400=,882808=,883137=,883B35=,882737=,881D39=,88133B=,880933=,88251D=,882F1B=,881B1F=,88111D=,880719=,88391B=,88212D=,7A702C0B15=,7A70551515=,7A70552D00=,7A7D2C2E1334=382C,000106083528=382C,7A70000106080504=382C7A6C55700F197120,00010608223A=380006082C,01026D0D2C=380006082C,01027A70551D30=380006082C0F71295283,01027A703636=380006082C0F71295283,0102416D1226=380006082C7A706C550F297120,0102251C=380006082C7A6C55700F197120,01026D2300=3800010608,2C2E0324=3800010608,7A702C2E082E=3800010608,7A70552C2E3B34=38000106082C,2F8026330C=38000106082C,2F80267A701622=38000106082C7A70556C0F197120,1904=38000106082C7A6C55700F197120,1514=38000106087A70556C0F197120,2C2E3138=38000106087A70556C0F197120,2C2E0B10=38000106087A6C55700F197120,2C2E2B28=387A6C55700F197120,000106082C2E2E16=38082C,000106037A700E3A=38082C,000106037A703708=38082C6C550F197120,000106037A701B20=38082C6C550F197120,000106037A70111C=38082C6C550F197120,000106037A703A2D=2C38,000106082733=2C38,000106081015=2C38020F71295283,000106083817=2C2920,7A700F03=2C2920,616D1839=2C292070556C100F,00010608161B=2C2920020F7100010608,302B=2C2920556C0F1971,7A701E07=2C2920010F,1B1B=2C2920010670100F00,352B=2C292000010206100F70,082B=2C292000010206100F707A,0C21=2C292000010870556C100F7A,0617=2C29206C0F1971,7A70552807=2C29207A70556C0F197100010206,122F=2C29207A706C55100F1971,1017=2C29207A706C55100F1971,2731=2C20,616D0436=2C2070550F,7A7D01022E12=2C200F71295283,01021831=2C20556C0F1971,7A702912=2C20100F52,01026D1D33=2C807138152952,000106080E31=2C80713815295270556C100F,000106083201=2C80713815295270556C100F7A,000106080327=2C80713815295202100F,000106037A702B2B=2C80713815295202100F,000106037A702801=2C80713815295202100F,000106083639=2C80713815295202100F7A7055,00010608341D=2C807138152952556C100F,000106037A701B23=2C807138152952010F6C55,7A70302D=2C8071381529520102100F7A7055,2231=2C8071381529520102100F7A6C55,1F13=2C80713815295200010206100F20,7A70313B=2C8071381529526C550F,000106037A701A15=2C8071381529527A70550F,000106080219=2C8071381529527A70556C0F19,000106082E0D=2C80713815295208556C100F,000106037A70161F=2C80711529525670556C100F,000106083813=2C80711529525670556C100F,000106082D05=2C807115295256020F7A706C55,2237=2C80711529525602100F,000106081F0D=2C80711529525602100F55,000106037A702627=2C8071152952560102100F7A706C,2C33=2C8071152952560102100F7A706C,0939=2C80711529525601100F7A7055,416D021F=2C80711529525600010206100F70,0E37=2C80711529525600010870556C10,2129=2C8071152952566C550F,7A702519=2C8071152952566C550F19,7A702417=2C8071152952566C55100F19,000106037A70043B=2C8071152952566C55100F19,000106037A700C1B=2C8071152952566C55100F19,7A703B31=2C8071152952566C100F19,7A705500010603172D=2C8071152952567A70550F,416D3A2F=2C8071152952567A70556C100F,1901=2C8071152952567A706C55100F19,1119=2C8071152952567A6C55700F19,1C2B=2C80711529525608556C100F,000106037A701403=2C80711529525608556C100F,000106037A70071D=2C80711529525608100F55,000106037A701908=292C20,7A7D01026D2E0F=292C200102100F7A7055,032C=292C20000608,0102071C=292C206C550F1971,000106037A700E33=292C207A70556C000108,0503=2920550F,7A702C2E0721=2920556C100F,7A702C1225=2920000108556C100F,7A702C2E1F11=2900010870556C100F7A,032C201A11=297A70556C100F,032C200E35=297A70556C100F,032C20000A=70556C0F197120,7A7D3A29=70556C100F2C20,000106081C25=70556C100F2C20,000106082805=70556C100F2C20,000106082F20=70556C100F2C20,00010608150C=70556C100F29522002,7A7D000106033314=70556C100F,00010608032C20122A=70556C08,7A7D000106032415=70100F2C715220,000106081A0D=4B0F2C20,000106037A701902=4B0F2C20,000106080E3B=4B0F20,7A702C000106032E17=0F2C09382920,7A7000010603363B=0F2C093829206C55,000106037A70082C=0F29528320,7A2C71707D01026D0718=0F712952832C20,7A7D01021C26=0F712952832C20,7A7D01026D3918=0F712952832C2038000608,01027A70552126=0F712952832C2010,01021330=0F712952832C207A7055,01021118=0F712952832C207A7055,01023524=0F715220,7A70552C2E3419=20556C0F1971,7A702C2E1D31=2000010206100F,7A702C1E05=0270290F2C207A,00010608212C=0270550F,00010608032C200C23=0270550F,00010608032C203706=0270550F20,000106082C2E2520=0270550F20,7A7D000106032E13=0270550F202C807115295256,000106081620=020F29528320,000106087A2C71707D0112=020F2952832055,7A2C71707D000106030F08=020F20,7A7055000106032A23=020F712952832C20,2521=020F712952832C20,000106082F21=020F712952832C20,000106080003=020F712952832C20,7A700432=020F712952832C2038000106086C,7A701E03=020F712952832C2070556C10,000106081623=020F712952832C2001,2236=020F712952832C2001,000B=020F712952832C2001,7A70552C36=020F712952832C20013800,416D341E=020F712952832C20017055,7A7D0E32=020F712952832C200110,7A7D0329=020F712952832C2001107A706C55,262D=020F712952832C20017A7055,1229=020F712952832C2000010608,122D=020F712952832C2000010608,1011=020F712952832C2000010608,0A0B=020F712952832C2000010608,1F0F=020F712952832C2000010870556C,1A0E=020F712952832C206C55,7A703312=020F712952832C2010,000106037A70172A=020F712952832C2010,7A7055000106033B3B=020F712952832C2010,416D000106037A700B12=020F712952832C20106C55,000106037A700615=020F712952832C207A7055,3203=020F712952832C207A7055,201B=020F712952832C207A706C5510,2023=020F712952832C207A6C7055,2A1B=020F7129528320,000106087A702C2629=020F7129528320,7A702C2E3709=020F7129528320,7A702C000106083A24=020F7129528320,7A70552C2E341A=020F712952832038000106087A70,2C2E1C2D=020F712952832001,7A702C2E0611=020F712952832001,7A702C2E021A=020F712952832001,7A7D2C2E3815=020F71295283200100,7A702C2E3024=020F71295283200110,616D2C2E093B=020F71295283206C55,7A702C2E000106030505=020F71295283206C55,7A702C030C1A=020F71295283207A706C55,000106082C2E3705=020F712952837A706C55,032C201F0C=02550F20,000106037A700508=02550F20,000106037A703029=02550F20,000106087A702C2E3027=02550F202C807115295256,000106037A703526=02100F2C29528320,000106037A70150E=02100F2C29528320,00010608380F=02100F2C29528320,000106083527=02100F2C29528320,7A70000106031C27=02100F2C2955528320,000106081227=02100F2C29555283207A706C,00010608060F=02100F2C29555283207A706C,000106081D34=02100F7020,7A7D000106030F02=02100F7055528315,2F8026000106083920=02100F7055528315,2F802600010608212A=02100F7055528315,000106082A20=02100F7055528315,000106083A26=02100F7055528315,000106080439=02100F7055528315,000106080008=02100F7055528315,000106081B21=02100F7055528315,00010608071B=02100F7055528315,000106080D24=02100F7055528315,000106082C2E2C32=02100F7055528315,000106082C2E2B2C=02100F7055528315,00010608032C201402=02100F7055528315,00010608032C20391C=02100F7055528315,7A7D000106031F10=02100F705552831538,2F8026000106082D06=02100F70555283157A,2F802600010608290D=02100F20,7A702C000106032416=02100F20,616D000106037A702C34=02100F20292C,7A70000106031C2A=02100F528315,7A7055000106032234=02100F528315,7A7055000106032A21=02100F55528315,000106037A703313=02100F55528315,000106037A700509=02100F55528315,000106037A702D03=02100F55528315,000106037A700613=02100F55528315,000106037A702235=02100F55528315,000106037A70391D=02100F55528315,000106037A70100F=02100F55528315,000106087A702C111B=02100F55528315,000106087A702C2E2916=02100F55528315,7A2C71707D000106030430=02100F55528315,7A2C71707D000106033B32=02100F55528315,7A2C71707D000106081903=02100F55528315,7A702C2E000106033A27=02100F55528315,7A702C000106030931=02100F55528315,7A702C000106030C1C=02100F55528315,7A70000106032735=02100F555283152C8071,000106037A700B13=02100F555283152C807138,000106037A701517=02100F555283152C807138,000106037A702917=02100F555283156C,000106037A703136=550F522010,7A2C71707D01022A1E=550F715220,7A702C2E1333=550F715220,7A702C2E000106081405=556C,000106087A702C2E0433=556C,7A70000106083B38=556C0F197120,7A702C2E1E01=556C0F19712001,7A702C2E190B=556C000108,7A70230B=556C000108,7A702C2E1A0F=556C0001082C807115295256,7A701830=556C0008,7A2C71707D01023814=556C100F295220,7A2C71707D03082F=556C100F295220,7A702C0C1D=556C100F295220,7A702C2E00010603021D=556C100F295220,7A70000106031121=556C100F2952202C,7A701835=556C100F2952202C80713815,000106037A703B30=556C100F29522002,000106037A70290C=556C100F29522002,7A70000106030930=556C100F2952200238,000106037A702B27=556C100F2952200102,7A702C2E3812=556C08,000106037A701012=556C08,000106037A701621=556C08,7A702C2E000106033209=556C08,7A702C2E000106032021=556C082C807138152952,000106037A700009=556C082C807138152952,000106037A702A1D=807138152952000170100F,032C200A05=807138152952000170100F,032C20273B=8071381529527A706C550F,032C203423=80711529525600010870556C100F,032C201511=80711529525600010870556C100F,032C20183B=80711529525600010870556C100F,032C203311=010F2C80093829206C55,7A702B29=010F2C80093829206C55,7A70616D3A25=010F2C09382920,7A70550825=010F2C093829207A6C5570,201E=010F09382920,7A702C2E352E=010670100F2C71522000,1C28=010670100F7152207A6C55,2C2E2E11=0106100F7152,7A70032C203205=0106100F71526C,7A70032C202A19=0102290F20,7A702C2E2A1F=010270290F2C207A6C55,2413=010270290F2C207A6C55,0437=010270290F2C207A6C55,0935=010270550F,032C201B18=010270550F20,2B24=010270550F20,2F80261906=010270550F20,2C2E2732=010270550F20,2C2E071A=010270550F20,2C2E3700=010270550F20,7A7D1724=010270550F203800,2F80263921=010270550F202C29,416D290F=010270550F202C807138152952,1619=010270550F202C8071381529527A,3207=010270550F202C80711529525600,0829=010270550F2000,060D=010270550F2000,0001=010270550F2000,2736=010270550F207A,1B1E=010270550F207A,2C2E140B=010270550F207A6C,0114=010270550F7A6C,032C202C3B=010270550F7A6C,032C20201F=0102550F20,7A702C1A13=0102550F20,7A702C3637=0102550F20,7A702C280B=0102550F20,7A702C223B=0102550F20,7A702C032D04=0102100F2C29528320,7A701409=0102100F2C29528320,7A70552307=0102100F2C2952832000,0005=0102100F295283,032C207A700A00=0102100F2955528320,7A2C71707D082D=0102100F2955528320,7A702C2E2809=0102100F295552832000,7A702C2E2B2D=0102100F7055528315,021E=0102100F7055528315,0C20=0102100F7055528315,2F80263420=0102100F7055528315,2F80261510=0102100F7055528315,2F80262E10=0102100F7055528315,2F80262806=0102100F7055528315,2F80263134=0102100F7055528315,2F80261D38=0102100F7055528315,2F8026251A=0102100F7055528315,2F80263A2A=0102100F7055528315,2F80267A7D1120=0102100F7055528315,2F80267A7D0824=0102100F7055528315,2C2E1E00=0102100F7055528315,2C2E7A2F1D=0102100F7055528315,032C200A06=0102100F7055528315,7A7D2C2E1C2E=0102100F70555283153800,2F80261832=0102100F70555283153800,2C2E280A=0102100F70555283153800,2C2E320A=0102100F705552831538007A,2738=0102100F705552831538007A6C,2F80260720=0102100F705552831538007A6C,2F8026032B=0102100F70555283152C292000,1907=0102100F70555283152C292000,3703=0102100F70555283152C292000,2739=0102100F70555283152C29207A,251B=0102100F70555283152C29207A,2B25=0102100F70555283152C29207A6C,1331=0102100F70555283152C207A,0D29=0102100F70555283152C80717A,1B1D=0102100F70555283158071,032C200D2D=0102100F705552831500,1725=0102100F705552831500,352D=0102100F705552831500,0C19=0102100F705552831500,150F=0102100F705552831500,3025=0102100F705552831500,0F07=0102100F705552831500,1E09=0102100F705552831500,251F=0102100F705552831500,010C=0102100F705552831500,2F80261A10=0102100F705552831500,2F80261016=0102100F705552831500,2F80260934=0102100F705552831500,2F80262910=0102100F705552831500,2F80267A7D1A14=0102100F705552831500,2C2E2304=0102100F705552831500,7A7D3421=0102100F7055528315002C2920,212F=0102100F7055528315002C807138,111F=0102100F7055528315002C807138,3135=0102100F7055528315008071,032C200828=0102100F7055528315007A6C,2022=0102100F70555283156C,7A7D140A=0102100F70555283156C,7A7D2C2E2127=0102100F70555283157A,1618=0102100F70555283157A,0B0F=0102100F70555283157A,1836=0102100F70555283157A,172E=0102100F70555283157A,2F8026352A=0102100F70555283157A,2F80262B2E=0102100F70555283157A,2F8026082A=0102100F70555283157A,2F80262306=0102100F70555283157A,2F80263702=0102100F70555283157A,2F80262C38=0102100F70555283157A,2F80261E06=0102100F70555283157A,2F80261B1A=0102100F70555283157A,2F8026032A=0102100F70555283157A,2C2E1F14=0102100F70555283157A,2C2E3810=0102100F70555283157A,2C2E262C=0102100F70555283157A29,032C20201A=0102100F70555283157A00,2F80260A02=0102100F70555283157A00,2F80261838=0102100F70555283157A6C,2F80260E34=0102100F70555283157A6C,2F80260438=0102100F70555283157A6C,2C2E2F1A=0102100F70555283157A6C,2C2E2305=0102100F528315,7A70553525=0102100F5283152C8071,7A70550723=0102100F528315807138,7A7055032C200D2A=0102100F55528315,2F80267A2C71707D3316=0102100F55528315,2F80267A2C71707D1224=0102100F55528315,2F80267A2C71707D212E=0102100F55528315,2F80267A700616=0102100F55528315,2F80267A70380C=0102100F55528315,2F80267A700434=0102100F55528315,2F80267A702A18=0102100F55528315,7A2C71707D2628=0102100F55528315,7A2C71707D100C=0102100F55528315,7A2C71707D2F80261729=0102100F55528315,7A701F15=0102100F55528315,7A70240E=0102100F55528315,7A703632=0102100F55528315,7A701339=0102100F55528315,7A700115=0102100F55528315,7A702C2C37=0102100F55528315,7A702C320B=0102100F55528315,7A702C3206=0102100F55528315,7A702C2E2238=0102100F55528315,616D2F80267A2C71707D3816=0102100F555283153800,2F80267A701406=0102100F555283153800,2F80267A700111=0102100F555283152C8071,7A700501=0102100F555283152C8071,7A70370B=0102100F555283152C807138,7A703B37=0102100F555283152C80713800,7A701C2F=0102100F555283152920,7A702C240F=0102100F555283152920,7A702C0A03=0102100F555283152920,7A702C0221=0102100F55528315292000,7A702C2E3317=0102100F55528315292000,7A702C2E3634=0102100F5552831500,2F80267A2C71707D3028=0102100F5552831500,7A2C71707D111A=0102100F5552831500,7A2C71707D071E=0102100F5552831500,7A2C71707D2913=0102100F5552831500,7A702F19=0102100F5552831500,7A702301=0102100F5552831500,7A702C3919=0102100F5552831500,7A702C3B33=0102100F5552831500,7A702C2E0223=0102100F5552831500,7A702C03032F=0102100F55528315006C,7A702C2E262E=0102100F555283156C,2F80267A70032E=0102100F555283156C,7A2C71707D0F0B=0102100F555283156C,7A701D3B=0102100F555283156C,7A702C2E030116=01100F1571292C20,2F80267A703200=01100F1571292C20,7A7055370A=01100F1571292C2000,7A701B22=01100F1571292C2000,7A701E04=01100F1571292C2000,416D1336=01100F1571292C20007A70556C,391A=01100F1571292C20007A6C7055,1C24=01100F1571292C207A7055,2F80260D2E=01100F15712920,7A702C2E2D0A=01100F15712920,7A702C2E2800=01100F15712920027A7055,2C2E251E=01100F157129207A70556C,2C2E1228=01100F157129207A70556C,416D2C2E050A=01100F5220,7A70550000=01100F5220,616D2624=01100F5220,616D2F80267A702804=01100F5220006C,7A70550F06=01100F52207A70556C,2C2E2F1E=01100F52207A70556C,2C2E1014=01100F527A70556C,032C20161E=01100F712920,7A702C2E0A0A=01100F71522C2920,616D161C=0070100F292C20,01020F04=0006100F7020,7A7D01026D183A=0006100F7020,616D0102201C=0006100F20,7A2C71707D01026D1D37=000170100F292C20,2F18=000170100F292C802038,161D=00014B0F,032C201338=00014B0F2C2002,2F80261728=00014B0F20,2C2E0F0A=00014B0F20,7A2C71707D1833=00014B0F20,7A702C1407=00014B0F20,7A702C1401=0001060838,2C2E1123=0001060838,416D032C202019=000106082C38,2C31=000106082C38,391F=000106082C38,2523=000106082C38,7A70416D1C29=000106082C38020F71295283,3811=000106082C38020F71295283,7A700937=000106082C386C550F197120,7A700117=00010252100F29202C7A706C55,1337=00010206700F202C807138152952,3A2E=00010206100F7020,616D0610=00010206100F20,7A2C71707D0328=00010206100F20,7A700F01=00010206100F20,7A702C3310=00010206100F20,7A702C2E3139=0001100F298020,7A702C2625=00010870556C100F2C20,1909=00010870556C100F2C20,391E=00010870556C100F2C20,2124=00010870556C100F2C20,2F80267A7D0F00=00010870556C100F2C2038,2D09=00010870556C100F2C2002,0500=00010870556C100F2C207A,2C39=00010870556C100F2C207A,2518=00010870556C100F2C207A,0B0C=00010870556C100F2C207A,2F80262911=00010870556C100F7A,032C200007=000108556C100F2C2029,7A700A07=000108556C100F2C2029,7A701332=000108556C100F20,2C2E7A70100D=000108556C100F20,7A702C2E2239=000108556C100F20,7A702C2E0A01=000108556C100F20,7A702C2E380D=0001086C100F2C20,7A70551D36=0001086C100F2C20,7A70552F1F=000108100F70552920,010D=000108100F70552920,616D0507=000108100F705529202C80713815,0B0D=000108100F705529202C8071157A,3133=000108100F7055292002,2309=000108100F7055292002,416D0002=000108100F705529207A,2F80263202=000108100F705529207A,2F80263638=000108100F705529207A,2C2E2A1A=000108100F705529207A38,2F80262414=000108100F705529207A6C,2C2E2E14=000108100F552920,7A2C71707D1404=000108100F552920,7A2C71707D0B17=000108100F552920,7A70330D=000108100F552920,7A702C172F=000108100F552920,7A702C2E3707=000108100F5529206C,616D7A702C2E302E=6C55700F197120,2C2E7A7D0C22=6C55700F197120,7A7D01026D1E02=6C550F297120,000106037A703923=6C550F297120,7A702C2E03230A=6C550F1920,7A2C71707D240C=6C550F19200210,7A2C71707D000106031A16=6C550F197120,000106037A701513=6C550F197120,7A703A2B=6C550F197120,7A701837=6C550F197120,7A702F23=6C550F197120,7A702F22=6C550F197120,7A702D07=6C550F197120,7A702C2E3922=6C550F197120,7A700102093A=6C550F197120,7A70000106031B19=6C550F197120,616D7A70071F=6C550F197120,616D7A702C2E212B=6C550F197120,616D7A702C2E000106032734=6C550F197120292C,000106037A700325=6C550F1971200001020610,7A702C122B=6C550F19712008,000106037A702411=6C100F2952,7A7055032C20010E=100F2C29528320,01023704=100F2C29528320,0102363A=100F292C206C55,000106037A702B26=100F2920,7A2C71707D01026D302C=100F7055528315,01021E08=100F7055528315,01022730=100F7055528315,01021512=100F7055528315,010200352C=100F7055528315,7A7D01026D2F1C=100F7055528315,7A7D01026D0222=100F70555283153800,01026D2412=100F70555283157A,01022230=100F70555283157A,0102060E=100F70555283157A6C,01022C3A=100F70555283157A6C,01026D1F12=100F1571292C20,01026D3B36=100F1571292C20,01026D1516=100F1571292C20,000106037A702302=100F1571292C20,000106037A701D32=100F1571292C20,000106082F8026330E=100F1571292C20,000106086D2A1C=100F1571292C20,7A7001026D313A=100F1571292C20,7A7000010603341C=100F1571292C20,416D7A70000106032B2A=100F1571292C2002,000106037A700326=100F1571292C20556C,000106037A70273A=100F1571292C2000,01026D0722=100F1571292C2000,01026D2E0C=100F1571292C206C55,000106037A701408=100F1571292C207A706C55,01022020=100F1571292C207A706C55,000106081726=100F1571292C207A6C7055,0102290E=100F1571292C207A6C7055,000106080932=100F1571292C207A6C7055,000106080D26=100F52,00010608032C20100E=100F5283153800,01027A70550B16=100F5220,2F8026000106081122=100F5220,6D010200133A=100F5220,01026D1F16=100F5220,000106037A703132=100F5220,000106083B3A=100F5220,000106082522=100F5220,00010608190A=100F5220,000106082C2E021C=100F5220,7A70000106030936=100F52202C,01026D3A2C=100F52206C55,01027A701A0C=100F52206C55,000106037A700E30=100F52206C55,000106037A700A08=100F52207A706C55,000106083204=100F52207A6C5570,01026D0B0E=100F55528315,01027A2C71707D0004=100F55528315,7A2C71707D01026D1D3A=100F55528315,7A2C71707D01026D3418=100F5552831500,7A2C71707D0102201D=100F712920,7A702C2E00010608030E36=100F71522C2920,01023635=100F715229,00010608032C20021B=7A70550F2C715220,1900=7A70550F715220,2C2E0A09=7A70556C,00010608172C=7A70556C,00010608032C200B14=7A70556C,00010608032C202914=7A70556C0F197120,2C2E0938=7A70556C0F197120,000106082C2E111E=7A70556C000108,0502=7A70556C000108,2F80260D2F=7A70556C0001082C807138152952,2D0B=7A70556C0001082C807138152952,3633=7A70556C0001082C807115295256,0C18=7A70556C0008,01020218=7A70556C0008,0102302F=7A70556C100F295220,000106082C35=7A70556C100F295220,000106081E0B=7A70556C100F2952202C807115,3130=7A70556C100F29522002,000106080506=7A70556C100F29522001,2C2E330F=7A70556C100F29522001022C8071,010F=7A70556C100F295220010200,0435=7A70556C100F295280713815,032C200614=7A70556C100F295201,032C20122C=7A70556C100F29520102,032C203B39=7A706C550F297120,0F05=7A706C550F297102,032C200D25=7A706C550F19712001,616D2233=7A706C550F19712000010608,2626=7A6C70550F197120,01021A17=7A6C70550F197120,00010608262F=7A6C70550F1971202C29,000106083529=7A6C70550F19712002,616D000106082D08=7A6C70550F197120103800,0102341F=7A6C55700F197120,2C2E172B=082C38,7A7055000106030D27=082C38,7A70000106030827=08556C100F2C20,000106037A702803=08556C100F2C20,000106037A701013=08556C100F2C20,7A7000010603262B=08556C100F2C20,7A7000010603240D=08556C100F2C20,7A70000106033631=08556C100F2C20,7A70000106030431=08556C100F20,7A702C2E000106031D35=08100F552920,000106037A701335=08100F552920,000106037A700612=08100F55292038,000106037A70',
+      SHEN_SHA:[
+        '{s.none}',
+        '{sn.tianEn}',
+        '{sn.mingFei}',
+        '{sn.muCang}',
+        '{sn.buJiang}',
+        '{sn.siXiang}',
+        '{sn.mingFeiDui}',
+        '{sn.wuHe}',
+        '{sn.sanHe}',
+        '{sn.chuShen}',
+        '{sn.yueDe}',
+        '{sn.yueKong}',
+        '{sn.yueDeHe}',
+        '{sn.yueEn}',
+        '{sn.shiYin}',
+        '{sn.wuFu}',
+        '{sn.shengQi}',
+        '{sn.jinKui}',
+        '{sn.xiangRi}',
+        '{sn.yinDe}',
+        '{sn.liuHe}',
+        '{sn.yiHou}',
+        '{sn.qingLong}',
+        '{sn.xuShi}',
+        '{sn.mingTang}',
+        '{sn.wangRi}',
+        '{sn.yaoAn}',
+        '{sn.guanRi}',
+        '{sn.jiQi}',
+        '{sn.fuDe}',
+        '{sn.liuYi}',
+        '{sn.jinTang}',
+        '{sn.baoGuang}',
+        '{sn.minRi}',
+        '{sn.linRi}',
+        '{sn.tianMa}',
+        '{sn.jingAn}',
+        '{sn.puHu}',
+        '{sn.yiMa}',
+        '{sn.tianHou}',
+        '{sn.yangDe}',
+        '{sn.tianXi}',
+        '{sn.tianYi}',
+        '{sn.siMing}',
+        '{sn.shengXin}',
+        '{sn.yuYu}',
+        '{sn.shouRi}',
+        '{sn.shiDe}',
+        '{sn.jieShen}',
+        '{sn.shiYang}',
+        '{sn.tianCang}',
+        '{sn.tianWu}',
+        '{sn.yuTang}',
+        '{sn.fuSheng}',
+        '{sn.tianDe}',
+        '{sn.tianDeHe}',
+        '{sn.tianYuan}',
+        '{sn.tianShe}',
+        '{sn.tianFu}',
+        '{sn.yinShen}',
+        '{sn.jieChu}',
+        '{sn.wuXu}',
+        '{sn.wuLi}',
+        '{sn.chongRi}',
+        '{sn.fuRi}',
+        '{sn.xueZhi}',
+        '{sn.tianZei}',
+        '{sn.tuFu}',
+        '{sn.youHuo}',
+        '{sn.baiHu}',
+        '{sn.xiaoHao}',
+        '{sn.zhiSi}',
+        '{sn.heKui}',
+        '{sn.jieSha}',
+        '{sn.yueSha}',
+        '{sn.yueJian}',
+        '{sn.wangWang}',
+        '{sn.daShi}',
+        '{sn.daBai}',
+        '{sn.xianChi}',
+        '{sn.yanDui}',
+        '{sn.zhaoYao}',
+        '{sn.jiuKan}',
+        '{sn.jiuJiao}',
+        '{sn.tianGang}',
+        '{sn.siShen}',
+        '{sn.yueHai}',
+        '{sn.siQi}',
+        '{sn.yuePo}',
+        '{sn.daHao}',
+        '{sn.tianLao}',
+        '{sn.yuanWu}',
+        '{sn.yueYan}',
+        '{sn.yueXu}',
+        '{sn.guiJi}',
+        '{sn.xiaoShi}',
+        '{sn.tianXing}',
+        '{sn.zhuQue}',
+        '{sn.jiuKong}',
+        '{sn.tianLi}',
+        '{sn.diHuo}',
+        '{sn.fourHit}',
+        '{sn.daSha}',
+        '{sn.gouChen}',
+        '{sn.baZhuan}',
+        '{sn.zaiSha}',
+        '{sn.tianHuo}',
+        '{sn.xueJi}',
+        '{sn.tuHu}',
+        '{sn.yueXing}',
+        '{sn.chuShuiLong}',
+        '{sn.diNang}',
+        '{sn.baFeng}',
+        '{sn.siFei}',
+        '{sn.siJi}',
+        '{sn.siQiong}',
+        '{sn.wuMu}',
+        '{sn.yinCuo}',
+        '{sn.siHao}',
+        '{sn.yangCuo}',
+        '{sn.guChen}',
+        '{sn.xiaoHui}',
+        '{sn.daHui}',
+        '{sn.baLong}',
+        '{sn.qiNiao}',
+        '{sn.jiuHu}',
+        '{sn.liuShe}',
+        '{sn.tianGou}',
+        '{sn.xingHen}',
+        '{sn.liaoLi}',
+        '{sn.suiBo}',
+        '{sn.zhuZhen}',
+        '{sn.sanSang}',
+        '{sn.sanYin}',
+        '{sn.yinDaoChongYang}',
+        '{sn.yinWei}',
+        '{sn.yinYangJiaoPo}',
+        '{sn.yinYangJuCuo}',
+        '{sn.yinYangJiChong}',
+        '{sn.guiKu}',
+        '{sn.danYin}',
+        '{sn.jueYin}',
+        '{sn.chunYang}',
+        '{sn.yangCuoYinChong}',
+        '{sn.qiFu}',
+        '{sn.chengRi}',
+        '{sn.guYang}',
+        '{sn.jueYang}',
+        '{sn.chunYin}',
+        '{sn.daTui}',
+        '{sn.siLi}',
+        '{sn.yangPoYinChong}'
+      ],
+      DAY_SHEN_SHA: [
+        ';000002300F14156869717A3F;01001617495C40413C425D6A;0209000C041831031906054A5E6B4B5F;033500041A1B032C06054C4D4E60;04002D321C1D1E104F50615152;05111F53546C55433C3E;062E200721220D01566E44;070B2333242F45;08360A2526242F080157583D59;091234080162463C3D5A;0A270728292A5B6364653F79;0B0237130E2B4748727A3E66;0C09020C04300F0314150568696D;0D3504031617495C40413C6F425D6A;0E38183119064A5E6B4B5F;0F001A1B032C064C4D4E60;10002D321C1D1E104F50615152;110B00111F53546C55433C3E;12360A002E200721220D015644;13002333456D;142526242F080157583F3D59;15001234080162463C3D5A;16090004270728292A5B636465;17350204130E032B47483E66;1802300F14156869;19031617495C40413C425D6A;1A1831031906054A5E6B4B5F;1B0B1A1B032C06054C4D4E;1C360A2D321C1D1E104F50615152;1D111F53546C55433C3E;1E2E200721220D01563F44;1F23334573;20090C042526242F080157583D;2135041234080162463C3D5A;22270728292A5B636465;2302130E032B47483E66;2402300F0314150568696E;250B031617495C40413C425D6A;26360A18311906054A5E6B4B5F;271A1B2C06054C4D4E60;282D321C1D1E104F506151523F;29111F53546C55433C3E;2A090C042E200721220D015644;2B350423334567;2C2526242F0857583D59;2D001234080162463C3D5A;2E00270728292A5B63646574;2F0B0002130E032B47483E66;30360A0002300F141505686975;31001617495C40413C425D6A676D;3218311906054A5E6B4B3F675F76;331A1B2C06054C4D4E60;34090C042D321C1D1E104F50615152;353504111F53546C55433C6F3E;362E200721220D5644;3723334567;382526242F08015758703D6759;390B123408016246703C3D5A84;3A360A270728292A5B636465;3B02130E2B47483E66;',
+        ';00090002272A536C4C4D4E41717A;0100300F3103233C6151523F66;020004180E032406150543405D;03000C041A1D340617054A5E6B4F50;04002D1B555F;050B112526321C2B3C42654B3E60;060A2E2014100547546246;0712070D161F566A;0822192F0148453D44;092C083301575868695B633C3D;0A0937131E495C6459;0B020721282903727A3F3E5A;0C020427032A05536C4C4D4E416D;0D0C04300F03233C6F61515266;0E38180E24061543405D;0F0B001A1D3406174A5E6B4F5078;100A002D1B555F;1100112526321C2B3C42654B3E60;12002E2014100147546246;130012070D161F566A6D;140922192F080148453D44;152C083301575868695B633C3F3D44;160413031E495C6459;17020C0407212829033E5A;1802272A536C4C4D4E41;190B300F3103233C61515266;1A0A180E032406150543405D;1B1A1D340617014A5E6B4F50;1C2D1B555F;1D112526321C2B3C42654B3E60;1E092E2014100147546246;1F12070D161F56736E6A3F;200422192F080148453D44;210C042C083301575868695B633C3D;22131E495C6459;230B0207212829033E5A;240A0227032A05536C4C4D4E41;25300F31233C61515266;26180E2406150543405D;271A1D340617054A5E6B4F50;28092D1B555F;29112526321C2B3C42654B3F3E60;2A042E2014100147546246;2B0C0412070D161F566A67;2C22192F0848453D44;2D0B002C083301575868695B633C3D85;2E0A0013031E495C6459;2F0002072128293E5A;300002272A05536C4C4D4E4175;3100300F31233C6151526E676D66;3209180E2406150543405D;331A1D340617054A5E6B4F503F76;34042D1B555F;350C04112526321C2B3C6F42654B3E60;362E20141047546246;370B12070D161F566A67;380A22192F08014845703D6744;392C083301575868695B63703C3D74;3A131E495C6459;3B02072128293E5A;',
+        ';00000207282931032B717A6E5D59;01000314473C5A;020A000427182526300F1D16062A054F506A;03360B00041A1906055562464066;04002D2C154A5E6B6C733F788B;0512111B0E1E17483C3E;060C2E20321C016869655F;0753544960;08350907210D230810015B63564B3D77;091324081F014C4D4E453C423D;0A2203342F57586461515244;0B02032C4341727A3E;0C0A020407282931032B055D6D59;0D360B040314473C6F5A;0E3827182526300F1D16062A4F506A3F;0F001A19065562464066;10000C2D2C154A5E6B6C86;110012111B0E1E17483C3E;123509002E20321C0168696E655F;13005354495C6D60;1407210D230810015B63564B3D7F;1537130324081F014C4D4E453C423D;160A042203342F57586461515244;17360B0204033343413E;1802072829312B5D3F59;190314473C5A;1A0C27182526300F1D16062A054F506A;1B1A1906055562464066;1C35092D2C154A5E6B6C;1D12111B0E1E17483C3E;1E2E20321C016869655F;1F5354495C60;200A0407210D230810015B63564B3D80;21360B04130324081F014C4D4E453C423D;2222342F5758646151523F44;2302033343413E;24020C072829312B055D59;2514473C5A;26120927182526300F1D16062A054F506A;271A1906055562464066;282D2C154A5E6B6C76;2912111B0E1E17483C3E;2A0A042E20321C016869655F;2B360B045354495C6760;2C07210D2308105B63564B3F3D77;2D00130324081F014C4D4E453C423D;2E000C22342F57586461515244;2F00023343413E;3035090002072829312B05755D59;310014473C676D5A;3227182526300F1D16062A054F506A67;331A1906055562464066;340A042D2C154A5E6B6C;35360B0412111B0E1E17483C6F3E;362E20321C6869653F5F;375354495C6760;380C07210D230810015B6356704B3D677774;391324081F014C4D4E45703C423D;3A350922342F57586461515244;3B023343413E;',
+        ';000A00220362463C44;010B00072128291D334F50645D;02360002230605534855423F59;03000212300F24060568695A;0400042E27342A495C403C8C;050C04184A5E6B3E66788D76;06091A1B2B15014C4D4E;07352D321C14175B636151526577;0811130E16080147546C433C6A3D5F;0920070D190801563D60;0A0A032C2F104541;0B0B252631031E1F57584B3E;0C362203056246717B3C3F6D44;0D072128291D334F50645D;0E020423065348554259;0F00020C0412300F240668696E5A;1009002E12342A495C403C;113500184A5E6B3E66;12001A1B2B15014C4D4E;13002D321C14175B63615152656D77;140A11130E0316080147546C433C6F6A3D5F;150B20070D03190801563D60;1636032C2F104541733F;17252631031E1F5758727B4B3E;1804220362463C44;190C04072128291D334F50645D;1A09022306055348554259;1B3502120D0F24060568695A;1C2E27342A495C403C;1D184A5E6B3E66;1E0A381A1B2B15014C4D4E;1F0B2D321C14175B63615152657F;20363711130E0316080147546C433C6A3F3D5F;2120070D03190801563D60;2204032C2F104541;230C042526311E1F57584B3E;2409220562463C44;2535072128291D334F50645D;26022306055348554259;270212300F24060568695A;280A2E27342A495C403C6F;290B184A5E6B3E66;2A361A1B2B15014C4D4E3F81;2B2D321C14175B6361515265678074;2C0411130E03160847546C433C6A3D5F;2D000C0420070D190801566E3D60;2E09002C2F104541;2F35002526311E1F57584B3E;300022056246703C44;3100072128291D334F50645D676D;320A02230605534855426759;330B02120D0F2406056869755A;34362E27342A495C403C3F;35184A5E6B3E6676;36041A1B2B154C4D4E81;370C042D321C14175B6361515265677774;380911130E16080147546C433C6A3D675F;393520070D190801563D60;3A2C2F104541;3B2526311E1F5758704B3E87;',
+        ';00001D2F10575868694F503C;0100122B1F495C5564;0209000207222829140605655D44;03000216063305474C4D4E51526A4B3F;04000C042E300F193C6159;0504182C43403E5A;06271A1E2A014A5E6B6C5B6342;070B2D1B1366;080A112526321C0815013C3D;0920032308170153546246413D;0A07210D310324565F;0B0E033448453E60;0C091D2F1005575868694F50717B3C6D;0D122B1F495C553F;0E020C04072228291406655D44;0F000204160633474C4D4E51526A4B;10002E300F193C6159;110B00182C43403E5A;120A00271A1E2A014A5E6B6C5B6342;13002D1B13036D66;14112526321C030815013C6F3D;1520032308170153546246413D;160907210D31032456735F;170E344845727B3F3E60;180C041D2F10575868694F503C;1904122B1F495C5564;1A0207222829140605655D44;1B0B0216063305474C4D4E51526A4B;1C0A2E300F193C6159;1D182C43403E5A;1E38271A1E2A014A5E6B6C5B6342;1F2D1B130366;2009112526321C030815013C3D;21202308170153546246413F3D;220C0407210D3103565F;23040E3448453E60;241D2F1005575868694F503C;250B122B1F495C5564;260A0207222829140605655D44;270216063305474C4D4E51526A4B;282E300F193C6F616E59;29182C43403E5A;2A09271A1E2A014A5E6B6C5B63427988;2B372D1B133F6766;2C0C04112526321C0308153C3D;2D0004202308170153546246413D;2E0007210D3124565F;2F0B000E3448453E60;300A001D2F1005575868694F50703C89;3100122B1F495C5564676D;320207222829140605655D6744;330216063305474C4D4E7551526A4B;34092E300F193C6159;35182C43403F3E5A;360904271A1E2A4A5E6B6C5B634278;37042D1B136766;38112526321C0815013C3D67;390B202308170153546246413D;3A0A07210D3124566E5F;3B0E03344845703E60;',
+        ';003509001E2F554C4D4E453C51525D5F;010057586C646160;0200020E06100543;0300020721282923061F0565;0400042E2224533C7344;05360B04182526300F34335B633F3E74;060A1A13016246404B59;070C2D2B4A5E6B5A;0827111B0314082A0148413C3D;0920321C310316080148413C3D;0A35090319154754495C42;0B12070D1D2C174F50563E;0C1E2F05554C4D4E45717B3C51525D6D5F;0D57586C646160;0E02040E061043;0F360B0002040721282923061F653F;100A002E2224533C44;11000C182526300F34335B633E;12001A1303016246404B59;13002D032B4A5E6B6D5A;14350927111B0314082A0148413C6F3D;1520321C310316080168696A3D66;1619154754495C426E;1712070D1D2C174F5056727B3E;18041E2F554C4D4E453C51525D5F;19360B0457586C64613F60;1A0A020E06100543;1B020C0721282923061F0565;1C2E2224533C44;1D182526300F34335B633E;1E3509381A1303016246404B59;1F2D032B4A5E6B5A;2027111B14082A0148413C3D;2120321C3116080168696A3D66;22040319154754495C42;23360B0412070D1D2C174F50563F3E;240A1E2F05554C4D4E453C51525D5F;250C57586C646160;26020E06100543;27020721282923061F0565;2835092E2224533C6F44;29182526300F34335B633E;2A1A13016246404B5982;2B2D2B4A5E6B675A76;2C0427111B0314082A48413C3D;2D360B000420321C3116080168696A3F3D66;2E0A0019154754495C42;2F000C12070D1D2C174F50563E;30001E2F05554C4D4E45703C51525D5F;310057586C6461676D608E;323509020E0610054367;33020721282923061F057565;342E2224533C6E44;35182526300F34335B633E7974;3637041A13036246404B5982;37360B042D2B4A5E6B3F675A76;380A27111B14082A0148413C3D67;390C20321C3116080168696A3D66;3A0319154754495C42;3B12070D1D2C174F5056703E;',
+        ';0000302007210D341556;01000217455D;020A0025262B2F060557586C5F;030B001406056246603C8F;0436000207282916105B6364656A;0537130E191F47483E;0622300F2C0168693F44;07021E33495C40413C;08090C04184A5E423D59;093504121A1B0308014C4D4E51524B3D5A;0A02272D321C1D232A4F507E61;0B1124535455433E66;0C0A2E2007210D341505566D;0D0B0217455D;0E3625262B2F0657586C;0F00140662463C4260;10000207282916105B6364656A3F79;1100130E191F47483E;1209350C0422300F032C01686944;1335000204031E33495C40413C6D;1418310308014A5E6B3D59;15121A1B0308014C4D4E51524B3D5A;160A02272D321C1D232A4F507E61;170B1124535455433C6F6E3E66;18362E2007210D341556;190217455D;1A25262B060557586C3F5F;1B14060562463C4260;1C09020C0407282916105B6364656A;1D3504130E03191F47483E;1E22300F032C01686944;1F02031E495C40413C;200A183108014A5E6B3D59;210B121A1B08014C4D4E51524B3D5A;223602272D321C1D232A4F507E61;231124535455433C3E66;242E2007210D34150556717C3F;25021745735D;26090C0425262B2F060557586C5F;27350414060562463C4260;280207282916105B6364656A74;29130E03191F47483E;2A0A22300F2C01686944;2B0B021E33495C40413C6F67;2C36381831034A5E6B3D59;2D00121A1B08014C4D4E51524B3D5A;2E0002272D321C1D232A4F507E613F;2F00112453545543727C3C3E66;3009000C042E2007210D34150556;313500020417455D676D;3225262B2F060557586C70675F;331406056246703C426084;340A0207282916105B6364656A;350B130E191F47486E3E;363622300F032C7544;37021E33495C40413C67;38183108014A5E6B3F3D675976;39121A1B08014C4D4E51524B3D5A;3A09020C04272D321C1D232A4F507E61;3B35041124535455433C3E66;',
+        ';000A002E27202C2A475462464B;010B0002070D1E5666;02002F06150548456E5D;0300061705575868695B633C;040002130323495C645F;0507212829249060;0609341001534C4D4E415152;070212300F31031F3C61423F;080418220E032B080143403D44;090C041A1D14080833014A5E6B6C4F503D;0A0A022D1B16556A59;0B0B112526321C193C653E5A;0C2E27202C2A05475462464B6D;0D02070D1E5666;0E2F061548455D;0F000617575868695B633C85;10090002371323495C645F;11000721282903243F3E60;12000403341001534C4D4E415152;1300020C0412300F31031F3C61426D;140A18220E032B080143403D44;150B1A1D140833014A5E6B6C4F503D;16022D1B16556A59;17112526321C193C6F653E5A;182E27202C2A475462464B;1902070D1E5666;1A092F06150548455D;1B061705575868695B633C3F79;1C0204130323495C645F;1D0C040721282903243E60;1E0A03341001534C4D4E415152;1F0B0227300F311F3C6142;2018220E2B080143406E3D44;211A1D140833014A5E6B6C4F503D;22022D1B16556A59;23112526321C193C653E5A;24092E27202C2A0547546246717C4B;2502070D1E56733F66;26042F06150548455D;270C04061705575868695B633C;280A02130323495C645F;290B07212829243E60;2A341001534C4D4E415152;2B0212300F311F3C6F614267;2C3818220E032B0843403D44;2D001A1D140833014A5E6B5B4F503D78;2E0900022D1B16556A59;2F00112526321C19727C3C653F3E5A;3000042E27202C2A05475462464B;3100020C04070D1E56676D66;320A2F0615054845705D67;330B061705575868695B63703C74;34021323495C645F;3507212829243E60;36033410534C4D4E41755152;370212300F311F3C614267;380918220E2B080143403D6744;391A1D140833014A5E6B6C4F503F3D76;3A02042D1B16556A59;3B0C04112526321C193C653E5A;',
+        ';00002E20391C246869655D59;010002345354495C5A;023509002707210D062A055B6356515277;0300132B06054C4D4E453C66;04000203142F1557586473614B3F;0512161743416A3E;060C072829310319015F;07360B02032C476C3C6E60;080A04182526300F1D1E0810014F503D;09041A081F01556246403D;0A022D224A5E6B4486;0B111B0E2333483C423E;0C35092E20321C24056869655D6D59;0D02345354495C5A;0E2707210D062A5B635651523F77;0F00132B064C4D4E453C66;1000020C03142F15575864614B;11360B001203161743416A3E;120A0004072829310319015F;13000204032C476C3C6D60;14182526300F1D1E0810014F503D;151A081F01556246403D;163509022D224A5E6B44;17111B0E2333483C6F423E;182E20321C246869655D3F59;1902345354495C5A;1A0C2707210D062A055B635651527F;1B360B3713032B06054C4D4E453C66;1C0A020403142F15575864614B;1D041203161743416A3E;1E0728293119015F;1F022C476C3C60;203509182526300F1D1E08104F503D;211A081F01556246403D;22022D224A5E6B3F447891;23111B0E2333483C423E;240C2E20321C24056869717C655D59;25360B021C5354495C6E5A;260A042707210D062A055B6356515280;270413032B06054C4D4E453C66;2802142F15575864614B;2912161743416A3E;2A35090728293119015F;2B022C476C3C6F6760;2C38182526300F1D1E08104F503F3D;2D001A081F01556246403D;2E0002092D224A5E6B4476;2F360B00111B0E233348727C3C423E;300A00042E20321C24056869655D59;31000204345354495C676D5A;322707210D062A055B6356705152677774;33132B06054C4D4E45703C66;34350902142F15575864614B;3512161743416A3E;36072829310319753F5F;37022C476C3C6760;380C182526300F1D1E0810014F503D67;39360B1A081F01556246403D;3A0A02042D224A5E6B44;3B04111B0E2333483C423E;',
+        ';00090038041A221B194C4D4E44;0135000C042D321C2C335B6361655D77;02002E11130E1E06054754433C59;03001220070D0605565A;0400272F2A454142;050B252631032357583E66;06360A0324150162463C;07072128291D34174F50644B;080208015348553F3D5F;0902300F2B080168693D60;0A09041410495C403C6F;0B35090418161F4A5E6B6C5152403E;0C1A221B19054C4D4E6D44;0D2D321C2C335B6361655D77;0E2E11130E1E064754433C6E59;0F0B351220070D0306565A;10360A0027032F2A454142;1100252631032357583E66;12000324150162463C3F;1300072128291D34174F50644B6D;1409020408015348553D5F;1535020C04300F2B080168693D60;161410495C403C;1718161F4A5E6B6C51526A3E;181A221B194C4D4E4481;190B0A2E11130E031E06054754433C59;1A360A2E11130E031E06054754433C59;1B1220070D030605565A;1C27032F2A454173423F;1D252631032357583E66;1E090424150162463C;1F350C04072128291D34174F50644B;200208015348553D5F;2102300F2B080168693D60;221410495C403C92;230B18161F4A5E6B6C51526A3E7893;24360A1A221B19054C4D4E44;252D321C2C335B6361655D7F;26372E11130E031E06054754433C3F59;271220070D030605565A;280904272F2A454142;29350C042526312357583E66;2A2415016246703C;2B072128291D34174F50644B67;2C02085348556E3D5F;2D090002300F2B080168693D60;2E360A001410495C403C;2F0018161F4A5E6B6C51526A3E;30001A221B19054C4D4E717D3F4481;31002D321C2C335B6361655D676D8074;3209042E11130E1E06054754433C6F6759;33350C042720070D0605565A;34272F2A454142;35252631235758703E6687;36241562463C;370B072128291D34174F50644B67;38360A023A015348553D675F;3902300F2B08016869753D60;3A1410495C403C3F;3B18161F4A5E6B6C727D51526A3E76;',
+        ';0000380C041A23104A5E6B5B63;010004122D1B13241F838A;020A002E11252622321C3406053C5D44;030B00200306330553544641;040007210D312B5659;050E031448453E5A;060E1D162F2A01575868694F503C6A;0719495C556466;0809020728292C081501515242653D;09021E081701474C4D4E3F3D;0A0C04300F3C6F614B5F;0B041843403E60;0C0A1A2310054A5E6B5B636D;0D0B122D1B1303241F838A94;0E2E11252622321C34063C5D44;0F002003063353546C624641;100007210D31032B5659;11000E031448453E5A;120900271D162F2A01575868694F503C6A;130019495C55643F6D66;14020C040728292C081501515242653D;1502041E081701474C4D4E3D;160A300F3C614B5F;170B1843403E60;181A23104A456B5B6378;19122D1B1303241F9583;1A2E11252622321C033406053C5D44;1B200306330553546C6246416E;1C0907210D31032B567359;1D0E1448453F3E5A;1E0C04271D163B2A01575868694F503C6A;1F0419495C556466;200A020728292C081501515242653D;210B021E081701474C4D4E3D;22300F3C614B5F;231843403E60;241A2310054A5E425B63;25122D1B1303241F;26092E11252622321C033406053C5D44;272006330553546C6246413F;280C0407210D312B5659;29040E1448453E5A;2A0A271D162F2A01575868694F50703C6A89;2B0B19495C55646766;2C020728292C0815515242653D;2D00021E081701474C4D4E3D;2E00300F3C614B5F;2F001843403E60;3009001A2310054A5E6B5B63717D7988;310037122D1B13241F3F676D;320C042E11252622321C3406053C6F5D6744;33042006330553546C624641;340A07210D312B5659;350B0E03144845703E5A;36271D162F2A575868694F503C6A;3719495C55646766;38020728292C081501515242653D67;39021E081701474C4D4E756E3D;3A09300F3C614B5F;3B184340727D3F3E60;',
+        ';000A003837041A1316624640425D6A5F;01360B00042D194A5E6B4B60;020009111B032C06100548413C;030020321C310310061F056869;0400224754495C7344;05070D1D334F505651523F3E;063509232F01554C4D4E453C59;070C24575864615A;0802270E34082A01433D;09020721282908016E653D66;0A0A042B15536C3C6F;0B360B0412182526300F14175B633E;0C1A13031605624640425D6A6D5F;0D2D03194A5E6B4B60;0E2E111B33061048413C;0F0020321C31031E061F68693F;1035090022034754495C44;11000C070D1D334F505651523E;1200232F01554C4D4E453C59;130024575864616D5A;140A0204270E0F082A01433D;15360B0204072128290801653D66;162B15536C3C;17121825260D0F14175B633E;181A1316624640425D6A5F82;192D03194A5E6B4B3F60;1A35092E111B032C061048413C;1B0C20321C31031E061F056869;1C224754495C44;1D07121D334F505651523E;1E0A04232F01554C4D4E453C59;1F360B0424575864615A;2002270E34082A01433D;2102072128290801653D66;222B15536C3C;2312182526300F14175B633F3E;2435091A13031605624640425D6A5F;250C2D03194A5E6B4B60;262E111B2C06100548413C;2720321C311E061F056869;280A04224746495C44;29360B04070D1D334F505651523E;2A232F01554C4D4E45703C59;2B2457586461675A96;2C02270E34082A433D;2D0002072128290801653F3D66;2E3509002B15536C3C;2F000C12182526300F14175B633E;30001A1316624640717D425D6A5F82;31002D194A5E6B4B676D6076;320A042E111B2C06100548413C6F67;33360B0420321C311E061F0568696E;3422034754495C44;35070D1D334F50567051523E;36232F554C4D4E453C59;3724575864613F675A;38350902270E34082A01433D67;39020C07212829080175653D66;3A2B15536C3C;3B12182526300F14175B63727D3E7974;'
+      ],
+      getTimeZhiIndex:function(hm){
+        if(!hm){
+          return 0;
+        }
+        if(hm.length>5){
+          hm = hm.substring(0,5);
+        }
+        var x = 1;
+        for(var i=1;i<22;i+=2){
+          if(hm>=((i<10?'0':'')+i+':00')&&hm<=((i+1<10?'0':'')+(i+1)+':59')){
+            return x;
+          }
+          x++;
+        }
+        return 0;
+      },
+      convertTime:function(hm){
+        return this.ZHI[this.getTimeZhiIndex(hm)+1];
+      },
+      getJiaZiIndex:function(ganZhi){
+        return this.index(ganZhi, this.JIA_ZI, 0);
+      },
+      hex:function(n){
+        var hex = n.toString(16);
+        if(hex.length<2){
+          hex = '0'+hex;
+        }
+        return hex.toUpperCase();
+      },
+      getDayYi:function(monthGanZhi,dayGanZhi){
+        var l = [];
+        var day = this.hex(this.getJiaZiIndex(dayGanZhi));
+        var month = this.hex(this.getJiaZiIndex(monthGanZhi));
+        var right = this.DAY_YI_JI;
+        var index = right.indexOf(day+'=');
+        while(index>-1) {
+          right = right.substring(index+3);
+          var left = right;
+          if (left.indexOf('=')>-1) {
+            left = left.substring(0, left.indexOf('=') - 2);
+          }
+          var matched = false;
+          var months = left.substring(0, left.indexOf(':'));
+          var i;
+          var j;
+          for (i = 0, j = months.length; i < j; i += 2) {
+            if (months.substring(i, i+2)===month) {
+              matched = true;
+              break;
+            }
+          }
+          if(matched) {
+            var ys = left.substring(left.indexOf(':') + 1);
+            ys = ys.substring(0, ys.indexOf(','));
+            for (i = 0, j = ys.length; i < j; i += 2) {
+              l.push(this.YI_JI[parseInt(ys.substring(i, i+2),16)]);
+            }
+            break;
+          }
+          index = right.indexOf(day+'=');
+        }
+        if(l.length<1){
+          l.push(this.SHEN_SHA[0]);
+        }
+        return l;
+      },
+      getDayJi:function(monthGanZhi,dayGanZhi){
+        var l = [];
+        var day = this.hex(this.getJiaZiIndex(dayGanZhi));
+        var month = this.hex(this.getJiaZiIndex(monthGanZhi));
+        var right = this.DAY_YI_JI;
+        var index = right.indexOf(day+'=');
+        while(index>-1) {
+          right = right.substring(index+3);
+          var left = right;
+          if (left.indexOf('=')>-1) {
+            left = left.substring(0, left.indexOf('=') - 2);
+          }
+          var matched = false;
+          var months = left.substring(0, left.indexOf(':'));
+          var i;
+          var j;
+          for (i = 0, j = months.length; i < j; i += 2) {
+            if (months.substring(i, i+2)===month) {
+              matched = true;
+              break;
+            }
+          }
+          if(matched) {
+            var js = left.substring(left.indexOf(',')+1);
+            for (i = 0, j = js.length; i < j; i += 2) {
+              l.push(this.YI_JI[parseInt(js.substring(i, i+2),16)]);
+            }
+            break;
+          }
+          index = right.indexOf(day+'=');
+        }
+        if(l.length<1){
+          l.push(this.SHEN_SHA[0]);
+        }
+        return l;
+      },
+      getDayJiShen:function(monthZhiIndex, dayGanZhi){
+        var l = [];
+        var m = monthZhiIndex - 2;
+        if (m < 0) {
+          m += 12;
+        }
+        var index = this.getJiaZiIndex(dayGanZhi).toString(16).toUpperCase();
+        if (index.length < 2) {
+          index = '0' + index;
+        }
+        var matcher = new RegExp(';' + index + '(.[^;]*)', 'g').exec(this.DAY_SHEN_SHA[m]);
+        if (matcher) {
+          var data = matcher[1];
+          for (var i = 0, j = data.length; i < j; i += 2) {
+            var n = parseInt(data.substring(i, i + 2), 16);
+            if (n < 60) {
+              l.push(this.SHEN_SHA[n + 1]);
+            }
+          }
+        }
+        if(l.length < 1) {
+          l.push(this.SHEN_SHA[0]);
+        }
+        return l;
+      },
+      getDayXiongSha:function(monthZhiIndex, dayGanZhi){
+        var l = [];
+        var m = monthZhiIndex - 2;
+        if (m < 0) {
+          m += 12;
+        }
+        var index = this.getJiaZiIndex(dayGanZhi).toString(16).toUpperCase();
+        if (index.length < 2) {
+          index = '0' + index;
+        }
+        var matcher = new RegExp(';' + index + '(.[^;]*)', 'g').exec(this.DAY_SHEN_SHA[m]);
+        if (matcher) {
+          var data = matcher[1];
+          for (var i = 0, j = data.length; i < j; i += 2) {
+            var n = parseInt(data.substring(i, i + 2), 16);
+            if (n >= 60) {
+              l.push(this.SHEN_SHA[n + 1]);
+            }
+          }
+        }
+        if(l.length < 1) {
+          l.push(this.SHEN_SHA[0]);
+        }
+        return l;
+      },
+      getTimeYi:function(dayGanZhi,timeGanZhi){
+        var l = [];
+        var day = this.hex(this.getJiaZiIndex(dayGanZhi));
+        var time = this.hex(this.getJiaZiIndex(timeGanZhi));
+        var index = this.TIME_YI_JI.indexOf(day+time+'=');
+        if(index>-1) {
+          var left = this.TIME_YI_JI.substring(index + 5);
+          if (left.indexOf('=')>-1) {
+            left = left.substring(0, left.indexOf('=') - 4);
+          }
+          var ys = left.substring(0, left.indexOf(','));
+          for (var i = 0, j = ys.length; i < j; i += 2) {
+            l.push(this.YI_JI[parseInt(ys.substring(i, i+2), 16)]);
+          }
+        }
+        if(l.length<1){
+          l.push(this.SHEN_SHA[0]);
+        }
+        return l;
+      },
+      getTimeJi:function(dayGanZhi,timeGanZhi){
+        var l = [];
+        var day = this.hex(this.getJiaZiIndex(dayGanZhi));
+        var time = this.hex(this.getJiaZiIndex(timeGanZhi));
+        var index = this.TIME_YI_JI.indexOf(day+time+'=');
+        if(index>-1) {
+          var left = this.TIME_YI_JI.substring(index + 5);
+          if (left.indexOf('=')>-1) {
+            left = left.substring(0, left.indexOf('=') - 4);
+          }
+          var js = left.substring(left.indexOf(',')+1);
+          for (var i = 0, j = js.length; i < j; i += 2) {
+            l.push(this.YI_JI[parseInt(js.substring(i, i+2), 16)]);
+          }
+        }
+        if(l.length<1){
+          l.push(this.SHEN_SHA[0]);
+        }
+        return l;
+      },
+      getXunIndex:function(ganZhi){
+        var diff = this.find(ganZhi, this.GAN).index - this.find(ganZhi, this.ZHI).index;
+        if (diff < 0) {
+          diff += 12;
+        }
+        return Math.floor(diff/2);
+      },
+      getXun:function(ganZhi){
+        return this.XUN[this.getXunIndex(ganZhi)];
+      },
+      getXunKong:function(ganZhi){
+        return this.XUN_KONG[this.getXunIndex(ganZhi)];
+      },
+      index:function(name, names, offset) {
+        for (var i = 0, j = names.length; i < j; i++) {
+          if (names[i] === name) {
+            return i + offset;
+          }
+        }
+        return -1;
+      },
+      find:function(s, arr){
+        for (var i = 0, j = arr.length; i < j; i++) {
+          var v = arr[i];
+          if (v.length < 1) {
+            continue;
+          }
+          if (s.indexOf(v) > -1) {
+            return {
+              index: i,
+              value: v
+            }
+          }
+        }
+        return null;
+      }
+    };
+  })();
+  var HolidayUtil = (function(_NAMES){
+    var _SIZE = 18;
+    var _ZERO='0'.charCodeAt(0);
+    var _TAG_REMOVE = '~';
+    var _NAMES_IN_USE=_NAMES,_DATA='200112290020020101200112300020020101200201010120020101200201020120020101200201030120020101200202091020020212200202101020020212200202121120020212200202131120020212200202141120020212200202151120020212200202161120020212200202171120020212200202181120020212200204273020020501200204283020020501200205013120020501200205023120020501200205033120020501200205043120020501200205053120020501200205063120020501200205073120020501200209286020021001200209296020021001200210016120021001200210026120021001200210036120021001200210046120021001200210056120021001200210066120021001200210076120021001200301010120030101200302011120030201200302021120030201200302031120030201200302041120030201200302051120030201200302061120030201200302071120030201200302081020030201200302091020030201200304263020030501200304273020030501200305013120030501200305023120030501200305033120030501200305043120030501200305053120030501200305063120030501200305073120030501200309276020031001200309286020031001200310016120031001200310026120031001200310036120031001200310046120031001200310056120031001200310066120031001200310076120031001200401010120040101200401171020040122200401181020040122200401221120040122200401231120040122200401241120040122200401251120040122200401261120040122200401271120040122200401281120040122200405013120040501200405023120040501200405033120040501200405043120040501200405053120040501200405063120040501200405073120040501200405083020040501200405093020040501200410016120041001200410026120041001200410036120041001200410046120041001200410056120041001200410066120041001200410076120041001200410096020041001200410106020041001200501010120050101200501020120050101200501030120050101200502051020050209200502061020050209200502091120050209200502101120050209200502111120050209200502121120050209200502131120050209200502141120050209200502151120050209200504303020050501200505013120050501200505023120050501200505033120050501200505043120050501200505053120050501200505063120050501200505073120050501200505083020050501200510016120051001200510026120051001200510036120051001200510046120051001200510056120051001200510066120051001200510076120051001200510086020051001200510096020051001200512310020060101200601010120060101200601020120060101200601030120060101200601281020060129200601291120060129200601301120060129200601311120060129200602011120060129200602021120060129200602031120060129200602041120060129200602051020060129200604293020060501200604303020060501200605013120060501200605023120060501200605033120060501200605043120060501200605053120060501200605063120060501200605073120060501200609306020061001200610016120061001200610026120061001200610036120061001200610046120061001200610056120061001200610066120061001200610076120061001200610086020061001200612300020070101200612310020070101200701010120070101200701020120070101200701030120070101200702171020070218200702181120070218200702191120070218200702201120070218200702211120070218200702221120070218200702231120070218200702241120070218200702251020070218200704283020070501200704293020070501200705013120070501200705023120070501200705033120070501200705043120070501200705053120070501200705063120070501200705073120070501200709296020071001200709306020071001200710016120071001200710026120071001200710036120071001200710046120071001200710056120071001200710066120071001200710076120071001200712290020080101200712300120080101200712310120080101200801010120080101200802021020080206200802031020080206200802061120080206200802071120080206200802081120080206200802091120080206200802101120080206200802111120080206200802121120080206200804042120080404200804052120080404200804062120080404200805013120080501200805023120080501200805033120080501200805043020080501200806074120080608200806084120080608200806094120080608200809135120080914200809145120080914200809155120080914200809276020081001200809286020081001200809296120081001200809306120081001200810016120081001200810026120081001200810036120081001200810046120081001200810056120081001200901010120090101200901020120090101200901030120090101200901040020090101200901241020090125200901251120090125200901261120090125200901271120090125200901281120090125200901291120090125200901301120090125200901311120090125200902011020090125200904042120090404200904052120090404200904062120090404200905013120090501200905023120090501200905033120090501200905284120090528200905294120090528200905304120090528200905314020090528200909276020091001200910016120091001200910026120091001200910036120091001200910046120091001200910055120091003200910065120091003200910075120091003200910085120091003200910105020091003201001010120100101201001020120100101201001030120100101201002131120100213201002141120100213201002151120100213201002161120100213201002171120100213201002181120100213201002191120100213201002201020100213201002211020100213201004032120100405201004042120100405201004052120100405201005013120100501201005023120100501201005033120100501201006124020100616201006134020100616201006144120100616201006154120100616201006164120100616201009195020100922201009225120100922201009235120100922201009245120100922201009255020100922201009266020101001201010016120101001201010026120101001201010036120101001201010046120101001201010056120101001201010066120101001201010076120101001201010096020101001201101010120110101201101020120110101201101030120110101201101301020110203201102021120110203201102031120110203201102041120110203201102051120110203201102061120110203201102071120110203201102081120110203201102121020110203201104022020110405201104032120110405201104042120110405201104052120110405201104303120110501201105013120110501201105023120110501201106044120110606201106054120110606201106064120110606201109105120110912201109115120110912201109125120110912201110016120111001201110026120111001201110036120111001201110046120111001201110056120111001201110066120111001201110076120111001201110086020111001201110096020111001201112310020120101201201010120120101201201020120120101201201030120120101201201211020120123201201221120120123201201231120120123201201241120120123201201251120120123201201261120120123201201271120120123201201281120120123201201291020120123201203312020120404201204012020120404201204022120120404201204032120120404201204042120120404201204283020120501201204293120120501201204303120120501201205013120120501201205023020120501201206224120120623201206234120120623201206244120120623201209295020120930201209305120120930201210016120121001201210026120121001201210036120121001201210046120121001201210056120121001201210066120121001201210076120121001201210086020121001201301010120130101201301020120130101201301030120130101201301050020130101201301060020130101201302091120130210201302101120130210201302111120130210201302121120130210201302131120130210201302141120130210201302151120130210201302161020130210201302171020130210201304042120130404201304052120130404201304062120130404201304273020130501201304283020130501201304293120130501201304303120130501201305013120130501201306084020130612201306094020130612201306104120130612201306114120130612201306124120130612201309195120130919201309205120130919201309215120130919201309225020130919201309296020131001201310016120131001201310026120131001201310036120131001201310046120131001201310056120131001201310066120131001201310076120131001201401010120140101201401261020140131201401311120140131201402011120140131201402021120140131201402031120140131201402041120140131201402051120140131201402061120140131201402081020140131201404052120140405201404062120140405201404072120140405201405013120140501201405023120140501201405033120140501201405043020140501201405314120140602201406014120140602201406024120140602201409065120140908201409075120140908201409085120140908201409286020141001201410016120141001201410026120141001201410036120141001201410046120141004201410056120141001201410066120141001201410076120141001201410116020141001201501010120150101201501020120150101201501030120150101201501040020150101201502151020150219201502181120150219201502191120150219201502201120150219201502211120150219201502221120150219201502231120150219201502241120150219201502281020150219201504042120150405201504052120150405201504062120150405201505013120150501201505023120150501201505033120150501201506204120150620201506214120150620201506224120150620201509038120150903201509048120150903201509058120150903201509068020150903201509265120150927201509275120150927201510016120151001201510026120151001201510036120151001201510046120151004201510056120151001201510066120151001201510076120151001201510106020151001201601010120160101201601020120160101201601030120160101201602061020160208201602071120160208201602081120160208201602091120160208201602101120160208201602111120160208201602121120160208201602131120160208201602141020160208201604022120160404201604032120160404201604042120160404201604303120160501201605013120160501201605023120160501201606094120160609201606104120160609201606114120160609201606124020160609201609155120160915201609165120160915201609175120160915201609185020160915201610016120161001201610026120161001201610036120161001201610046120161001201610056120161001201610066120161001201610076120161001201610086020161001201610096020161001201612310120170101201701010120170101201701020120170101201701221020170128201701271120170128201701281120170128201701291120170128201701301120170128201701311120170128201702011120170128201702021120170128201702041020170128201704012020170404201704022120170404201704032120170404201704042120170404201704293120170501201704303120170501201705013120170501201705274020170530201705284120170530201705294120170530201705304120170530201709306020171001201710016120171001201710026120171001201710036120171001201710045120171004201710056120171001201710066120171001201710076120171001201710086120171001201712300120180101201712310120180101201801010120180101201802111020180216201802151120180216201802161120180216201802171120180216201802181120180216201802191120180216201802201120180216201802211120180216201802241020180216201804052120180405201804062120180405201804072120180405201804082020180405201804283020180501201804293120180501201804303120180501201805013120180501201806164120180618201806174120180618201806184120180618201809225120180924201809235120180924201809245120180924201809296020181001201809306020181001201810016120181001201810026120181001201810036120181001201810046120181001201810056120181001201810066120181001201810076120181001201812290020190101201812300120190101201812310120190101201901010120190101201902021020190205201902031020190205201902041120190205201902051120190205201902061120190205201902071120190205201902081120190205201902091120190205201902101120190205201904052120190405201904062120190405201904072120190405201904283020190501201905013120190501201905023120190501201905033120190501201905043120190501201905053020190501201906074120190607201906084120190607201906094120190607201909135120190913201909145120190913201909155120190913201909296020191001201910016120191001201910026120191001201910036120191001201910046120191001201910056120191001201910066120191001201910076120191001201910126020191001202001010120200101202001191020200125202001241120200125202001251120200125202001261120200125202001271120200125202001281120200125202001291120200125202001301120200125202001311120200125202002011120200125202002021120200125202004042120200404202004052120200404202004062120200404202004263020200501202005013120200501202005023120200501202005033120200501202005043120200501202005053120200501202005093020200501202006254120200625202006264120200625202006274120200625202006284020200625202009277020201001202010017120201001202010026120201001202010036120201001202010046120201001202010056120201001202010066120201001202010076120201001202010086120201001202010106020201001202101010120210101202101020120210101202101030120210101202102071020210212202102111120210212202102121120210212202102131120210212202102141120210212202102151120210212202102161120210212202102171120210212202102201020210212202104032120210404202104042120210404202104052120210404202104253020210501202105013120210501202105023120210501202105033120210501202105043120210501202105053120210501202105083020210501202106124120210614202106134120210614202106144120210614202109185020210921202109195120210921202109205120210921202109215120210921202109266020211001202110016120211001202110026120211001202110036120211001202110046120211001202110056120211001202110066120211001202110076120211001202110096020211001202201010120220101202201020120220101202201030120220101202201291020220201202201301020220201202201311120220201202202011120220201202202021120220201202202031120220201202202041120220201202202051120220201202202061120220201202204022020220405202204032120220405202204042120220405202204052120220405202204243020220501202204303120220501202205013120220501202205023120220501202205033120220501202205043120220501202205073020220501202206034120220603202206044120220603202206054120220603202209105120220910202209115120220910202209125120220910202210016120221001202210026120221001202210036120221001202210046120221001202210056120221001202210066120221001202210076120221001202210086020221001202210096020221001202212310120230101202301010120230101202301020120230101202301211120230122202301221120230122202301231120230122202301241120230122202301251120230122202301261120230122202301271120230122202301281020230122202301291020230122202304052120230405202304233020230501202304293120230501202304303120230501202305013120230501202305023120230501202305033120230501202305063020230501202306224120230622202306234120230622202306244120230622202306254020230622202309295120230929202309306120231001202310016120231001202310026120231001202310036120231001202310046120231001202310056120231001202310066120231001202310076020231001202310086020231001202312300120240101202312310120240101202401010120240101202402041020240210202402101120240210202402111120240210202402121120240210202402131120240210202402141120240210202402151120240210202402161120240210202402171120240210202402181020240210202404042120240404202404052120240404202404062120240404202404072020240404202404283020240501202405013120240501202405023120240501202405033120240501202405043120240501202405053120240501202405113020240501202406084120240610202406094120240610202406104120240610202409145020240917202409155120240917202409165120240917202409175120240917202409296020241001202410016120241001202410026120241001202410036120241001202410046120241001202410056120241001202410066120241001202410076120241001202410126020241001202501010120250101202501261020250129202501281120250129202501291120250129202501301120250129202501311120250129202502011120250129202502021120250129202502031120250129202502041120250129202502081020250129202504042120250404202504052120250404202504062120250404202504273020250501202505013120250501202505023120250501202505033120250501202505043120250501202505053120250501202505314120250531202506014120250531202506024120250531202509287020251001202510017120251001202510027120251001202510037120251001202510047120251001202510057120251001202510067120251001202510077120251001202510087120251001202510117020251001202601010120260101202601020120260101202601030120260101202601040020260101202602141020260217202602151120260217202602161120260217202602171120260217202602181120260217202602191120260217202602201120260217202602211120260217202602221120260217202602231120260217202602281020260217202604042120260405202604052120260405202604062120260405202605013120260501202605023120260501202605033120260501202605043120260501202605053120260501202605093020260501202606194120260619202606204120260619202606214120260619202609206020261001202609255120260925202609265120260925202609275120260925202610016120261001202610026120261001202610036120261001202610046120261001202610056120261001202610066120261001202610076120261001202610106020261001';
+    var _DATA_IN_USE = _DATA;
+    var _padding = function(n){
+      return (n<10?'0':'')+n;
+    };
+    var _ymd = function(s){
+      return s.indexOf('-')<0?(s.substring(0,4)+'-'+s.substring(4,6)+'-'+s.substring(6)):s;
+    };
+    var _buildHoliday = function(day,name,work,target){
+      return {
+        _p:{
+          day:_ymd(day),
+          name:name,
+          work:work,
+          target:_ymd(target)
+        },
+        getDay:function(){
+          return this._p.day;
+        },
+        setDay:function(v){
+          this._p.day = _ymd(v);
+        },
+        getName:function(){
+          return this._p.name;
+        },
+        setName:function(v){
+          this._p.name = v;
+        },
+        isWork:function(){
+          return this._p.work;
+        },
+        setWork:function(v){
+          this._p.work = v;
+        },
+        getTarget:function(){
+          return this._p.target;
+        },
+        setTarget:function(v){
+          this._p.target = _ymd(v);
+        },
+        toString:function(){
+          return this._p.day+' '+this._p.name+(this._p.work?'调休':'')+' '+this._p.target;
+        }
+      };
+    };
+    var _buildHolidayForward = function(s){
+      var day = s.substring(0,8);
+      var name = _NAMES_IN_USE[s.charCodeAt(8)-_ZERO];
+      var work = s.charCodeAt(9)===_ZERO;
+      var target = s.substring(10, 18);
+      return _buildHoliday(day,name,work,target);
+    };
+    var _buildHolidayBackward = function(s){
+      var size = s.length;
+      var day = s.substring(size-18,size-10);
+      var name = _NAMES_IN_USE[s.charCodeAt(size-10)-_ZERO];
+      var work = s.charCodeAt(size-9)===_ZERO;
+      var target = s.substring(size-8);
+      return _buildHoliday(day,name,work,target);
+    };
+    var _findForward = function(key){
+      var start = _DATA_IN_USE.indexOf(key);
+      if(start<0) {
+        return null;
+      }
+      var right = _DATA_IN_USE.substring(start);
+      var n = right.length%_SIZE;
+      if(n>0){
+        right = right.substring(n);
+      }
+      while((0!==right.indexOf(key))&&right.length>=_SIZE){
+        right = right.substring(_SIZE);
+      }
+      return right;
+    };
+    var _findBackward = function(key){
+      var start = _DATA_IN_USE.lastIndexOf(key);
+      if(start<0) {
+        return null;
+      }
+      var keySize = key.length;
+      var left = _DATA_IN_USE.substring(0,start+keySize);
+      var size = left.length;
+      var n = size%_SIZE;
+      if(n>0){
+        left = left.substring(0,size-n);
+      }
+      size = left.length;
+      while((size-keySize!==left.lastIndexOf(key))&&size>=_SIZE){
+        left = left.substring(0,size-_SIZE);
+        size = left.length;
+      }
+      return left;
+    };
+    var _findHolidaysForward = function(key){
+      var l = [];
+      var s = _findForward(key);
+      if(null==s) {
+        return l;
+      }
+      while(0===s.indexOf(key)){
+        l.push(_buildHolidayForward(s));
+        s = s.substring(_SIZE);
+      }
+      return l;
+    };
+    var _findHolidaysBackward = function(key){
+      var l = [];
+      var s = _findBackward(key);
+      if(null==s) {
+        return l;
+      }
+      var size = s.length;
+      var keySize = key.length;
+      while(size-keySize===s.lastIndexOf(key)){
+        l.push(_buildHolidayBackward(s));
+        s = s.substring(0,size-_SIZE);
+        size = s.length;
+      }
+      l.reverse();
+      return l;
+    };
+    var _getHoliday = function(args){
+      var l = [];
+      switch(args.length){
+        case 1:
+          l = _findHolidaysForward(args[0].replace(/-/g,''));
+          break;
+        case 3:
+          l = _findHolidaysForward(args[0]+_padding(args[1])+_padding(args[2]));
+          break;
+      }
+      return l.length<1?null:l[0];
+    };
+    var _getHolidays = function(args){
+      var l = [];
+      switch(args.length){
+        case 1:
+          l = _findHolidaysForward((args[0]+'').replace(/-/g,''));
+          break;
+        case 2:
+          l = _findHolidaysForward(args[0]+_padding(args[1]));
+          break;
+      }
+      return l;
+    };
+    var _getHolidaysByTarget = function(args){
+      var l = [];
+      switch(args.length){
+        case 1:
+          l = _findHolidaysBackward((args[0]+'').replace(/-/g,''));
+          break;
+        case 3:
+          l = _findHolidaysBackward(args[0]+_padding(args[1])+_padding(args[2]));
+          break;
+      }
+      return l;
+    };
+    var _fixNames = function(names){
+      if(names){
+        _NAMES_IN_USE = names;
+      }
+    };
+    var _fixData = function(data){
+      if(!data){
+        return;
+      }
+      var append = [];
+      while(data.length>=_SIZE){
+        var segment = data.substring(0,_SIZE);
+        var day = segment.substring(0,8);
+        var remove = _TAG_REMOVE === segment.substring(8, 9);
+        var holiday = _getHoliday([day]);
+        if(!holiday){
+          if (!remove) {
+            append.push(segment);
+          }
+        }else{
+          var nameIndex = -1;
+          for(var i=0,j=_NAMES_IN_USE.length;i<j;i++){
+            if(_NAMES_IN_USE[i]===holiday.getName()){
+              nameIndex = i;
+              break;
+            }
+          }
+          if(nameIndex>-1){
+            var old = day + String.fromCharCode(nameIndex + _ZERO) + (holiday.isWork() ? '0' : '1') + holiday.getTarget().replace(/-/g, '');
+            _DATA_IN_USE = _DATA_IN_USE.replace(new RegExp(old, 'g'), remove ? '' : segment);
+          }
+        }
+        data = data.substring(_SIZE);
+      }
+      if(append.length>0){
+        _DATA_IN_USE += append.join('');
+      }
+    };
+    var _fix = function(args){
+      switch(args.length){
+        case 1:
+          _fixData(args[0]);
+          break;
+        case 2:
+          _fixNames(args[0]);
+          _fixData(args[1]);
+          break;
+      }
+    };
+    return {
+      NAMES:_NAMES,
+      getHoliday:function(){return _getHoliday(arguments);},
+      getHolidays:function(){return _getHolidays(arguments);},
+      getHolidaysByTarget:function(){return _getHolidaysByTarget(arguments);},
+      fix:function(){_fix(arguments);}
+    };
+  })(['元旦节','春节','清明节','劳动节','端午节','中秋节','国庆节','国庆中秋','抗战胜利日']);
+  var NineStar = (function(){
+    var _fromIndex=function(index){
+      return {
+        _p:{index:index},
+        getNumber:function(){return NineStarUtil.NUMBER[this._p.index];},
+        getColor:function(){return NineStarUtil.COLOR[this._p.index];},
+        getWuXing:function(){return NineStarUtil.WU_XING[this._p.index];},
+        getPosition:function(){return NineStarUtil.POSITION[this._p.index];},
+        getPositionDesc:function(){return LunarUtil.POSITION_DESC[this.getPosition()];},
+        getNameInXuanKong:function(){return NineStar.NAME_XUAN_KONG[this._p.index];},
+        getNameInBeiDou:function(){return NineStar.NAME_BEI_DOU[this._p.index];},
+        getNameInQiMen:function(){return NineStar.NAME_QI_MEN[this._p.index];},
+        getNameInTaiYi:function(){return NineStar.NAME_TAI_YI[this._p.index];},
+        getLuckInQiMen:function(){return NineStar.LUCK_QI_MEN[this._p.index];},
+        getLuckInXuanKong:function(){return NineStarUtil.LUCK_XUAN_KONG[this._p.index];},
+        getYinYangInQiMen:function(){return NineStarUtil.YIN_YANG_QI_MEN[this._p.index];},
+        getTypeInTaiYi:function(){return NineStar.TYPE_TAI_YI[this._p.index];},
+        getBaMenInQiMen:function(){return NineStar.BA_MEN_QI_MEN[this._p.index];},
+        getSongInTaiYi:function(){return NineStar.SONG_TAI_YI[this._p.index];},
+        getIndex:function(){return this._p.index;},
+        toString:function(){return this.getNumber()+this.getColor()+this.getWuXing()+this.getNameInBeiDou();},
+        toFullString:function(){
+          var s = this.getNumber();
+          s += this.getColor();
+          s += this.getWuXing();
+          s += ' ';
+          s += this.getPosition();
+          s += '(';
+          s += this.getPositionDesc();
+          s += ') ';
+          s += this.getNameInBeiDou();
+          s += ' 玄空[';
+          s += this.getNameInXuanKong();
+          s += ' ';
+          s += this.getLuckInXuanKong();
+          s += '] 奇门[';
+          s += this.getNameInQiMen();
+          s += ' ';
+          s += this.getLuckInQiMen();
+          if(this.getBaMenInQiMen().length>0) {
+            s += ' ';
+            s += this.getBaMenInQiMen();
+            s += '门';
+          }
+          s += ' ';
+          s += this.getYinYangInQiMen();
+          s += '] 太乙[';
+          s += this.getNameInTaiYi();
+          s += ' ';
+          s += this.getTypeInTaiYi();
+          s += ']';
+          return s;
+        }
+      };
+    };
+    return {
+      NAME_BEI_DOU:['天枢','天璇','天玑','天权','玉衡','开阳','摇光','洞明','隐元'],
+      NAME_XUAN_KONG:['贪狼','巨门','禄存','文曲','廉贞','武曲','破军','左辅','右弼'],
+      NAME_QI_MEN:['天蓬','天芮','天冲','天辅','天禽','天心','天柱','天任','天英'],
+      BA_MEN_QI_MEN:['休','死','伤','杜','','开','惊','生','景'],
+      NAME_TAI_YI:['太乙','摄提','轩辕','招摇','天符','青龙','咸池','太阴','天乙'],
+      TYPE_TAI_YI:['吉神','凶神','安神','安神','凶神','吉神','凶神','吉神','吉神'],
+      SONG_TAI_YI:['门中太乙明，星官号贪狼，赌彩财喜旺，婚姻大吉昌，出入无阻挡，参谒见贤良，此行三五里，黑衣别阴阳。','门前见摄提，百事必忧疑，相生犹自可，相克祸必临，死门并相会，老妇哭悲啼，求谋并吉事，尽皆不相宜，只可藏隐遁，若动伤身疾。','出入会轩辕，凡事必缠牵，相生全不美，相克更忧煎，远行多不利，博彩尽输钱，九天玄女法，句句不虚言。','招摇号木星，当之事莫行，相克行人阻，阴人口舌迎，梦寐多惊惧，屋响斧自鸣，阴阳消息理，万法弗违情。','五鬼为天符，当门阴女谋，相克无好事，行路阻中途，走失难寻觅，道逢有尼姑，此星当门值，万事有灾除。','神光跃青龙，财气喜重重，投入有酒食，赌彩最兴隆，更逢相生旺，休言克破凶，见贵安营寨，万事总吉同。','吾将为咸池，当之尽不宜，出入多不利，相克有灾情，赌彩全输尽，求财空手回，仙人真妙语，愚人莫与知，动用虚惊退，反复逆风吹。','坐临太阴星，百祸不相侵，求谋悉成就，知交有觅寻，回风归来路，恐有殃伏起，密语中记取，慎乎莫轻行。','迎来天乙星，相逢百事兴，运用和合庆，茶酒喜相迎，求谋并嫁娶，好合有天成，祸福如神验，吉凶甚分明。'],
+      LUCK_QI_MEN:['大凶','大凶','小吉','大吉','大吉','大吉','小凶','小吉','小凶'],
+      fromIndex:function(index){return _fromIndex(index);}
+    };
+  })();
+  var EightChar = (function(){
+    var _fromLunar=function(lunar){
+      return {
+        _p:{sect:2,lunar:lunar},
+        setSect:function(sect){
+          sect *= 1;
+          this._p.sect=(1===sect)?1:2;
+        },
+        getSect:function(){return this._p.sect;},
+        getDayGanIndex:function(){return 2===this._p.sect?this._p.lunar.getDayGanIndexExact2():this._p.lunar.getDayGanIndexExact();},
+        getDayZhiIndex:function(){return 2===this._p.sect?this._p.lunar.getDayZhiIndexExact2():this._p.lunar.getDayZhiIndexExact();},
+        getYear:function(){return this._p.lunar.getYearInGanZhiExact();},
+        getYearGan:function(){return this._p.lunar.getYearGanExact();},
+        getYearZhi:function(){return this._p.lunar.getYearZhiExact();},
+        getYearHideGan:function(){return LunarUtil.ZHI_HIDE_GAN[this.getYearZhi()];},
+        getYearWuXing:function(){return LunarUtil.WU_XING_GAN[this.getYearGan()]+LunarUtil.WU_XING_ZHI[this.getYearZhi()];},
+        getYearNaYin:function(){return LunarUtil.NAYIN[this.getYear()];},
+        getYearShiShenGan:function(){return LunarUtil.SHI_SHEN[this.getDayGan()+this.getYearGan()];},
+        getYearShiShenZhi:function(){
+          var dayGan = this.getDayGan();
+          var hideGan = LunarUtil.ZHI_HIDE_GAN[this.getYearZhi()];
+          var l = [];
+          for(var i=0,j=hideGan.length;i<j;i++){
+            l.push(LunarUtil.SHI_SHEN[dayGan+hideGan[i]]);
+          }
+          return l;
+        },
+        _getDiShi:function(zhiIndex){
+          var offset = LunarUtil.CHANG_SHENG_OFFSET[this.getDayGan()];
+          var index = offset + (this.getDayGanIndex()%2===0?zhiIndex:-zhiIndex);
+          if(index>=12){
+            index -= 12;
+          }
+          if(index<0){
+            index += 12;
+          }
+          return LunarUtil.CHANG_SHENG[index];
+        },
+        getYearDiShi:function(){return this._getDiShi(this._p.lunar.getYearZhiIndexExact());},
+        getYearXun:function(){return this._p.lunar.getYearXunExact()},
+        getYearXunKong:function(){return this._p.lunar.getYearXunKongExact()},
+        getMonth:function(){return this._p.lunar.getMonthInGanZhiExact();},
+        getMonthGan:function(){return this._p.lunar.getMonthGanExact();},
+        getMonthZhi:function(){return this._p.lunar.getMonthZhiExact();},
+        getMonthHideGan:function(){return LunarUtil.ZHI_HIDE_GAN[this.getMonthZhi()];},
+        getMonthWuXing:function(){return LunarUtil.WU_XING_GAN[this.getMonthGan()]+LunarUtil.WU_XING_ZHI[this.getMonthZhi()];},
+        getMonthNaYin:function(){return LunarUtil.NAYIN[this.getMonth()];},
+        getMonthShiShenGan:function(){return LunarUtil.SHI_SHEN[this.getDayGan()+this.getMonthGan()];},
+        getMonthShiShenZhi:function(){
+          var dayGan = this.getDayGan();
+          var hideGan = LunarUtil.ZHI_HIDE_GAN[this.getMonthZhi()];
+          var l = [];
+          for(var i=0,j=hideGan.length;i<j;i++){
+            l.push(LunarUtil.SHI_SHEN[dayGan+hideGan[i]]);
+          }
+          return l;
+        },
+        getMonthDiShi:function(){return this._getDiShi(this._p.lunar.getMonthZhiIndexExact());},
+        getMonthXun:function(){return this._p.lunar.getMonthXunExact()},
+        getMonthXunKong:function(){return this._p.lunar.getMonthXunKongExact()},
+        getDay:function(){return 2===this._p.sect?this._p.lunar.getDayInGanZhiExact2():this._p.lunar.getDayInGanZhiExact();},
+        getDayGan:function(){return 2===this._p.sect?this._p.lunar.getDayGanExact2():this._p.lunar.getDayGanExact();},
+        getDayZhi:function(){return 2===this._p.sect?this._p.lunar.getDayZhiExact2():this._p.lunar.getDayZhiExact();},
+        getDayHideGan:function(){return LunarUtil.ZHI_HIDE_GAN[this.getDayZhi()];},
+        getDayWuXing:function(){return LunarUtil.WU_XING_GAN[this.getDayGan()]+LunarUtil.WU_XING_ZHI[this.getDayZhi()];},
+        getDayNaYin:function(){return LunarUtil.NAYIN[this.getDay()];},
+        getDayShiShenGan:function(){return '日主';},
+        getDayShiShenZhi:function(){
+          var dayGan = this.getDayGan();
+          var hideGan = LunarUtil.ZHI_HIDE_GAN[this.getDayZhi()];
+          var l = [];
+          for(var i=0,j=hideGan.length;i<j;i++){
+            l.push(LunarUtil.SHI_SHEN[dayGan+hideGan[i]]);
+          }
+          return l;
+        },
+        getDayDiShi:function(){return this._getDiShi(this.getDayZhiIndex());},
+        getDayXun:function(){return 2===this._p.sect?this._p.lunar.getDayXunExact2():this._p.lunar.getDayXunExact()},
+        getDayXunKong:function(){return 2===this._p.sect?this._p.lunar.getDayXunKongExact2():this._p.lunar.getDayXunKongExact()},
+        getTime:function(){return this._p.lunar.getTimeInGanZhi();},
+        getTimeGan:function(){return this._p.lunar.getTimeGan();},
+        getTimeZhi:function(){return this._p.lunar.getTimeZhi();},
+        getTimeHideGan:function(){return LunarUtil.ZHI_HIDE_GAN[this.getTimeZhi()];},
+        getTimeWuXing:function(){return LunarUtil.WU_XING_GAN[this.getTimeGan()]+LunarUtil.WU_XING_ZHI[this.getTimeZhi()];},
+        getTimeNaYin:function(){return LunarUtil.NAYIN[this.getTime()];},
+        getTimeShiShenGan:function(){return LunarUtil.SHI_SHEN[this.getDayGan()+this.getTimeGan()];},
+        getTimeShiShenZhi:function(){
+          var dayGan = this.getDayGan();
+          var hideGan = LunarUtil.ZHI_HIDE_GAN[this.getTimeZhi()];
+          var l = [];
+          for(var i=0,j=hideGan.length;i<j;i++){
+            l.push(LunarUtil.SHI_SHEN[dayGan+hideGan[i]]);
+          }
+          return l;
+        },
+        getTimeDiShi:function(){return this._getDiShi(this._p.lunar.getTimeZhiIndex());},
+        getTimeXun:function(){return this._p.lunar.getTimeXun();},
+        getTimeXunKong:function(){return this._p.lunar.getTimeXunKong();},
+        getTaiYuan:function(){
+          var ganIndex = this._p.lunar.getMonthGanIndexExact() + 1;
+          if(ganIndex>=10){
+            ganIndex -= 10;
+          }
+          var zhiIndex = this._p.lunar.getMonthZhiIndexExact() + 3;
+          if(zhiIndex>=12){
+            zhiIndex -= 12;
+          }
+          return LunarUtil.GAN[ganIndex+1]+LunarUtil.ZHI[zhiIndex+1];
+        },
+        getTaiYuanNaYin:function(){return LunarUtil.NAYIN[this.getTaiYuan()];},
+        getTaiXi:function(){
+          var lunar = this._p.lunar;
+          var ganIndex = (2 === this._p.sect) ? lunar.getDayGanIndexExact2() : lunar.getDayGanIndexExact();
+          var zhiIndex = (2 === this._p.sect) ? lunar.getDayZhiIndexExact2() : lunar.getDayZhiIndexExact();
+          return LunarUtil.HE_GAN_5[ganIndex]+LunarUtil.HE_ZHI_6[zhiIndex];
+        },
+        getTaiXiNaYin:function(){return LunarUtil.NAYIN[this.getTaiXi()];},
+        getMingGong:function(){
+          var monthZhiIndex = LunarUtil.index(this.getMonthZhi(), LunarUtil.MONTH_ZHI, 0);
+          var timeZhiIndex = LunarUtil.index(this.getTimeZhi(), LunarUtil.MONTH_ZHI, 0);
+          var offset = monthZhiIndex + timeZhiIndex;
+          offset = (offset >= 14 ? 26 : 14) - offset;
+          var ganIndex = (this._p.lunar.getYearGanIndexExact() + 1) * 2 + offset;
+          while (ganIndex > 10) {
+            ganIndex -= 10;
+          }
+          return LunarUtil.GAN[ganIndex] + LunarUtil.MONTH_ZHI[offset];
+        },
+        getMingGongNaYin:function(){return LunarUtil.NAYIN[this.getMingGong()];},
+        getShenGong:function(){
+          var monthZhiIndex = LunarUtil.index(this.getMonthZhi(), LunarUtil.MONTH_ZHI, 0);
+          var timeZhiIndex = LunarUtil.index(this.getTimeZhi(), LunarUtil.ZHI, 0);
+          var offset = monthZhiIndex + timeZhiIndex;
+          if (offset > 12) {
+            offset -= 12;
+          }
+          var ganIndex = (this._p.lunar.getYearGanIndexExact() + 1) * 2 + offset;
+          while (ganIndex > 10) {
+            ganIndex -= 10;
+          }
+          return LunarUtil.GAN[ganIndex] + LunarUtil.MONTH_ZHI[offset];
+        },
+        getShenGongNaYin:function(){return LunarUtil.NAYIN[this.getShenGong()];},
+        getLunar:function(){return this._p.lunar;},
+        getYun:function(gender, sect){
+          sect *= 1;
+          sect = (2 === sect) ? sect : 1;
+          var lunar = this.getLunar();
+          var yang = 0 === lunar.getYearGanIndexExact() % 2;
+          var man = 1 === gender;
+          var forward = (yang && man) || (!yang && !man);
+          var start = (function(){
+            var prev = lunar.getPrevJie();
+            var next = lunar.getNextJie();
+            var current = lunar.getSolar();
+            var start = forward ? current : prev.getSolar();
+            var end = forward ? next.getSolar() : current;
+
+            var year;
+            var month;
+            var day;
+            var hour = 0;
+
+            if (2 === sect) {
+              var minutes = end.subtractMinute(start);
+              year = Math.floor(minutes / 4320);
+              minutes -= year * 4320;
+              month = Math.floor(minutes / 360);
+              minutes -= month * 360;
+              day = Math.floor(minutes / 12);
+              minutes -= day * 12;
+              hour = minutes * 2;
+            } else {
+              var endTimeZhiIndex = (end.getHour() === 23) ? 11 : LunarUtil.getTimeZhiIndex(end.toYmdHms().substring(11, 16));
+              var startTimeZhiIndex = (start.getHour() === 23) ? 11 : LunarUtil.getTimeZhiIndex(start.toYmdHms().substring(11, 16));
+              // 时辰差
+              var hourDiff = endTimeZhiIndex - startTimeZhiIndex;
+              // 天数差
+              var dayDiff = end.subtract(start);
+              if (hourDiff < 0) {
+                hourDiff += 12;
+                dayDiff--;
+              }
+              var monthDiff = Math.floor(hourDiff * 10 / 30);
+              month = dayDiff * 4 + monthDiff;
+              day = hourDiff * 10 - monthDiff * 30;
+              year = Math.floor(month / 12);
+              month = month - year * 12;
+            }
+
+            return {
+              year: year,
+              month: month,
+              day: day,
+              hour: hour
+            };
+          })();
+          var buildLiuYue = function(liuNian, index){
+            return {
+              _p: {
+                index: index,
+                liuNian: liuNian
+              },
+              getIndex:function(){return this._p.index;},
+              getMonthInChinese:function(){return LunarUtil.MONTH[this._p.index + 1];},
+              getGanZhi:function(){
+                var yearGanIndex = LunarUtil.find(this._p.liuNian.getGanZhi(), LunarUtil.GAN).index - 1;
+                var offset = [2, 4, 6, 8, 0][yearGanIndex % 5];
+                var gan = LunarUtil.GAN[(this._p.index + offset) % 10 + 1];
+                var zhi = LunarUtil.ZHI[(this._p.index + LunarUtil.BASE_MONTH_ZHI_INDEX) % 12 + 1];
+                return gan + zhi;
+              },
+              getXun:function(){return LunarUtil.getXun(this.getGanZhi());},
+              getXunKong:function(){return LunarUtil.getXunKong(this.getGanZhi());}
+            };
+          };
+          var buildLiuNian = function(daYun, index){
+            return {
+              _p: {
+                year: daYun.getStartYear() + index,
+                age: daYun.getStartAge() + index,
+                index: index,
+                daYun: daYun,
+                lunar: daYun.getLunar()
+              },
+              getYear: function(){return this._p.year;},
+              getAge: function(){return this._p.age;},
+              getIndex: function(){return this._p.index;},
+              getLunar: function(){return this._p.lunar;},
+              getGanZhi: function(){
+                var offset = LunarUtil.getJiaZiIndex(this._p.lunar.getJieQiTable()[I18n.getMessage('jq.liChun')].getLunar().getYearInGanZhiExact()) + this._p.index;
+                if (this._p.daYun.getIndex() > 0) {
+                  offset += this._p.daYun.getStartAge() - 1;
+                }
+                offset %= LunarUtil.JIA_ZI.length;
+                return LunarUtil.JIA_ZI[offset];
+              },
+              getXun:function(){return LunarUtil.getXun(this.getGanZhi());},
+              getXunKong:function(){return LunarUtil.getXunKong(this.getGanZhi());},
+              getLiuYue: function(){
+                var l = [];
+                for (var i = 0; i < 12; i++) {
+                  l.push(buildLiuYue(this,i));
+                }
+                return l;
+              }
+            };
+          };
+          var buildXiaoYun = function(daYun, index, forward){
+            return {
+              _p: {
+                year: daYun.getStartYear() + index,
+                age: daYun.getStartAge() + index,
+                index: index,
+                daYun: daYun,
+                forward: forward,
+                lunar: daYun.getLunar()
+              },
+              getYear: function(){return this._p.year;},
+              getAge: function(){return this._p.age;},
+              getIndex: function(){return this._p.index;},
+              getGanZhi: function(){
+                var offset = LunarUtil.getJiaZiIndex(this._p.lunar.getTimeInGanZhi());
+                var add = this._p.index + 1;
+                if (this._p.daYun.getIndex() > 0) {
+                  add += this._p.daYun.getStartAge() - 1;
+                }
+                offset += this._p.forward ? add : -add;
+                var size = LunarUtil.JIA_ZI.length;
+                while (offset < 0) {
+                  offset += size;
+                }
+                offset %= size;
+                return LunarUtil.JIA_ZI[offset];
+              },
+              getXun:function(){return LunarUtil.getXun(this.getGanZhi());},
+              getXunKong:function(){return LunarUtil.getXunKong(this.getGanZhi());}
+            };
+          };
+          var buildDaYun = function(yun, index){
+            var birthYear = yun.getLunar().getSolar().getYear();
+            var year = yun.getStartSolar().getYear();
+            var startYear;
+            var startAge;
+            var endYear;
+            var endAge;
+            if (index < 1) {
+              startYear = birthYear;
+              startAge = 1;
+              endYear = year - 1;
+              endAge = year - birthYear;
+            } else {
+              var add = (index - 1) * 10;
+              startYear = year + add;
+              startAge = startYear - birthYear + 1;
+              endYear = startYear + 9;
+              endAge = startAge + 9;
+            }
+            return {
+              _p: {
+                startYear: startYear,
+                endYear: endYear,
+                startAge: startAge,
+                endAge: endAge,
+                index: index,
+                yun: yun,
+                lunar: yun.getLunar()
+              },
+              getStartYear: function(){return this._p.startYear;},
+              getEndYear: function(){return this._p.endYear;},
+              getStartAge: function(){return this._p.startAge;},
+              getEndAge: function(){return this._p.endAge;},
+              getIndex: function(){return this._p.index;},
+              getLunar: function(){return this._p.lunar;},
+              getGanZhi: function(){
+                if (this._p.index < 1) {
+                  return '';
+                }
+                var offset = LunarUtil.getJiaZiIndex(this._p.lunar.getMonthInGanZhiExact());
+                offset += this._p.yun.isForward() ? this._p.index : -this._p.index;
+                var size = LunarUtil.JIA_ZI.length;
+                if (offset >= size) {
+                  offset -= size;
+                }
+                if (offset < 0) {
+                  offset += size;
+                }
+                return LunarUtil.JIA_ZI[offset];
+              },
+              getXun:function(){return LunarUtil.getXun(this.getGanZhi());},
+              getXunKong:function(){return LunarUtil.getXunKong(this.getGanZhi());},
+              getLiuNian: function(n){
+                if (!n) {
+                  n = 10;
+                }
+                if (this._p.index < 1) {
+                  n = this._p.endYear-this._p.startYear+1;
+                }
+                var l = [];
+                for (var i = 0; i < n; i++) {
+                  l.push(buildLiuNian(this,i));
+                }
+                return l;
+              },
+              getXiaoYun: function(n){
+                if (!n) {
+                  n = 10;
+                }
+                if (this._p.index < 1) {
+                  n = this._p.endYear-this._p.startYear+1;
+                }
+                var l = [];
+                for (var i = 0; i < n; i++) {
+                  l.push(buildXiaoYun(this,i,this._p.yun.isForward()));
+                }
+                return l;
+              }
+            };
+          };
+          return {
+            _p: {
+              gender: gender,
+              startYear: start.year,
+              startMonth: start.month,
+              startDay: start.day,
+              startHour: start.hour,
+              forward: forward,
+              lunar: lunar
+            },
+            getGender: function(){return this._p.gender;},
+            getStartYear: function(){return this._p.startYear;},
+            getStartMonth: function(){return this._p.startMonth;},
+            getStartDay: function(){return this._p.startDay;},
+            getStartHour: function(){return this._p.startHour;},
+            isForward: function(){return this._p.forward;},
+            getLunar: function(){return this._p.lunar;},
+            getStartSolar: function(){
+              var solar = this._p.lunar.getSolar();
+              solar = solar.nextYear(this._p.startYear);
+              solar = solar.nextMonth(this._p.startMonth);
+              solar = solar.next(this._p.startDay);
+              return solar.nextHour(this._p.startHour);
+            },
+            getDaYun: function(n){
+              if (!n) {
+                n = 10;
+              }
+              var l = [];
+              for (var i = 0; i < n; i++) {
+                l.push(buildDaYun(this,i));
+              }
+              return l;
+            }
+          };
+        },
+        toString:function(){return this.getYear()+' '+this.getMonth()+' '+this.getDay()+' '+this.getTime();}
+      };
+    };
+    return {
+      fromLunar:function(lunar){return _fromLunar(lunar);}
+    };
+  })();
+  var LunarTime = (function(){
+    var _fromYmdHms=function(lunarYear,lunarMonth,lunarDay,hour,minute,second){
+      var lunar=Lunar.fromYmdHms(lunarYear,lunarMonth,lunarDay,hour,minute,second);
+      var zhiIndex=LunarUtil.getTimeZhiIndex([(hour<10?'0':'')+hour,(minute<10?'0':'')+minute].join(':'));
+      var ganIndex = (lunar.getDayGanIndexExact() % 5 * 2 + zhiIndex) % 10;
+      return {
+        _p:{
+          ganIndex:ganIndex,
+          zhiIndex:zhiIndex,
+          lunar:lunar
+        },
+        getGanIndex:function(){return this._p.ganIndex;},
+        getZhiIndex:function(){return this._p.zhiIndex;},
+        getGan:function(){return LunarUtil.GAN[this._p.ganIndex+1];},
+        getZhi:function(){return LunarUtil.ZHI[this._p.zhiIndex+1];},
+        getGanZhi:function(){return this.getGan()+this.getZhi();},
+        getShengXiao:function(){return LunarUtil.SHENGXIAO[this._p.zhiIndex+1];},
+        getPositionXi:function(){return LunarUtil.POSITION_XI[this._p.ganIndex + 1];},
+        getPositionXiDesc:function(){return LunarUtil.POSITION_DESC[this.getPositionXi()];},
+        getPositionYangGui:function(){return LunarUtil.POSITION_YANG_GUI[this._p.ganIndex + 1];},
+        getPositionYangGuiDesc:function(){return LunarUtil.POSITION_DESC[this.getPositionYangGui()];},
+        getPositionYinGui:function(){return LunarUtil.POSITION_YIN_GUI[this._p.ganIndex + 1];},
+        getPositionYinGuiDesc:function(){return LunarUtil.POSITION_DESC[this.getPositionYinGui()];},
+        getPositionFu:function(sect){return (1===sect?LunarUtil.POSITION_FU:LunarUtil.POSITION_FU_2)[this._p.ganIndex + 1];},
+        getPositionFuDesc:function(sect){return LunarUtil.POSITION_DESC[this.getPositionFu(sect)];},
+        getPositionCai:function(){return LunarUtil.POSITION_CAI[this._p.ganIndex + 1];},
+        getPositionCaiDesc:function(){return LunarUtil.POSITION_DESC[this.getPositionCai()];},
+        getNaYin:function(){return LunarUtil.NAYIN[this.getGanZhi()];},
+        getTianShen:function(){
+          return LunarUtil.TIAN_SHEN[(this._p.zhiIndex + LunarUtil.ZHI_TIAN_SHEN_OFFSET[this._p.lunar.getDayZhiExact()]) % 12 + 1];
+        },
+        getTianShenType:function(){return LunarUtil.TIAN_SHEN_TYPE[this.getTianShen()];},
+        getTianShenLuck:function(){return LunarUtil.TIAN_SHEN_TYPE_LUCK[this.getTianShenType()];},
+        getChong:function(){return LunarUtil.CHONG[this._p.zhiIndex];},
+        getSha:function(){return LunarUtil.SHA[this.getZhi()];},
+        getChongShengXiao:function(){
+          var chong = this.getChong();
+          for (var i = 0, j = LunarUtil.ZHI.length; i < j; i++) {
+            if (LunarUtil.ZHI[i]===chong) {
+              return LunarUtil.SHENGXIAO[i];
+            }
+          }
+          return '';
+        },
+        getChongDesc:function(){return '(' + this.getChongGan() + this.getChong() + ')' + this.getChongShengXiao();},
+        getChongGan:function(){return LunarUtil.CHONG_GAN[this._p.ganIndex];},
+        getChongGanTie:function(){return LunarUtil.CHONG_GAN_TIE[this._p.ganIndex];},
+        getYi:function(){return LunarUtil.getTimeYi(this._p.lunar.getDayInGanZhiExact(), this.getGanZhi());},
+        getJi:function(){return LunarUtil.getTimeJi(this._p.lunar.getDayInGanZhiExact(), this.getGanZhi());},
+        getNineStar:function(){
+          var solarYmd = this._p.lunar.getSolar().toYmd();
+          var jieQi = this._p.lunar.getJieQiTable();
+          var asc = false;
+          if (solarYmd>=jieQi[I18n.getMessage('jq.dongZhi')].toYmd() && solarYmd<jieQi[I18n.getMessage('jq.xiaZhi')].toYmd()) {
+            asc = true;
+          }
+          var offset = asc ? [0, 3, 6] : [8, 5, 2];
+          var start = offset[this._p.lunar.getDayZhiIndex() % 3];
+          var index = asc ? (start + this._p.zhiIndex) : (start + 9 - this._p.zhiIndex);
+          return NineStar.fromIndex(index % 9);
+        },
+        getXun:function(){return LunarUtil.getXun(this.getGanZhi());},
+        getXunKong:function(){return LunarUtil.getXunKong(this.getGanZhi());},
+        getMinHm:function(){
+          var hour = this._p.lunar.getHour();
+          if(hour <1){
+            return '00:00';
+          }else if(hour > 22){
+            return '23:00';
+          }
+          if(hour%2===0){
+            hour-=1;
+          }
+          return (hour<10?'0':'')+hour+':00';
+        },
+        getMaxHm:function(){
+          var hour = this._p.lunar.getHour();
+          if (hour <1){
+            return '00:59';
+          } else if (hour > 22) {
+            return '23:59';
+          }
+          if(hour%2!==0){
+            hour+=1;
+          }
+          return (hour<10?'0':'')+hour+':59';
+        },
+        toString:function(){return this.getGanZhi();}
+      };
+    };
+    return {
+      fromYmdHms:function(lunarYear,lunarMonth,lunarDay,hour,minute,second){return _fromYmdHms(lunarYear,lunarMonth,lunarDay,hour,minute,second);}
+    };
+  })();
+  var FotoUtil = (function(){
+    var XIU_OFFSET = [11, 13, 15, 17, 19, 21, 24, 0, 2, 4, 7, 9];
+    var _f=function(name,result,everyMonth,remark){
+      return {
+        _p:{
+          name:name,
+          result:result?result:'',
+          everyMonth:!!everyMonth,
+          remark:remark?remark:''
+        },
+        getName:function(){return this._p.name;},
+        getResult:function(){return this._p.result;},
+        isEveryMonth:function(){return this._p.everyMonth;},
+        getRemark:function(){return this._p.remark;},
+        toString:function(){return this._p.name;},
+        toFullString:function(){
+          var l = [this._p.name];
+          if(this._p.result) {
+            l.push(this._p.result);
+          }
+          if(this._p.remark) {
+            l.push(this._p.remark);
+          }
+          return l.join(' ');
+        }
+      };
+    };
+    var _getXiu=function(m,d){
+      return FotoUtil.XIU_27[(XIU_OFFSET[Math.abs(m)-1] + d - 1) % FotoUtil.XIU_27.length];
+    };
+    var dj='犯者夺纪';
+    var js='犯者减寿';
+    var ss='犯者损寿';
+    var xl='犯者削禄夺纪';
+    var jw='犯者三年内夫妇俱亡';
+    var _y=_f('杨公忌');
+    var _t=_f('四天王巡行', '', true);
+    var _d=_f('斗降', dj, true);
+    var _s=_f('月朔', dj, true);
+    var _w=_f('月望', dj, true);
+    var _h=_f('月晦', js, true);
+    var _l=_f('雷斋日', js, true);
+    var _j=_f('九毒日', '犯者夭亡，奇祸不测');
+    var _r=_f('人神在阴', '犯者得病', true, '宜先一日即戒');
+    var _m=_f('司命奏事', js, true, '如月小，即戒廿九');
+    var _hh=_f('月晦', js, true, '如月小，即戒廿九');
+    return {
+      XIU_27:[
+        '{xx.jiao}',
+        '{xx.kang}',
+        '{xx.di}',
+        '{xx.fang}',
+        '{xx.xin}',
+        '{xx.tail}',
+        '{xx.ji}',
+        '{xx.dou}',
+        '{xx.nv}',
+        '{xx.xu}',
+        '{xx.wei}',
+        '{xx.shi}',
+        '{xx.qiang}',
+        '{xx.kui}',
+        '{xx.lou}',
+        '{xx.vei}',
+        '{xx.mao}',
+        '{xx.bi}',
+        '{xx.zi}',
+        '{xx.can}',
+        '{xx.jing}',
+        '{xx.gui}',
+        '{xx.liu}',
+        '{xx.xing}',
+        '{xx.zhang}',
+        '{xx.yi}',
+        '{xx.zhen}'
+      ],
+      DAY_ZHAI_GUAN_YIN:['1-8','2-7','2-9','2-19','3-3','3-6','3-13','4-22','5-3','5-17','6-16','6-18','6-19','6-23','7-13','8-16','9-19','9-23','10-2','11-19','11-24','12-25'],
+      FESTIVAL:{
+        '1-1': [_f('天腊，玉帝校世人神气禄命', xl), _s],
+        '1-3': [_f('万神都会', dj), _d],
+        '1-5': [_f('五虚忌')],
+        '1-6': [_f('六耗忌'), _l],
+        '1-7': [_f('上会日', ss)],
+        '1-8': [_f('五殿阎罗天子诞', dj), _t],
+        '1-9': [_f('玉皇上帝诞', dj)],
+        '1-13': [_y],
+        '1-14': [_f('三元降', js), _t],
+        '1-15': [_f('三元降', js), _f('上元神会', dj), _w, _t],
+        '1-16': [_f('三元降', js)],
+        '1-19': [_f('长春真人诞')],
+        '1-23': [_f('三尸神奏事'), _t],
+        '1-25': [_h, _f('天地仓开日', '犯者损寿，子带疾')],
+        '1-27': [_d],
+        '1-28': [_r],
+        '1-29': [_t],
+        '1-30': [_hh, _m, _t],
+        '2-1': [_f('一殿秦广王诞', dj), _s],
+        '2-2': [_f('万神都会', dj), _f('福德土地正神诞', '犯者得祸')],
+        '2-3': [_f('文昌帝君诞', xl), _d],
+        '2-6': [_f('东华帝君诞'), _l],
+        '2-8': [_f('释迦牟尼佛出家', dj), _f('三殿宋帝王诞', dj), _f('张大帝诞', dj), _t],
+        '2-11': [_y],
+        '2-14': [_t],
+        '2-15': [_f('释迦牟尼佛涅槃', xl), _f('太上老君诞', xl), _f('月望', xl, true), _t],
+        '2-17': [_f('东方杜将军诞')],
+        '2-18': [_f('四殿五官王诞', xl), _f('至圣先师孔子讳辰', xl)],
+        '2-19': [_f('观音大士诞', dj)],
+        '2-21': [_f('普贤菩萨诞')],
+        '2-23': [_t],
+        '2-25': [_h],
+        '2-27': [_d],
+        '2-28': [_r],
+        '2-29': [_t],
+        '2-30': [_hh, _m, _t],
+        '3-1': [_f('二殿楚江王诞', dj), _s],
+        '3-3': [_f('玄天上帝诞', dj), _d],
+        '3-6': [_l],
+        '3-8': [_f('六殿卞城王诞', dj), _t],
+        '3-9': [_f('牛鬼神出', '犯者产恶胎'), _y],
+        '3-12': [_f('中央五道诞')],
+        '3-14': [_t],
+        '3-15': [_f('昊天上帝诞', dj), _f('玄坛诞', dj), _w, _t],
+        '3-16': [_f('准提菩萨诞', dj)],
+        '3-19': [_f('中岳大帝诞'), _f('后土娘娘诞'), _f('三茅降')],
+        '3-20': [_f('天地仓开日', ss), _f('子孙娘娘诞')],
+        '3-23': [_t],
+        '3-25': [_h],
+        '3-27': [_f('七殿泰山王诞'), _d],
+        '3-28': [_r, _f('苍颉至圣先师诞', xl), _f('东岳大帝诞')],
+        '3-29': [_t],
+        '3-30': [_hh, _m, _t],
+        '4-1': [_f('八殿都市王诞', dj), _s],
+        '4-3': [_d],
+        '4-4': [_f('万神善会', '犯者失瘼夭胎'), _f('文殊菩萨诞')],
+        '4-6': [_l],
+        '4-7': [_f('南斗、北斗、西斗同降', js), _y],
+        '4-8': [_f('释迦牟尼佛诞', dj), _f('万神善会', '犯者失瘼夭胎'), _f('善恶童子降', '犯者血死'), _f('九殿平等王诞'), _t],
+        '4-14': [_f('纯阳祖师诞', js), _t],
+        '4-15': [_w, _f('钟离祖师诞'),  _t],
+        '4-16': [_f('天地仓开日', ss)],
+        '4-17': [_f('十殿转轮王诞', dj)],
+        '4-18': [_f('天地仓开日', ss), _f('紫徽大帝诞', ss)],
+        '4-20': [_f('眼光圣母诞')],
+        '4-23': [_t],
+        '4-25': [_h],
+        '4-27': [_d],
+        '4-28': [_r],
+        '4-29': [_t],
+        '4-30': [_hh, _m, _t],
+        '5-1': [_f('南极长生大帝诞', dj), _s],
+        '5-3': [_d],
+        '5-5': [_f('地腊', xl), _f('五帝校定生人官爵', xl), _j, _y],
+        '5-6': [_j, _l],
+        '5-7': [_j],
+        '5-8': [_f('南方五道诞'), _t],
+        '5-11': [_f('天地仓开日', ss),_f('天下都城隍诞')],
+        '5-12': [_f('炳灵公诞')],
+        '5-13': [_f('关圣降', xl)],
+        '5-14': [_f('夜子时为天地交泰', jw), _t],
+        '5-15': [_w, _j, _t],
+        '5-16': [_f('九毒日', jw), _f('天地元气造化万物之辰', jw)],
+        '5-17': [_j],
+        '5-18': [_f('张天师诞')],
+        '5-22': [_f('孝娥神诞', dj)],
+        '5-23': [_t],
+        '5-25': [_j, _h],
+        '5-26': [_j],
+        '5-27': [_j, _d],
+        '5-28': [_r],
+        '5-29': [_t],
+        '5-30': [_hh, _m, _t],
+        '6-1': [_s],
+        '6-3': [_f('韦驮菩萨圣诞'), _d, _y],
+        '6-5': [_f('南赡部洲转大轮', ss)],
+        '6-6': [_f('天地仓开日', ss), _l],
+        '6-8': [_t],
+        '6-10': [_f('金粟如来诞')],
+        '6-14': [_t],
+        '6-15': [_w, _t],
+        '6-19': [_f('观世音菩萨成道', dj)],
+        '6-23': [_f('南方火神诞', '犯者遭回禄'), _t],
+        '6-24': [_f('雷祖诞', xl), _f('关帝诞', xl)],
+        '6-25': [_h],
+        '6-27': [_d],
+        '6-28': [_r],
+        '6-29': [_t],
+        '6-30': [_hh, _m, _t],
+        '7-1': [_s, _y],
+        '7-3': [_d],
+        '7-5': [_f('中会日', ss, false, '一作初七')],
+        '7-6': [_l],
+        '7-7': [_f('道德腊', xl), _f('五帝校生人善恶', xl), _f('魁星诞', xl)],
+        '7-8': [_t],
+        '7-10': [_f('阴毒日', '', false, '大忌')],
+        '7-12': [_f('长真谭真人诞')],
+        '7-13': [_f('大势至菩萨诞', js)],
+        '7-14': [_f('三元降', js), _t],
+        '7-15': [_w, _f('三元降', dj),_f('地官校籍', dj), _t],
+        '7-16': [_f('三元降', js)],
+        '7-18': [_f('西王母诞', dj)],
+        '7-19': [_f('太岁诞', dj)],
+        '7-22': [_f('增福财神诞', xl)],
+        '7-23': [_t],
+        '7-25': [_h],
+        '7-27': [_d],
+        '7-28': [_r],
+        '7-29': [_y, _t],
+        '7-30': [_f('地藏菩萨诞', dj), _hh, _m, _t],
+        '8-1': [_s, _f('许真君诞')],
+        '8-3': [_d, _f('北斗诞', xl), _f('司命灶君诞', '犯者遭回禄')],
+        '8-5': [_f('雷声大帝诞', dj)],
+        '8-6': [_l],
+        '8-8': [_t],
+        '8-10': [_f('北斗大帝诞')],
+        '8-12': [_f('西方五道诞')],
+        '8-14': [_t],
+        '8-15': [_w, _f('太明朝元', '犯者暴亡', false, '宜焚香守夜'), _t],
+        '8-16': [_f('天曹掠刷真君降', '犯者贫夭')],
+        '8-18': [_f('天人兴福之辰', '', false, '宜斋戒，存想吉事')],
+        '8-23': [_f('汉恒候张显王诞'), _t],
+        '8-24': [_f('灶君夫人诞')],
+        '8-25': [_h],
+        '8-27': [_d, _f('至圣先师孔子诞', xl), _y],
+        '8-28': [_r, _f('四天会事')],
+        '8-29': [_t],
+        '8-30': [_f('诸神考校', '犯者夺算'), _hh, _m, _t],
+        '9-1': [_s, _f('南斗诞', xl), _f('北斗九星降世', dj, false, '此九日俱宜斋戒')],
+        '9-3': [_d, _f('五瘟神诞')],
+        '9-6': [_l],
+        '9-8': [_t],
+        '9-9': [_f('斗母诞', xl), _f('酆都大帝诞'), _f('玄天上帝飞升')],
+        '9-10': [_f('斗母降', dj)],
+        '9-11': [_f('宜戒')],
+        '9-13': [_f('孟婆尊神诞')],
+        '9-14': [_t],
+        '9-15': [_w, _t],
+        '9-17': [_f('金龙四大王诞', '犯者遭水厄')],
+        '9-19': [_f('日宫月宫会合', js), _f('观世音菩萨诞', js)],
+        '9-23': [_t],
+        '9-25': [_h, _y],
+        '9-27': [_d],
+        '9-28': [_r],
+        '9-29': [_t],
+        '9-30': [_f('药师琉璃光佛诞', '犯者危疾'), _hh, _m, _t],
+        '10-1': [_s, _f('民岁腊', dj), _f('四天王降', '犯者一年内死')],
+        '10-3': [_d, _f('三茅诞')],
+        '10-5': [_f('下会日', js), _f('达摩祖师诞', js)],
+        '10-6': [_l, _f('天曹考察', dj)],
+        '10-8': [_f('佛涅槃日', '', false, '大忌色欲'), _t],
+        '10-10': [_f('四天王降', '犯者一年内死')],
+        '10-11': [_f('宜戒')],
+        '10-14': [_f('三元降', js), _t],
+        '10-15': [_w, _f('三元降', dj), _f('下元水府校籍', dj), _t],
+        '10-16': [_f('三元降', js), _t],
+        '10-23': [_y, _t],
+        '10-25': [_h],
+        '10-27': [_d, _f('北极紫徽大帝降')],
+        '10-28': [_r],
+        '10-29': [_t],
+        '10-30': [_hh, _m, _t],
+        '11-1': [_s],
+        '11-3': [_d],
+        '11-4': [_f('至圣先师孔子诞', xl)],
+        '11-6': [_f('西岳大帝诞')],
+        '11-8': [_t],
+        '11-11': [_f('天地仓开日', dj), _f('太乙救苦天尊诞', dj)],
+        '11-14': [_t],
+        '11-15': [_f('月望', '上半夜犯男死 下半夜犯女死'), _f('四天王巡行', '上半夜犯男死 下半夜犯女死')],
+        '11-17': [_f('阿弥陀佛诞')],
+        '11-19': [_f('太阳日宫诞', '犯者得奇祸')],
+        '11-21': [_y],
+        '11-23': [_f('张仙诞', '犯者绝嗣'), _t],
+        '11-25': [_f('掠刷大夫降', '犯者遭大凶'), _h],
+        '11-26': [_f('北方五道诞')],
+        '11-27': [_d],
+        '11-28': [_r],
+        '11-29': [_t],
+        '11-30': [_hh, _m, _t],
+        '12-1': [_s],
+        '12-3': [_d],
+        '12-6': [_f('天地仓开日', js), _l],
+        '12-7': [_f('掠刷大夫降', '犯者得恶疾')],
+        '12-8': [_f('王侯腊', dj), _f('释迦如来成佛之辰'), _t, _f('初旬内戊日，亦名王侯腊', dj)],
+        '12-12': [_f('太素三元君朝真')],
+        '12-14': [_t],
+        '12-15': [_w, _t],
+        '12-16': [_f('南岳大帝诞')],
+        '12-19': [_y],
+        '12-20': [_f('天地交道', '犯者促寿')],
+        '12-21': [_f('天猷上帝诞')],
+        '12-23': [_f('五岳诞降'), _t],
+        '12-24': [_f('司今朝天奏人善恶', '犯者得大祸')],
+        '12-25': [_f('三清玉帝同降，考察善恶', '犯者得奇祸'), _h],
+        '12-27': [_d],
+        '12-28': [_r],
+        '12-29': [_f('华严菩萨诞'), _t],
+        '12-30': [_f('诸神下降，察访善恶', '犯者男女俱亡')]
+      },
+      OTHER_FESTIVAL:{
+        '1-1': ['弥勒菩萨圣诞'],
+        '1-6': ['定光佛圣诞'],
+        '2-8': ['释迦牟尼佛出家'],
+        '2-15': ['释迦牟尼佛涅槃'],
+        '2-19': ['观世音菩萨圣诞'],
+        '2-21': ['普贤菩萨圣诞'],
+        '3-16': ['准提菩萨圣诞'],
+        '4-4': ['文殊菩萨圣诞'],
+        '4-8': ['释迦牟尼佛圣诞'],
+        '4-15': ['佛吉祥日'],
+        '4-28': ['药王菩萨圣诞'],
+        '5-13': ['伽蓝菩萨圣诞'],
+        '6-3': ['韦驮菩萨圣诞'],
+        '6-19': ['观音菩萨成道'],
+        '7-13': ['大势至菩萨圣诞'],
+        '7-15': ['佛欢喜日'],
+        '7-24': ['龙树菩萨圣诞'],
+        '7-30': ['地藏菩萨圣诞'],
+        '8-15': ['月光菩萨圣诞'],
+        '8-22': ['燃灯佛圣诞'],
+        '9-9': ['摩利支天菩萨圣诞'],
+        '9-19': ['观世音菩萨出家'],
+        '9-30': ['药师琉璃光佛圣诞'],
+        '10-5': ['达摩祖师圣诞'],
+        '10-20': ['文殊菩萨出家'],
+        '11-17': ['阿弥陀佛圣诞'],
+        '11-19': ['日光菩萨圣诞'],
+        '12-8': ['释迦牟尼佛成道'],
+        '12-23': ['监斋菩萨圣诞'],
+        '12-29': ['华严菩萨圣诞']
+      },
+      getXiu:function(m,d){return _getXiu(m,d);}
+    }
+  })();
+  var Foto = (function(){
+    var _fromYmdHms=function(y,m,d,hour,minute,second){
+      return _fromLunar(Lunar.fromYmdHms(y+Foto.DEAD_YEAR-1,m,d,hour,minute,second));
+    };
+    var _fromLunar=function(lunar){
+      return {
+        _p: {
+          lunar: lunar
+        },
+        getLunar:function(){return this._p.lunar;},
+        getYear:function(){
+          var sy = this._p.lunar.getSolar().getYear();
+          var y = sy-Foto.DEAD_YEAR;
+          if(sy===this._p.lunar.getYear()){
+            y++;
+          }
+          return y;
+        },
+        getMonth:function(){return this._p.lunar.getMonth();},
+        getDay:function(){return this._p.lunar.getDay();},
+        getYearInChinese:function(){
+          var y = this.getYear()+'';
+          var s = '';
+          var zero = '0'.charCodeAt(0);
+          for(var i=0,j=y.length;i<j;i++){
+            s+=LunarUtil.NUMBER[y.charCodeAt(i)-zero];
+          }
+          return s;
+        },
+        getMonthInChinese:function(){return this._p.lunar.getMonthInChinese();},
+        getDayInChinese:function(){return this._p.lunar.getDayInChinese();},
+        getFestivals:function(){
+          var l = FotoUtil.FESTIVAL[this.getMonth()+'-'+this.getDay()];
+          return l?l:[];
+        },
+        getOtherFestivals:function(){
+          var l=[];
+          var fs=FotoUtil.OTHER_FESTIVAL[this.getMonth()+'-'+this.getDay()];
+          if(fs){
+            l=l.concat(fs);
+          }
+          return l;
+        },
+        isMonthZhai:function(){
+          var m = this.getMonth();
+          return 1===m||5===m||9===m;
+        },
+        isDayYangGong:function(){
+          var l = this.getFestivals();
+          for(var i=0,j=l.length;i<j;i++){
+            if('杨公忌'===l[i].getName()){
+              return true;
+            }
+          }
+          return false;
+        },
+        isDayZhaiShuoWang:function(){
+          var d = this.getDay();
+          return 1===d||15===d;
+        },
+        isDayZhaiSix:function(){
+          var d = this.getDay();
+          if(8===d||14===d||15===d||23===d||29===d||30===d){
+            return true;
+          }else if(28===d){
+            var m = LunarMonth.fromYm(this._p.lunar.getYear(), this.getMonth());
+            if(30!==m.getDayCount()){
+              return true;
+            }
+          }
+          return false;
+        },
+        isDayZhaiTen:function() {
+          var d = this.getDay();
+          return 1===d||8===d||14===d||15===d||18===d||23===d||24===d||28===d||29===d||30===d;
+        },
+        isDayZhaiGuanYin:function() {
+          var k = this.getMonth()+'-'+this.getDay();
+          for(var i=0,j=FotoUtil.DAY_ZHAI_GUAN_YIN.length;i<j;i++){
+            if(k===FotoUtil.DAY_ZHAI_GUAN_YIN[i]){
+              return true;
+            }
+          }
+          return false;
+        },
+        getXiu:function(){
+          return FotoUtil.getXiu(this.getMonth(), this.getDay());
+        },
+        getXiuLuck:function(){
+          return LunarUtil.XIU_LUCK[this.getXiu()];
+        },
+        getXiuSong:function(){
+          return LunarUtil.XIU_SONG[this.getXiu()];
+        },
+        getZheng:function(){
+          return LunarUtil.ZHENG[this.getXiu()];
+        },
+        getAnimal:function(){
+          return LunarUtil.ANIMAL[this.getXiu()];
+        },
+        getGong:function(){
+          return LunarUtil.GONG[this.getXiu()];
+        },
+        getShou:function(){
+          return LunarUtil.SHOU[this.getGong()];
+        },
+        toString:function(){
+          return this.getYearInChinese()+'年'+this.getMonthInChinese()+'月'+this.getDayInChinese();
+        },
+        toFullString:function(){
+          var s = this.toString();
+          var fs = this.getFestivals();
+          for(var i=0,j=fs.length;i<j;i++){
+            s += ' ('+fs[i]+')';
+          }
+          return s;
+        }
+      };
+    };
+    return {
+      DEAD_YEAR:-543,
+      fromYmdHms:function(y,m,d,hour,minute,second){return _fromYmdHms(y,m,d,hour,minute,second);},
+      fromYmd:function(y,m,d){return _fromYmdHms(y,m,d,0,0,0);},
+      fromLunar:function(lunar){return _fromLunar(lunar);}
+    };
+  })();
+  var TaoFestival = (function(){
+    var _f=function(name,remark){
+      return {
+        _p:{
+          name:name,
+          remark:remark?remark:''
+        },
+        getName:function(){return this._p.name;},
+        getRemark:function(){return this._p.remark;},
+        toString:function(){return this._p.name;},
+        toFullString:function(){
+          var l = [this._p.name];
+          if(this._p.remark) {
+            l.push('['+this._p.remark+']');
+          }
+          return l.join('');
+        }
+      };
+    };
+    return {
+      create:function(name,remark){return _f(name,remark);}
+    };
+  })();
+  var TaoUtil = (function(){
+    var _f = TaoFestival.create;
+    return {
+      SAN_HUI:['1-7','7-7','10-15'],
+      SAN_YUAN:['1-15','7-15','10-15'],
+      WU_LA:['1-1','5-5','7-7','10-1','12-8'],
+      AN_WU:['{dz.wei}', '{dz.xu}', '{dz.chen}', '{dz.yin}', '{dz.wu}', '{dz.zi}', '{dz.you}', '{dz.shen}', '{dz.si}', '{dz.hai}', '{dz.mao}', '{dz.chou}'],
+      BA_HUI:{
+        '{jz.bingWu}':'天会',
+        '{jz.renWu}':'地会',
+        '{jz.renZi}':'人会',
+        '{jz.gengWu}':'日会',
+        '{jz.gengShen}':'月会',
+        '{jz.xinYou}':'星辰会',
+        '{jz.jiaChen}':'五行会',
+        '{jz.jiaXu}':'四时会'
+      },
+      BA_JIE:{
+        '{jq.liChun}':'东北方度仙上圣天尊同梵炁始青天君下降',
+        '{jq.chunFen}':'东方玉宝星上天尊同青帝九炁天君下降',
+        '{jq.liXia}':'东南方好生度命天尊同梵炁始丹天君下降',
+        '{jq.xiaZhi}':'南方玄真万福天尊同赤帝三炁天君下降',
+        '{jq.liQiu}':'西南方太灵虚皇天尊同梵炁始素天君下降',
+        '{jq.qiuFen}':'西方太妙至极天尊同白帝七炁天君下降',
+        '{jq.liDong}':'西北方无量太华天尊同梵炁始玄天君下降',
+        '{jq.dongZhi}':'北方玄上玉宸天尊同黑帝五炁天君下降'
+      },
+      FESTIVAL: {
+        '1-1': [_f('天腊之辰', '天腊，此日五帝会于东方九炁青天')],
+        '1-3': [_f('郝真人圣诞'), _f('孙真人圣诞')],
+        '1-5': [_f('孙祖清静元君诞')],
+        '1-7': [_f('举迁赏会', '此日上元赐福，天官同地水二官考校罪福')],
+        '1-9': [_f('玉皇上帝圣诞')],
+        '1-13': [_f('关圣帝君飞升')],
+        '1-15': [_f('上元天官圣诞'), _f('老祖天师圣诞')],
+        '1-19': [_f('长春邱真人(邱处机)圣诞')],
+        '1-28': [_f('许真君(许逊天师)圣诞')],
+        '2-1': [_f('勾陈天皇大帝圣诞'), _f('长春刘真人(刘渊然)圣诞')],
+        '2-2': [_f('土地正神诞'), _f('姜太公圣诞')],
+        '2-3': [_f('文昌梓潼帝君圣诞')],
+        '2-6': [_f('东华帝君圣诞')],
+        '2-13': [_f('度人无量葛真君圣诞')],
+        '2-15': [_f('太清道德天尊(太上老君)圣诞')],
+        '2-19': [_f('慈航真人圣诞')],
+        '3-1': [_f('谭祖(谭处端)长真真人圣诞')],
+        '3-3': [_f('玄天上帝圣诞')],
+        '3-6': [_f('眼光娘娘圣诞')],
+        '3-15': [_f('天师张大真人圣诞'), _f('财神赵公元帅圣诞')],
+        '3-16': [_f('三茅真君得道之辰'), _f('中岳大帝圣诞')],
+        '3-18': [_f('王祖(王处一)玉阳真人圣诞'), _f('后土娘娘圣诞')],
+        '3-19': [_f('太阳星君圣诞')],
+        '3-20': [_f('子孙娘娘圣诞')],
+        '3-23': [_f('天后妈祖圣诞')],
+        '3-26': [_f('鬼谷先师诞')],
+        '3-28': [_f('东岳大帝圣诞')],
+        '4-1': [_f('长生谭真君成道之辰')],
+        '4-10': [_f('何仙姑圣诞')],
+        '4-14': [_f('吕祖纯阳祖师圣诞')],
+        '4-15': [_f('钟离祖师圣诞')],
+        '4-18': [_f('北极紫微大帝圣诞'), _f('泰山圣母碧霞元君诞'), _f('华佗神医先师诞')],
+        '4-20': [_f('眼光圣母娘娘诞')],
+        '4-28': [_f('神农先帝诞')],
+        '5-1': [_f('南极长生大帝圣诞')],
+        '5-5': [_f('地腊之辰', '地腊，此日五帝会于南方三炁丹天'), _f('南方雷祖圣诞'), _f('地祗温元帅圣诞'), _f('雷霆邓天君圣诞')],
+        '5-11': [_f('城隍爷圣诞')],
+        '5-13': [_f('关圣帝君降神'), _f('关平太子圣诞')],
+        '5-18': [_f('张天师圣诞')],
+        '5-20': [_f('马祖丹阳真人圣诞')],
+        '5-29': [_f('紫青白祖师圣诞')],
+        '6-1': [_f('南斗星君下降')],
+        '6-2': [_f('南斗星君下降')],
+        '6-3': [_f('南斗星君下降')],
+        '6-4': [_f('南斗星君下降')],
+        '6-5': [_f('南斗星君下降')],
+        '6-6': [_f('南斗星君下降')],
+        '6-10': [_f('刘海蟾祖师圣诞')],
+        '6-15': [_f('灵官王天君圣诞')],
+        '6-19': [_f('慈航(观音)成道日')],
+        '6-23': [_f('火神圣诞')],
+        '6-24': [_f('南极大帝中方雷祖圣诞'), _f('关圣帝君圣诞')],
+        '6-26': [_f('二郎真君圣诞')],
+        '7-7': [_f('道德腊之辰', '道德腊，此日五帝会于西方七炁素天'), _f('庆生中会', '此日中元赦罪，地官同天水二官考校罪福')],
+        '7-12': [_f('西方雷祖圣诞')],
+        '7-15': [_f('中元地官大帝圣诞')],
+        '7-18': [_f('王母娘娘圣诞')],
+        '7-20': [_f('刘祖(刘处玄)长生真人圣诞')],
+        '7-22': [_f('财帛星君文财神增福相公李诡祖圣诞')],
+        '7-26': [_f('张三丰祖师圣诞')],
+        '8-1': [_f('许真君飞升日')],
+        '8-3': [_f('九天司命灶君诞')],
+        '8-5': [_f('北方雷祖圣诞')],
+        '8-10': [_f('北岳大帝诞辰')],
+        '8-15': [_f('太阴星君诞')],
+        '9-1': [_f('北斗九皇降世之辰')],
+        '9-2': [_f('北斗九皇降世之辰')],
+        '9-3': [_f('北斗九皇降世之辰')],
+        '9-4': [_f('北斗九皇降世之辰')],
+        '9-5': [_f('北斗九皇降世之辰')],
+        '9-6': [_f('北斗九皇降世之辰')],
+        '9-7': [_f('北斗九皇降世之辰')],
+        '9-8': [_f('北斗九皇降世之辰')],
+        '9-9': [_f('北斗九皇降世之辰'), _f('斗姥元君圣诞'), _f('重阳帝君圣诞'), _f('玄天上帝飞升'), _f('酆都大帝圣诞')],
+        '9-22': [_f('增福财神诞')],
+        '9-23': [_f('萨翁真君圣诞')],
+        '9-28': [_f('五显灵官马元帅圣诞')],
+        '10-1': [_f('民岁腊之辰', '民岁腊，此日五帝会于北方五炁黑天'), _f('东皇大帝圣诞')],
+        '10-3': [_f('三茅应化真君圣诞')],
+        '10-6': [_f('天曹诸司五岳五帝圣诞')],
+        '10-15': [_f('下元水官大帝圣诞'), _f('建生大会', '此日下元解厄，水官同天地二官考校罪福')],
+        '10-18': [_f('地母娘娘圣诞')],
+        '10-19': [_f('长春邱真君飞升')],
+        '10-20': [_f('虚靖天师(即三十代天师弘悟张真人)诞')],
+        '11-6': [_f('西岳大帝圣诞')],
+        '11-9': [_f('湘子韩祖圣诞')],
+        '11-11': [_f('太乙救苦天尊圣诞')],
+        '11-26': [_f('北方五道圣诞')],
+        '12-8': [_f('王侯腊之辰', '王侯腊，此日五帝会于上方玄都玉京')],
+        '12-16': [_f('南岳大帝圣诞'), _f('福德正神诞')],
+        '12-20': [_f('鲁班先师圣诞')],
+        '12-21': [_f('天猷上帝圣诞')],
+        '12-22': [_f('重阳祖师圣诞')],
+        '12-23': [_f('祭灶王', '最适宜谢旧年太岁，开启拜新年太岁')],
+        '12-25': [_f('玉帝巡天'), _f('天神下降')],
+        '12-29': [_f('清静孙真君(孙不二)成道')]
+      }
+    }
+  })();
+  var NineStarUtil = (function(){
+    return {
+      NUMBER:[
+        '{n.one}',
+        '{n.two}',
+        '{n.three}',
+        '{n.four}',
+        '{n.five}',
+        '{n.six}',
+        '{n.seven}',
+        '{n.eight}',
+        '{n.nine}'
+      ],
+      WU_XING:[
+        '{wx.shui}',
+        '{wx.tu}',
+        '{wx.mu}',
+        '{wx.mu}',
+        '{wx.tu}',
+        '{wx.jin}',
+        '{wx.jin}',
+        '{wx.tu}',
+        '{wx.huo}'
+      ],
+      POSITION:[
+        '{bg.kan}',
+        '{bg.kun}',
+        '{bg.zhen}',
+        '{bg.xun}',
+        '{ps.center}',
+        '{bg.qian}',
+        '{bg.dui}',
+        '{bg.gen}',
+        '{bg.li}'
+      ],
+      LUCK_XUAN_KONG:[
+        '{s.goodLuck}',
+        '{s.badLuck}',
+        '{s.badLuck}',
+        '{s.goodLuck}',
+        '{s.badLuck}',
+        '{s.goodLuck}',
+        '{s.badLuck}',
+        '{s.goodLuck}',
+        '{s.goodLuck}'
+      ],
+      YIN_YANG_QI_MEN:[
+        '{s.yang}',
+        '{s.yin}',
+        '{s.yang}',
+        '{s.yang}',
+        '{s.yang}',
+        '{s.yin}',
+        '{s.yin}',
+        '{s.yang}',
+        '{s.yin}'
+      ],
+      COLOR:[
+        '{s.white}',
+        '{s.black}',
+        '{s.blue}',
+        '{s.green}',
+        '{s.yellow}',
+        '{s.white}',
+        '{s.red}',
+        '{s.white}',
+        '{s.purple}'
+      ]
+    }
+  })();
+  var Tao = (function(){
+    var _fromYmdHms=function(y,m,d,hour,minute,second){
+      return _fromLunar(Lunar.fromYmdHms(y+Tao.BIRTH_YEAR,m,d,hour,minute,second));
+    };
+    var _fromLunar=function(lunar){
+      return {
+        _p: {
+          lunar: lunar
+        },
+        getLunar:function(){return this._p.lunar;},
+        getYear:function(){
+          return this._p.lunar.getYear()-Tao.BIRTH_YEAR;
+        },
+        getMonth:function(){return this._p.lunar.getMonth();},
+        getDay:function(){return this._p.lunar.getDay();},
+        getYearInChinese:function(){
+          var y = this.getYear()+'';
+          var s = '';
+          var zero = '0'.charCodeAt(0);
+          for(var i=0,j=y.length;i<j;i++){
+            s+=LunarUtil.NUMBER[y.charCodeAt(i)-zero];
+          }
+          return s;
+        },
+        getMonthInChinese:function(){return this._p.lunar.getMonthInChinese();},
+        getDayInChinese:function(){return this._p.lunar.getDayInChinese();},
+        getFestivals:function(){
+          var l=[];
+          var fs=TaoUtil.FESTIVAL[this.getMonth()+'-'+this.getDay()];
+          if(fs){
+            l=l.concat(fs);
+          }
+          var jq = this._p.lunar.getJieQi();
+          if(I18n.getMessage('jq.dongZhi')===jq){
+            l.push(TaoFestival.create('元始天尊圣诞'));
+          }else if(I18n.getMessage('jq.xiaZhi')===jq){
+            l.push(TaoFestival.create('灵宝天尊圣诞'));
+          }
+          var f = TaoUtil.BA_JIE[jq];
+          if(f){
+            l.push(TaoFestival.create(f));
+          }
+          f = TaoUtil.BA_HUI[this._p.lunar.getDayInGanZhi()];
+          if(f){
+            l.push(TaoFestival.create(f));
+          }
+          return l;
+        },
+        _isDayIn:function(days){
+          var md = this.getMonth() + '-' + this.getDay();
+          for(var i=0,j=days.length;i<j;i++){
+            if(md===days[i]){
+              return true;
+            }
+          }
+          return false;
+        },
+        isDaySanHui:function(){return this._isDayIn(TaoUtil.SAN_HUI);},
+        isDaySanYuan:function(){return this._isDayIn(TaoUtil.SAN_YUAN);},
+        isDayBaJie:function(){return !!TaoUtil.BA_JIE[this._p.lunar.getJieQi()];},
+        isDayWuLa:function(){return this._isDayIn(TaoUtil.WU_LA);},
+        isDayBaHui:function(){return !!TaoUtil.BA_HUI[this._p.lunar.getDayInGanZhi()];},
+        isDayMingWu:function(){return I18n.getMessage('tg.wu')===this._p.lunar.getDayGan();},
+        isDayAnWu:function(){return this._p.lunar.getDayZhi()===TaoUtil.AN_WU[Math.abs(this.getMonth())-1]},
+        isDayWu:function(){return this.isDayMingWu()||this.isDayAnWu()},
+        isDayTianShe:function(){
+          var ret = false;
+          var mz = this._p.lunar.getMonthZhi();
+          var dgz = this._p.lunar.getDayInGanZhi();
+          if ([I18n.getMessage('dz.yin'), I18n.getMessage('dz.mao'), I18n.getMessage('dz.chen')].join(',').indexOf(mz) > -1) {
+            if (I18n.getMessage('jz.wuYin') === dgz) {
+              ret = true;
+            }
+          } else if ([I18n.getMessage('dz.si'), I18n.getMessage('dz.wu'), I18n.getMessage('dz.wei')].join(',').indexOf(mz) > -1) {
+            if (I18n.getMessage('jz.jiaWu') === dgz) {
+              ret = true;
+            }
+          } else if ([I18n.getMessage('dz.shen'), I18n.getMessage('dz.you'), I18n.getMessage('dz.xu')].join(',').indexOf(mz) > -1) {
+            if (I18n.getMessage('jz.wuShen') === dgz) {
+              ret = true;
+            }
+          } else if ([I18n.getMessage('dz.hai'), I18n.getMessage('dz.zi'), I18n.getMessage('dz.chou')].join(',').indexOf(mz) > -1) {
+            if (I18n.getMessage('jz.jiaZi') === dgz) {
+              ret = true;
+            }
+          }
+          return ret;
+        },
+        toString:function(){
+          return this.getYearInChinese()+'年'+this.getMonthInChinese()+'月'+this.getDayInChinese();
+        },
+        toFullString:function(){
+          return '道歷'+this.getYearInChinese()+'年，天運'+this._p.lunar.getYearInGanZhi()+'年，'+this._p.lunar.getMonthInGanZhi()+'月，'+this._p.lunar.getDayInGanZhi()+'日。'+this.getMonthInChinese()+'月'+this.getDayInChinese()+'日，'+this._p.lunar.getTimeZhi()+'時。';
+        }
+      };
+    };
+    return {
+      BIRTH_YEAR:-2697,
+      fromYmdHms:function(y,m,d,hour,minute,second){return _fromYmdHms(y,m,d,hour,minute,second);},
+      fromYmd:function(y,m,d){return _fromYmdHms(y,m,d,0,0,0);},
+      fromLunar:function(lunar){return _fromLunar(lunar);}
+    };
+  })();
+  var I18n = (function(){
+    var _defaultLang = 'chs';
+    var _lang = _defaultLang;
+    var _inited = false;
+    var _messages = {
+      'chs': {
+        'tg.jia': '甲',
+        'tg.yi': '乙',
+        'tg.bing': '丙',
+        'tg.ding': '丁',
+        'tg.wu': '戊',
+        'tg.ji': '己',
+        'tg.geng': '庚',
+        'tg.xin': '辛',
+        'tg.ren': '壬',
+        'tg.gui': '癸',
+        'dz.zi': '子',
+        'dz.chou': '丑',
+        'dz.yin': '寅',
+        'dz.mao': '卯',
+        'dz.chen': '辰',
+        'dz.si': '巳',
+        'dz.wu': '午',
+        'dz.wei': '未',
+        'dz.shen': '申',
+        'dz.you': '酉',
+        'dz.xu': '戌',
+        'dz.hai': '亥',
+        'zx.jian': '建',
+        'zx.chu': '除',
+        'zx.man': '满',
+        'zx.ping': '平',
+        'zx.ding': '定',
+        'zx.zhi': '执',
+        'zx.po': '破',
+        'zx.wei': '危',
+        'zx.cheng': '成',
+        'zx.shou': '收',
+        'zx.kai': '开',
+        'zx.bi': '闭',
+        'jz.jiaZi': '甲子',
+        'jz.yiChou': '乙丑',
+        'jz.bingYin': '丙寅',
+        'jz.dingMao': '丁卯',
+        'jz.wuChen': '戊辰',
+        'jz.jiSi': '己巳',
+        'jz.gengWu': '庚午',
+        'jz.xinWei': '辛未',
+        'jz.renShen': '壬申',
+        'jz.guiYou': '癸酉',
+        'jz.jiaXu': '甲戌',
+        'jz.yiHai': '乙亥',
+        'jz.bingZi': '丙子',
+        'jz.dingChou': '丁丑',
+        'jz.wuYin': '戊寅',
+        'jz.jiMao': '己卯',
+        'jz.gengChen': '庚辰',
+        'jz.xinSi': '辛巳',
+        'jz.renWu': '壬午',
+        'jz.guiWei': '癸未',
+        'jz.jiaShen': '甲申',
+        'jz.yiYou': '乙酉',
+        'jz.bingXu': '丙戌',
+        'jz.dingHai': '丁亥',
+        'jz.wuZi': '戊子',
+        'jz.jiChou': '己丑',
+        'jz.gengYin': '庚寅',
+        'jz.xinMao': '辛卯',
+        'jz.renChen': '壬辰',
+        'jz.guiSi': '癸巳',
+        'jz.jiaWu': '甲午',
+        'jz.yiWei': '乙未',
+        'jz.bingShen': '丙申',
+        'jz.dingYou': '丁酉',
+        'jz.wuXu': '戊戌',
+        'jz.jiHai': '己亥',
+        'jz.gengZi': '庚子',
+        'jz.xinChou': '辛丑',
+        'jz.renYin': '壬寅',
+        'jz.guiMao': '癸卯',
+        'jz.jiaChen': '甲辰',
+        'jz.yiSi': '乙巳',
+        'jz.bingWu': '丙午',
+        'jz.dingWei': '丁未',
+        'jz.wuShen': '戊申',
+        'jz.jiYou': '己酉',
+        'jz.gengXu': '庚戌',
+        'jz.xinHai': '辛亥',
+        'jz.renZi': '壬子',
+        'jz.guiChou': '癸丑',
+        'jz.jiaYin': '甲寅',
+        'jz.yiMao': '乙卯',
+        'jz.bingChen': '丙辰',
+        'jz.dingSi': '丁巳',
+        'jz.wuWu': '戊午',
+        'jz.jiWei': '己未',
+        'jz.gengShen': '庚申',
+        'jz.xinYou': '辛酉',
+        'jz.renXu': '壬戌',
+        'jz.guiHai': '癸亥',
+        'sx.rat': '鼠',
+        'sx.ox': '牛',
+        'sx.tiger': '虎',
+        'sx.rabbit': '兔',
+        'sx.dragon': '龙',
+        'sx.snake': '蛇',
+        'sx.horse': '马',
+        'sx.goat': '羊',
+        'sx.monkey': '猴',
+        'sx.rooster': '鸡',
+        'sx.dog': '狗',
+        'sx.pig': '猪',
+        'dw.long': '龙',
+        'dw.niu': '牛',
+        'dw.gou': '狗',
+        'dw.yang': '羊',
+        'dw.tu': '兔',
+        'dw.shu': '鼠',
+        'dw.ji': '鸡',
+        'dw.ma': '马',
+        'dw.hu': '虎',
+        'dw.zhu': '猪',
+        'dw.hou': '猴',
+        'dw.she': '蛇',
+        'dw.huLi': '狐',
+        'dw.yan': '燕',
+        'dw.bao': '豹',
+        'dw.yuan': '猿',
+        'dw.yin': '蚓',
+        'dw.lu': '鹿',
+        'dw.wu': '乌',
+        'dw.jiao': '蛟',
+        'dw.lang': '狼',
+        'dw.fu': '蝠',
+        'dw.zhang': '獐',
+        'dw.xu': '獝',
+        'dw.xie': '獬',
+        'dw.han': '犴',
+        'dw.he': '貉',
+        'dw.zhi': '彘',
+        'wx.jin': '金',
+        'wx.mu': '木',
+        'wx.shui': '水',
+        'wx.huo': '火',
+        'wx.tu': '土',
+        'wx.ri': '日',
+        'wx.yue': '月',
+        'n.zero': '〇',
+        'n.one': '一',
+        'n.two': '二',
+        'n.three': '三',
+        'n.four': '四',
+        'n.five': '五',
+        'n.six': '六',
+        'n.seven': '七',
+        'n.eight': '八',
+        'n.nine': '九',
+        'n.ten': '十',
+        'n.eleven': '十一',
+        'n.twelve': '十二',
+        'd.one': '初一',
+        'd.two': '初二',
+        'd.three': '初三',
+        'd.four': '初四',
+        'd.five': '初五',
+        'd.six': '初六',
+        'd.seven': '初七',
+        'd.eight': '初八',
+        'd.nine': '初九',
+        'd.ten': '初十',
+        'd.eleven': '十一',
+        'd.twelve': '十二',
+        'd.thirteen': '十三',
+        'd.fourteen': '十四',
+        'd.fifteen': '十五',
+        'd.sixteen': '十六',
+        'd.seventeen': '十七',
+        'd.eighteen': '十八',
+        'd.nighteen': '十九',
+        'd.twenty': '二十',
+        'd.twentyOne': '廿一',
+        'd.twentyTwo': '廿二',
+        'd.twentyThree': '廿三',
+        'd.twentyFour': '廿四',
+        'd.twentyFive': '廿五',
+        'd.twentySix': '廿六',
+        'd.twentySeven': '廿七',
+        'd.twentyEight': '廿八',
+        'd.twentyNine': '廿九',
+        'd.thirty': '三十',
+        'm.one': '正',
+        'm.two': '二',
+        'm.three': '三',
+        'm.four': '四',
+        'm.five': '五',
+        'm.six': '六',
+        'm.seven': '七',
+        'm.eight': '八',
+        'm.nine': '九',
+        'm.ten': '十',
+        'm.eleven': '冬',
+        'm.twelve': '腊',
+        'w.sun': '日',
+        'w.mon': '一',
+        'w.tues': '二',
+        'w.wed': '三',
+        'w.thur': '四',
+        'w.fri': '五',
+        'w.sat': '六',
+        'xz.aries': '白羊',
+        'xz.taurus': '金牛',
+        'xz.gemini': '双子',
+        'xz.cancer': '巨蟹',
+        'xz.leo': '狮子',
+        'xz.virgo': '处女',
+        'xz.libra': '天秤',
+        'xz.scorpio': '天蝎',
+        'xz.sagittarius': '射手',
+        'xz.capricornus': '摩羯',
+        'xz.aquarius': '水瓶',
+        'xz.pisces': '双鱼',
+        'bg.qian': '乾',
+        'bg.kun': '坤',
+        'bg.zhen': '震',
+        'bg.xun': '巽',
+        'bg.kan': '坎',
+        'bg.li': '离',
+        'bg.gen': '艮',
+        'bg.dui': '兑',
+        'ps.center': '中',
+        'ps.dong': '东',
+        'ps.nan': '南',
+        'ps.xi': '西',
+        'ps.bei': '北',
+        'ps.zhong': '中宫',
+        'ps.zhengDong': '正东',
+        'ps.zhengNan': '正南',
+        'ps.zhengXi': '正西',
+        'ps.zhengBei': '正北',
+        'ps.dongBei': '东北',
+        'ps.dongNan': '东南',
+        'ps.xiBei': '西北',
+        'ps.xiNan': '西南',
+        'ps.wai': '外',
+        'ps.fangNei': '房内',
+        'jq.dongZhi': '冬至',
+        'jq.xiaoHan': '小寒',
+        'jq.daHan': '大寒',
+        'jq.liChun': '立春',
+        'jq.yuShui': '雨水',
+        'jq.jingZhe': '惊蛰',
+        'jq.chunFen': '春分',
+        'jq.qingMing': '清明',
+        'jq.guYu': '谷雨',
+        'jq.liXia': '立夏',
+        'jq.xiaoMan': '小满',
+        'jq.mangZhong': '芒种',
+        'jq.xiaZhi': '夏至',
+        'jq.xiaoShu': '小暑',
+        'jq.daShu': '大暑',
+        'jq.liQiu': '立秋',
+        'jq.chuShu': '处暑',
+        'jq.baiLu': '白露',
+        'jq.qiuFen': '秋分',
+        'jq.hanLu': '寒露',
+        'jq.shuangJiang': '霜降',
+        'jq.liDong': '立冬',
+        'jq.xiaoXue': '小雪',
+        'jq.daXue': '大雪',
+        'sn.qingLong': '青龙',
+        'sn.baiHu': '白虎',
+        'sn.zhuQue': '朱雀',
+        'sn.xuanWu': '玄武',
+        'sn.mingTang': '明堂',
+        'sn.tianXing': '天刑',
+        'sn.tianDe': '天德',
+        'sn.jinKui': '金匮',
+        'sn.yuTang': '玉堂',
+        'sn.siMing': '司命',
+        'sn.tianLao': '天牢',
+        'sn.gouChen': '勾陈',
+        'sn.tianEn': '天恩',
+        'sn.muCang': '母仓',
+        'sn.shiYang': '时阳',
+        'sn.shengQi': '生气',
+        'sn.yiHou': '益后',
+        'sn.zaiSha': '灾煞',
+        'sn.tianHuo': '天火',
+        'sn.siJi': '四忌',
+        'sn.baLong': '八龙',
+        'sn.fuRi': '复日',
+        'sn.xuShi': '续世',
+        'sn.yueSha': '月煞',
+        'sn.yueXu': '月虚',
+        'sn.xueZhi': '血支',
+        'sn.tianZei': '天贼',
+        'sn.wuXu': '五虚',
+        'sn.tuFu': '土符',
+        'sn.guiJi': '归忌',
+        'sn.xueJi': '血忌',
+        'sn.yueDe': '月德',
+        'sn.yueEn': '月恩',
+        'sn.siXiang': '四相',
+        'sn.wangRi': '王日',
+        'sn.tianCang': '天仓',
+        'sn.buJiang': '不将',
+        'sn.wuHe': '五合',
+        'sn.mingFeiDui': '鸣吠对',
+        'sn.yueJian': '月建',
+        'sn.xiaoShi': '小时',
+        'sn.tuHu': '土府',
+        'sn.wangWang': '往亡',
+        'sn.yaoAn': '要安',
+        'sn.siShen': '死神',
+        'sn.tianMa': '天马',
+        'sn.jiuHu': '九虎',
+        'sn.qiNiao': '七鸟',
+        'sn.liuShe': '六蛇',
+        'sn.guanRi': '官日',
+        'sn.jiQi': '吉期',
+        'sn.yuYu': '玉宇',
+        'sn.daShi': '大时',
+        'sn.daBai': '大败',
+        'sn.xianChi': '咸池',
+        'sn.shouRi': '守日',
+        'sn.tianWu': '天巫',
+        'sn.fuDe': '福德',
+        'sn.liuYi': '六仪',
+        'sn.jinTang': '金堂',
+        'sn.yanDui': '厌对',
+        'sn.zhaoYao': '招摇',
+        'sn.jiuKong': '九空',
+        'sn.jiuKan': '九坎',
+        'sn.jiuJiao': '九焦',
+        'sn.xiangRi': '相日',
+        'sn.baoGuang': '宝光',
+        'sn.tianGang': '天罡',
+        'sn.yueXing': '月刑',
+        'sn.yueHai': '月害',
+        'sn.youHuo': '游祸',
+        'sn.chongRi': '重日',
+        'sn.shiDe': '时德',
+        'sn.minRi': '民日',
+        'sn.sanHe': '三合',
+        'sn.linRi': '临日',
+        'sn.shiYin': '时阴',
+        'sn.mingFei': '鸣吠',
+        'sn.siQi': '死气',
+        'sn.diNang': '地囊',
+        'sn.yueDeHe': '月德合',
+        'sn.jingAn': '敬安',
+        'sn.puHu': '普护',
+        'sn.jieShen': '解神',
+        'sn.xiaoHao': '小耗',
+        'sn.tianDeHe': '天德合',
+        'sn.yueKong': '月空',
+        'sn.yiMa': '驿马',
+        'sn.tianHou': '天后',
+        'sn.chuShen': '除神',
+        'sn.yuePo': '月破',
+        'sn.daHao': '大耗',
+        'sn.wuLi': '五离',
+        'sn.yinDe': '阴德',
+        'sn.fuSheng': '福生',
+        'sn.tianLi': '天吏',
+        'sn.zhiSi': '致死',
+        'sn.yuanWu': '元武',
+        'sn.yangDe': '阳德',
+        'sn.tianXi': '天喜',
+        'sn.tianYi': '天医',
+        'sn.yueYan': '月厌',
+        'sn.diHuo': '地火',
+        'sn.fourHit': '四击',
+        'sn.daSha': '大煞',
+        'sn.daHui': '大会',
+        'sn.tianYuan': '天愿',
+        'sn.liuHe': '六合',
+        'sn.wuFu': '五富',
+        'sn.shengXin': '圣心',
+        'sn.heKui': '河魁',
+        'sn.jieSha': '劫煞',
+        'sn.siQiong': '四穷',
+        'sn.chuShuiLong': '触水龙',
+        'sn.baFeng': '八风',
+        'sn.tianShe': '天赦',
+        'sn.wuMu': '五墓',
+        'sn.baZhuan': '八专',
+        'sn.yinCuo': '阴错',
+        'sn.siHao': '四耗',
+        'sn.yangCuo': '阳错',
+        'sn.siFei': '四废',
+        'sn.sanYin': '三阴',
+        'sn.xiaoHui': '小会',
+        'sn.yinDaoChongYang': '阴道冲阳',
+        'sn.danYin': '单阴',
+        'sn.guChen': '孤辰',
+        'sn.yinWei': '阴位',
+        'sn.xingHen': '行狠',
+        'sn.liaoLi': '了戾',
+        'sn.jueYin': '绝阴',
+        'sn.chunYang': '纯阳',
+        'sn.suiBo': '岁薄',
+        'sn.yinYangJiaoPo': '阴阳交破',
+        'sn.yinYangJuCuo': '阴阳俱错',
+        'sn.yinYangJiChong': '阴阳击冲',
+        'sn.zhuZhen': '逐阵',
+        'sn.yangCuoYinChong': '阳错阴冲',
+        'sn.qiFu': '七符',
+        'sn.tianGou': '天狗',
+        'sn.chengRi': '成日',
+        'sn.tianFu': '天符',
+        'sn.guYang': '孤阳',
+        'sn.jueYang': '绝阳',
+        'sn.chunYin': '纯阴',
+        'sn.yinShen': '阴神',
+        'sn.jieChu': '解除',
+        'sn.yangPoYinChong': '阳破阴冲',
+        'sn.sanSang': '三丧',
+        'sn.guiKu': '鬼哭',
+        'sn.daTui': '大退',
+        'sn.siLi': '四离',
+        'ss.biJian': '比肩',
+        'ss.jieCai': '劫财',
+        'ss.shiShen': '食神',
+        'ss.shangGuan': '伤官',
+        'ss.pianCai': '偏财',
+        'ss.zhengCai': '正财',
+        'ss.qiSha': '七杀',
+        'ss.zhengGuan': '正官',
+        'ss.pianYin': '偏印',
+        'ss.zhengYin': '正印',
+        's.none': '无',
+        's.huangDao': '黄道',
+        's.heiDao': '黑道',
+        's.goodLuck': '吉',
+        's.badLuck': '凶',
+        's.yin': '阴',
+        's.yang': '阳',
+        's.white': '白',
+        's.black': '黑',
+        's.blue': '碧',
+        's.green': '绿',
+        's.yellow': '黄',
+        's.red': '赤',
+        's.purple': '紫',
+        'jr.chuXi': '除夕',
+        'jr.chunJie': '春节',
+        'jr.yuanXiao': '元宵节',
+        'jr.longTou': '龙头节',
+        'jr.duanWu': '端午节',
+        'jr.qiXi': '七夕节',
+        'jr.zhongQiu': '中秋节',
+        'jr.chongYang': '重阳节',
+        'jr.laBa': '腊八节',
+        'jr.yuanDan': '元旦节',
+        'jr.qingRen': '情人节',
+        'jr.fuNv': '妇女节',
+        'jr.zhiShu': '植树节',
+        'jr.xiaoFei': '消费者权益日',
+        'jr.wuYi': '劳动节',
+        'jr.qingNian': '青年节',
+        'jr.erTong': '儿童节',
+        'jr.yuRen': '愚人节',
+        'jr.jianDang': '建党节',
+        'jr.jianJun': '建军节',
+        'jr.jiaoShi': '教师节',
+        'jr.guoQing': '国庆节',
+        'jr.wanShengYe': '万圣节前夜',
+        'jr.wanSheng': '万圣节',
+        'jr.pingAn': '平安夜',
+        'jr.shengDan': '圣诞节',
+        'ds.changSheng': '长生',
+        'ds.muYu': '沐浴',
+        'ds.guanDai': '冠带',
+        'ds.linGuan': '临官',
+        'ds.diWang': '帝旺',
+        'ds.shuai': '衰',
+        'ds.bing': '病',
+        'ds.si': '死',
+        'ds.mu': '墓',
+        'ds.jue': '绝',
+        'ds.tai': '胎',
+        'ds.yang': '养',
+        'h.first': '初候',
+        'h.second': '二候',
+        'h.third': '三候',
+        'h.qiuYinJie': '蚯蚓结',
+        'h.miJiao': '麋角解',
+        'h.shuiQuan': '水泉动',
+        'h.yanBei': '雁北乡',
+        'h.queShi': '鹊始巢',
+        'h.zhiShi': '雉始雊',
+        'h.jiShi': '鸡始乳',
+        'h.zhengNiao': '征鸟厉疾',
+        'h.shuiZe': '水泽腹坚',
+        'h.dongFeng': '东风解冻',
+        'h.zheChongShiZhen': '蛰虫始振',
+        'h.yuZhi': '鱼陟负冰',
+        'h.taJi': '獭祭鱼',
+        'h.houYan': '候雁北',
+        'h.caoMuMengDong': '草木萌动',
+        'h.taoShi': '桃始华',
+        'h.cangGeng': '仓庚鸣',
+        'h.yingHua': '鹰化为鸠',
+        'h.xuanNiaoZhi': '玄鸟至',
+        'h.leiNai': '雷乃发声',
+        'h.shiDian': '始电',
+        'h.tongShi': '桐始华',
+        'h.tianShu': '田鼠化为鴽',
+        'h.hongShi': '虹始见',
+        'h.pingShi': '萍始生',
+        'h.mingJiu': '鸣鸠拂其羽',
+        'h.daiSheng': '戴胜降于桑',
+        'h.louGuo': '蝼蝈鸣',
+        'h.qiuYinChu': '蚯蚓出',
+        'h.wangGua': '王瓜生',
+        'h.kuCai': '苦菜秀',
+        'h.miCao': '靡草死',
+        'h.maiQiu': '麦秋至',
+        'h.tangLang': '螳螂生',
+        'h.juShi': '鵙始鸣',
+        'h.fanShe': '反舌无声',
+        'h.luJia': '鹿角解',
+        'h.tiaoShi': '蜩始鸣',
+        'h.banXia': '半夏生',
+        'h.wenFeng': '温风至',
+        'h.xiShuai': '蟋蟀居壁',
+        'h.yingShi': '鹰始挚',
+        'h.fuCao': '腐草为萤',
+        'h.tuRun': '土润溽暑',
+        'h.daYu': '大雨行时',
+        'h.liangFeng': '凉风至',
+        'h.baiLu': '白露降',
+        'h.hanChan': '寒蝉鸣',
+        'h.yingNai': '鹰乃祭鸟',
+        'h.tianDi': '天地始肃',
+        'h.heNai': '禾乃登',
+        'h.hongYanLai': '鸿雁来',
+        'h.xuanNiaoGui': '玄鸟归',
+        'h.qunNiao': '群鸟养羞',
+        'h.leiShi': '雷始收声',
+        'h.zheChongPiHu': '蛰虫坯户',
+        'h.shuiShiHe': '水始涸',
+        'h.hongYanLaiBin': '鸿雁来宾',
+        'h.queRu': '雀入大水为蛤',
+        'h.juYou': '菊有黄花',
+        'h.caiNai': '豺乃祭兽',
+        'h.caoMuHuangLuo': '草木黄落',
+        'h.zheChongXianFu': '蛰虫咸俯',
+        'h.shuiShiBing': '水始冰',
+        'h.diShi': '地始冻',
+        'h.zhiRu': '雉入大水为蜃',
+        'h.hongCang': '虹藏不见',
+        'h.tianQi': '天气上升地气下降',
+        'h.biSe': '闭塞而成冬',
+        'h.heDan': '鹖鴠不鸣',
+        'h.huShi': '虎始交',
+        'h.liTing': '荔挺出',
+        'ts.zhan': '占',
+        'ts.hu': '户',
+        'ts.win': '窗',
+        'ts.fang': '房',
+        'ts.chuang': '床',
+        'ts.lu': '炉',
+        'ts.zao': '灶',
+        'ts.dui': '碓',
+        'ts.mo': '磨',
+        'ts.xi': '栖',
+        'ts.chu': '厨',
+        'ts.ce': '厕',
+        'ts.cang': '仓',
+        'ts.cangKu': '仓库',
+        'ts.daMen': '大门',
+        'ts.men': '门',
+        'ts.tang': '堂',
+        'ly.xianSheng': '先胜',
+        'ly.xianFu': '先负',
+        'ly.youYin': '友引',
+        'ly.foMie': '佛灭',
+        'ly.daAn': '大安',
+        'ly.chiKou': '赤口',
+        'yj.jiSi': '祭祀',
+        'yj.qiFu': '祈福',
+        'yj.qiuSi': '求嗣',
+        'yj.kaiGuang': '开光',
+        'yj.suHui': '塑绘',
+        'yj.qiJiao': '齐醮',
+        'yj.zhaiJiao': '斋醮',
+        'yj.muYu': '沐浴',
+        'yj.chouShen': '酬神',
+        'yj.zaoMiao': '造庙',
+        'yj.siZhao': '祀灶',
+        'yj.fenXiang': '焚香',
+        'yj.xieTu': '谢土',
+        'yj.chuHuo': '出火',
+        'yj.diaoKe': '雕刻',
+        'yj.jiaQu': '嫁娶',
+        'yj.DingHun': '订婚',
+        'yj.naCai': '纳采',
+        'yj.wenMing': '问名',
+        'yj.naXu': '纳婿',
+        'yj.guiNing': '归宁',
+        'yj.anChuang': '安床',
+        'yj.heZhang': '合帐',
+        'yj.guanJi': '冠笄',
+        'yj.dingMeng': '订盟',
+        'yj.jinRenKou': '进人口',
+        'yj.caiYi': '裁衣',
+        'yj.wanMian': '挽面',
+        'yj.kaiRong': '开容',
+        'yj.xiuFen': '修坟',
+        'yj.qiZuan': '启钻',
+        'yj.poTu': '破土',
+        'yj.anZang': '安葬',
+        'yj.liBei': '立碑',
+        'yj.chengFu': '成服',
+        'yj.chuFu': '除服',
+        'yj.kaiShengFen': '开生坟',
+        'yj.heShouMu': '合寿木',
+        'yj.ruLian': '入殓',
+        'yj.yiJiu': '移柩',
+        'yj.puDu': '普渡',
+        'yj.ruZhai': '入宅',
+        'yj.anXiang': '安香',
+        'yj.anMen': '安门',
+        'yj.xiuZao': '修造',
+        'yj.qiJi': '起基',
+        'yj.dongTu': '动土',
+        'yj.shangLiang': '上梁',
+        'yj.shuZhu': '竖柱',
+        'yj.kaiJing': '开井开池',
+        'yj.zuoBei': '作陂放水',
+        'yj.chaiXie': '拆卸',
+        'yj.poWu': '破屋',
+        'yj.huaiYuan': '坏垣',
+        'yj.buYuan': '补垣',
+        'yj.faMuZuoLiang': '伐木做梁',
+        'yj.zuoZhao': '作灶',
+        'yj.jieChu': '解除',
+        'yj.kaiZhuYan': '开柱眼',
+        'yj.chuanPing': '穿屏扇架',
+        'yj.gaiWuHeJi': '盖屋合脊',
+        'yj.kaiCe': '开厕',
+        'yj.zaoCang': '造仓',
+        'yj.saiXue': '塞穴',
+        'yj.pingZhi': '平治道涂',
+        'yj.zaoQiao': '造桥',
+        'yj.zuoCe': '作厕',
+        'yj.zhuDi': '筑堤',
+        'yj.kaiChi': '开池',
+        'yj.faMu': '伐木',
+        'yj.kaiQu': '开渠',
+        'yj.jueJing': '掘井',
+        'yj.saoShe': '扫舍',
+        'yj.fangShui': '放水',
+        'yj.zaoWu': '造屋',
+        'yj.heJi': '合脊',
+        'yj.zaoChuChou': '造畜稠',
+        'yj.xiuMen': '修门',
+        'yj.dingSang': '定磉',
+        'yj.zuoLiang': '作梁',
+        'yj.xiuShi': '修饰垣墙',
+        'yj.jiaMa': '架马',
+        'yj.kaiShi': '开市',
+        'yj.guaBian': '挂匾',
+        'yj.naChai': '纳财',
+        'yj.qiuCai': '求财',
+        'yj.kaiCang': '开仓',
+        'yj.maiChe': '买车',
+        'yj.zhiChan': '置产',
+        'yj.guYong': '雇佣',
+        'yj.chuHuoCai': '出货财',
+        'yj.anJiXie': '安机械',
+        'yj.zaoCheQi': '造车器',
+        'yj.jingLuo': '经络',
+        'yj.yunNiang': '酝酿',
+        'yj.zuoRan': '作染',
+        'yj.guZhu': '鼓铸',
+        'yj.zaoChuan': '造船',
+        'yj.geMi': '割蜜',
+        'yj.zaiZhong': '栽种',
+        'yj.quYu': '取渔',
+        'yj.jieWang': '结网',
+        'yj.muYang': '牧养',
+        'yj.anDuiWei': '安碓磑',
+        'yj.xiYi': '习艺',
+        'yj.ruXue': '入学',
+        'yj.liFa': '理发',
+        'yj.tanBing': '探病',
+        'yj.jianGui': '见贵',
+        'yj.chengChuan': '乘船',
+        'yj.duShui': '渡水',
+        'yj.zhenJiu': '针灸',
+        'yj.chuXing': '出行',
+        'yj.yiXi': '移徙',
+        'yj.fenJu': '分居',
+        'yj.TiTou': '剃头',
+        'yj.zhengShou': '整手足甲',
+        'yj.naChu': '纳畜',
+        'yj.buZhuo': '捕捉',
+        'yj.tianLie': '畋猎',
+        'yj.jiaoNiuMa': '教牛马',
+        'yj.huiQinYou': '会亲友',
+        'yj.fuRen': '赴任',
+        'yj.qiuYi': '求医',
+        'yj.zhiBing': '治病',
+        'yj.ciSong': '词讼',
+        'yj.qiJiDongTu': '起基动土',
+        'yj.poWuHuaiYuan': '破屋坏垣',
+        'yj.gaiWu': '盖屋',
+        'yj.zaoCangKu': '造仓库',
+        'yj.liQuanJiaoYi': '立券交易',
+        'yj.jiaoYi': '交易',
+        'yj.liQuan': '立券',
+        'yj.anJi': '安机',
+        'yj.huiYou': '会友',
+        'yj.qiuYiLiaoBing': '求医疗病',
+        'yj.zhuShi': '诸事不宜',
+        'yj.yuShi': '馀事勿取',
+        'yj.xingSang': '行丧',
+        'yj.duanYi': '断蚁',
+        'yj.guiXiu': '归岫',
+        'xx.bi': '毕',
+        'xx.yi': '翼',
+        'xx.ji': '箕',
+        'xx.kui': '奎',
+        'xx.gui': '鬼',
+        'xx.di': '氐',
+        'xx.xu': '虚',
+        'xx.wei': '危',
+        'xx.zi': '觜',
+        'xx.zhen': '轸',
+        'xx.dou': '斗',
+        'xx.lou': '娄',
+        'xx.liu': '柳',
+        'xx.fang': '房',
+        'xx.xin': '心',
+        'xx.shi': '室',
+        'xx.can': '参',
+        'xx.jiao': '角',
+        'xx.niu': '牛',
+        'xx.vei': '胃',
+        'xx.xing': '星',
+        'xx.zhang': '张',
+        'xx.tail': '尾',
+        'xx.qiang': '壁',
+        'xx.jing': '井',
+        'xx.kang': '亢',
+        'xx.nv': '女',
+        'xx.mao': '昴',
+        'sz.chun': '春',
+        'sz.xia': '夏',
+        'sz.qiu': '秋',
+        'sz.dong': '冬',
+        'od.first': '孟',
+        'od.second': '仲',
+        'od.third': '季',
+        'yx.shuo': '朔',
+        'yx.jiShuo': '既朔',
+        'yx.eMeiXin': '蛾眉新',
+        'yx.eMei': '蛾眉',
+        'yx.xi': '夕',
+        'yx.shangXian': '上弦',
+        'yx.jiuYe': '九夜',
+        'yx.night': '宵',
+        'yx.jianYingTu': '渐盈凸',
+        'yx.xiaoWang': '小望',
+        'yx.wang': '望',
+        'yx.jiWang': '既望',
+        'yx.liDai': '立待',
+        'yx.juDai': '居待',
+        'yx.qinDai': '寝待',
+        'yx.gengDai': '更待',
+        'yx.jianKuiTu': '渐亏凸',
+        'yx.xiaXian': '下弦',
+        'yx.youMing': '有明',
+        'yx.eMeiCan': '蛾眉残',
+        'yx.can': '残',
+        'yx.xiao': '晓',
+        'yx.hui': '晦',
+        'ny.sangZhe': '桑柘',
+        'ny.baiLa': '白蜡',
+        'ny.yangLiu': '杨柳',
+        'ny.jinBo': '金箔',
+        'ny.haiZhong': '海中',
+        'ny.daHai': '大海',
+        'ny.shaZhong': '沙中',
+        'ny.luZhong': '炉中',
+        'ny.shanXia': '山下',
+        'ny.daLin': '大林',
+        'ny.pingDi': '平地',
+        'ny.luPang': '路旁',
+        'ny.biShang': '壁上',
+        'ny.jianFeng': '剑锋',
+        'ny.shanTou': '山头',
+        'ny.fuDeng': '覆灯',
+        'ny.jianXia': '涧下',
+        'ny.tianHe': '天河',
+        'ny.chengTou': '城头',
+        'ny.daYi': '大驿',
+        'ny.chaiChuan': '钗钏',
+        'ny.quanZhong': '泉中',
+        'ny.daXi': '大溪',
+        'ny.wuShang': '屋上',
+        'ny.piLi': '霹雳',
+        'ny.tianShang': '天上',
+        'ny.songBo': '松柏',
+        'ny.shiLiu': '石榴',
+        'ny.changLiu': '长流'
+      },
+      'en': {
+        'tg.jia': 'Jia',
+        'tg.yi': 'Yi',
+        'tg.bing': 'Bing',
+        'tg.ding': 'Ding',
+        'tg.wu': 'Wu',
+        'tg.ji': 'Ji',
+        'tg.geng': 'Geng',
+        'tg.xin': 'Xin',
+        'tg.ren': 'Ren',
+        'tg.gui': 'Gui',
+        'dz.zi': 'Zi',
+        'dz.chou': 'Chou',
+        'dz.yin': 'Yin',
+        'dz.mao': 'Mao',
+        'dz.chen': 'Chen',
+        'dz.si': 'Si',
+        'dz.wu': 'Wu',
+        'dz.wei': 'Wei',
+        'dz.shen': 'Shen',
+        'dz.you': 'You',
+        'dz.xu': 'Xu',
+        'dz.hai': 'Hai',
+        'zx.jian': 'Build',
+        'zx.chu': 'Remove',
+        'zx.man': 'Full',
+        'zx.ping': 'Flat',
+        'zx.ding': 'Stable',
+        'zx.zhi': 'Hold',
+        'zx.po': 'Break',
+        'zx.wei': 'Danger',
+        'zx.cheng': 'Complete',
+        'zx.shou': 'Collect',
+        'zx.kai': 'Open',
+        'zx.bi': 'Close',
+        'jz.jiaZi': 'JiaZi',
+        'jz.yiChou': 'YiChou',
+        'jz.bingYin': 'BingYin',
+        'jz.dingMao': 'DingMao',
+        'jz.wuChen': 'WuChen',
+        'jz.jiSi': 'JiSi',
+        'jz.gengWu': 'GengWu',
+        'jz.xinWei': 'XinWei',
+        'jz.renShen': 'RenShen',
+        'jz.guiYou': 'GuiYou',
+        'jz.jiaXu': 'JiaXu',
+        'jz.yiHai': 'YiHai',
+        'jz.bingZi': 'BingZi',
+        'jz.dingChou': 'DingChou',
+        'jz.wuYin': 'WuYin',
+        'jz.jiMao': 'JiMao',
+        'jz.gengChen': 'GengChen',
+        'jz.xinSi': 'XinSi',
+        'jz.renWu': 'RenWu',
+        'jz.guiWei': 'GuiWei',
+        'jz.jiaShen': 'JiaShen',
+        'jz.yiYou': 'YiYou',
+        'jz.bingXu': 'BingXu',
+        'jz.dingHai': 'DingHai',
+        'jz.wuZi': 'WuZi',
+        'jz.jiChou': 'JiChou',
+        'jz.gengYin': 'GengYin',
+        'jz.xinMao': 'XinMao',
+        'jz.renChen': 'RenChen',
+        'jz.guiSi': 'GuiSi',
+        'jz.jiaWu': 'JiaWu',
+        'jz.yiWei': 'YiWei',
+        'jz.bingShen': 'BingShen',
+        'jz.dingYou': 'DingYou',
+        'jz.wuXu': 'WuXu',
+        'jz.jiHai': 'JiHai',
+        'jz.gengZi': 'GengZi',
+        'jz.xinChou': 'XinChou',
+        'jz.renYin': 'RenYin',
+        'jz.guiMao': 'GuiMao',
+        'jz.jiaChen': 'JiaChen',
+        'jz.yiSi': 'YiSi',
+        'jz.bingWu': 'BingWu',
+        'jz.dingWei': 'DingWei',
+        'jz.wuShen': 'WuShen',
+        'jz.jiYou': 'JiYou',
+        'jz.gengXu': 'GengXu',
+        'jz.xinHai': 'XinHai',
+        'jz.renZi': 'RenZi',
+        'jz.guiChou': 'GuiChou',
+        'jz.jiaYin': 'JiaYin',
+        'jz.yiMao': 'YiMao',
+        'jz.bingChen': 'BingChen',
+        'jz.dingSi': 'DingSi',
+        'jz.wuWu': 'WuWu',
+        'jz.jiWei': 'JiWei',
+        'jz.gengShen': 'GengShen',
+        'jz.xinYou': 'XinYou',
+        'jz.renXu': 'RenXu',
+        'jz.guiHai': 'GuiHai',
+        'sx.rat': 'Rat',
+        'sx.ox': 'Ox',
+        'sx.tiger': 'Tiger',
+        'sx.rabbit': 'Rabbit',
+        'sx.dragon': 'Dragon',
+        'sx.snake': 'Snake',
+        'sx.horse': 'Horse',
+        'sx.goat': 'Goat',
+        'sx.monkey': 'Monkey',
+        'sx.rooster': 'Rooster',
+        'sx.dog': 'Dog',
+        'sx.pig': 'Pig',
+        'dw.long': 'Dragon',
+        'dw.niu': 'Ox',
+        'dw.gou': 'Dog',
+        'dw.yang': 'Goat',
+        'dw.tu': 'Rabbit',
+        'dw.shu': 'Rat',
+        'dw.ji': 'Rooster',
+        'dw.ma': 'Horse',
+        'dw.hu': 'Tiger',
+        'dw.zhu': 'Pig',
+        'dw.hou': 'Monkey',
+        'dw.she': 'Snake',
+        'dw.huLi': 'Fox',
+        'dw.yan': 'Swallow',
+        'dw.bao': 'Leopard',
+        'dw.yuan': 'Ape',
+        'dw.yin': 'Earthworm',
+        'dw.lu': 'Deer',
+        'dw.wu': 'Crow',
+        'dw.lang': 'Wolf',
+        'dw.fu': 'Bat',
+        'wx.jin': 'Metal',
+        'wx.mu': 'Wood',
+        'wx.shui': 'Water',
+        'wx.huo': 'Fire',
+        'wx.tu': 'Earth',
+        'wx.ri': 'Sun',
+        'wx.yue': 'Moon',
+        'n.zero': '0',
+        'n.one': '1',
+        'n.two': '2',
+        'n.three': '3',
+        'n.four': '4',
+        'n.five': '5',
+        'n.six': '6',
+        'n.seven': '7',
+        'n.eight': '8',
+        'n.nine': '9',
+        'n.ten': '10',
+        'n.eleven': '11',
+        'n.twelve': '12',
+        'w.sun': 'Sunday',
+        'w.mon': 'Monday',
+        'w.tues': 'Tuesday',
+        'w.wed': 'Wednesday',
+        'w.thur': 'Thursday',
+        'w.fri': 'Friday',
+        'w.sat': 'Saturday',
+        'xz.aries': 'Aries',
+        'xz.taurus': 'Taurus',
+        'xz.gemini': 'Gemini',
+        'xz.cancer': 'Cancer',
+        'xz.leo': 'Leo',
+        'xz.virgo': 'Virgo',
+        'xz.libra': 'Libra',
+        'xz.scorpio': 'Scorpio',
+        'xz.sagittarius': 'Sagittarius',
+        'xz.capricornus': 'Capricornus',
+        'xz.aquarius': 'Aquarius',
+        'xz.pisces': 'Pisces',
+        'bg.qian': 'Qian',
+        'bg.kun': 'Kun',
+        'bg.zhen': 'Zhen',
+        'bg.xun': 'Xun',
+        'bg.kan': 'Kan',
+        'bg.li': 'Li',
+        'bg.gen': 'Gen',
+        'bg.dui': 'Dui',
+        'ps.center': 'Center',
+        'ps.dong': 'East',
+        'ps.nan': 'South',
+        'ps.xi': 'West',
+        'ps.bei': 'North',
+        'ps.zhong': 'Center',
+        'ps.zhengDong': 'East',
+        'ps.zhengNan': 'South',
+        'ps.zhengXi': 'West',
+        'ps.zhengBei': 'North',
+        'ps.dongBei': 'Northeast',
+        'ps.dongNan': 'Southeast',
+        'ps.xiBei': 'Northwest',
+        'ps.xiNan': 'Southwest',
+        'jq.dongZhi': 'Winter Solstice',
+        'jq.xiaoHan': 'Lesser Cold',
+        'jq.daHan': 'Great Cold',
+        'jq.liChun': 'Spring Beginning',
+        'jq.yuShui': 'Rain Water',
+        'jq.jingZhe': 'Awakening from Hibernation',
+        'jq.chunFen': 'Spring Equinox',
+        'jq.qingMing': 'Fresh Green',
+        'jq.guYu': 'Grain Rain',
+        'jq.liXia': 'Beginning of Summer',
+        'jq.xiaoMan': 'Lesser Fullness',
+        'jq.mangZhong': 'Grain in Ear',
+        'jq.xiaZhi': 'Summer Solstice',
+        'jq.xiaoShu': 'Lesser Heat',
+        'jq.daShu': 'Greater Heat',
+        'jq.liQiu': 'Beginning of Autumn',
+        'jq.chuShu': 'End of Heat',
+        'jq.baiLu': 'White Dew',
+        'jq.qiuFen': 'Autumnal Equinox',
+        'jq.hanLu': 'Cold Dew',
+        'jq.shuangJiang': 'First Frost',
+        'jq.liDong': 'Beginning of Winter',
+        'jq.xiaoXue': 'Light Snow',
+        'jq.daXue': 'Heavy Snow',
+        'sn.qingLong': 'Azure Dragon',
+        'sn.baiHu': 'White Tiger',
+        'sn.zhuQue': 'Rosefinch',
+        'sn.xuanWu': 'Black Tortoise',
+        'sn.tianEn': 'Serene Grace',
+        'sn.siShen': 'Death',
+        'sn.tianMa': 'Pegasus',
+        'sn.baLong': 'Eight Dragon',
+        'sn.jiuHu': 'Nine Tiger',
+        'sn.qiNiao': 'Seven Bird',
+        'sn.liuShe': 'Six Snake',
+        's.none': 'None',
+        's.goodLuck': 'Good luck',
+        's.badLuck': 'Bad luck',
+        's.yin': 'Yin',
+        's.yang': 'Yang',
+        's.white': 'White',
+        's.black': 'Black',
+        's.blue': 'Blue',
+        's.green': 'Green',
+        's.yellow': 'Yellow',
+        's.red': 'Red',
+        's.purple': 'Purple',
+        'jr.chuXi': 'Chinese New Year\'s Eve',
+        'jr.chunJie': 'Luna New Year',
+        'jr.yuanXiao': 'Lantern Festival',
+        'jr.duanWu': 'Dragon Boat Festival',
+        'jr.qiXi': 'Begging Festival',
+        'jr.zhongQiu': 'Mid-Autumn Festival',
+        'jr.laBa': 'Laba Festival',
+        'jr.yuanDan': 'New Year\'s Day',
+        'jr.qingRen': 'Valentine\'s Day',
+        'jr.fuNv': 'Women\'s Day',
+        'jr.xiaoFei': 'Consumer Rights Day',
+        'jr.zhiShu': 'Arbor Day',
+        'jr.wuYi': 'International Worker\'s Day',
+        'jr.erTong': 'Children\'s Day',
+        'jr.qingNian': 'Youth Day',
+        'jr.yuRen': 'April Fools\' Day',
+        'jr.jianDang': 'Party\'s Day',
+        'jr.jianJun': 'Army Day',
+        'jr.jiaoShi': 'Teachers\' Day',
+        'jr.guoQing': 'National Day',
+        'jr.wanShengYe': 'All Saints\' Eve',
+        'jr.wanSheng': 'All Saints\' Day',
+        'jr.pingAn': 'Christmas Eve',
+        'jr.shengDan': 'Christmas Day',
+        'ts.zhan': 'At',
+        'ts.hu': 'Household',
+        'ts.zao': 'Cooker',
+        'ts.dui': 'Pestle',
+        'ts.xi': 'Habitat',
+        'ts.win': 'Window',
+        'ts.fang': 'Room',
+        'ts.chuang': 'Bed',
+        'ts.lu': 'Stove',
+        'ts.mo': 'Mill',
+        'ts.chu': 'Kitchen',
+        'ts.ce': 'Toilet',
+        'ts.cang': 'Depot',
+        'ts.cangKu': 'Depot',
+        'ts.daMen': 'Gate',
+        'ts.men': 'Door',
+        'ts.tang': 'Hall',
+        'ly.xianSheng': 'Win first',
+        'ly.xianFu': 'Lose first',
+        'ly.youYin': 'Friend\'s referral',
+        'ly.foMie': 'Buddhism\'s demise',
+        'ly.daAn': 'Great safety',
+        'ly.chiKou': 'Chikagoro',
+        'yj.jiSi': 'Sacrifice',
+        'yj.qiFu': 'Pray',
+        'yj.qiuSi': 'Seek heirs',
+        'yj.kaiGuang': 'Consecretion',
+        'yj.suHui': 'Paint sculptural',
+        'yj.qiJiao': 'Build altar',
+        'yj.zhaiJiao': 'Taoist rites',
+        'yj.muYu': 'Bathing',
+        'yj.chouShen': 'Reward gods',
+        'yj.zaoMiao': 'Build temple',
+        'yj.siZhao': 'Offer kitchen god',
+        'yj.fenXiang': 'Burn incense',
+        'yj.xieTu': 'Earth gratitude',
+        'yj.chuHuo': 'Expel the flame',
+        'yj.diaoKe': 'Carving',
+        'yj.jiaQu': 'Marriage',
+        'yj.DingHun': 'Engagement',
+        'yj.naCai': 'Proposing',
+        'yj.wenMing': 'Ask name',
+        'yj.naXu': 'Uxorilocal marriage',
+        'yj.guiNing': 'Visit parents',
+        'yj.anChuang': 'Bed placing',
+        'yj.heZhang': 'Make up accounts',
+        'yj.guanJi': 'Crowning adulthood',
+        'yj.dingMeng': 'Make alliance',
+        'yj.jinRenKou': 'Adopt',
+        'yj.caiYi': 'Dressmaking',
+        'yj.wanMian': 'Cosmeticsurgery',
+        'yj.kaiRong': 'Open face',
+        'yj.xiuFen': 'Grave repair',
+        'yj.qiZuan': 'Open coffin',
+        'yj.poTu': 'Break earth',
+        'yj.anZang': 'Burial',
+        'yj.liBei': 'Tombstone erecting',
+        'yj.chengFu': 'Formation of clothes',
+        'yj.chuFu': 'Mourning clothes removal',
+        'yj.kaiShengFen': 'Open grave',
+        'yj.heShouMu': 'Make coffin',
+        'yj.ruLian': 'Body placing',
+        'yj.yiJiu': 'Move coffin',
+        'yj.puDu': 'Save soul',
+        'yj.ruZhai': 'Enter house',
+        'yj.anXiang': 'Incenst placement',
+        'yj.anMen': 'Door placing',
+        'yj.xiuZao': 'Repair',
+        'yj.qiJi': 'Digging',
+        'yj.dongTu': 'Break ground',
+        'yj.shangLiang': 'Beam placing',
+        'yj.shuZhu': 'Erecting pillars',
+        'yj.kaiJing': 'Open pond and well',
+        'yj.zuoBei': 'Make pond and fill water',
+        'yj.chaiXie': 'Smash house',
+        'yj.poWu': 'Break house',
+        'yj.huaiYuan': 'Demolish',
+        'yj.buYuan': 'Mending',
+        'yj.faMuZuoLiang': 'Make beams',
+        'yj.zuoZhao': 'Make stove',
+        'yj.jieChu': 'Removal',
+        'yj.kaiZhuYan': 'Build beam',
+        'yj.chuanPing': 'Build door',
+        'yj.gaiWuHeJi': 'Cover house',
+        'yj.kaiCe': 'Open toilet',
+        'yj.zaoCang': 'Build depot',
+        'yj.saiXue': 'Block nest',
+        'yj.pingZhi': 'Repair roads',
+        'yj.zaoQiao': 'Build bridge',
+        'yj.zuoCe': 'Build toilet',
+        'yj.zhuDi': 'Fill',
+        'yj.kaiChi': 'Open pond',
+        'yj.faMu': 'Lumbering',
+        'yj.kaiQu': 'Canalization',
+        'yj.jueJing': 'Dig well',
+        'yj.saoShe': 'Sweep house',
+        'yj.fangShui': 'Drainage',
+        'yj.zaoWu': 'Build house',
+        'yj.heJi': 'Close ridge',
+        'yj.zaoChuChou': 'Livestock thickening',
+        'yj.xiuMen': 'Repair door',
+        'yj.dingSang': 'Fix stone',
+        'yj.zuoLiang': 'Beam construction',
+        'yj.xiuShi': 'Decorate wall',
+        'yj.jiaMa': 'Erect horse',
+        'yj.kaiShi': 'Opening',
+        'yj.guaBian': 'Hang plaque',
+        'yj.naChai': 'Accept wealth',
+        'yj.qiuCai': 'Seek wealth',
+        'yj.kaiCang': 'Open depot',
+        'yj.maiChe': 'Buy car',
+        'yj.zhiChan': 'Buy property',
+        'yj.guYong': 'Hire',
+        'yj.chuHuoCai': 'Delivery',
+        'yj.anJiXie': 'Build machine',
+        'yj.zaoCheQi': 'Build car',
+        'yj.jingLuo': 'Build loom',
+        'yj.yunNiang': 'Brew',
+        'yj.zuoRan': 'Dye',
+        'yj.guZhu': 'Cast',
+        'yj.zaoChuan': 'Build boat',
+        'yj.geMi': 'Harvest honey',
+        'yj.zaiZhong': 'Farming',
+        'yj.quYu': 'Fishing',
+        'yj.jieWang': 'Netting',
+        'yj.muYang': 'Graze',
+        'yj.anDuiWei': 'Build rub',
+        'yj.xiYi': 'Learn',
+        'yj.ruXue': 'Enter school',
+        'yj.liFa': 'Haircut',
+        'yj.tanBing': 'Visiting',
+        'yj.jianGui': 'Meet noble',
+        'yj.chengChuan': 'Ride boat',
+        'yj.duShui': 'Cross water',
+        'yj.zhenJiu': 'Acupuncture',
+        'yj.chuXing': 'Travel',
+        'yj.yiXi': 'Move',
+        'yj.fenJu': 'Live apart',
+        'yj.TiTou': 'Shave',
+        'yj.zhengShou': 'Manicure',
+        'yj.naChu': 'Feed livestock',
+        'yj.buZhuo': 'Catch',
+        'yj.tianLie': 'Hunt',
+        'yj.jiaoNiuMa': 'Train horse',
+        'yj.huiQinYou': 'Meet friends',
+        'yj.fuRen': 'Go post',
+        'yj.qiuYi': 'See doctor',
+        'yj.zhiBing': 'Treat',
+        'yj.ciSong': 'Litigation',
+        'yj.qiJiDongTu': 'Lay foundation',
+        'yj.poWuHuaiYuan': 'Demolish',
+        'yj.gaiWu': 'Build house',
+        'yj.zaoCangKu': 'Build depot',
+        'yj.liQuanJiaoYi': 'Covenant trade',
+        'yj.jiaoYi': 'Trade',
+        'yj.liQuan': 'Covenant',
+        'yj.anJi': 'Install machine',
+        'yj.huiYou': 'Meet friends',
+        'yj.qiuYiLiaoBing': 'Seek treatment',
+        'yj.zhuShi': 'Everything Sucks',
+        'yj.yuShi': 'Do nothing else',
+        'yj.xingSang': 'Funeral',
+        'yj.duanYi': 'Block ant hole',
+        'yj.guiXiu': 'Place beam',
+        'xx.bi': 'Finish',
+        'xx.yi': 'Wing',
+        'xx.ji': 'Sieve',
+        'xx.kui': 'Qui',
+        'xx.gui': 'Ghost',
+        'xx.di': 'Foundation',
+        'xx.xu': 'Virtual',
+        'xx.wei': 'Danger',
+        'xx.zi': 'Mouth',
+        'xx.zhen': 'Cross-bar',
+        'xx.dou': 'Fight',
+        'xx.lou': 'Weak',
+        'xx.liu': 'Willow',
+        'xx.fang': 'House',
+        'xx.xin': 'Heart',
+        'xx.shi': 'Room',
+        'xx.can': 'Join',
+        'xx.jiao': 'Horn',
+        'xx.niu': 'Ox',
+        'xx.vei': 'Stomach',
+        'xx.xing': 'Star',
+        'xx.zhang': 'Chang',
+        'xx.tail': 'Tail',
+        'xx.qiang': 'Wall',
+        'xx.jing': 'Well',
+        'xx.kang': 'Kang',
+        'xx.nv': 'Female',
+        'xx.mao': 'Mao',
+        'sz.chun': 'Spring',
+        'sz.xia': 'Summer',
+        'sz.qiu': 'Autumn',
+        'sz.dong': 'Winter',
+        'yx.shuo': 'New',
+        'yx.eMeiXin': 'New waxing',
+        'yx.eMei': 'Waxing',
+        'yx.xi': 'Evening',
+        'yx.shangXian': 'First quarter',
+        'yx.jiuYe': 'Nine night',
+        'yx.night': 'Night',
+        'yx.jianYingTu': 'Gibbous',
+        'yx.xiaoWang': 'Little full',
+        'yx.wang': 'Full',
+        'yx.jianKuiTu': 'Disseminating',
+        'yx.xiaXian': 'Third quarter',
+        'yx.eMeiCan': 'Waning waxing',
+        'yx.can': 'Waning',
+        'yx.xiao': 'Daybreak',
+        'yx.hui': 'Obscure',
+        'ny.sangZhe': 'Cudrania',
+        'ny.baiLa': 'Wax',
+        'ny.yangLiu': 'Willow',
+        'ny.jinBo': 'Foil',
+        'ny.haiZhong': 'Sea',
+        'ny.daHai': 'Ocean',
+        'ny.shaZhong': 'Sand',
+        'ny.luZhong': 'Stove',
+        'ny.shanXia': 'Piedmont',
+        'ny.daLin': 'Forest',
+        'ny.pingDi': 'Land',
+        'ny.luPang': 'Roadside',
+        'ny.biShang': 'Wall',
+        'ny.jianFeng': 'Blade',
+        'ny.shanTou': 'Hilltop',
+        'ny.fuDeng': 'Light',
+        'ny.jianXia': 'Valleyn',
+        'ny.tianHe': 'River',
+        'ny.chengTou': 'City',
+        'ny.daYi': 'Post',
+        'ny.chaiChuan': 'Ornaments',
+        'ny.quanZhong': 'Spring',
+        'ny.daXi': 'Stream',
+        'ny.wuShang': 'Roof',
+        'ny.piLi': 'Thunderbolt',
+        'ny.tianShang': 'Sky',
+        'ny.songBo': 'Coniferin',
+        'ny.shiLiu': 'Pomegranate',
+        'ny.changLiu': 'Flows'
+      }
+    };
+
+    var _objs = {
+      'LunarUtil': LunarUtil,
+      'SolarUtil': SolarUtil,
+      'TaoUtil': TaoUtil,
+      'FotoUtil': FotoUtil,
+      'NineStarUtil': NineStarUtil
+    };
+    var _dictString = {
+      'LunarUtil': {
+        'TIAN_SHEN_TYPE': {},
+        'TIAN_SHEN_TYPE_LUCK': {},
+        'XIU_LUCK': {},
+        'LU': {},
+        'XIU': {},
+        'SHA': {},
+        'POSITION_DESC': {},
+        'NAYIN': {},
+        'WU_XING_GAN': {},
+        'WU_XING_ZHI': {},
+        'SHOU': {},
+        'GONG': {},
+        'FESTIVAL': {},
+        'ZHENG': {},
+        'ANIMAL': {},
+        'SHI_SHEN': {},
+        'XIU_SONG': {}
+      },
+      'SolarUtil': {
+        'FESTIVAL': {}
+      },
+      'TaoUtil': {
+        'BA_HUI': {},
+        'BA_JIE': {}
+      }
+    };
+    var _dictNumber = {
+      'LunarUtil': {
+        'ZHI_TIAN_SHEN_OFFSET': {},
+        'CHANG_SHENG_OFFSET': {}
+      }
+    };
+    var _dictArray = {
+      'LunarUtil': {
+        'ZHI_HIDE_GAN': {}
+      }
+    };
+    var _arrays = {
+      'LunarUtil': {
+        'GAN': [],
+        'ZHI': [],
+        'JIA_ZI': [],
+        'ZHI_XING': [],
+        'XUN': [],
+        'XUN_KONG': [],
+        'CHONG': [],
+        'CHONG_GAN': [],
+        'CHONG_GAN_TIE': [],
+        'HE_GAN_5': [],
+        'HE_ZHI_6': [],
+        'SHENGXIAO': [],
+        'NUMBER': [],
+        'POSITION_XI': [],
+        'POSITION_YANG_GUI': [],
+        'POSITION_YIN_GUI': [],
+        'POSITION_FU': [],
+        'POSITION_FU_2': [],
+        'POSITION_CAI': [],
+        'POSITION_TAI_SUI_YEAR': [],
+        'POSITION_GAN': [],
+        'POSITION_ZHI': [],
+        'JIE_QI': [],
+        'JIE_QI_IN_USE': [],
+        'TIAN_SHEN': [],
+        'SHEN_SHA': [],
+        'PENGZU_GAN': [],
+        'PENGZU_ZHI': [],
+        'MONTH_ZHI': [],
+        'CHANG_SHENG': [],
+        'HOU': [],
+        'WU_HOU': [],
+        'POSITION_TAI_DAY': [],
+        'POSITION_TAI_MONTH': [],
+        'YI_JI': [],
+        'LIU_YAO': [],
+        'MONTH': [],
+        'SEASON': [],
+        'DAY': [],
+        'YUE_XIANG': []
+      },
+      'SolarUtil': {
+        'WEEK': [],
+        'XINGZUO': []
+      },
+      'TaoUtil': {
+        'AN_WU': []
+      },
+      'FotoUtil': {
+        'XIU_27': []
+      },
+      'NineStarUtil': {
+        'NUMBER': [],
+        'WU_XING': [],
+        'POSITION': [],
+        'LUCK_XUAN_KONG': [],
+        'YIN_YANG_QI_MEN': [],
+        'COLOR': []
+      }
+    };
+
+    var _updateArray = function(c) {
+      var v = _arrays[c];
+      var o = _objs[c];
+      for (var k in v) {
+        var arr = v[k];
+        for (var i = 0, j = arr.length; i < j; i++) {
+          o[k][i] = arr[i].replace(/{(.[^}]*)}/g, function($0, $1) {
+            return _getMessage($1);
+          });
+        }
+      }
+    };
+
+    var _updateStringDictionary = function(c) {
+      var v = _dictString[c];
+      var o = _objs[c];
+      for (var k in v) {
+        var dict = v[k];
+        for (var key in dict){
+          var i = key.replace(/{(.[^}]*)}/g, function($0, $1) {
+            return _getMessage($1);
+          });
+          o[k][i] = dict[key].replace(/{(.[^}]*)}/g, function($0, $1) {
+            return _getMessage($1);
+          });
+        }
+      }
+    };
+
+    var _updateNumberDictionary = function(c) {
+      var v = _dictNumber[c];
+      var o = _objs[c];
+      for (var k in v) {
+        var dict = v[k];
+        for (var key in dict){
+          var i = key.replace(/{(.[^}]*)}/g, function($0, $1) {
+            return _getMessage($1);
+          });
+          o[k][i] = dict[key];
+        }
+      }
+    };
+
+    var _updateArrayDictionary = function(c) {
+      var v = _dictArray[c];
+      var o = _objs[c];
+      for (var k in v) {
+        var dict = v[k];
+        for (var key in dict){
+          var x = key.replace(/{(.[^}]*)}/g, function($0, $1) {
+            return _getMessage($1);
+          });
+          var arr = dict[key];
+          for (var i = 0, j = arr.length; i < j; i++) {
+            arr[i] = arr[i].replace(/{(.[^}]*)}/g, function($0, $1) {
+              return _getMessage($1);
+            });
+          }
+          o[k][x] = arr;
+        }
+      }
+    };
+
+    var _update = function() {
+      var c;
+      for (c in _arrays) {
+        _updateArray(c);
+      }
+      for (c in _dictString) {
+        _updateStringDictionary(c);
+      }
+      for (c in _dictNumber) {
+        _updateNumberDictionary(c);
+      }
+      for (c in _dictArray) {
+        _updateArrayDictionary(c);
+      }
+    };
+
+    var _setLanguage = function(lang) {
+      if (_messages[lang]) {
+        _lang = lang;
+        _update();
+      }
+    };
+
+    var _getLanguage = function() {
+      return _lang;
+    };
+
+    var _setMessages = function(lang, messages) {
+      if (!messages) {
+        return;
+      }
+      if (!_messages[lang]) {
+        _messages[lang] = {};
+      }
+      for (var key in messages) {
+        _messages[lang][key] = messages[key];
+      }
+      _update();
+    };
+
+    var _getMessage = function(key) {
+      var s = _messages[_lang][key];
+      if (undefined === s) {
+        s = _messages[_defaultLang][key];
+      }
+      if (undefined === s) {
+        s = key;
+      }
+      return s;
+    };
+
+    var _initArray = function(c) {
+      var v = _arrays[c];
+      var o = _objs[c];
+      for (var k in v) {
+        v[k].length = 0;
+        var arr = o[k];
+        for (var i = 0, j = arr.length; i < j; i++) {
+          v[k].push(arr[i]);
+        }
+      }
+    };
+
+    var _initDictionary = function(c, type) {
+      var v;
+      switch(type){
+        case 'string':
+          v = _dictString[c];
+          break;
+        case 'number':
+          v = _dictNumber[c];
+          break;
+        case 'array':
+          v = _dictArray[c];
+          break;
+        default:
+      }
+      var o = _objs[c];
+      for (var k in v) {
+        var dict = o[k];
+        for (var key in dict) {
+          v[k][key] = dict[key];
+        }
+      }
+    };
+
+    var _init = function() {
+      if (_inited) {
+        return;
+      }
+      _inited = true;
+      var c;
+      for (c in _arrays) {
+        _initArray(c);
+      }
+      for (c in _dictString) {
+        _initDictionary(c, 'string');
+      }
+      for (c in _dictNumber) {
+        _initDictionary(c, 'number');
+      }
+      for (c in _dictArray) {
+        _initDictionary(c, 'array');
+      }
+      _setLanguage(_defaultLang);
+    };
+    _init();
+    return {
+      getLanguage:function(){return _getLanguage();},
+      setLanguage:function(lang){_setLanguage(lang);},
+      getMessage:function(key){return _getMessage(key);},
+      setMessages:function(lang,messages){_setMessages(lang,messages);}
+    };
+  })();
+  return {
+    ShouXingUtil:ShouXingUtil,
+    SolarUtil:SolarUtil,
+    LunarUtil:LunarUtil,
+    FotoUtil:FotoUtil,
+    TaoUtil:TaoUtil,
+    NineStarUtil:NineStarUtil,
+    Solar:Solar,
+    Lunar:Lunar,
+    Foto:Foto,
+    Tao:Tao,
+    NineStar:NineStar,
+    EightChar:EightChar,
+    SolarWeek:SolarWeek,
+    SolarMonth:SolarMonth,
+    SolarSeason:SolarSeason,
+    SolarHalfYear:SolarHalfYear,
+    SolarYear:SolarYear,
+    LunarMonth:LunarMonth,
+    LunarYear:LunarYear,
+    LunarTime:LunarTime,
+    HolidayUtil:HolidayUtil,
+    I18n: I18n
+  };
+});
