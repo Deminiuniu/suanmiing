@@ -1,0 +1,316 @@
+* {
+    font-family: 'Noto Serif SC', serif;
+}
+body {
+    background-color: #FDFBF7;
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    color: #333333;
+}
+.title-font {
+    font-family: 'Ma Shan Zheng', cursive;
+}
+.card {
+    background-color: #fffef7;
+    border-radius: 0.75rem;
+    border: 1px solid #e8dcc9;
+    box-shadow: 0 4px 12px rgba(120, 80, 50, 0.08);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 8px 24px rgba(120, 80, 50, 0.12);
+    border-color: #d4b98b;
+}
+.btn-primary {
+    background-color: #c03a2b;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(192, 58, 43, 0.3);
+}
+.btn-primary:hover {
+    background-color: #a52f22;
+    box-shadow: 0 6px 10px rgba(192, 58, 43, 0.4);
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(51, 51, 51, 0.3);
+}
+.btn-secondary:hover {
+    background-color: #1a1a1a;
+    box-shadow: 0 6px 10px rgba(51, 51, 51, 0.4);
+    transform: translateY(-2px);
+}
+.energy-bar {
+    height: 1rem;
+    border-radius: 0.5rem;
+    transition: width 1s ease;
+}
+.shake-animation {
+    animation: shake 0.5s ease infinite;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+    to { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6); }
+}
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.five-elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.element-item {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    min-width: 50px;
+    flex: 1 0 auto;
+    max-width: 80px;
+}
+.metal { background-color: #F0F0F0; color: #333; border: 1px solid #C0C0C0; }
+.wood { background-color: #E8F5E9; color: #2E7D32; border: 1px solid #A5D6A7; }
+.water { background-color: #E3F2FD; color: #1565C0; border: 1px solid #90CAF9; }
+.fire { background-color: #FFEBEE; color: #C62828; border: 1px solid #EF9A9A; }
+.earth { background-color: #FFF3E0; color: #EF6C00; border: 1px solid #FFCC80; }
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+/* 增强的摇签动画 - 模拟竹筒摇动 */
+.shake-lottery {
+    animation: shakeLottery 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes shakeLottery {
+    0% { transform: translateX(0) rotate(-3deg); }
+    25% { transform: translateX(-8px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(2deg); }
+    75% { transform: translateX(-5px) rotate(-2deg); }
+    100% { transform: translateX(8px) rotate(5deg); }
+}
+
+/* 祈福模态框 */
+.incense-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.incense-content {
+    background-color: #fffef7;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid #e8dcc9;
+}
+
+.incense-title {
+    font-size: 1.8rem;
+    color: #c03a2b;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.incense-message {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.incense-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.incense-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.incense-btn-yes {
+    background-color: #c03a2b;
+    color: white;
+    box-shadow: 0 4px 6px rgba(192, 58, 43, 0.3);
+}
+
+.incense-btn-yes:hover {
+    background-color: #a52f22;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(192, 58, 43, 0.4);
+}
+
+.incense-btn-no {
+    background-color: #333333;
+    color: white;
+    box-shadow: 0 4px 6px rgba(51, 51, 51, 0.3);
+}
+
+.incense-btn-no:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(51, 51, 51, 0.4);
+}
+
+/* 清香容器 */
+.incense-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    position: relative;
+    height: 200px;
+}
+
+.incense-stick {
+    position: relative;
+    width: 8px;
+    height: 150px;
+    background: linear-gradient(to bottom, #8B4513 0%, #A0522D 30%, #D2691E 100%);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.incense-burning {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 20px;
+    background: linear-gradient(to bottom, #FFD700 0%, #FF8C00 50%, #FF4500 100%);
+    border-radius: 50% 50% 20% 20%;
+    animation: burning 2s infinite alternate;
+}
+
+@keyframes burning {
+    0% {
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+        transform: translateX(-50%) scale(1.2);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 69, 0, 0.6);
+    }
+}
+
+/* 青烟动画 */
+.incense-smoke {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 100px;
+    opacity: 0;
+}
+
+.smoke-particle {
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(200, 200, 200, 0.4) 100%);
+    border-radius: 50%;
+    animation: smokeRise 3s infinite ease-out;
+}
+
+.smoke-particle:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    left: 10px;
+    animation-delay: 0s;
+}
+
+.smoke-particle:nth-child(2) {
+    width: 8px;
+    height: 8px;
+    left: 5px;
+    animation-delay: 0.5s;
+}
+
+.smoke-particle:nth-child(3) {
+    width: 12px;
+    height: 12px;
+    left: 15px;
+    animation-delay: 1s;
+}
+
+@keyframes smokeRise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100px) scale(2);
+        opacity: 0;
+    }
+}
+
+/* 祈福完成提示 */
+.blessing-complete {
+    font-size: 1.5rem;
+    color: #2E7D32;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #E8F5E9;
+    border-radius: 0.5rem;
+    border: 2px solid #A5D6A7;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* 隐藏类 */
+.hidden {
+    display: none;
+}

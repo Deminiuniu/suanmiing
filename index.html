@@ -12,75 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Noto Sans SC', sans-serif;
-        }
-        body {
-            background-color: #FDFBF7;
-            color: #333333;
-        }
-        .title-font {
-            font-family: 'Ma Shan Zheng', cursive;
-        }
-        .card {
-            background-color: white;
-            border-radius: 1rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        }
-        .energy-bar {
-            height: 1rem;
-            border-radius: 0.5rem;
-            transition: width 1s ease;
-        }
-        .shake-animation {
-            animation: shake 0.5s ease infinite;
-        }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        .glow {
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        @keyframes glow {
-            from { box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
-            to { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6); }
-        }
-        .fade-in {
-            animation: fadeIn 0.8s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .five-elements {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        .element-item {
-            text-align: center;
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            min-width: 50px;
-            flex: 1 0 auto;
-            max-width: 80px;
-        }
-        .metal { background-color: #F0F0F0; color: #333; border: 1px solid #C0C0C0; }
-        .wood { background-color: #E8F5E9; color: #2E7D32; border: 1px solid #A5D6A7; }
-        .water { background-color: #E3F2FD; color: #1565C0; border: 1px solid #90CAF9; }
-        .fire { background-color: #FFEBEE; color: #C62828; border: 1px solid #EF9A9A; }
-        .earth { background-color: #FFF3E0; color: #EF6C00; border: 1px solid #FFCC80; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen p-4 md:p-8">
     <div class="max-w-6xl mx-auto">
@@ -90,6 +23,49 @@
             <p class="text-gray-600 text-lg">探索八字五行，遇见赛博机缘</p>
         </header>
 
+        <!-- 测算指引 -->
+        <section class="mb-12">
+            <div class="card p-6 md:p-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800 border-b pb-3 flex items-center">
+                    <i class="fas fa-book-open mr-3 text-red-600"></i>测算指引
+                </h2>
+                <div class="text-gray-700 leading-relaxed text-lg space-y-4">
+                    <p>身强如江河澎湃，需疏导以成大器；身弱如空谷幽兰，需滋养以显芳华。</p>
+                    <p>命理如棋局，步步皆学问。知身强身弱，方能明进退得失，察运势起伏，掌人生航向。</p>
+                    <p>八字五行，乃天地之气赋予个人的禀赋密码。强则顺势而为，弱则借力打力，阴阳调和，方能趋吉避凶，成就非凡人生。</p>
+                    <p class="text-red-600 font-medium">探索您的命理特质，开启自我认知与提升之旅。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 八字五行科普 -->
+        <section class="mb-12">
+            <div class="card p-6 md:p-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800 border-b pb-3 flex items-center cursor-pointer" id="collapse-toggle">
+                    <i class="fas fa-chevron-right mr-3 text-red-600 transition-transform duration-300" id="collapse-icon"></i>八字五行基本概念
+                    <span class="text-sm font-normal text-gray-500 ml-auto">点击展开/收起</span>
+                </h2>
+                <div class="text-gray-700 leading-relaxed text-lg space-y-4 hidden" id="collapse-content">
+                    <h3 class="text-xl font-medium text-gray-800">八字</h3>
+                    <p>八字，又称四柱八字，是根据一个人出生的年、月、日、时，分别用天干地支表示，共八个字，故称八字。它反映了人与天地自然的关系，是命理学的核心。</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>年柱：</strong>出生年份的天干地支，代表祖上、家庭背景</li>
+                        <li><strong>月柱：</strong>出生月份的天干地支，代表父母、兄弟、社会环境</li>
+                        <li><strong>日柱：</strong>出生日的天干地支，其中日干代表自己，日支代表配偶</li>
+                        <li><strong>时柱：</strong>出生时辰的天干地支，代表子女、晚年运势</li>
+                    </ul>
+                    <h3 class="text-xl font-medium text-gray-800">五行</h3>
+                    <p>五行指金、木、水、火、土五种基本元素，它们之间相生相克，构成万物变化的基础。</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>相生：</strong>金生水，水生木，木生火，火生土，土生金</li>
+                        <li><strong>相克：</strong>金克木，木克土，土克水，水克火，火克金</li>
+                        <li><strong>五行平衡：</strong>命理追求五行平衡，过旺或过弱皆需调节</li>
+                    </ul>
+                    <p class="text-sm text-gray-500">了解八字五行，有助于认识自我特质，把握人生机遇，达到天人合一的境界。</p>
+                </div>
+            </div>
+        </section>
+
         <!-- 中部表单区 -->
         <section class="mb-12">
             <div class="card p-6 md:p-8 mb-8">
@@ -97,7 +73,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-gray-700 mb-2">公历出生日期</label>
-                        <input type="date" id="birthdate" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-blue-500 outline-none">
+                        <input type="date" id="birthdate" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-300 focus:border-red-500 outline-none">
                         <div class="mt-2">
                             <label class="block text-gray-700 mb-2 text-sm">农历显示</label>
                             <input type="text" id="lunar-display" readonly class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700">
@@ -105,7 +81,7 @@
                     </div>
                     <div>
                         <label class="block text-gray-700 mb-2">出生时间 (24小时制)</label>
-                        <input type="time" id="birthtime" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-blue-500 outline-none" value="12:00">
+                        <input type="time" id="birthtime" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-300 focus:border-red-500 outline-none" value="12:00">
                     </div>
                     <div>
                         <label class="block text-gray-700 mb-2">性别</label>
@@ -121,7 +97,7 @@
                         </div>
                     </div>
                     <div class="flex items-end">
-                        <button id="calculate-btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg">
+                        <button id="calculate-btn" class="w-full btn-primary font-medium py-3 px-6 rounded-lg">
                             <i class="fas fa-calculator mr-2"></i>计算八字五行
                         </button>
                     </div>
@@ -141,7 +117,7 @@
                     <!-- 八字卡片 -->
                     <div class="card p-6">
                         <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
-                            <i class="fas fa-scroll mr-3 text-blue-500"></i>八字信息
+                            <i class="fas fa-scroll mr-3 text-red-600"></i>八字信息
                         </h3>
                         <div class="space-y-4">
                             <div class="flex justify-between items-center">
@@ -262,6 +238,34 @@
                     </div>
                 </div>
 
+                <!-- 贵人与避嫌 -->
+                <div class="card p-6 mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <i class="fas fa-hands-helping mr-3 text-green-600"></i>贵人与避嫌
+                    </h3>
+                    <div id="relationship-advice" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="p-4 rounded-lg bg-green-50 border border-green-100">
+                                <h4 class="text-lg font-medium mb-2 text-gray-800 flex items-center">
+                                    <i class="fas fa-user-friends mr-2 text-green-600"></i>贵人特征
+                                </h4>
+                                <p id="noble-person-desc" class="text-gray-700"></p>
+                                <ul id="noble-person-list" class="mt-2 space-y-1 text-sm text-gray-600"></ul>
+                            </div>
+                            <div class="p-4 rounded-lg bg-red-50 border border-red-100">
+                                <h4 class="text-lg font-medium mb-2 text-gray-800 flex items-center">
+                                    <i class="fas fa-user-times mr-2 text-red-600"></i>避嫌特征
+                                </h4>
+                                <p id="avoid-person-desc" class="text-gray-700"></p>
+                                <ul id="avoid-person-list" class="mt-2 space-y-1 text-sm text-gray-600"></ul>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <p><i class="fas fa-lightbulb mr-2"></i>提示：贵人并非无条件帮助，避嫌也非绝对对立，人际交往重在相互理解与尊重。</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 运势推断 -->
                 <div class="card p-6 mb-8">
                     <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
@@ -290,7 +294,7 @@
                             </div>
                         </div>
                         <div class="mt-8">
-                            <button id="shake-btn" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <button id="shake-btn" class="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transition-all duration-300">
                                 <i class="fas fa-hand-point-up mr-3"></i>点击摇签
                             </button>
                         </div>
@@ -314,561 +318,6 @@
         </footer>
     </div>
 
-    <script>
-        // 全局变量
-        let currentBazi = null;
-        let currentFiveElements = { metal: 0, wood: 0, water: 0, fire: 0, earth: 0 };
-        let currentDayElement = null;
-        let lunarLoading = false; // 防止重复加载
-
-        // 动态加载 lunar.js 库（在线CDN）
-        function loadLunarScript() {
-            if (lunarLoading) return false;
-            if (typeof Lunar !== 'undefined') return true; // 已经加载
-
-            lunarLoading = true;
-            console.log('尝试动态加载 lunar.js 库...');
-
-            const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/lunar-javascript@latest/dist/lunar.js';
-            script.onload = function() {
-                console.log('lunar.js 库动态加载成功');
-                lunarLoading = false;
-                // 重新启用计算按钮
-                document.getElementById('calculate-btn').disabled = false;
-                document.getElementById('calculate-btn').innerHTML = '<i class="fas fa-calculator mr-2"></i>计算八字五行';
-                // 更新农历显示
-                updateLunarDisplay();
-            };
-            script.onerror = function() {
-                console.error('lunar.js 库动态加载失败');
-                lunarLoading = false;
-                alert('无法加载 lunar.js 库，请检查网络连接或确保本地 lunar.js 文件存在。');
-            };
-
-            document.head.appendChild(script);
-            return false; // 表示正在加载中
-        }
-
-        // 检查库是否加载，如果未加载则尝试加载
-        function checkLunarLib() {
-            if (typeof Lunar === 'undefined') {
-                console.warn('lunar.js 库未加载');
-                document.getElementById('calculate-btn').disabled = true;
-                document.getElementById('calculate-btn').innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i>库未加载';
-                document.getElementById('lunar-display').value = '库未加载';
-                return false;
-            }
-            return true;
-        }
-
-        // 天干地支五行映射
-        const heavenlyStems = {
-            '甲': 'wood', '乙': 'wood', '丙': 'fire', '丁': 'fire', '戊': 'earth',
-            '己': 'earth', '庚': 'metal', '辛': 'metal', '壬': 'water', '癸': 'water'
-        };
-
-        const earthlyBranches = {
-            '子': 'water', '丑': 'earth', '寅': 'wood', '卯': 'wood', '辰': 'earth',
-            '巳': 'fire', '午': 'fire', '未': 'earth', '申': 'metal', '酉': 'metal',
-            '戌': 'earth', '亥': 'water'
-        };
-
-        // 月令（地支）对应的五行
-        const monthBranchToElement = {
-            '寅': 'wood', '卯': 'wood', '辰': 'earth',
-            '巳': 'fire', '午': 'fire', '未': 'earth',
-            '申': 'metal', '酉': 'metal', '戌': 'earth',
-            '亥': 'water', '子': 'water', '丑': 'earth'
-        };
-
-        // 五行相生：key生value
-        const generatingCycle = {
-            'wood': 'fire',
-            'fire': 'earth',
-            'earth': 'metal',
-            'metal': 'water',
-            'water': 'wood'
-        };
-
-        // 五行颜色
-        const elementColors = {
-            'metal': '#C0C0C0',
-            'wood': '#2E7D32',
-            'water': '#1565C0',
-            'fire': '#C62828',
-            'earth': '#EF6C00'
-        };
-
-        // 五行补救建议
-        const remedySuggestions = {
-            'metal': {
-                colors: ['白色', '金色', '银色'],
-                accessories: ['银饰', '金属手表', '白水晶', '钛钢饰品'],
-                elements: ['多接触金属物品', '佩戴金属饰品', '使用白色系物品']
-            },
-            'wood': {
-                colors: ['绿色', '青色'],
-                accessories: ['绿幽灵', '檀木手串', '翡翠', '竹制品'],
-                elements: ['多接触植物', '佩戴木制饰品', '使用绿色系物品']
-            },
-            'water': {
-                colors: ['黑色', '蓝色', '灰色'],
-                accessories: ['黑曜石', '海蓝宝', '蓝宝石', '水滴形饰品'],
-                elements: ['多接触水元素', '佩戴水属性饰品', '使用黑蓝色系物品']
-            },
-            'fire': {
-                colors: ['红色', '紫色', '橙色'],
-                accessories: ['红玛瑙', '紫水晶', '琥珀', '太阳石'],
-                elements: ['多接触火元素', '佩戴红色饰品', '使用暖色系物品']
-            },
-            'earth': {
-                colors: ['黄色', '棕色', '米色'],
-                accessories: ['黄水晶', '陶瓷饰品', '玛瑙', '玉石'],
-                elements: ['多接触土元素', '佩戴土属性饰品', '使用大地色系物品']
-            }
-        };
-
-        // 运势话术库
-        const fortuneSentences = [
-            "今日天时地利，你的命格与流年相得益彰，适宜开展新计划，会有意想不到的收获。",
-            "五行流转，生生不息。今日你的能量与天地共鸣，人际关系和谐，贵人运上升。",
-            "命理显示今日是你的幸运日，小小的冒险可能会带来丰厚的回报，保持开放心态。",
-            "天地之气与你命格相生，今日思维清晰，决策果断，是处理重要事务的好时机。",
-            "五行平衡，身心和谐。今日适合内省与规划，为未来的成功打下坚实基础。",
-            "今日天干地支与你的命格形成良好互动，创造力旺盛，艺术灵感迸发。",
-            "命理流转，今日你的能量场强大，吸引力倍增，适合社交与展示自我。",
-            "天地能量与你的五行互补，今日财务状况良好，可能有意外之财的机会。",
-            "今日命格与流年相合，情感运势上升，单身者可能有浪漫邂逅，有伴者关系更融洽。",
-            "五行相生，今日你的健康状况良好，精力充沛，适合运动与户外活动。"
-        ];
-
-        // 签诗库
-        const lotteryResults = [
-            { level: "大吉", message: "春风得意马蹄疾，一日看尽长安花。今日机缘如潮涌，心想事成乐无涯。" },
-            { level: "上吉", message: "云开月明照前程，贵人相助路自平。只需保持初心在，功成名就自然成。" },
-            { level: "中吉", message: "柳暗花明又一村，稳步前行福自临。小有波折不足虑，坚持到底见真金。" },
-            { level: "小吉", message: "细雨滋润万物生，点滴积累终成城。今日种下善因种，来日收获满园春。" }
-        ];
-
-        // DOM 加载完成后初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 检查库是否加载
-            checkLunarLib();
-
-            // 设置默认出生日期为30年前
-            const defaultDate = new Date();
-            defaultDate.setFullYear(defaultDate.getFullYear() - 30);
-            const formattedDate = defaultDate.toISOString().split('T')[0];
-            document.getElementById('birthdate').value = formattedDate;
-
-            // 更新农历显示
-            updateLunarDisplay();
-
-            // 绑定事件监听器
-            document.getElementById('birthdate').addEventListener('change', updateLunarDisplay);
-            document.getElementById('calculate-btn').addEventListener('click', calculateBazi);
-            document.getElementById('shake-btn').addEventListener('click', performLottery);
-
-            // 初始隐藏结果区域
-            document.getElementById('results-section').classList.add('hidden');
-        });
-
-        // 更新农历显示
-        function updateLunarDisplay() {
-            const birthdate = document.getElementById('birthdate').value;
-            if (!birthdate) return;
-
-            // 检查库是否加载
-            if (typeof Lunar === 'undefined') {
-                document.getElementById('lunar-display').value = '库未加载';
-                return;
-            }
-
-            try {
-                const date = new Date(birthdate);
-                // 检查 Lunar.fromDate 方法是否存在
-                if (typeof Lunar.fromDate !== 'function') {
-                    document.getElementById('lunar-display').value = '库方法错误';
-                    console.error('Lunar.fromDate 不是函数，库版本可能不匹配');
-                    return;
-                }
-
-                const lunar = Lunar.fromDate(date);
-
-                // 检查 toString 方法
-                if (typeof lunar.toString !== 'function') {
-                    document.getElementById('lunar-display').value = '日期转换错误';
-                    return;
-                }
-
-                const lunarStr = lunar.toString();
-                document.getElementById('lunar-display').value = lunarStr;
-            } catch (e) {
-                console.error('农历转换错误:', e);
-                document.getElementById('lunar-display').value = '转换失败: ' + e.message;
-            }
-        }
-
-        // 计算八字和五行
-        function calculateBazi() {
-            const birthdate = document.getElementById('birthdate').value;
-            const birthtime = document.getElementById('birthtime').value;
-
-            if (!birthdate) {
-                alert('请选择出生日期');
-                return;
-            }
-
-            // 检查库是否加载
-            if (typeof Lunar === 'undefined') {
-                const userConfirmed = confirm('lunar.js 库未加载。点击"确定"尝试从网络加载，点击"取消"检查本地文件。\n\n请确保 lunar.js 文件与网页在同一目录。\n如需离线使用，请确保已下载 lunar.js 文件。');
-                if (userConfirmed) {
-                    // 尝试动态加载
-                    document.getElementById('calculate-btn').disabled = true;
-                    document.getElementById('calculate-btn').innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>加载库中...';
-                    loadLunarScript();
-                    alert('正在尝试加载库，请稍后重试计算。');
-                }
-                return;
-            }
-
-            try {
-                const date = new Date(birthdate + 'T' + birthtime);
-
-                // 检查日期是否有效
-                if (isNaN(date.getTime())) {
-                    alert('日期格式无效，请检查输入');
-                    return;
-                }
-
-                // 检查 Lunar.fromDate 方法
-                if (typeof Lunar.fromDate !== 'function') {
-                    alert('库方法错误，请尝试刷新页面');
-                    console.error('Lunar.fromDate 不是函数');
-                    return;
-                }
-
-                const lunar = Lunar.fromDate(date);
-
-                // 检查 getBaZi 方法
-                if (typeof lunar.getBaZi !== 'function') {
-                    alert('八字计算方法不可用，库版本可能不兼容');
-                    console.error('lunar.getBaZi 不是函数，库对象:', lunar);
-                    return;
-                }
-
-                // 获取八字
-                const bazi = lunar.getBaZi();
-
-                // 检查八字结果是否有效
-                if (!Array.isArray(bazi) || bazi.length < 4) {
-                    alert('八字计算结果格式错误');
-                    console.error('八字结果格式错误:', bazi);
-                    return;
-                }
-
-                currentBazi = bazi;
-
-                // 显示公历和农历日期
-                document.getElementById('gregorian-date').textContent = date.toLocaleDateString('zh-CN');
-                document.getElementById('lunar-date').textContent = lunar.toString();
-
-                // 显示四柱八字
-                document.getElementById('year-pillar').textContent = bazi[0] || '未知';
-                document.getElementById('month-pillar').textContent = bazi[1] || '未知';
-                document.getElementById('day-pillar').textContent = bazi[2] || '未知';
-                document.getElementById('hour-pillar').textContent = bazi[3] || '未知';
-
-                // 计算五行
-                calculateFiveElements(bazi);
-
-                // 显示五行能量条
-                updateFiveElementsDisplay();
-
-                // 计算身强身弱
-                calculateBodyStrength(bazi);
-
-                // 生成补救建议
-                generateRemedy();
-
-                // 生成运势推断
-                generateFortune();
-
-                // 显示结果区域
-                document.getElementById('results-section').classList.remove('hidden');
-                document.getElementById('results-section').classList.add('fade-in');
-
-                // 滚动到结果区域
-                document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
-
-            } catch (e) {
-                console.error('八字计算错误:', e);
-                alert('计算失败: ' + e.message + '\n请检查控制台获取详细信息');
-            }
-        }
-
-        // 计算五行得分
-        function calculateFiveElements(bazi) {
-            // 重置得分
-            currentFiveElements = { metal: 0, wood: 0, water: 0, fire: 0, earth: 0 };
-
-            // 遍历八字中的每个字
-            for (let pillar of bazi) {
-                if (!pillar) continue;
-
-                // 每个柱有两个字符
-                for (let char of pillar) {
-                    // 检查天干
-                    if (heavenlyStems[char]) {
-                        currentFiveElements[heavenlyStems[char]]++;
-                    }
-                    // 检查地支
-                    if (earthlyBranches[char]) {
-                        currentFiveElements[earthlyBranches[char]]++;
-                    }
-                }
-            }
-
-            // 计算总分并归一化到百分比（简化处理）
-            const total = Object.values(currentFiveElements).reduce((a, b) => a + b, 0);
-            if (total > 0) {
-                for (let key in currentFiveElements) {
-                    currentFiveElements[key] = Math.round((currentFiveElements[key] / total) * 100);
-                }
-            }
-        }
-
-        // 更新五行显示
-        function updateFiveElementsDisplay() {
-            const elements = ['metal', 'wood', 'water', 'fire', 'earth'];
-            const elementNames = { metal: '金', wood: '木', water: '水', fire: '火', earth: '土' };
-
-            // 更新分数显示
-            elements.forEach(el => {
-                document.getElementById(`${el}-score`).textContent = currentFiveElements[el];
-                document.getElementById(`${el}-bar`).style.width = `${currentFiveElements[el]}%`;
-            });
-
-            // 更新五行标签显示
-            const container = document.getElementById('five-elements-score');
-            container.innerHTML = '';
-
-            elements.forEach(el => {
-                const div = document.createElement('div');
-                div.className = `element-item ${el}`;
-                div.innerHTML = `<div class="font-bold text-lg">${elementNames[el]}</div>
-                                 <div class="text-sm">${currentFiveElements[el]}分</div>`;
-                container.appendChild(div);
-            });
-        }
-
-        // 计算身强身弱
-        function calculateBodyStrength(bazi) {
-            const dayPillar = bazi[2]; // 日柱
-            const monthPillar = bazi[1]; // 月柱
-
-            if (!dayPillar || !monthPillar) return;
-
-            const dayStem = dayPillar[0]; // 日干
-            const monthBranch = monthPillar[1]; // 月支
-
-            const dayElement = heavenlyStems[dayStem];
-            currentDayElement = dayElement; // 存储日干五行
-            const monthElement = monthBranchToElement[monthBranch];
-
-            let strength = '未知';
-            let description = '';
-
-            if (dayElement && monthElement) {
-                // 简单判断：如果月令五行生助日干五行，或相同，则为身强；否则为身弱
-                if (dayElement === monthElement || generatingCycle[monthElement] === dayElement) {
-                    strength = '身强';
-                    description = '日干得令，能量充沛。适合担当领导角色，积极进取，发挥自身影响力。';
-                } else {
-                    strength = '身弱';
-                    description = '日干不得令，能量稍弱。宜以柔克刚，借助他人力量，注重修养与积累。';
-                }
-            }
-
-            document.getElementById('body-strength').textContent = strength;
-            document.getElementById('body-strength-desc').textContent = description;
-        }
-
-        // 生成补救建议
-        function generateRemedy() {
-            // 找到得分最低的五行
-            let minElement = 'metal';
-            let minScore = currentFiveElements.metal;
-
-            for (let element in currentFiveElements) {
-                if (currentFiveElements[element] < minScore) {
-                    minScore = currentFiveElements[element];
-                    minElement = element;
-                }
-            }
-
-            const suggestion = remedySuggestions[minElement];
-            const elementNames = { metal: '金', wood: '木', water: '水', fire: '火', earth: '土' };
-
-            document.getElementById('remedy-text').textContent =
-                `你的命理中${elementNames[minElement]}元素较弱，建议通过以下方式补充能量：`;
-
-            const details = document.getElementById('remedy-details');
-            details.innerHTML = `
-                <div class="space-y-2">
-                    <div><span class="font-medium">推荐颜色：</span>${suggestion.colors.join('、')}</div>
-                    <div><span class="font-medium">推荐饰品：</span>${suggestion.accessories.slice(0, 3).join('、')}</div>
-                    <div><span class="font-medium">日常建议：</span>${suggestion.elements[0]}</div>
-                </div>
-            `;
-        }
-
-        // 生成运势推断
-        function generateFortune() {
-            // 如果日干五行未计算，使用随机话术
-            if (!currentDayElement) {
-                const randomIndex = Math.floor(Math.random() * fortuneSentences.length);
-                document.getElementById('fortune-text').textContent = fortuneSentences[randomIndex];
-                return;
-            }
-
-            // 获取今日日期的日干五行
-            const today = new Date();
-            let todayElement = null;
-
-            // 检查库是否可用
-            if (typeof Lunar !== 'undefined' && typeof Lunar.fromDate === 'function') {
-                try {
-                    const lunarToday = Lunar.fromDate(today);
-                    if (lunarToday && typeof lunarToday.getBaZi === 'function') {
-                        const baziToday = lunarToday.getBaZi();
-                        const dayPillarToday = baziToday[2];
-                        const dayStemToday = dayPillarToday ? dayPillarToday[0] : null;
-                        todayElement = dayStemToday ? heavenlyStems[dayStemToday] : null;
-                    }
-                } catch (e) {
-                    console.warn('获取今日八字失败，使用随机话术:', e);
-                }
-            }
-
-            // 如果获取失败，使用随机话术
-            if (!todayElement) {
-                const randomIndex = Math.floor(Math.random() * fortuneSentences.length);
-                document.getElementById('fortune-text').textContent = fortuneSentences[randomIndex];
-                return;
-            }
-
-            // 五行相克关系
-            const restrainingCycle = {
-                'metal': 'wood',
-                'wood': 'earth',
-                'earth': 'water',
-                'water': 'fire',
-                'fire': 'metal'
-            };
-
-            // 根据五行关系选择话术类别
-            let sentencePool = [];
-
-            if (todayElement === currentDayElement) {
-                // 五行相同
-                sentencePool = [
-                    "今日五行与你的命格相同，能量共振，是发挥潜力、展现自我的绝佳时机。",
-                    "天地之气与你命格契合，今日诸事顺遂，宜把握机会，积极行动。",
-                    "五行共鸣，今日你的直觉敏锐，决策准确，适合处理重要事务。"
-                ];
-            } else if (generatingCycle[todayElement] === currentDayElement) {
-                // 今日五行生你的日干五行（吉）
-                sentencePool = [
-                    "今日天时地利，五行相生，能量流转顺畅，是开展新计划的好时机。",
-                    "天地之气滋养你的命格，今日贵人运强，易得他人相助。",
-                    "五行相生，今日你的创造力旺盛，思维活跃，适合创新与表达。"
-                ];
-            } else if (restrainingCycle[todayElement] === currentDayElement) {
-                // 今日五行克你的日干五行（挑战）
-                sentencePool = [
-                    "今日五行稍有相克，可能遇到小挑战，但以柔克刚，反而能磨练心性。",
-                    "天地之气稍有阻滞，今日需保持耐心，稳扎稳打，避免冒进。",
-                    "五行相克，今日宜内省规划，积蓄能量，待时机成熟再行动。"
-                ];
-            } else if (generatingCycle[currentDayElement] === todayElement) {
-                // 你的日干五行生今日五行（泄气）
-                sentencePool = [
-                    "今日你的能量有所外泄，宜保存实力，专注于重要事务，避免分散精力。",
-                    "五行流转，今日适合付出与奉献，但需注意平衡，勿过度消耗。",
-                    "能量稍泄，今日宜低调行事，积累资源，为未来做准备。"
-                ];
-            } else {
-                // 其他关系（中性）
-                sentencePool = fortuneSentences;
-            }
-
-            // 随机选择一句
-            const randomIndex = Math.floor(Math.random() * sentencePool.length);
-            document.getElementById('fortune-text').textContent = sentencePool[randomIndex];
-        }
-
-        // 赛博摇签
-        function performLottery() {
-            const button = document.getElementById('shake-btn');
-            const box = document.getElementById('lottery-box');
-            const result = document.getElementById('lottery-result');
-            const message = document.getElementById('lottery-message');
-
-            // 禁用按钮
-            button.disabled = true;
-            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-3"></i>摇签中...';
-
-            // 添加摇动动画
-            box.classList.add('shake-animation');
-            result.textContent = '...';
-
-            // 3秒后显示结果
-            setTimeout(() => {
-                // 移除动画
-                box.classList.remove('shake-animation');
-                box.classList.add('glow');
-
-                // 随机选择签文
-                const randomIndex = Math.floor(Math.random() * lotteryResults.length);
-                const lottery = lotteryResults[randomIndex];
-
-                // 显示结果
-                result.textContent = lottery.level;
-                result.style.color = getLotteryColor(lottery.level);
-
-                // 显示签诗
-                message.innerHTML = `
-                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-purple-200">
-                        <h3 class="text-2xl font-bold mb-3" style="color: ${getLotteryColor(lottery.level)}">${lottery.level}</h3>
-                        <p class="text-lg">${lottery.message}</p>
-                    </div>
-                `;
-                message.classList.remove('hidden');
-
-                // 恢复按钮
-                button.disabled = false;
-                button.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>再次摇签';
-
-                // 3秒后移除发光效果
-                setTimeout(() => {
-                    box.classList.remove('glow');
-                }, 3000);
-
-            }, 3000);
-        }
-
-        // 获取签文颜色
-        function getLotteryColor(level) {
-            switch(level) {
-                case '大吉': return '#E53935'; // 红色
-                case '上吉': return '#FB8C00'; // 橙色
-                case '中吉': return '#43A047'; // 绿色
-                case '小吉': return '#1E88E5'; // 蓝色
-                default: return '#333';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
