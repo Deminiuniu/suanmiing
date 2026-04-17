@@ -314,3 +314,393 @@ body {
 .hidden {
     display: none;
 }
+
+/* ==================== 打小人仪式样式 ==================== */
+
+/* 开始按钮点击动画 */
+.beat-evil-btn:active {
+    transform: scale(0.92);
+    transition: transform 0.3s ease-out;
+}
+
+/* 仪式阶段样式 */
+.ritual-stage {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ritual-title {
+    font-size: 1.8rem;
+    color: #c03a2b;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.ritual-message {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.ritual-blessing {
+    font-size: 1.5rem;
+    color: #2E7D32;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.ritual-blessing:nth-child(1) { animation-delay: 0.3s; }
+.ritual-blessing:nth-child(2) { animation-delay: 0.6s; }
+.ritual-blessing:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 祥云动画 */
+.auspicious-cloud {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 240, 0.7) 100%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: cloudFloat 1.2s ease-out forwards;
+}
+
+.auspicious-cloud:before,
+.auspicious-cloud:after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.auspicious-cloud:before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 10px;
+}
+
+.auspicious-cloud:after {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    right: 10px;
+}
+
+.cloud-2 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0.3s;
+}
+
+.cloud-3 {
+    top: 40%;
+    right: 10%;
+    animation-delay: 0.6s;
+}
+
+.cloud-4 {
+    top: 30%;
+    left: 15%;
+    animation-delay: 0.2s;
+}
+
+.cloud-5 {
+    top: 50%;
+    right: 15%;
+    animation-delay: 0.4s;
+}
+
+@keyframes cloudFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 纸人样式 */
+.evil-paper {
+    width: 160px;
+    height: 200px;
+    background: linear-gradient(to bottom, #F5F5F5 0%, #E0E0E0 100%);
+    border-radius: 8px;
+    border: 2px solid #BDBDBD;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.12s ease-out;
+    overflow: hidden;
+}
+
+.evil-paper-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 纸人拍打震动动画 */
+.evil-paper.beating {
+    animation: paperBeat 0.12s ease-out;
+}
+
+@keyframes paperBeat {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-3px, -3px); }
+    50% { transform: translate(3px, 3px); }
+    75% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* 纸人连续拍打击大动画 */
+.evil-paper.scale-beat {
+    animation: paperScaleBeat 0.25s ease-out;
+}
+
+@keyframes paperScaleBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* 裂纹样式 */
+.crack {
+    position: absolute;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+}
+
+.crack-1 {
+    width: 100px;
+    height: 2px;
+    top: 40%;
+    left: 10%;
+    transform: rotate(15deg);
+}
+
+.crack-2 {
+    width: 80px;
+    height: 1.5px;
+    top: 60%;
+    right: 15%;
+    transform: rotate(-10deg);
+}
+
+.crack-3 {
+    width: 60px;
+    height: 1px;
+    bottom: 30%;
+    left: 30%;
+    transform: rotate(5deg);
+}
+
+.crack.show {
+    animation: crackAppear 0.2s ease-out forwards;
+}
+
+@keyframes crackAppear {
+    0% { opacity: 0; }
+    100% { opacity: 0.7; }
+}
+
+/* 屏幕闪烁效果 */
+.screen-flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.white-flash {
+    background-color: rgba(255, 255, 255, 0);
+    animation: whiteFlash 0.15s ease-out;
+}
+
+.red-flash {
+    background-color: rgba(255, 0, 0, 0);
+    animation: redFlash 0.3s ease-out;
+}
+
+@keyframes whiteFlash {
+    0% { background-color: rgba(255, 255, 255, 0); }
+    50% { background-color: rgba(255, 255, 255, 0.1); }
+    100% { background-color: rgba(255, 255, 255, 0); }
+}
+
+@keyframes redFlash {
+    0% { background-color: rgba(255, 0, 0, 0); }
+    50% { background-color: rgba(255, 0, 0, 0.15); }
+    100% { background-color: rgba(255, 0, 0, 0); }
+}
+
+/* 焚化动画 */
+.burning-paper {
+    width: 160px;
+    height: 200px;
+    position: relative;
+}
+
+.burning-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 69, 0, 0.3) 0%, rgba(255, 140, 0, 0.2) 30%, rgba(255, 215, 0, 0.1) 100%);
+    border-radius: 8px;
+    animation: burnSpread 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes burnSpread {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        filter: blur(0px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+        filter: blur(5px);
+    }
+}
+
+/* 灰烬粒子 */
+.ash-particle {
+    position: absolute;
+    background: linear-gradient(to bottom, #808080 0%, #A0A0A0 100%);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.ash-1 {
+    width: 6px;
+    height: 6px;
+    top: 40%;
+    left: 20%;
+    animation: ashFloat 2s ease-out 0.2s forwards;
+}
+
+.ash-2 {
+    width: 8px;
+    height: 8px;
+    top: 30%;
+    left: 50%;
+    animation: ashFloat 2s ease-out 0.4s forwards;
+}
+
+.ash-3 {
+    width: 5px;
+    height: 5px;
+    top: 60%;
+    left: 30%;
+    animation: ashFloat 2s ease-out 0.6s forwards;
+}
+
+.ash-4 {
+    width: 7px;
+    height: 7px;
+    top: 50%;
+    left: 70%;
+    animation: ashFloat 2s ease-out 0.8s forwards;
+}
+
+.ash-5 {
+    width: 4px;
+    height: 4px;
+    top: 70%;
+    left: 40%;
+    animation: ashFloat 2s ease-out 1s forwards;
+}
+
+.ash-6 {
+    width: 9px;
+    height: 9px;
+    top: 20%;
+    left: 60%;
+    animation: ashFloat 2s ease-out 1.2s forwards;
+}
+
+@keyframes ashFloat {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(1);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--ash-x, 30px), var(--ash-y, -100px)) scale(0.5);
+    }
+}
+
+/* 金光效果 */
+.golden-light {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 215, 0, 0) 70%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: goldenLightSpread 1.2s ease-out forwards;
+    z-index: 1;
+}
+
+@keyframes goldenLightSpread {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* 震动效果 */
+@keyframes shakeScreen {
+    0%, 100% { transform: translate(0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-2px, -1px); }
+    20%, 40%, 60%, 80% { transform: translate(2px, 1px); }
+}
+
+.screen-shake {
+    animation: shakeScreen 0.5s ease-out;
+}
+
+/* 进度条动画 */
+#beat-progress {
+    transition: width 0.3s ease-out;
+}

@@ -822,4 +822,267 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.toggle('rotate-90');
         });
     }
+
+    // 初始化打小人功能
+    initBeatEvilRitual();
 });
+
+/* ==================== 打小人仪式功能 ==================== */
+
+let beatCount = 0;
+const totalBeatsRequired = 9;
+let isRitualInProgress = false;
+let currentRitualStage = 'home'; // home, opening, beating, burning, ending, result
+
+// 吉祥祈福语库
+const blessingSentences = [
+    "小人退散，贵人进门，从此路路畅通，事事顺心。",
+    "一扫阴霾，迎来阳光，心中块垒已消，好运自然来。",
+    "驱逐负能量，吸引正能量，心情舒畅，福气自来。",
+    "仪式完成，心境清明，小人远离，贵人相助。",
+    "情绪已宣泄，心灵得净化，前路光明，好运相随。",
+    "打走烦恼，迎来欢喜，心境开阔，福运亨通。",
+    "小人已驱，正气长存，贵人将至，好运连连。",
+    "宣泄完成，心结已解，阳光普照，前路坦荡。",
+    "仪式圆满，心情舒畅，小人退避，贵人引路。",
+    "负能量消散，正能量汇聚，心境平和，好运自然。"
+];
+
+// 初始化打小人仪式
+function initBeatEvilRitual() {
+    const startBtn = document.getElementById('start-beat-evil-btn');
+    const evilPaper = document.getElementById('evil-paper');
+    const restartBtn = document.getElementById('restart-ritual-btn');
+    const backToHomeBtn = document.getElementById('back-to-home-btn');
+
+    if (startBtn) {
+        startBtn.addEventListener('click', startBeatEvilRitual);
+    }
+
+    if (evilPaper) {
+        evilPaper.addEventListener('click', handleBeatEvilPaper);
+    }
+
+    if (restartBtn) {
+        restartBtn.addEventListener('click', restartBeatEvilRitual);
+    }
+
+    if (backToHomeBtn) {
+        backToHomeBtn.addEventListener('click', backToBeatEvilHome);
+    }
+}
+
+// 开始打小人仪式
+function startBeatEvilRitual() {
+    if (isRitualInProgress) return;
+
+    isRitualInProgress = true;
+    currentRitualStage = 'opening';
+    beatCount = 0;
+
+    // 隐藏首页，显示仪式页
+    document.getElementById('beat-evil-home').classList.add('hidden');
+    document.getElementById('beat-evil-ritual').classList.remove('hidden');
+    document.getElementById('beat-evil-result').classList.add('hidden');
+
+    // 重置所有仪式阶段
+    const stages = ['ritual-opening', 'ritual-beating', 'ritual-burning', 'ritual-ending'];
+    stages.forEach(stage => {
+        const element = document.getElementById(stage);
+        if (element) {
+            element.classList.add('hidden');
+        }
+    });
+
+    // 显示祈福开场
+    document.getElementById('ritual-opening').classList.remove('hidden');
+
+    // 更新拍打计数
+    updateBeatCount();
+
+    // 3秒后自动进入拍打阶段
+    setTimeout(() => {
+        if (currentRitualStage === 'opening') {
+            startBeatingStage();
+        }
+    }, 3000);
+}
+
+// 开始拍打阶段
+function startBeatingStage() {
+    currentRitualStage = 'beating';
+
+    // 隐藏开场，显示拍打
+    document.getElementById('ritual-opening').classList.add('hidden');
+    document.getElementById('ritual-beating').classList.remove('hidden');
+
+    // 重置纸人状态
+    const evilPaper = document.getElementById('evil-paper');
+    if (evilPaper) {
+        evilPaper.classList.remove('beating', 'scale-beat');
+        const cracks = evilPaper.querySelectorAll('.crack');
+        cracks.forEach(crack => crack.classList.remove('show'));
+    }
+}
+
+// 处理拍打纸人
+function handleBeatEvilPaper() {
+    if (currentRitualStage !== 'beating' || beatCount >= totalBeatsRequired) return;
+
+    beatCount++;
+    updateBeatCount();
+
+    // 纸人震动动画
+    const evilPaper = document.getElementById('evil-paper');
+    evilPaper.classList.remove('beating');
+    void evilPaper.offsetWidth; // 触发重绘
+    evilPaper.classList.add('beating');
+
+    // 屏幕闪烁（白色）
+    createScreenFlash('white');
+
+    // 每3次拍打显示屏幕红光闪烁和纸人放大
+    if (beatCount % 3 === 0) {
+        createScreenFlash('red');
+        evilPaper.classList.remove('scale-beat');
+        void evilPaper.offsetWidth;
+        evilPaper.classList.add('scale-beat');
+    }
+
+    // 显示裂纹（每2次拍打显示一个裂纹）
+    if (beatCount % 2 === 0) {
+        const crackIndex = Math.min(Math.floor(beatCount / 2), 3);
+        const crack = document.querySelector(`.crack-${crackIndex}`);
+        if (crack) {
+            crack.classList.remove('show');
+            void crack.offsetWidth;
+            crack.classList.add('show');
+        }
+    }
+
+    // 屏幕震动效果（强度70/100）
+    if (beatCount % 2 === 0) {
+        document.body.classList.remove('screen-shake');
+        void document.body.offsetWidth;
+        document.body.classList.add('screen-shake');
+    }
+
+    // 拍打完成，进入焚化阶段
+    if (beatCount >= totalBeatsRequired) {
+        setTimeout(() => {
+            startBurningStage();
+        }, 500);
+    }
+}
+
+// 更新拍打计数显示
+function updateBeatCount() {
+    const beatCountElement = document.getElementById('beat-count');
+    const beatProgress = document.getElementById('beat-progress');
+
+    if (beatCountElement) {
+        beatCountElement.textContent = beatCount;
+    }
+
+    if (beatProgress) {
+        const progressPercent = (beatCount / totalBeatsRequired) * 100;
+        beatProgress.style.width = `${progressPercent}%`;
+    }
+}
+
+// 创建屏幕闪烁效果
+function createScreenFlash(type) {
+    const flash = document.createElement('div');
+    flash.className = `screen-flash ${type}-flash`;
+    document.body.appendChild(flash);
+
+    // 动画结束后移除元素
+    setTimeout(() => {
+        if (flash.parentNode) {
+            flash.parentNode.removeChild(flash);
+        }
+    }, type === 'white' ? 150 : 300);
+}
+
+// 开始焚化阶段
+function startBurningStage() {
+    currentRitualStage = 'burning';
+
+    // 隐藏拍打，显示焚化
+    document.getElementById('ritual-beating').classList.add('hidden');
+    document.getElementById('ritual-burning').classList.remove('hidden');
+
+    // 设置灰烬粒子的随机运动方向
+    const ashes = document.querySelectorAll('.ash-particle');
+    ashes.forEach(ash => {
+        const x = (Math.random() * 60 - 30) + 'px';
+        const y = -(Math.random() * 80 + 60) + 'px';
+        ash.style.setProperty('--ash-x', x);
+        ash.style.setProperty('--ash-y', y);
+    });
+
+    // 1.5秒焚化动画后进入迎贵人阶段
+    setTimeout(() => {
+        startEndingStage();
+    }, 1500);
+}
+
+// 开始迎贵人阶段
+function startEndingStage() {
+    currentRitualStage = 'ending';
+
+    // 隐藏焚化，显示迎贵人
+    document.getElementById('ritual-burning').classList.add('hidden');
+    document.getElementById('ritual-ending').classList.remove('hidden');
+
+    // 1.2秒金光动画后，文字依次弹出（总时长1.0s）
+    // 祥云飞入汇聚（1.0s）
+
+    // 2秒后显示结果页
+    setTimeout(() => {
+        showResultPage();
+    }, 2000);
+}
+
+// 显示结果页
+function showResultPage() {
+    currentRitualStage = 'result';
+    isRitualInProgress = false;
+
+    // 隐藏仪式页，显示结果页
+    document.getElementById('beat-evil-ritual').classList.add('hidden');
+    document.getElementById('beat-evil-result').classList.remove('hidden');
+
+    // 随机选择吉祥祈福语
+    const blessingText = document.getElementById('blessing-text');
+    if (blessingText) {
+        const randomIndex = Math.floor(Math.random() * blessingSentences.length);
+        blessingText.textContent = blessingSentences[randomIndex];
+    }
+}
+
+// 重新开始仪式
+function restartBeatEvilRitual() {
+    // 重置状态
+    beatCount = 0;
+    isRitualInProgress = false;
+    currentRitualStage = 'home';
+
+    // 隐藏结果页，显示首页
+    document.getElementById('beat-evil-result').classList.add('hidden');
+    document.getElementById('beat-evil-home').classList.remove('hidden');
+    document.getElementById('beat-evil-ritual').classList.add('hidden');
+}
+
+// 返回打小人首页
+function backToBeatEvilHome() {
+    // 重置状态
+    beatCount = 0;
+    isRitualInProgress = false;
+    currentRitualStage = 'home';
+
+    // 隐藏结果页，显示首页
+    document.getElementById('beat-evil-result').classList.add('hidden');
+    document.getElementById('beat-evil-home').classList.remove('hidden');
+    document.getElementById('beat-evil-ritual').classList.add('hidden');
+}
