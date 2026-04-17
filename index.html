@@ -392,6 +392,158 @@
             </div>
         </section>
 
+        <!-- 合五行板块 -->
+        <section class="mt-20" id="five-elements-match-section">
+            <div class="text-center mb-10">
+                <h2 class="title-font text-3xl md:text-4xl text-gray-800 mb-2">合五行配对</h2>
+                <p class="text-gray-600">双人合盘配对：查看两人契合度、相处模式、缘分深浅、相处建议</p>
+            </div>
+
+            <!-- 配对输入页 -->
+            <div id="five-elements-match-input" class="card p-8 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <div class="mb-8">
+                        <div class="w-48 h-48 mx-auto mb-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-full flex items-center justify-center border-4 border-white shadow-xl">
+                            <i class="fas fa-heart text-6xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">输入双方生日，分析配对指数</h3>
+                        <p class="text-gray-600 mb-6 text-lg">适配恋爱、朋友、同事、家人等多种关系</p>
+                    </div>
+
+                    <div class="space-y-6 max-w-md mx-auto">
+                        <!-- 我的生日 -->
+                        <div>
+                            <label class="block text-gray-700 mb-2 text-left">我的生日（公历）</label>
+                            <input type="date" id="my-birthdate" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-300 focus:border-purple-500 outline-none">
+                            <div class="mt-2">
+                                <label class="block text-gray-700 mb-2 text-sm text-left">农历显示</label>
+                                <input type="text" id="my-lunar-display" readonly class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700">
+                            </div>
+                        </div>
+
+                        <!-- 对方生日 -->
+                        <div>
+                            <label class="block text-gray-700 mb-2 text-left">对方生日（公历）</label>
+                            <input type="date" id="partner-birthdate" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-300 focus:border-purple-500 outline-none">
+                            <div class="mt-2">
+                                <label class="block text-gray-700 mb-2 text-sm text-left">农历显示</label>
+                                <input type="text" id="partner-lunar-display" readonly class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700">
+                            </div>
+                        </div>
+
+                        <!-- 关系类型选择 -->
+                        <div>
+                            <label class="block text-gray-700 mb-2 text-left">关系类型</label>
+                            <select id="relationship-type" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-300 focus:border-purple-500 outline-none">
+                                <option value="love">恋爱关系</option>
+                                <option value="friend">朋友关系</option>
+                                <option value="colleague">同事关系</option>
+                                <option value="family">家人关系</option>
+                            </select>
+                        </div>
+
+                        <button id="start-match-btn" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <i class="fas fa-heartbeat mr-3"></i>开始合盘配对
+                        </button>
+                    </div>
+
+                    <div class="mt-12 text-sm text-gray-500 border-t pt-6">
+                        <p><i class="fas fa-info-circle mr-2"></i>基于双方八字五行计算契合度，分析缘分深浅、相处模式、合拍优势与注意事项。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 配对结果页 -->
+            <div id="five-elements-match-result" class="card p-8 max-w-4xl mx-auto mt-8 hidden">
+                <div class="text-center">
+                    <button id="back-to-match-input" class="absolute top-4 left-4 text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-arrow-left mr-2"></i>返回
+                    </button>
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">配对结果分析</h3>
+
+                    <!-- 配对总评分 -->
+                    <div class="mb-10">
+                        <div class="relative w-48 h-48 mx-auto">
+                            <svg class="progress-ring" width="192" height="192">
+                                <circle class="progress-ring-bg" stroke="#E5E7EB" stroke-width="12" fill="transparent" r="82" cx="96" cy="96"/>
+                                <circle class="progress-ring-circle" stroke="url(#gradient-score)" stroke-width="12" fill="transparent" r="82" cx="96" cy="96" stroke-dasharray="515" stroke-dashoffset="515"/>
+                            </svg>
+                            <defs>
+                                <linearGradient id="gradient-score" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#8B5CF6"/>
+                                    <stop offset="100%" stop-color="#EC4899"/>
+                                </linearGradient>
+                            </defs>
+                            <div class="absolute inset-0 flex items-center justify-center flex-col">
+                                <div id="match-score" class="text-5xl font-bold text-gray-800">0</div>
+                                <div class="text-gray-600">配对评分</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 核心结论 -->
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-4 text-gray-800">核心结论</h4>
+                        <div id="match-conclusion" class="text-gray-700 text-lg leading-relaxed p-6 bg-purple-50 rounded-xl border-l-4 border-purple-400">
+                            <!-- 核心结论将通过JS动态生成 -->
+                        </div>
+                    </div>
+
+                    <!-- 四大板块 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- 缘分深浅 -->
+                        <div class="match-block fade-up">
+                            <div class="match-block-header bg-blue-50 border-blue-100">
+                                <i class="fas fa-link text-blue-600"></i>
+                                <h5>缘分深浅</h5>
+                            </div>
+                            <div class="match-block-content">
+                                <p id="fate-depth" class="text-gray-700"></p>
+                            </div>
+                        </div>
+
+                        <!-- 相处模式 -->
+                        <div class="match-block fade-up">
+                            <div class="match-block-header bg-green-50 border-green-100">
+                                <i class="fas fa-handshake text-green-600"></i>
+                                <h5>相处模式</h5>
+                            </div>
+                            <div class="match-block-content">
+                                <p id="interaction-mode" class="text-gray-700"></p>
+                            </div>
+                        </div>
+
+                        <!-- 合拍优势 -->
+                        <div class="match-block fade-up highlight-bg">
+                            <div class="match-block-header bg-yellow-50 border-yellow-100">
+                                <i class="fas fa-star text-yellow-600"></i>
+                                <h5>合拍优势</h5>
+                            </div>
+                            <div class="match-block-content">
+                                <p id="advantage" class="text-gray-700"></p>
+                            </div>
+                        </div>
+
+                        <!-- 注意事项 -->
+                        <div class="match-block fade-up">
+                            <div class="match-block-header bg-red-50 border-red-100">
+                                <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                <h5>注意事项</h5>
+                            </div>
+                            <div class="match-block-content">
+                                <p id="caution" class="text-gray-700"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 text-sm text-gray-500 border-t pt-6">
+                        <p><i class="fas fa-lightbulb mr-2"></i>提示：配对分析基于五行命理，仅供参考，实际相处还需双方用心经营。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 打小人仪式 -->
         <section class="mt-20" id="beat-evil-section">
             <div class="text-center mb-10">

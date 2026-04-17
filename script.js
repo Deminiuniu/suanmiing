@@ -628,6 +628,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始隐藏结果区域
     document.getElementById('results-section').classList.add('hidden');
+
+    // 初始化合五行板块
+    initFiveElementsMatch();
 });
 
 // 更新农历显示
@@ -1643,3 +1646,487 @@ function backToBeatEvilHome() {
     document.getElementById('beat-evil-home').classList.remove('hidden');
     document.getElementById('beat-evil-ritual').classList.add('hidden');
 }
+
+/* ==================== 合五行板块功能 ==================== */
+
+// 合五行板块全局变量
+let myBazi = null;
+let myFiveElements = { metal: 0, wood: 0, water: 0, fire: 0, earth: 0 };
+let partnerBazi = null;
+let partnerFiveElements = { metal: 0, wood: 0, water: 0, fire: 0, earth: 0 };
+let relationshipType = 'love';
+
+// 初始化合五行板块
+function initFiveElementsMatch() {
+    // 设置默认出生日期为30年前
+    const defaultDate = new Date();
+    defaultDate.setFullYear(defaultDate.getFullYear() - 30);
+    const formattedDate = defaultDate.toISOString().split('T')[0];
+
+    document.getElementById('my-birthdate').value = formattedDate;
+    document.getElementById('partner-birthdate').value = formattedDate;
+
+    // 更新农历显示
+    updateMyLunarDisplay();
+    updatePartnerLunarDisplay();
+
+    // 绑定事件监听器
+    document.getElementById('my-birthdate').addEventListener('change', updateMyLunarDisplay);
+    document.getElementById('partner-birthdate').addEventListener('change', updatePartnerLunarDisplay);
+    document.getElementById('relationship-type').addEventListener('change', function() {
+        relationshipType = this.value;
+    });
+
+    document.getElementById('start-match-btn').addEventListener('click', startFiveElementsMatch);
+    document.getElementById('back-to-match-input').addEventListener('click', backToMatchInput);
+}
+
+// 更新我的农历显示
+function updateMyLunarDisplay() {
+    const birthdate = document.getElementById('my-birthdate').value;
+    if (!birthdate) return;
+
+    if (typeof Lunar === 'undefined') {
+        document.getElementById('my-lunar-display').value = '库未加载';
+        return;
+    }
+
+    try {
+        const date = new Date(birthdate);
+        if (typeof Lunar.fromDate !== 'function') {
+            document.getElementById('my-lunar-display').value = '库方法错误';
+            return;
+        }
+        const lunar = Lunar.fromDate(date);
+        const lunarStr = lunar.toString();
+        document.getElementById('my-lunar-display').value = lunarStr;
+    } catch (e) {
+        console.error('农历转换错误:', e);
+        document.getElementById('my-lunar-display').value = '转换失败: ' + e.message;
+    }
+}
+
+// 更新对方农历显示
+function updatePartnerLunarDisplay() {
+    const birthdate = document.getElementById('partner-birthdate').value;
+    if (!birthdate) return;
+
+    if (typeof Lunar === 'undefined') {
+        document.getElementById('partner-lunar-display').value = '库未加载';
+        return;
+    }
+
+    try {
+        const date = new Date(birthdate);
+        if (typeof Lunar.fromDate !== 'function') {
+            document.getElementById('partner-lunar-display').value = '库方法错误';
+            return;
+        }
+        const lunar = Lunar.fromDate(date);
+        const lunarStr = lunar.toString();
+        document.getElementById('partner-lunar-display').value = lunarStr;
+    } catch (e) {
+        console.error('农历转换错误:', e);
+        document.getElementById('partner-lunar-display').value = '转换失败: ' + e.message;
+    }
+}
+
+// 开始合盘配对
+function startFiveElementsMatch() {
+    const myBirthdate = document.getElementById('my-birthdate').value;
+    const partnerBirthdate = document.getElementById('partner-birthdate').value;
+
+    if (!myBirthdate || !partnerBirthdate) {
+        alert('请填写双方出生日期');
+        return;
+    }
+
+    // 检查库是否加载
+    if (typeof Lunar === 'undefined') {
+        alert('lunar.js 库未加载，请稍后再试');
+        return;
+    }
+
+    try {
+        // 检查库方法
+        if (typeof Lunar.fromDate !== 'function') {
+            alert('库方法错误，请尝试刷新页面');
+            console.error('Lunar.fromDate 不是函数');
+            return;
+        }
+
+        // 计算我的八字五行
+        const myDate = new Date(myBirthdate);
+        const myLunar = Lunar.fromDate(myDate);
+
+        if (typeof myLunar.getBaZi !== 'function') {
+            alert('八字计算方法不可用，库版本可能不兼容');
+            console.error('myLunar.getBaZi 不是函数');
+            return;
+        }
+
+        myBazi = myLunar.getBaZi();
+        calculateFiveElementsForMatch(myBazi, 'my');
+
+        // 计算对方八字五行
+        const partnerDate = new Date(partnerBirthdate);
+        const partnerLunar = Lunar.fromDate(partnerDate);
+
+        if (typeof partnerLunar.getBaZi !== 'function') {
+            alert('八字计算方法不可用，库版本可能不兼容');
+            console.error('partnerLunar.getBaZi 不是函数');
+            return;
+        }
+
+        partnerBazi = partnerLunar.getBaZi();
+        calculateFiveElementsForMatch(partnerBazi, 'partner');
+
+        // 计算配对结果
+        const matchResult = calculateMatchResult();
+
+        // 显示结果页
+        showMatchResult(matchResult);
+
+    } catch (e) {
+        console.error('合盘计算错误:', e);
+        alert('计算失败: ' + e.message);
+    }
+}
+
+// 为匹配计算五行得分
+function calculateFiveElementsForMatch(bazi, person) {
+    const elements = { metal: 0, wood: 0, water: 0, fire: 0, earth: 0 };
+
+    // 遍历八字中的每个字
+    for (let pillar of bazi) {
+        if (!pillar) continue;
+
+        // 每个柱有两个字符
+        for (let char of pillar) {
+            // 检查天干
+            if (heavenlyStems[char]) {
+                elements[heavenlyStems[char]]++;
+            }
+            // 检查地支
+            if (earthlyBranches[char]) {
+                elements[earthlyBranches[char]]++;
+            }
+        }
+    }
+
+    // 计算总分并归一化到百分比
+    const total = Object.values(elements).reduce((a, b) => a + b, 0);
+    if (total > 0) {
+        for (let key in elements) {
+            elements[key] = Math.round((elements[key] / total) * 100);
+        }
+    }
+
+    if (person === 'my') {
+        myFiveElements = elements;
+    } else {
+        partnerFiveElements = elements;
+    }
+}
+
+// 计算配对结果
+function calculateMatchResult() {
+    // 计算五行互补分数（0-50分）
+    let complementScore = 0;
+
+    // 1. 相生关系加分
+    for (let element in myFiveElements) {
+        const myScore = myFiveElements[element];
+        const partnerScore = partnerFiveElements[element];
+
+        // 如果一方某元素强，另一方生扶该元素的元素也强，加分
+        if (myScore > 60) { // 我的某元素很强
+            const generatingElement = getGeneratingElementFor(element); // 找到生扶该元素的元素
+            if (partnerFiveElements[generatingElement] > 50) {
+                complementScore += 8;
+            }
+        }
+
+        if (partnerScore > 60) { // 对方的某元素很强
+            const generatingElement = getGeneratingElementFor(element);
+            if (myFiveElements[generatingElement] > 50) {
+                complementScore += 8;
+            }
+        }
+    }
+
+    // 2. 相同五行加分（相似性）
+    let similarityScore = 0;
+    for (let element in myFiveElements) {
+        const diff = Math.abs(myFiveElements[element] - partnerFiveElements[element]);
+        similarityScore += Math.max(0, 20 - diff); // 差异越小，分数越高
+    }
+    similarityScore = Math.min(similarityScore / 5, 30); // 归一化到0-30分
+
+    // 3. 基础分数
+    const baseScore = 40;
+
+    // 4. 根据关系类型调整
+    let relationshipBonus = 0;
+    switch (relationshipType) {
+        case 'love':
+            relationshipBonus = similarityScore * 0.7; // 恋爱关系重视相似性
+            break;
+        case 'friend':
+            relationshipBonus = complementScore * 0.8; // 朋友关系重视互补性
+            break;
+        case 'colleague':
+            relationshipBonus = (similarityScore + complementScore) * 0.5; // 同事关系平衡
+            break;
+        case 'family':
+            relationshipBonus = baseScore * 0.3; // 家人关系基础分高
+            break;
+    }
+
+    // 总分计算
+    let totalScore = baseScore + complementScore + similarityScore + relationshipBonus;
+    totalScore = Math.min(Math.max(Math.round(totalScore), 0), 100);
+
+    // 生成结果文本
+    const result = {
+        score: totalScore,
+        conclusion: generateConclusion(totalScore),
+        fateDepth: generateFateDepth(totalScore, relationshipType),
+        interactionMode: generateInteractionMode(),
+        advantage: generateAdvantage(),
+        caution: generateCaution()
+    };
+
+    return result;
+}
+
+// 获取生扶某元素的元素
+function getGeneratingElementFor(element) {
+    // 在generatingCycle中查找key，使得generatingCycle[key] === element
+    for (let key in generatingCycle) {
+        if (generatingCycle[key] === element) {
+            return key;
+        }
+    }
+    return element; // 如果找不到，返回自身
+}
+
+// 生成核心结论
+function generateConclusion(score) {
+    if (score >= 90) {
+        return '天作之合！你们之间的五行能量高度互补，缘分深厚，是非常理想的配对。无论是在感情、友情还是合作上，都能相互促进，共同成长。';
+    } else if (score >= 75) {
+        return '良缘佳配！你们的五行搭配较为和谐，有很好的相处基础。只要双方用心经营，这段关系会非常稳定且富有成果。';
+    } else if (score >= 60) {
+        return '中平之配！你们的五行能量有一定互补性，但也存在一些差异。需要相互理解和包容，通过磨合可以建立稳固的关系。';
+    } else if (score >= 40) {
+        return '有待磨合！你们的五行特点差异较大，需要更多的沟通和调整。只要双方愿意努力，也可以建立有意义的关系。';
+    } else {
+        return '挑战较多！你们的五行能量冲突较多，相处中可能会遇到不少挑战。需要更多的耐心和智慧来经营这段关系。';
+    }
+}
+
+// 生成缘分深浅
+function generateFateDepth(score, relationshipType) {
+    const relationshipNames = {
+        'love': '恋爱',
+        'friend': '朋友',
+        'colleague': '同事',
+        'family': '家人'
+    };
+    const relationName = relationshipNames[relationshipType] || '双方';
+
+    if (score >= 80) {
+        return `${relationName}缘分深厚，似有前缘。彼此吸引力强，容易产生共鸣，关系发展自然顺畅。`;
+    } else if (score >= 60) {
+        return `${relationName}缘分中等，需主动经营。有建立良好关系的基础，但需要双方共同努力加深连接。`;
+    } else {
+        return `${relationName}缘分尚浅，需耐心培养。初期可能感觉不太契合，但通过长期相处可以逐渐建立默契。`;
+    }
+}
+
+// 生成相处模式
+function generateInteractionMode() {
+    // 分析五行主导元素
+    const myDominant = getDominantElement(myFiveElements);
+    const partnerDominant = getDominantElement(partnerFiveElements);
+
+    const elementNames = { metal: '金', wood: '木', water: '水', fire: '火', earth: '土' };
+    const myElement = elementNames[myDominant];
+    const partnerElement = elementNames[partnerDominant];
+
+    // 根据五行相生相克判断相处模式
+    if (generatingCycle[myDominant] === partnerDominant) {
+        return `你（${myElement}）生对方（${partnerElement}），自然愿意付出和滋养对方。对方受到你的生扶，会感到被支持和关爱。`;
+    } else if (generatingCycle[partnerDominant] === myDominant) {
+        return `对方（${partnerElement}）生你（${myElement}），对方会主动关心和支持你。你受到对方的生扶，会感到温暖和受滋养。`;
+    } else if (restrainingCycle[myDominant] === partnerDominant) {
+        return `你（${myElement}）克对方（${partnerElement}），你可能在关系中占据主导地位。需要注意尊重对方的独立性，避免过于控制。`;
+    } else if (restrainingCycle[partnerDominant] === myDominant) {
+        return `对方（${partnerElement}）克你（${myElement}），对方可能对你有所约束。需要建立平等的沟通方式，保持自我边界。`;
+    } else {
+        return `你们都是${myElement}行人，性格特质相似，容易理解彼此。但也要注意避免过于相似导致的单调或冲突。`;
+    }
+}
+
+// 生成合拍优势
+function generateAdvantage() {
+    const myDominant = getDominantElement(myFiveElements);
+    const partnerDominant = getDominantElement(partnerFiveElements);
+
+    // 检查是否有相生关系
+    if (generatingCycle[myDominant] === partnerDominant) {
+        return `五行相生（${getElementName(myDominant)}生${getElementName(partnerDominant)}），你能够滋养和支持对方，对方也能从你这里获得能量。这种互补关系有利于长期稳定。`;
+    } else if (generatingCycle[partnerDominant] === myDominant) {
+        return `五行相生（${getElementName(partnerDominant)}生${getElementName(myDominant)}），对方能够滋养和支持你，你能从对方那里获得能量。这种互相滋养的关系非常珍贵。`;
+    }
+
+    // 检查是否有共同强势元素
+    const commonStrongElements = [];
+    for (let element in myFiveElements) {
+        if (myFiveElements[element] > 60 && partnerFiveElements[element] > 60) {
+            commonStrongElements.push(getElementName(element));
+        }
+    }
+
+    if (commonStrongElements.length > 0) {
+        return `你们在${commonStrongElements.join('、')}元素上都很强势，有共同的特质和价值观。这为你们的沟通和理解奠定了良好基础。`;
+    }
+
+    return `你们的五行配置各有特色，能够互相补充对方的不足。这种差异性如果处理得当，可以成为关系的活力来源。`;
+}
+
+// 生成注意事项
+function generateCaution() {
+    const myDominant = getDominantElement(myFiveElements);
+    const partnerDominant = getDominantElement(partnerFiveElements);
+
+    // 检查相克关系
+    if (restrainingCycle[myDominant] === partnerDominant) {
+        return `你（${getElementName(myDominant)}）克对方（${getElementName(partnerDominant)}），需要注意避免过于强势或控制。给对方足够的空间和尊重，关系才能和谐。`;
+    } else if (restrainingCycle[partnerDominant] === myDominant) {
+        return `对方（${getElementName(partnerDominant)}）克你（${getElementName(myDominant)}），需要注意保持自我边界，不要过度妥协。平等沟通是关键。`;
+    }
+
+    // 检查是否有共同弱势元素
+    const commonWeakElements = [];
+    for (let element in myFiveElements) {
+        if (myFiveElements[element] < 30 && partnerFiveElements[element] < 30) {
+            commonWeakElements.push(getElementName(element));
+        }
+    }
+
+    if (commonWeakElements.length > 0) {
+        return `你们在${commonWeakElements.join('、')}元素上都偏弱，这方面可能成为关系的短板。可以共同加强这方面的能量，比如通过环境布置、生活习惯等。`;
+    }
+
+    return `由于五行配置的差异，你们在某些方面可能有不同的需求和表达方式。需要多沟通，增进理解，避免误解。`;
+}
+
+// 获取主导元素
+function getDominantElement(elements) {
+    let maxElement = 'metal';
+    let maxScore = elements.metal;
+
+    for (let element in elements) {
+        if (elements[element] > maxScore) {
+            maxScore = elements[element];
+            maxElement = element;
+        }
+    }
+
+    return maxElement;
+}
+
+// 获取元素名称
+function getElementName(element) {
+    const names = { metal: '金', wood: '木', water: '水', fire: '火', earth: '土' };
+    return names[element] || element;
+}
+
+// 显示匹配结果
+function showMatchResult(result) {
+    // 隐藏输入页，显示结果页
+    document.getElementById('five-elements-match-input').classList.add('hidden');
+    document.getElementById('five-elements-match-result').classList.remove('hidden');
+
+    // 初始设置分数为0
+    document.getElementById('match-score').textContent = '0';
+
+    // 设置进度环
+    const progressCircle = document.querySelector('.progress-ring-circle');
+    const radius = 82;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (result.score / 100) * circumference;
+
+    // 初始设置进度环为全空
+    progressCircle.style.strokeDasharray = circumference;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    // 更新文本内容
+    document.getElementById('match-conclusion').textContent = result.conclusion;
+    document.getElementById('fate-depth').textContent = result.fateDepth;
+    document.getElementById('interaction-mode').textContent = result.interactionMode;
+    document.getElementById('advantage').textContent = result.advantage;
+    document.getElementById('caution').textContent = result.caution;
+
+    // 开始动画序列
+    setTimeout(() => {
+        // 1. 分数动画（1.2秒）
+        animateScore(result.score);
+
+        // 2. 进度环动画（1.2秒）
+        progressCircle.style.transition = 'stroke-dashoffset 1.2s ease-out';
+        progressCircle.style.strokeDashoffset = offset;
+
+        // 3. 四大板块入场动画（依次延迟0.2秒）
+        animateMatchBlocks();
+    }, 300);
+}
+
+// 动画显示分数
+function animateScore(targetScore) {
+    const scoreElement = document.getElementById('match-score');
+    const duration = 1200; // 1.2秒
+    const steps = 60;
+    const stepTime = duration / steps;
+    const increment = targetScore / steps;
+
+    let currentScore = 0;
+    let step = 0;
+
+    const timer = setInterval(() => {
+        step++;
+        currentScore = Math.min(Math.round(increment * step), targetScore);
+        scoreElement.textContent = currentScore;
+
+        if (step >= steps) {
+            clearInterval(timer);
+            scoreElement.textContent = targetScore;
+        }
+    }, stepTime);
+}
+
+// 动画显示匹配区块
+function animateMatchBlocks() {
+    const blocks = document.querySelectorAll('.match-block');
+
+    blocks.forEach((block, index) => {
+        setTimeout(() => {
+            block.classList.add('visible');
+        }, index * 200 + 1200); // 在分数动画后开始，每个区块延迟0.2秒
+    });
+}
+
+// 返回配对输入页
+function backToMatchInput() {
+    document.getElementById('five-elements-match-result').classList.add('hidden');
+    document.getElementById('five-elements-match-input').classList.remove('hidden');
+
+    // 重置区块动画状态
+    const blocks = document.querySelectorAll('.match-block');
+    blocks.forEach(block => {
+        block.classList.remove('visible');
+    });
+}
+
