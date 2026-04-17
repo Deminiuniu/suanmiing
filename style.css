@@ -1029,3 +1029,104 @@ body {
         opacity: 0;
     }
 }
+/* ==================== 竖排导语样式 ==================== */
+
+.vertical-quote-section {
+    margin: 2rem auto 3rem;
+    padding: 2rem 0;
+}
+
+.vertical-quote-container {
+    padding: 3rem 4rem;
+    position: relative;
+}
+
+.red-circle-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    background-color: #ED1C24;
+    border-radius: 50%;
+    opacity: 0.18;
+    z-index: 0;
+}
+
+.vertical-quote-content {
+    position: relative;
+    z-index: 1;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 2.2rem;
+    line-height: 1.6;
+    color: #2C2C2C;
+    text-align: center;
+    letter-spacing: 0.15em;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.quote-subtitle {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.2rem;
+    color: #C04851;
+    margin-top: 2rem;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .vertical-quote-section {
+        margin: 1.5rem auto 2rem;
+        padding: 1.5rem 0;
+    }
+    
+    .vertical-quote-container {
+        padding: 2rem 3rem;
+    }
+    
+    .red-circle-bg {
+        width: 220px;
+        height: 220px;
+        opacity: 0.15;
+    }
+    
+    .vertical-text {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+    }
+    
+    .quote-subtitle {
+        font-size: 1rem;
+        letter-spacing: 0.3em;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vertical-quote-container {
+        padding: 1.5rem 2rem;
+    }
+    
+    .red-circle-bg {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .vertical-text {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+    
+    .quote-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+    }
+}
