@@ -1486,11 +1486,14 @@ function startBeatingStage() {
 }
 
 // 处理拍打纸人
-function handleBeatEvilPaper() {
+function handleBeatEvilPaper(event) {
     if (currentRitualStage !== 'beating' || beatCount >= totalBeatsRequired) return;
 
     beatCount++;
     updateBeatCount();
+
+    // 创建拖鞋挥动动画
+    createSlipperSwingAnimation(event);
 
     // 纸人震动动画
     const evilPaper = document.getElementById('evil-paper');
@@ -1562,6 +1565,36 @@ function createScreenFlash(type) {
             flash.parentNode.removeChild(flash);
         }
     }, type === 'white' ? 150 : 300);
+}
+
+// 创建拖鞋挥动动画
+function createSlipperSwingAnimation(event) {
+    // 获取点击位置
+    const x = event.clientX;
+    const y = event.clientY;
+
+    // 创建拖鞋元素
+    const slipper = document.createElement('div');
+    slipper.className = 'crystal-slipper beating-slipper';
+    slipper.innerHTML = '<div class="crystal-slipper-sole"></div><div class="crystal-slipper-strap"></div>';
+
+    // 设置位置（以点击点为中心）
+    slipper.style.position = 'fixed';
+    slipper.style.left = (x - 40) + 'px'; // 拖鞋宽度80px，一半40px
+    slipper.style.top = (y - 20) + 'px'; // 拖鞋高度40px，一半20px
+    slipper.style.zIndex = '9999';
+
+    document.body.appendChild(slipper);
+
+    // 添加挥动动画
+    slipper.classList.add('slipper-swing');
+
+    // 动画结束后移除元素
+    setTimeout(() => {
+        if (slipper.parentNode) {
+            slipper.parentNode.removeChild(slipper);
+        }
+    }, 300);
 }
 
 // 开始焚化阶段
