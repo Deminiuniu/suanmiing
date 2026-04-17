@@ -2,37 +2,44 @@
     font-family: 'Noto Serif SC', serif;
 }
 body {
-    background-color: #FDFBF7;
-    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
-    color: #333333;
+    background-color: #F5F1E8;
+    background-image:
+        repeating-linear-gradient(90deg,
+            transparent 0px,
+            transparent 2px,
+            rgba(0, 0, 0, 0.02) 2px,
+            rgba(0, 0, 0, 0.02) 3px
+        ),
+        url("https://www.transparenttextures.com/patterns/rice-paper.png");
+    color: #2C2C2C;
 }
 .title-font {
     font-family: 'Ma Shan Zheng', cursive;
 }
 .card {
-    background-color: #fffef7;
+    background-color: #FFFBF0;
     border-radius: 0.75rem;
-    border: 1px solid #e8dcc9;
+    border: 1px solid #E0D4B8;
     box-shadow: 0 4px 12px rgba(120, 80, 50, 0.08);
     transition: all 0.3s ease;
 }
 .card:hover {
     box-shadow: 0 8px 24px rgba(120, 80, 50, 0.12);
-    border-color: #d4b98b;
+    border-color: #D0C4A8;
 }
 .btn-primary {
-    background-color: #c03a2b;
+    background-color: #C04851;
     color: white;
     border: none;
     border-radius: 0.5rem;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(192, 58, 43, 0.3);
+    box-shadow: 0 4px 6px rgba(192, 72, 81, 0.3);
 }
 .btn-primary:hover {
-    background-color: #a52f22;
-    box-shadow: 0 6px 10px rgba(192, 58, 43, 0.4);
+    background-color: #A83C44;
+    box-shadow: 0 6px 10px rgba(192, 72, 81, 0.4);
     transform: translateY(-2px);
 }
 .btn-secondary {
@@ -142,7 +149,7 @@ body {
 
 .incense-title {
     font-size: 1.8rem;
-    color: #c03a2b;
+    color: #C04851;
     margin-bottom: 1rem;
     font-weight: bold;
 }
@@ -172,15 +179,15 @@ body {
 }
 
 .incense-btn-yes {
-    background-color: #c03a2b;
+    background-color: #C04851;
     color: white;
-    box-shadow: 0 4px 6px rgba(192, 58, 43, 0.3);
+    box-shadow: 0 4px 6px rgba(192, 72, 81, 0.3);
 }
 
 .incense-btn-yes:hover {
-    background-color: #a52f22;
+    background-color: #A83C44;
     transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(192, 58, 43, 0.4);
+    box-shadow: 0 6px 10px rgba(192, 72, 81, 0.4);
 }
 
 .incense-btn-no {
@@ -333,7 +340,7 @@ body {
 
 .ritual-title {
     font-size: 1.8rem;
-    color: #c03a2b;
+    color: #C04851;
     margin-bottom: 1rem;
     font-weight: bold;
 }
