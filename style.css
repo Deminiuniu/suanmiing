@@ -704,3 +704,65 @@ body {
 #beat-progress {
     transition: width 0.3s ease-out;
 }
+
+/* 五行测算加载动画 */
+#five-elements-loading {
+    z-index: 9999;
+}
+
+/* 八卦旋转动画 */
+#bagua-spinner {
+    animation: baguaRotate 2s linear infinite;
+}
+
+@keyframes baguaRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 五行光点环绕 */
+.five-elements-orb {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbOrbit 2.5s linear infinite;
+}
+
+.five-elements-orb.metal {
+    background-color: #C0C0C0;
+    box-shadow: 0 0 8px #C0C0C0;
+    animation-delay: 0s;
+}
+.five-elements-orb.wood {
+    background-color: #2E7D32;
+    box-shadow: 0 0 8px #2E7D32;
+    animation-delay: -0.5s;
+}
+.five-elements-orb.water {
+    background-color: #1565C0;
+    box-shadow: 0 0 8px #1565C0;
+    animation-delay: -1s;
+}
+.five-elements-orb.fire {
+    background-color: #C62828;
+    box-shadow: 0 0 8px #C62828;
+    animation-delay: -1.5s;
+}
+.five-elements-orb.earth {
+    background-color: #EF6C00;
+    box-shadow: 0 0 8px #EF6C00;
+    animation-delay: -2s;
+}
+
+@keyframes orbOrbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+}

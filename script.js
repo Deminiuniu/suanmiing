@@ -7,6 +7,374 @@ let lunarLoading = false; // 防止重复加载
 let fortunesData = null; // 签诗数据
 let fortunesLoaded = false; // 数据是否已加载
 
+// 嵌入式签诗数据（当外部加载失败时使用）
+const embeddedFortunesData = {
+  "fortuneDict": {
+    "metal": {
+      "strong": [
+        {
+          "title": "金行身强签",
+          "poem": "金戈铁马气如虹，玉宇澄清万里风。刚强自有回天力，不惧前路有险峰。",
+          "explanation": "金性刚健，身强更显威仪。您具备领导才能和决断力，适合开拓进取，但需注意刚愎自用，适当听取他人建议。"
+        },
+        {
+          "title": "金刚不坏签",
+          "poem": "百炼成钢志愈坚，千锤万击若等闲。正气凛然驱邪佞，光明磊落照人间。",
+          "explanation": "如金刚般坚固，您有极强的抗压能力和原则性。在团队中是可靠的核心，但需避免过于强硬，以柔克刚更佳。"
+        },
+        {
+          "title": "金城铁壁签",
+          "poem": "金城铁壁固若汤，正气凌霄镇四方。谋略深沉藏机变，稳坐中军帐不慌。",
+          "explanation": "您如同坚固的城墙，稳重而有谋略。在复杂环境中能保持冷静，适合决策和规划，但需注意不要过于封闭。"
+        },
+        {
+          "title": "金声玉振签",
+          "poem": "金声玉振彻云霄，威仪自显德高超。言行一致守诚信，名扬四海誉不凋。",
+          "explanation": "您的声音如金玉般清脆，言行一致，信誉卓著。在社交和职场中影响力强，但需保持谦逊以免招妒。"
+        }
+      ],
+      "weak": [
+        {
+          "title": "金弱需润签",
+          "poem": "金石虽坚需水润，锋芒不露藏内秀。待得春风化雨时，精光内蕴耀九州。",
+          "explanation": "金性偏弱，需水来生扶。您才华内敛，需等待时机展现。多接触属水之人事物，可增强运势。"
+        },
+        {
+          "title": "金声玉振签",
+          "poem": "金声玉振待时鸣，潜龙勿用藏其形。一朝得遇风云会，响彻云霄天下惊。",
+          "explanation": "如珍贵乐器待奏响，您需要积累和准备。暂时低调行事，待时机成熟自然一鸣惊人。"
+        },
+        {
+          "title": "金波荡漾签",
+          "poem": "金波荡漾映月光，柔能克刚蕴锋芒。待时而动隐智慧，静水流深藏华章。",
+          "explanation": "您如月光下的金色波浪，柔和而有内涵。暂时隐藏锋芒，积累能量，时机一到便能发挥巨大潜力。"
+        },
+        {
+          "title": "金辉含彩签",
+          "poem": "金辉含彩待晨光，内秀不彰自芬芳。修身养性积厚德，一朝展翅任翱翔。",
+          "explanation": "您内在的光彩如同含而未发的金色光芒。注重内在修养，积累德行，未来必能大放异彩。"
+        }
+      ]
+    },
+    "wood": {
+      "strong": [
+        {
+          "title": "木行身强签",
+          "poem": "参天古木根深固，枝繁叶茂荫四方。仁德广布如春泽，生生不息福运长。",
+          "explanation": "木性仁爱，身强则生机勃勃。您有强大的成长力和包容心，适合教育、公益事业，但需避免过于散漫。"
+        },
+        {
+          "title": "栋梁之材签",
+          "poem": "良材本是栋梁器，经风历雨更坚直。他日若遂凌云志，撑起广厦千万间。",
+          "explanation": "您具备成为栋梁的潜质，坚韧不拔。在事业上会有重要成就，但需注意劳逸结合，避免过劳。"
+        },
+        {
+          "title": "春木繁茂签",
+          "poem": "春木繁茂生机旺，仁心善行德自彰。广结善缘福泽厚，绿荫蔽日送清凉。",
+          "explanation": "您如春天的树木般生机盎然，仁德之心带来广泛的人缘。多行善事，福报自然深厚，但需避免过于理想化。"
+        },
+        {
+          "title": "青松傲雪签",
+          "poem": "青松傲雪立寒峰，坚韧不拔志不穷。历经沧桑色愈翠，风骨铮铮显英雄。",
+          "explanation": "您如雪中青松，坚韧而有风骨。面对困难能坚持原则，适合需要毅力的工作，但需注意刚直易折。"
+        }
+      ],
+      "weak": [
+        {
+          "title": "木弱逢春签",
+          "poem": "弱柳扶风待春回，枯木逢阳又生枝。柔能克刚真智慧，以屈求伸是良机。",
+          "explanation": "木性偏弱，需水滋养。您具有柔韧性，善于适应环境。多亲近自然，佩戴绿色饰品可增强木气。"
+        },
+        {
+          "title": "芝兰玉树签",
+          "poem": "芝兰生于深林处，不以无人而不芳。谦谦君子温如玉，德馨自能引凤凰。",
+          "explanation": "如幽谷兰花，您有内在的美德和才华。不必急于表现，保持品格高尚，自会吸引赏识之人。"
+        },
+        {
+          "title": "新芽破土签",
+          "poem": "新芽破土力虽微，蓄势待发向天追。阳光雨露勤滋养，终成巨木显神威。",
+          "explanation": "您如刚破土的新芽，力量虽小但潜力巨大。需要耐心积累，接受他人帮助，终能成长为参天大树。"
+        },
+        {
+          "title": "幽兰空谷签",
+          "poem": "幽兰空谷自芬芳，不慕繁华守淡妆。清心寡欲修内德，自有知音识妙香。",
+          "explanation": "您如空谷幽兰，清雅高洁。不必追逐世俗繁华，保持内心宁静，自有懂您的人出现。"
+        }
+      ]
+    },
+    "water": {
+      "strong": [
+        {
+          "title": "水行身强签",
+          "poem": "大江东去势滔天，海纳百川容乃宽。智慧如渊深莫测，随方就圆任自然。",
+          "explanation": "水性智慧，身强则气势磅礴。您思维敏捷，适应力强，适合创意、咨询行业，但需避免随波逐流。"
+        },
+        {
+          "title": "上善若水签",
+          "poem": "上善若水利万物，处下不争德自高。胸怀似海纳千流，以柔克刚是真道。",
+          "explanation": "具备水的最高品德，您善良、包容且不争。这种品质会为您带来长远的福报和人际关系。"
+        },
+        {
+          "title": "汪洋浩瀚签",
+          "poem": "汪洋浩瀚纳百川，智慧深邃如渊泉。随机应变无穷尽，润泽万物福绵延。",
+          "explanation": "您如浩瀚海洋，包容而智慧。能适应各种变化，善于处理复杂问题，但需注意不要失去自己的方向。"
+        },
+        {
+          "title": "瀑布飞流签",
+          "poem": "瀑布飞流势磅礴，雷霆万钧不可当。洗净尘嚣显本色，一往无前向远方。",
+          "explanation": "您如瀑布般充满力量和冲劲。适合开拓性工作，能克服重重障碍，但需注意有时过于急躁。"
+        }
+      ],
+      "weak": [
+        {
+          "title": "水弱需源签",
+          "poem": "细流潺潺待泉涌，滴水穿石贵在恒。静水深流藏智慧，蓄势待发跃龙门。",
+          "explanation": "水性偏弱，需金来生扶。您有持久的毅力，但需要加强行动力。多与属金之人合作，可补不足。"
+        },
+        {
+          "title": "清泉石上签",
+          "poem": "清泉石上流细细，明月松间照悠悠。心静自然乾坤大，淡泊明志致远猷。",
+          "explanation": "如清泉般清澈宁静，您需要保持内心的平和。在淡泊中积累力量，终会达到理想境界。"
+        },
+        {
+          "title": "溪流绕石签",
+          "poem": "溪流绕石巧迂回，以柔克刚显智慧。不争不抢循道进，终归大海势巍巍。",
+          "explanation": "您如溪流般灵活，懂得迂回前进。面对障碍能以柔克刚，最终达成目标，但需注意不要过于迂回。"
+        },
+        {
+          "title": "晨露润物签",
+          "poem": "晨露晶莹润物微，点滴滋养显慈悲。温柔细腻藏大爱，春风化雨福相随。",
+          "explanation": "您如晨露般温柔细腻，能潜移默化地影响他人。适合需要耐心和细心的工作，但需注意不要过于敏感。"
+        }
+      ]
+    },
+    "fire": {
+      "strong": [
+        {
+          "title": "火行身强签",
+          "poem": "烈日当空照四方，光芒万丈显辉煌。热情奔放如烈焰，焚尽荆棘路自康。",
+          "explanation": "火性热情，身强则光芒四射。您有领导力和感染力，适合演艺、营销等行业，但需避免急躁冲动。"
+        },
+        {
+          "title": "凤凰涅槃签",
+          "poem": "凤凰浴火得重生，炼就真金不怕焚。历尽劫波初心在，光明普照众生欣。",
+          "explanation": "如凤凰涅槃，您有强大的重生能力和创造力。经历挑战后会更加强大，适合从事革新性工作。"
+        },
+        {
+          "title": "烈火真金签",
+          "poem": "烈火真金炼愈纯，热情似火耀乾坤。照亮黑暗引前路，温暖人心福满门。",
+          "explanation": "您如烈火般纯粹而热情，能激励他人，照亮前路。适合领导或创意工作，但需注意控制情绪。"
+        },
+        {
+          "title": "旭日东升签",
+          "poem": "旭日东升光芒耀，驱散阴霾照大道。生机勃勃万象新，鸿运当头福星照。",
+          "explanation": "您如初升的太阳，带来希望和活力。运势正处于上升期，适合开始新项目，但需注意不要过于冒进。"
+        }
+      ],
+      "weak": [
+        {
+          "title": "火弱需薪签",
+          "poem": "星火虽微可燎原，待得东风助烈焰。韬光养晦积能量，一飞冲天耀九天。",
+          "explanation": "火性偏弱，需木来生扶。您有潜力但需要外在支持。多与属木之人交往，可获得助力。"
+        },
+        {
+          "title": "烛照幽微签",
+          "poem": "烛光虽微照暗室，温暖人心胜骄阳。不必争辉于日月，自有真光照八方。",
+          "explanation": "如烛光般温暖，您有细腻的情感和洞察力。不必与强光争辉，发挥自己的独特价值更为重要。"
+        },
+        {
+          "title": "萤火烁夜签",
+          "poem": "萤火烁夜点点光，虽不明亮却温馨。默默奉献不争艳，自有知音识丹心。",
+          "explanation": "您如萤火虫般，光芒虽小却能照亮黑暗。默默付出会被人看见和感激，适合支持性角色。"
+        },
+        {
+          "title": "炉火纯青签",
+          "poem": "炉火纯青需时炼，内敛光华待机显。厚积薄发终有时，一鸣惊人震九天。",
+          "explanation": "您如炉火般需要时间锤炼。暂时内敛才华，专注提升自己，时机成熟便能一鸣惊人。"
+        }
+      ]
+    },
+    "earth": {
+      "strong": [
+        {
+          "title": "土行身强签",
+          "poem": "厚德载物如大地，万物生长赖其基。沉稳踏实步步稳，积善之家有余庆。",
+          "explanation": "土性沉稳，身强则根基稳固。您可靠务实，适合管理、建筑等行业，但需避免过于保守固执。"
+        },
+        {
+          "title": "泰山不移签",
+          "poem": "稳如泰山不可移，信若磐石众人依。脚踏实地行正道，厚积薄发自成蹊。",
+          "explanation": "如泰山般稳重可靠，您值得信赖且有耐心。坚持正道，稳步前进，终会取得扎实的成就。"
+        },
+        {
+          "title": "沃土生金签",
+          "poem": "沃土生金育英才，厚德载福自然来。根基深厚风雨稳，福泽绵长笑颜开。",
+          "explanation": "您如肥沃的土地，能滋养万物。为人可靠，能培养人才，福泽深厚，但需注意不要过于包揽责任。"
+        },
+        {
+          "title": "坤德载物签",
+          "poem": "坤德载物容天地，沉稳大气显威仪。包容万象胸襟阔，厚德流光福寿齐。",
+          "explanation": "您具备大地般的包容和稳重。能容纳不同意见，适合协调和管理工作，但需注意不要优柔寡断。"
+        }
+      ],
+      "weak": [
+        {
+          "title": "土弱需培签",
+          "poem": "土壤贫瘠需肥培，根深方能叶茂繁。虚心学习增智慧，厚积薄发终成才。",
+          "explanation": "土性偏弱，需火来生扶。您需要加强学习和积累。多与属火之人交流，可激发热情和动力。"
+        },
+        {
+          "title": "大地回春签",
+          "poem": "冻土虽坚待春融，万物复苏赖阳和。耐心守得云开日，沃野千里丰收多。",
+          "explanation": "如冻土等待春融，您需要耐心等待时机。加强内在修养，时机一到自然会有丰硕收获。"
+        },
+        {
+          "title": "尘土飞扬签",
+          "poem": "尘土飞扬待雨润，根基未稳莫急行。静心修炼增定力，踏实前行路自平。",
+          "explanation": "您如待雨滋润的尘土，需要稳定根基。暂时不要急于行动，先打好基础，未来才能稳步前进。"
+        },
+        {
+          "title": "梯田层叠签",
+          "poem": "梯田层叠步步高，稳扎稳打不焦躁。循序渐进终登顶，一览众山显英豪。",
+          "explanation": "您如梯田般需要一步步建设。脚踏实地，循序渐进，终能达到理想高度，适合需要耐心的长期项目。"
+        }
+      ]
+    }
+  },
+  "lotteryResults": [
+    { "level": "大吉", "message": "春风得意马蹄疾，一日看尽长安花。今日机缘如潮涌，心想事成乐无涯。" },
+    { "level": "上吉", "message": "云开月明照前程，贵人相助路自平。只需保持初心在，功成名就自然成。" },
+    { "level": "中吉", "message": "柳暗花明又一村，稳步前行福自临。小有波折不足虑，坚持到底见真金。" },
+    { "level": "小吉", "message": "细雨滋润万物生，点滴积累终成城。今日种下善因种，来日收获满园春。" }
+  ],
+  "fortuneSentences": [
+    "今日天时地利，你的命格与流年相得益彰，适宜开展新计划，会有意想不到的收获。",
+    "五行流转，生生不息。今日你的能量与天地共鸣，人际关系和谐，贵人运上升。",
+    "命理显示今日是你的幸运日，小小的冒险可能会带来丰厚的回报，保持开放心态。",
+    "天地之气与你命格相生，今日思维清晰，决策果断，是处理重要事务的好时机。",
+    "五行平衡，身心和谐。今日适合内省与规划，为未来的成功打下坚实基础。",
+    "今日天干地支与你的命格形成良好互动，创造力旺盛，艺术灵感迸发。",
+    "命理流转，今日你的能量场强大，吸引力倍增，适合社交与展示自我。",
+    "天地能量与你的五行互补，今日财务状况良好，可能有意外之财的机会。",
+    "今日命格与流年相合，情感运势上升，单身者可能有浪漫邂逅，有伴者关系更融洽。",
+    "五行相生，今日你的健康状况良好，精力充沛，适合运动与户外活动。"
+  ],
+  "fiveDimensionAdvice": {
+    "metal": {
+      "strong": {
+        "study": "学业上，金行身强者思维清晰，逻辑性强，适合法律、金融、管理等需要严谨思维的领域。建议制定系统学习计划，发挥分析和判断优势。",
+        "career": "事业上，具备领导才能和决断力，适合担任管理职位或自主创业。注意刚柔并济，避免过于强硬。",
+        "wealth": "财富方面，理财观念稳健，适合长期投资和资产配置。避免冲动消费，注重积累。",
+        "relationship": "姻缘方面，重视诚信和原则，感情较为专一。需多表达情感，避免过于理性。",
+        "health": "健康方面，肺部和呼吸系统需多关注，建议定期锻炼，保持空气流通。"
+      },
+      "weak": {
+        "study": "学业上，金行身弱者需加强自信，循序渐进。适合需要耐心和细致的学科，如会计、审计等。",
+        "career": "事业上，适合团队协作或辅助性职位，借助他人力量发展。注意积累经验和人脉。",
+        "wealth": "财富方面，宜保守理财，避免高风险投资。注重储蓄，逐步积累财富。",
+        "relationship": "姻缘方面，感情较为内敛，需主动表达。适合寻找稳重可靠的伴侣。",
+        "health": "健康方面，注意呼吸道和皮肤保养，多喝水，避免干燥环境。"
+      }
+    },
+    "wood": {
+      "strong": {
+        "study": "学业上，木行身强者富有创意和探索精神，适合艺术、设计、教育等领域。建议多参与实践项目。",
+        "career": "事业上，具有成长性和拓展能力，适合新兴行业或创新岗位。注意目标专注，避免分散精力。",
+        "wealth": "财富方面，眼光长远，适合投资成长型项目。避免盲目扩张，注意风险控制。",
+        "relationship": "姻缘方面，性格温和，善于沟通。感情丰富，需注意平衡付出与索取。",
+        "health": "健康方面，肝脏和眼睛需多关注，建议适量运动，保持情绪舒畅。"
+      },
+      "weak": {
+        "study": "学业上，木行身弱者需培养耐心，打好基础。适合循序渐进的学习方式，如语言、文学等。",
+        "career": "事业上，适合稳定性较强的岗位，或与他人合作。注意提升专业技能，增强竞争力。",
+        "wealth": "财富方面，宜稳健理财，避免借贷。注重日常开支管理，逐步改善经济状况。",
+        "relationship": "姻缘方面，感情细腻，需增强自信。适合寻找包容性强的伴侣。",
+        "health": "健康方面，注意肝胆调理，避免熬夜，保持规律作息。"
+      }
+    },
+    "water": {
+      "strong": {
+        "study": "学业上，水行身强者思维敏捷，适应力强，适合贸易、咨询、外交等需要沟通的领域。建议多涉猎广泛知识。",
+        "career": "事业上，善于变通和协调，适合公关、销售、咨询等岗位。注意坚持原则，避免随波逐流。",
+        "wealth": "财富方面，财运流动性强，适合短期投资或贸易。注意资金周转，避免过度投机。",
+        "relationship": "姻缘方面，感情丰富，善于理解他人。需注意专一性，避免感情波动。",
+        "health": "健康方面，肾脏和泌尿系统需多关注，建议多喝水，避免过度劳累。"
+      },
+      "weak": {
+        "study": "学业上，水行身弱者需加强专注力，避免分散。适合需要深入钻研的学科，如研究、技术等。",
+        "career": "事业上，适合稳定性强的岗位，或技术类工作。注意积累经验，提升专业深度。",
+        "wealth": "财富方面，财运较为平稳，宜储蓄为主。可考虑长期稳健投资，避免冒险。",
+        "relationship": "姻缘方面，感情较为含蓄，需主动沟通。适合寻找稳重踏实的伴侣。",
+        "health": "健康方面，注意肾脏保健，避免久坐，适度运动。"
+      }
+    },
+    "fire": {
+      "strong": {
+        "study": "学业上，火行身强者热情积极，富有感染力，适合表演、营销、传媒等需要表现力的领域。建议多参与实践活动。",
+        "career": "事业上，具有领导力和感染力，适合演艺、餐饮、营销等行业。注意控制情绪，避免冲动决策。",
+        "wealth": "财富方面，财运起伏较大，适合开拓性投资。注意理性消费，避免过度挥霍。",
+        "relationship": "姻缘方面，感情热烈，表达直接。需注意对方感受，避免急躁。",
+        "health": "健康方面，心脏和血液循环需多关注，建议保持平和心态，避免过度兴奋。"
+      },
+      "weak": {
+        "study": "学业上，火行身弱者需增强动力，设定小目标。适合需要耐心和细心的学科，如手工、护理等。",
+        "career": "事业上，适合支持性岗位或团队协作。注意提升热情，积极参与集体活动。",
+        "wealth": "财富方面，财运较为平稳，宜稳步积累。避免高风险投资，注重节俭。",
+        "relationship": "姻缘方面，感情较为被动，需增强主动性。适合寻找热情开朗的伴侣。",
+        "health": "健康方面，注意心脏保健，避免过度劳累，保持充足睡眠。"
+      }
+    },
+    "earth": {
+      "strong": {
+        "study": "学业上，土行身强者踏实稳重，有耐心，适合建筑、农业、管理等需要扎实基础的领域。建议按部就班学习。",
+        "career": "事业上，可靠务实，适合管理、行政、建筑等岗位。注意灵活变通，避免过于保守。",
+        "wealth": "财富方面，财运稳健，适合长期投资和不动产。注重储蓄，避免投机。",
+        "relationship": "姻缘方面，感情稳定，重视承诺。需多表达情感，避免沉闷。",
+        "health": "健康方面，脾胃和消化系统需多关注，建议饮食规律，避免暴饮暴食。"
+      },
+      "weak": {
+        "study": "学业上，土行身弱者需增强自信，循序渐进。适合需要耐心和毅力的学科，如历史、地理等。",
+        "career": "事业上，适合稳定性强的岗位，或技术类工作。注意打好基础，逐步提升。",
+        "wealth": "财富方面，财运较为平稳，宜保守理财。注重开源节流，逐步改善经济状况。",
+        "relationship": "姻缘方面，感情较为内向，需多沟通。适合寻找踏实可靠的伴侣。",
+        "health": "健康方面，注意脾胃调理，饮食清淡，避免思虑过度。"
+      }
+    }
+  },
+  "luckyGuide": {
+    "metal": {
+      "luckyColors": ["白色", "金色", "银色"],
+      "luckyNumbers": [4, 9],
+      "auspiciousDirections": ["西方", "西北方"],
+      "dailyAdvice": "多接触金属物品，佩戴金属饰品，保持环境整洁有序。"
+    },
+    "wood": {
+      "luckyColors": ["绿色", "青色"],
+      "luckyNumbers": [3, 8],
+      "auspiciousDirections": ["东方", "东南方"],
+      "dailyAdvice": "多接触植物，佩戴木制饰品，保持积极向上的心态。"
+    },
+    "water": {
+      "luckyColors": ["黑色", "蓝色", "灰色"],
+      "luckyNumbers": [1, 6],
+      "auspiciousDirections": ["北方"],
+      "dailyAdvice": "多接触水元素，佩戴水属性饰品，保持灵活变通。"
+    },
+    "fire": {
+      "luckyColors": ["红色", "紫色", "橙色"],
+      "luckyNumbers": [2, 7],
+      "auspiciousDirections": ["南方"],
+      "dailyAdvice": "多接触火元素，佩戴红色饰品，保持热情活力。"
+    },
+    "earth": {
+      "luckyColors": ["黄色", "棕色", "米色"],
+      "luckyNumbers": [5, 0],
+      "auspiciousDirections": ["中央", "西南方", "东北方"],
+      "dailyAdvice": "多接触土元素，佩戴土属性饰品，保持稳重踏实。"
+    }
+  }
+};
+
 // 动态加载 lunar.js 库（在线CDN）
 function loadLunarScript() {
     if (lunarLoading) return false;
@@ -39,42 +407,82 @@ function loadLunarScript() {
 // 加载签诗数据
 function loadFortunesData() {
     console.log('开始加载签诗数据...');
-    fetch('./fortunes.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
+
+    // 先设置默认的空数据结构，防止后续代码访问未定义属性
+    fortunesData = {
+        fortuneDict: {},
+        lotteryResults: [],
+        fortuneSentences: [],
+        fiveDimensionAdvice: null,
+        luckyGuide: null
+    };
+
+    // 尝试使用XMLHttpRequest加载（兼容性更好，适用于本地文件）
+    try {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'fortunes.json', false); // 同步请求
+        xhr.send();
+
+        if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
             fortunesData = data;
             fortunesLoaded = true;
-            console.log('签诗数据加载成功', data);
-            // 可以在这里启用摇签按钮或其他UI
+            console.log('签诗数据加载成功（通过XMLHttpRequest）', data);
+
+            // 启用摇签按钮
             const shakeBtn = document.getElementById('shake-btn');
             if (shakeBtn) {
                 shakeBtn.disabled = false;
                 shakeBtn.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>点击摇签';
             }
-        })
-        .catch(error => {
-            console.error('加载签诗数据失败:', error);
-            // 使用默认数据或显示错误
-            alert('签诗数据加载失败，部分功能可能受限。请检查 fortunes.json 文件是否存在。');
-            // 设置默认空数据以避免后续错误
-            fortunesData = {
-                fortuneDict: {},
-                lotteryResults: [],
-                fortuneSentences: []
-            };
-            fortunesLoaded = true;
-            // 仍然启用摇签按钮，但功能受限
-            const shakeBtn = document.getElementById('shake-btn');
-            if (shakeBtn) {
-                shakeBtn.disabled = false;
-                shakeBtn.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>点击摇签';
-            }
-        });
+            return;
+        } else {
+            throw new Error(`HTTP error! status: ${xhr.status}`);
+        }
+    } catch (xhrError) {
+        console.warn('XMLHttpRequest加载失败，尝试使用fetch:', xhrError);
+
+        // 尝试使用fetch（异步）
+        fetch('fortunes.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                fortunesData = data;
+                fortunesLoaded = true;
+                console.log('签诗数据加载成功（通过fetch）', data);
+
+                // 启用摇签按钮
+                const shakeBtn = document.getElementById('shake-btn');
+                if (shakeBtn) {
+                    shakeBtn.disabled = false;
+                    shakeBtn.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>点击摇签';
+                }
+            })
+            .catch(fetchError => {
+                console.error('所有加载方式都失败:', fetchError);
+                // 使用嵌入的签诗数据作为回退
+                fortunesData = embeddedFortunesData;
+                fortunesLoaded = true;
+                console.log('使用嵌入的签诗数据作为回退', embeddedFortunesData);
+
+                // 启用摇签按钮
+                const shakeBtn = document.getElementById('shake-btn');
+                if (shakeBtn) {
+                    shakeBtn.disabled = false;
+                    shakeBtn.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>点击摇签';
+                }
+
+                // 仅在真正失败时显示警告（不是所有file://协议都会失败）
+                // 检查是否通过file://协议访问
+                if (window.location.protocol === 'file:') {
+                    alert('签诗数据加载失败，已使用内置数据。\n\n如果通过file://协议打开页面，请确保fortunes.json文件与网页在同一目录。\n建议使用本地HTTP服务器运行（如Python: python -m http.server 8000）。');
+                }
+            });
+    }
 }
 
 // 检查库是否加载，如果未加载则尝试加载
@@ -260,6 +668,12 @@ function updateLunarDisplay() {
 
 // 计算八字和五行
 function calculateBazi() {
+    // 显示五行测算加载动画
+    const loadingElement = document.getElementById('five-elements-loading');
+    if (loadingElement) {
+        loadingElement.classList.remove('hidden');
+    }
+
     const birthdate = document.getElementById('birthdate').value;
     const birthtime = document.getElementById('birthtime').value;
 
@@ -346,6 +760,12 @@ function calculateBazi() {
         // 生成运势推断
         generateFortune();
 
+        // 生成五大维度运势建议
+        generateFiveDimensionAdvice();
+
+        // 生成综合开运指南
+        generateLuckyGuide();
+
         // 显示结果区域
         document.getElementById('results-section').classList.remove('hidden');
         document.getElementById('results-section').classList.add('fade-in');
@@ -353,9 +773,21 @@ function calculateBazi() {
         // 滚动到结果区域
         document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
 
+        // 隐藏五行测算加载动画
+        const loadingElement = document.getElementById('five-elements-loading');
+        if (loadingElement) {
+            loadingElement.classList.add('hidden');
+        }
+
     } catch (e) {
         console.error('八字计算错误:', e);
         alert('计算失败: ' + e.message + '\n请检查控制台获取详细信息');
+
+        // 隐藏五行测算加载动画
+        const loadingElement = document.getElementById('five-elements-loading');
+        if (loadingElement) {
+            loadingElement.classList.add('hidden');
+        }
     }
 }
 
@@ -607,6 +1039,131 @@ function generateFortune() {
         // 回退到随机话术
         const randomIndex = Math.floor(Math.random() * fortuneSentences.length);
         document.getElementById('fortune-text').textContent = fortuneSentences[randomIndex];
+    }
+}
+
+// 生成五大维度运势建议
+function generateFiveDimensionAdvice() {
+    // 检查数据是否加载
+    const fiveDimensionAdvice = fortunesData && fortunesData.fiveDimensionAdvice ? fortunesData.fiveDimensionAdvice : null;
+    if (!fiveDimensionAdvice || Object.keys(fiveDimensionAdvice).length === 0) {
+        console.warn('五大维度运势建议数据未加载');
+        // 设置默认文本
+        document.getElementById('advice-study').textContent = '学业建议数据加载中...';
+        document.getElementById('advice-career').textContent = '事业建议数据加载中...';
+        document.getElementById('advice-wealth').textContent = '财富建议数据加载中...';
+        document.getElementById('advice-relationship').textContent = '姻缘建议数据加载中...';
+        document.getElementById('advice-health').textContent = '健康建议数据加载中...';
+        return;
+    }
+
+    // 如果日干五行或身强身弱未计算，无法生成建议
+    if (!currentDayElement || !currentBodyStrength) {
+        console.warn('无法生成五大维度建议：缺少五行或身强身弱数据');
+        // 设置默认文本
+        document.getElementById('advice-study').textContent = '请先计算八字五行';
+        document.getElementById('advice-career').textContent = '请先计算八字五行';
+        document.getElementById('advice-wealth').textContent = '请先计算八字五行';
+        document.getElementById('advice-relationship').textContent = '请先计算八字五行';
+        document.getElementById('advice-health').textContent = '请先计算八字五行';
+        return;
+    }
+
+    // 确定身强身弱键值
+    const strengthKey = currentBodyStrength.includes('强') ? 'strong' : 'weak';
+    const elementKey = currentDayElement; // metal, wood, water, fire, earth
+
+    // 检查是否有对应的建议数据
+    if (fiveDimensionAdvice[elementKey] && fiveDimensionAdvice[elementKey][strengthKey]) {
+        const advice = fiveDimensionAdvice[elementKey][strengthKey];
+
+        // 更新DOM元素
+        document.getElementById('advice-study').textContent = advice.study;
+        document.getElementById('advice-career').textContent = advice.career;
+        document.getElementById('advice-wealth').textContent = advice.wealth;
+        document.getElementById('advice-relationship').textContent = advice.relationship;
+        document.getElementById('advice-health').textContent = advice.health;
+    } else {
+        console.warn(`未找到${elementKey} ${strengthKey}的五大维度建议数据`);
+        // 设置默认文本
+        document.getElementById('advice-study').textContent = '学业建议数据加载中...';
+        document.getElementById('advice-career').textContent = '事业建议数据加载中...';
+        document.getElementById('advice-wealth').textContent = '财富建议数据加载中...';
+        document.getElementById('advice-relationship').textContent = '姻缘建议数据加载中...';
+        document.getElementById('advice-health').textContent = '健康建议数据加载中...';
+    }
+}
+
+// 生成综合开运指南
+function generateLuckyGuide() {
+    // 检查数据是否加载
+    const luckyGuide = fortunesData && fortunesData.luckyGuide ? fortunesData.luckyGuide : null;
+    if (!luckyGuide || Object.keys(luckyGuide).length === 0) {
+        console.warn('综合开运指南数据未加载');
+        // 设置默认文本
+        document.getElementById('lucky-colors').innerHTML = '<span class="text-gray-500">数据加载中...</span>';
+        document.getElementById('lucky-numbers').innerHTML = '<span class="text-gray-500">数据加载中...</span>';
+        document.getElementById('auspicious-directions').innerHTML = '<span class="text-gray-500">数据加载中...</span>';
+        document.getElementById('daily-advice').textContent = '日常建议数据加载中...';
+        return;
+    }
+
+    // 如果日干五行未计算，无法生成指南
+    if (!currentDayElement) {
+        console.warn('无法生成开运指南：缺少五行数据');
+        // 设置默认文本
+        document.getElementById('lucky-colors').innerHTML = '<span class="text-gray-500">请先计算八字五行</span>';
+        document.getElementById('lucky-numbers').innerHTML = '<span class="text-gray-500">请先计算八字五行</span>';
+        document.getElementById('auspicious-directions').innerHTML = '<span class="text-gray-500">请先计算八字五行</span>';
+        document.getElementById('daily-advice').textContent = '请先计算八字五行';
+        return;
+    }
+
+    const elementKey = currentDayElement; // metal, wood, water, fire, earth
+
+    // 检查是否有对应的指南数据
+    if (luckyGuide[elementKey]) {
+        const guide = luckyGuide[elementKey];
+
+        // 更新幸运色
+        const colorsContainer = document.getElementById('lucky-colors');
+        colorsContainer.innerHTML = '';
+        guide.luckyColors.forEach(color => {
+            const span = document.createElement('span');
+            span.className = 'px-3 py-1 rounded-full text-sm font-medium bg-white border border-gray-300';
+            span.textContent = color;
+            colorsContainer.appendChild(span);
+        });
+
+        // 更新幸运数字
+        const numbersContainer = document.getElementById('lucky-numbers');
+        numbersContainer.innerHTML = '';
+        guide.luckyNumbers.forEach(number => {
+            const span = document.createElement('span');
+            span.className = 'px-3 py-1 rounded-full text-sm font-medium bg-white border border-gray-300';
+            span.textContent = number;
+            numbersContainer.appendChild(span);
+        });
+
+        // 更新吉利方位
+        const directionsContainer = document.getElementById('auspicious-directions');
+        directionsContainer.innerHTML = '';
+        guide.auspiciousDirections.forEach(direction => {
+            const span = document.createElement('span');
+            span.className = 'px-3 py-1 rounded-full text-sm font-medium bg-white border border-gray-300';
+            span.textContent = direction;
+            directionsContainer.appendChild(span);
+        });
+
+        // 更新日常建议
+        document.getElementById('daily-advice').textContent = guide.dailyAdvice;
+    } else {
+        console.warn(`未找到${elementKey}的综合开运指南数据`);
+        // 设置默认文本
+        document.getElementById('lucky-colors').innerHTML = '<span class="text-gray-500">数据加载中...</span>';
+        document.getElementById('lucky-numbers').innerHTML = '<span class="text-gray-500">数据加载中...</span>';
+        document.getElementById('auspicious-directions').innerHTML = '<span class="text-gray-500">数据加载中...</span>';
+        document.getElementById('daily-advice').textContent = '日常建议数据加载中...';
     }
 }
 
