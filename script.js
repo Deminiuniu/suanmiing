@@ -1371,19 +1371,8 @@ function showBlessingComplete(modal, lotteryLevel) {
     }, 3000);
 }
 
-// 折叠板块交互
+// 初始化打小人功能
 document.addEventListener('DOMContentLoaded', function() {
-    const toggle = document.getElementById('collapse-toggle');
-    const content = document.getElementById('collapse-content');
-    const icon = document.getElementById('collapse-icon');
-    if (toggle && content && icon) {
-        toggle.addEventListener('click', function() {
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-90');
-        });
-    }
-
-    // 初始化打小人功能
     initBeatEvilRitual();
 });
 
