@@ -408,320 +408,232 @@
             </div>
         </section>
 
-        <!-- 赛博摇签 -->
-        <section class="mt-20">
-            <div class="text-center mb-10">
-                <h2 class="title-font text-3xl md:text-4xl text-gray-800 mb-2">赛博摇签</h2>
-                <p class="text-gray-600">点击摇签，获取你的赛博机缘</p>
-            </div>
+        <!-- 三大功能模块 - 左右并排 -->
+        <section class="mt-16">
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
-            <div class="card p-8 max-w-2xl mx-auto">
-                <div class="text-center">
-                    <div id="lottery-container" class="relative mb-10">
-                        <div id="lottery-box" class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl flex items-center justify-center border-4 border-white shadow-2xl">
-                            <div id="lottery-result" class="text-5xl font-bold text-gray-800">
-                                签
+                <!-- 赛博摇签 -->
+                <div class="card p-5">
+                    <div class="text-center mb-4">
+                        <h2 class="title-font text-2xl text-gray-800 mb-1">赛博摇签</h2>
+                        <p class="text-gray-500 text-xs">点击摇签，获取你的赛博机缘</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div id="lottery-container" class="relative mb-6">
+                            <div id="lottery-box" class="w-40 h-40 mx-auto bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl flex items-center justify-center border-2 border-white shadow-xl">
+                                <div id="lottery-result" class="text-4xl font-bold text-gray-800">
+                                    签
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button id="shake-btn" class="btn-primary text-white font-bold py-2 px-6 rounded-full text-base shadow-lg hover:shadow-xl transition-all duration-300">
+                                    <i class="fas fa-hand-point-up mr-2"></i>点击摇签
+                                </button>
                             </div>
                         </div>
-                        <div class="mt-8">
-                            <button id="shake-btn" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                                <i class="fas fa-hand-point-up mr-3"></i>点击摇签
+
+                        <div id="lottery-message" class="mt-4 text-gray-700 text-sm hidden">
+                            <!-- 签诗将通过JS动态生成 -->
+                        </div>
+
+                        <div class="mt-6 text-xs text-gray-400">
+                            <p><span class="icon-circle" style="width: 1rem; height: 1rem; font-size: 0.5rem; vertical-align: middle; margin-right: 0.25rem;"><i class="fas fa-star"></i></span>仅含吉签：大吉、上吉、中吉、小吉</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 合五行配对 -->
+                <div class="card p-5" id="five-elements-match-section">
+                    <div class="text-center mb-4">
+                        <h2 class="title-font text-2xl text-gray-800 mb-1">合五行配对</h2>
+                        <p class="text-gray-500 text-xs">双人合盘配对</p>
+                    </div>
+
+                    <!-- 配对输入页 -->
+                    <div id="five-elements-match-input">
+                        <div class="text-center">
+                            <div class="mb-4">
+                                <div class="w-32 h-32 mx-auto mb-4 rounded-full flex items-center justify-center border-2 border-white shadow-xl" style="background: linear-gradient(135deg, rgba(192, 72, 81, 0.1) 0%, rgba(168, 60, 68, 0.15) 100%);">
+                                    <span class="icon-circle-xl" style="width: 3.5rem; height: 3.5rem; font-size: 1.5rem;"><i class="fas fa-heart"></i></span>
+                                </div>
+                                <h3 class="text-base font-bold text-gray-800 mb-1">输入双方生日</h3>
+                                <p class="text-gray-500 text-xs">分析配对指数</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-gray-600 mb-1 text-xs text-left">我的生日</label>
+                                    <input type="date" id="my-birthdate" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-200 focus:border-red-400 outline-none text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 mb-1 text-xs text-left">对方生日</label>
+                                    <input type="date" id="partner-birthdate" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-200 focus:border-red-400 outline-none text-sm">
+                                </div>
+                                <div>
+                                    <select id="relationship-type" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-200 focus:border-red-400 outline-none text-sm">
+                                        <option value="love">恋爱关系</option>
+                                        <option value="friend">朋友关系</option>
+                                        <option value="colleague">同事关系</option>
+                                        <option value="family">家人关系</option>
+                                    </select>
+                                </div>
+                                <button id="start-match-btn" class="w-full btn-primary text-white font-bold py-2 px-6 rounded-full text-base shadow-lg hover:shadow-xl transition-all duration-300">
+                                    <i class="fas fa-heartbeat mr-2"></i>开始配对
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 配对结果页 -->
+                    <div id="five-elements-match-result" class="hidden">
+                        <div class="text-center">
+                            <button id="back-to-match-input" class="text-gray-400 hover:text-gray-600 text-xs mb-2">
+                                <i class="fas fa-arrow-left mr-1"></i>返回
                             </button>
-                        </div>
-                    </div>
-
-                    <div id="lottery-message" class="mt-8 text-gray-700 text-lg hidden">
-                        <!-- 签诗将通过JS动态生成 -->
-                    </div>
-
-                    <div class="mt-12 text-sm text-gray-500">
-                        <p><span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.6rem; vertical-align: middle; margin-right: 0.5rem;"><i class="fas fa-star"></i></span>赛博摇签仅含吉签：大吉、上吉、中吉、小吉，寓意美好未来</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 合五行板块 -->
-        <section class="mt-20" id="five-elements-match-section">
-            <div class="text-center mb-10">
-                <h2 class="title-font text-3xl md:text-4xl text-gray-800 mb-2">合五行配对</h2>
-                <p class="text-gray-600">双人合盘配对：查看两人契合度、相处模式、缘分深浅、相处建议</p>
-            </div>
-
-            <!-- 配对输入页 -->
-            <div id="five-elements-match-input" class="card p-8 max-w-2xl mx-auto">
-                <div class="text-center">
-                    <div class="mb-8">
-                        <div class="w-48 h-48 mx-auto mb-6 rounded-full flex items-center justify-center border-4 border-white shadow-xl" style="background: linear-gradient(135deg, rgba(192, 72, 81, 0.1) 0%, rgba(168, 60, 68, 0.15) 100%);">
-                            <span class="icon-circle-xl" style="width: 5rem; height: 5rem; font-size: 2rem;"><i class="fas fa-heart"></i></span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">输入双方生日，分析配对指数</h3>
-                        <p class="text-gray-600 mb-6 text-lg">适配恋爱、朋友、同事、家人等多种关系</p>
-                    </div>
-
-                    <div class="space-y-6 max-w-md mx-auto">
-                        <!-- 我的生日 -->
-                        <div>
-                            <label class="block text-gray-700 mb-2 text-left">我的生日（公历）</label>
-                            <input type="date" id="my-birthdate" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-300 focus:border-purple-500 outline-none">
-                            <div class="mt-2">
-                                <label class="block text-gray-700 mb-2 text-sm text-left">农历显示</label>
-                                <input type="text" id="my-lunar-display" readonly class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700">
-                            </div>
-                        </div>
-
-                        <!-- 对方生日 -->
-                        <div>
-                            <label class="block text-gray-700 mb-2 text-left">对方生日（公历）</label>
-                            <input type="date" id="partner-birthdate" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-300 focus:border-purple-500 outline-none">
-                            <div class="mt-2">
-                                <label class="block text-gray-700 mb-2 text-sm text-left">农历显示</label>
-                                <input type="text" id="partner-lunar-display" readonly class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700">
-                            </div>
-                        </div>
-
-                        <!-- 关系类型选择 -->
-                        <div>
-                            <label class="block text-gray-700 mb-2 text-left">关系类型</label>
-                            <select id="relationship-type" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-300 focus:border-purple-500 outline-none">
-                                <option value="love">恋爱关系</option>
-                                <option value="friend">朋友关系</option>
-                                <option value="colleague">同事关系</option>
-                                <option value="family">家人关系</option>
-                            </select>
-                        </div>
-
-                        <button id="start-match-btn" class="w-full btn-primary text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                            <i class="fas fa-heartbeat mr-3"></i>开始合盘配对
-                        </button>
-                    </div>
-
-                    <div class="mt-12 text-sm text-gray-500 border-t pt-6">
-                        <p><span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.6rem; vertical-align: middle; margin-right: 0.5rem;"><i class="fas fa-info-circle"></i></span>基于双方八字五行计算契合度，分析缘分深浅、相处模式、合拍优势与注意事项。</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 配对结果页 -->
-            <div id="five-elements-match-result" class="card p-8 max-w-4xl mx-auto mt-8 hidden">
-                <div class="text-center">
-                    <button id="back-to-match-input" class="absolute top-4 left-4 text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-arrow-left mr-2"></i>返回
-                    </button>
-
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">配对结果分析</h3>
-
-                    <!-- 配对总评分 -->
-                    <div class="mb-10">
-                        <div class="relative w-48 h-48 mx-auto">
-                            <svg class="progress-ring" width="192" height="192">
-                                <circle class="progress-ring-bg" stroke="#E5E7EB" stroke-width="12" fill="transparent" r="82" cx="96" cy="96"/>
-                                <circle class="progress-ring-circle" stroke="url(#gradient-score)" stroke-width="12" fill="transparent" r="82" cx="96" cy="96" stroke-dasharray="515" stroke-dashoffset="515"/>
-                            </svg>
-                            <defs>
-                                <linearGradient id="gradient-score" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#8B5CF6"/>
-                                    <stop offset="100%" stop-color="#EC4899"/>
-                                </linearGradient>
-                            </defs>
-                            <div class="absolute inset-0 flex items-center justify-center flex-col">
-                                <div id="match-score" class="text-5xl font-bold text-gray-800">0</div>
-                                <div class="text-gray-600">配对评分</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 核心结论 -->
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4 text-gray-800">核心结论</h4>
-                        <div id="match-conclusion" class="text-gray-700 text-lg leading-relaxed p-6 bg-purple-50 rounded-xl border-l-4 border-purple-400">
-                            <!-- 核心结论将通过JS动态生成 -->
-                        </div>
-                    </div>
-
-                    <!-- 四大板块 -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- 缘分深浅 -->
-                        <div class="match-block fade-up">
-                            <div class="match-block-header">
-                                <span class="icon-circle" style="width: 1.5rem; height: 1.5rem; font-size: 0.7rem;"><i class="fas fa-link"></i></span>
-                                <h5>缘分深浅</h5>
-                            </div>
-                            <div class="match-block-content">
-                                <p id="fate-depth" class="text-gray-700"></p>
-                            </div>
-                        </div>
-
-                        <!-- 相处模式 -->
-                        <div class="match-block fade-up">
-                            <div class="match-block-header">
-                                <span class="icon-circle" style="width: 1.5rem; height: 1.5rem; font-size: 0.7rem;"><i class="fas fa-handshake"></i></span>
-                                <h5>相处模式</h5>
-                            </div>
-                            <div class="match-block-content">
-                                <p id="interaction-mode" class="text-gray-700"></p>
-                            </div>
-                        </div>
-
-                        <!-- 合拍优势 -->
-                        <div class="match-block fade-up highlight-bg">
-                            <div class="match-block-header">
-                                <span class="icon-circle" style="width: 1.5rem; height: 1.5rem; font-size: 0.7rem;"><i class="fas fa-star"></i></span>
-                                <h5>合拍优势</h5>
-                            </div>
-                            <div class="match-block-content">
-                                <p id="advantage" class="text-gray-700"></p>
-                            </div>
-                        </div>
-
-                        <!-- 注意事项 -->
-                        <div class="match-block fade-up">
-                            <div class="match-block-header">
-                                <span class="icon-circle" style="width: 1.5rem; height: 1.5rem; font-size: 0.7rem;"><i class="fas fa-exclamation-triangle"></i></span>
-                                <h5>注意事项</h5>
-                            </div>
-                            <div class="match-block-content">
-                                <p id="caution" class="text-gray-700"></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-12 text-sm text-gray-500 border-t pt-6">
-                        <p><span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.6rem; vertical-align: middle; margin-right: 0.5rem;"><i class="fas fa-lightbulb"></i></span>提示：配对分析基于五行命理，仅供参考，实际相处还需双方用心经营。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 打小人仪式 -->
-        <section class="mt-20" id="beat-evil-section">
-            <div class="text-center mb-10">
-                <h2 class="title-font text-3xl md:text-4xl text-gray-800 mb-2">打小人仪式</h2>
-                <p class="text-gray-600">驱小人，迎贵人，宣泄情绪迎好运</p>
-            </div>
-
-            <!-- 打小人首页 -->
-            <div id="beat-evil-home" class="card p-8 max-w-2xl mx-auto">
-                <div class="text-center">
-                    <div class="mb-8">
-                        <div class="w-48 h-48 mx-auto mb-6 rounded-full flex items-center justify-center border-4 border-white shadow-xl" style="background: linear-gradient(135deg, rgba(192, 72, 81, 0.1) 0%, rgba(168, 60, 68, 0.15) 100%);">
-                            <div class="crystal-slipper crystal-slipper-large">
-                                <div class="crystal-slipper-sole"></div>
-                                <div class="crystal-slipper-strap"></div>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">心里想着那个人，无需输入名字</h3>
-                        <p class="text-gray-600 mb-6 text-lg">默念对象，开始仪式宣泄情绪</p>
-                    </div>
-
-                    <button id="start-beat-evil-btn" class="beat-evil-btn btn-primary text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                        <i class="fas fa-play-circle mr-3"></i>开始打小人
-                    </button>
-
-                    <div class="mt-12 text-sm text-gray-500 border-t pt-6">
-                        <p><span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.6rem; vertical-align: middle; margin-right: 0.5rem;"><i class="fas fa-exclamation-triangle"></i></span>免责声明：本仪式仅供娱乐和情绪宣泄，不针对任何具体个人或实体。请理性对待，切勿当真。</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 仪式流程页 -->
-            <div id="beat-evil-ritual" class="card p-8 max-w-2xl mx-auto hidden">
-                <div class="text-center">
-                    <!-- 祈福开场 -->
-                    <div id="ritual-opening" class="ritual-stage">
-                        <div class="auspicious-cloud"></div>
-                        <div class="auspicious-cloud cloud-2"></div>
-                        <div class="auspicious-cloud cloud-3"></div>
-                        <h3 class="ritual-title">祈福开场</h3>
-                        <p class="ritual-message">仪式开始，请专注默念</p>
-                        <div class="mt-8">
-                            <span class="icon-circle-xl" style="width: 5rem; height: 5rem; font-size: 2rem;"><i class="fas fa-pray"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- 拍打交互 -->
-                    <div id="ritual-beating" class="ritual-stage hidden">
-                        <h3 class="ritual-title">拍打小人</h3>
-                        <p class="ritual-message">点击下方纸人进行拍打</p>
-                        <div class="mt-8">
-                            <div id="evil-paper" class="evil-paper mx-auto crystal-slipper-pointer">
-                                <div class="evil-paper-content">
-                                    <i class="fas fa-user-times text-4xl" style="color: #C04851;"></i>
+                            <h3 class="text-base font-bold text-gray-800 mb-3">配对结果</h3>
+                            <div class="mb-4">
+                                <div class="relative w-24 h-24 mx-auto">
+                                    <svg class="progress-ring" width="96" height="96">
+                                        <circle class="progress-ring-bg" stroke="#E5E7EB" stroke-width="8" fill="transparent" r="40" cx="48" cy="48"/>
+                                        <circle class="progress-ring-circle" stroke="url(#gradient-score)" stroke-width="8" fill="transparent" r="40" cx="48" cy="48" stroke-dasharray="251" stroke-dashoffset="251"/>
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center flex-col">
+                                        <div id="match-score" class="text-2xl font-bold text-gray-800">0</div>
+                                        <div class="text-xs text-gray-500">配对评分</div>
+                                    </div>
                                 </div>
-                                <div class="crack crack-1"></div>
-                                <div class="crack crack-2"></div>
-                                <div class="crack crack-3"></div>
                             </div>
-                            <div class="mt-6">
-                                <p class="text-gray-600 mb-4">拍打次数：<span id="beat-count">0</span> / 9</p>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div id="beat-progress" class="bg-red-600 h-2.5 rounded-full" style="width: 0%"></div>
+                            <div class="mb-3">
+                                <h4 class="text-sm font-semibold mb-2 text-gray-800">核心结论</h4>
+                                <div id="match-conclusion" class="text-gray-600 text-xs leading-relaxed p-3 bg-red-50 rounded-lg border-l-2 border-red-400">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="match-block fade-up">
+                                    <div class="match-block-header">
+                                        <span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.55rem;"><i class="fas fa-link"></i></span>
+                                        <h5>缘分</h5>
+                                    </div>
+                                    <div class="match-block-content p-2">
+                                        <p id="fate-depth" class="text-gray-600 text-xs"></p>
+                                    </div>
+                                </div>
+                                <div class="match-block fade-up">
+                                    <div class="match-block-header">
+                                        <span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.55rem;"><i class="fas fa-handshake"></i></span>
+                                        <h5>相处</h5>
+                                    </div>
+                                    <div class="match-block-content p-2">
+                                        <p id="interaction-mode" class="text-gray-600 text-xs"></p>
+                                    </div>
+                                </div>
+                                <div class="match-block fade-up">
+                                    <div class="match-block-header">
+                                        <span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.55rem;"><i class="fas fa-star"></i></span>
+                                        <h5>优势</h5>
+                                    </div>
+                                    <div class="match-block-content p-2">
+                                        <p id="advantage" class="text-gray-600 text-xs"></p>
+                                    </div>
+                                </div>
+                                <div class="match-block fade-up">
+                                    <div class="match-block-header">
+                                        <span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.55rem;"><i class="fas fa-exclamation-triangle"></i></span>
+                                        <h5>注意</h5>
+                                    </div>
+                                    <div class="match-block-content p-2">
+                                        <p id="caution" class="text-gray-600 text-xs"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-8">
-                            <p class="text-sm text-gray-500">连续点击纸人9次完成拍打仪式</p>
-                        </div>
-                    </div>
-
-                    <!-- 焚化小人 -->
-                    <div id="ritual-burning" class="ritual-stage hidden">
-                        <h3 class="ritual-title">焚化小人</h3>
-                        <p class="ritual-message">纸人正在焚化中...</p>
-                        <div class="mt-8">
-                            <div id="burning-paper" class="burning-paper mx-auto">
-                                <div class="burning-effect"></div>
-                                <div class="ash-particle ash-1"></div>
-                                <div class="ash-particle ash-2"></div>
-                                <div class="ash-particle ash-3"></div>
-                                <div class="ash-particle ash-4"></div>
-                                <div class="ash-particle ash-5"></div>
-                                <div class="ash-particle ash-6"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 迎贵人收尾 -->
-                    <div id="ritual-ending" class="ritual-stage hidden">
-                        <h3 class="ritual-title">迎贵人</h3>
-                        <p class="ritual-message">贵人将至，好运相随</p>
-                        <div class="mt-8">
-                            <div class="golden-light"></div>
-                            <div class="relative z-10">
-                                <span class="icon-circle-xl" style="width: 5rem; height: 5rem; font-size: 2rem;"><i class="fas fa-hands-helping"></i></span>
-                            </div>
-                            <div class="auspicious-cloud cloud-4"></div>
-                            <div class="auspicious-cloud cloud-5"></div>
-                        </div>
-                        <div class="mt-6">
-                            <p class="ritual-blessing">小人已驱</p>
-                            <p class="ritual-blessing">贵人将至</p>
-                            <p class="ritual-blessing">好运相随</p>
-                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 结果页 -->
-            <div id="beat-evil-result" class="card p-8 max-w-2xl mx-auto hidden">
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center border-4 border-green-300" style="background: linear-gradient(135deg, rgba(192, 72, 81, 0.1) 0%, rgba(168, 60, 68, 0.15) 100%);">
-                        <span class="icon-circle-xl"><i class="fas fa-check-circle"></i></span>
+                <!-- 打小人仪式 -->
+                <div class="card p-5" id="beat-evil-section">
+                    <div class="text-center mb-4">
+                        <h2 class="title-font text-2xl text-gray-800 mb-1">打小人仪式</h2>
+                        <p class="text-gray-500 text-xs">驱小人，迎贵人</p>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">仪式完成</h3>
-                    <div id="blessing-text" class="text-gray-700 text-lg leading-relaxed italic p-6 bg-green-50 rounded-xl border-l-4 border-green-400 mb-8">
-                        <!-- 吉祥祈福语将通过JS动态生成 -->
+
+                    <!-- 打小人首页 -->
+                    <div id="beat-evil-home">
+                        <div class="text-center">
+                            <div class="mb-4">
+                                <div class="w-32 h-32 mx-auto mb-4 rounded-full flex items-center justify-center border-2 border-white shadow-xl" style="background: linear-gradient(135deg, rgba(192, 72, 81, 0.1) 0%, rgba(168, 60, 68, 0.15) 100%);">
+                                    <div class="crystal-slipper" style="width: 60px; height: 30px; transform: rotate(-15deg);">
+                                        <div class="crystal-slipper-sole"></div>
+                                        <div class="crystal-slipper-strap"></div>
+                                    </div>
+                                </div>
+                                <h3 class="text-base font-bold text-gray-800 mb-1">默念对象</h3>
+                                <p class="text-gray-500 text-xs">开始仪式宣泄情绪</p>
+                            </div>
+                            <button id="start-beat-evil-btn" class="beat-evil-btn btn-primary text-white font-bold py-2 px-6 rounded-full text-base shadow-lg hover:shadow-xl transition-all duration-300">
+                                <i class="fas fa-play-circle mr-2"></i>开始打小人
+                            </button>
+                            <div class="mt-4 text-xs text-gray-400">
+                                <p><span class="icon-circle" style="width: 1rem; height: 1rem; font-size: 0.5rem; vertical-align: middle; margin-right: 0.25rem;"><i class="fas fa-exclamation-triangle"></i></span>本仪式仅供娱乐宣泄</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex gap-4 justify-center">
-                        <button id="restart-ritual-btn" class="beat-evil-btn btn-primary text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                            <i class="fas fa-redo mr-2"></i>再次仪式
-                        </button>
-                        <button id="back-to-home-btn" class="beat-evil-btn btn-primary text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                            <i class="fas fa-home mr-2"></i>返回首页
-                        </button>
+
+                    <!-- 仪式流程页 -->
+                    <div id="beat-evil-ritual" class="hidden">
+                        <div class="text-center">
+                            <div id="ritual-opening" class="ritual-stage-compact">
+                                <h3 class="ritual-title-compact">祈福开场</h3>
+                                <p class="ritual-message-compact">仪式开始</p>
+                                <div class="mt-3">
+                                    <span class="icon-circle-xl" style="width: 2.5rem; height: 2.5rem; font-size: 1rem;"><i class="fas fa-pray"></i></span>
+                                </div>
+                            </div>
+                            <div id="ritual-beating" class="ritual-stage-compact hidden">
+                                <h3 class="ritual-title-compact">拍打小人</h3>
+                                <p class="ritual-message-compact">点击纸人</p>
+                                <div class="mt-3">
+                                    <div id="evil-paper" class="evil-paper mx-auto crystal-slipper-pointer" style="width: 80px; height: 100px;">
+                                        <div class="evil-paper-content">
+                                            <i class="fas fa-user-times text-xl" style="color: #C04851;"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-500 text-xs mt-2">次数：<span id="beat-count">0</span>/9</p>
+                                </div>
+                            </div>
+                            <div id="ritual-burning" class="ritual-stage-compact hidden">
+                                <h3 class="ritual-title-compact">焚化中</h3>
+                                <p class="ritual-message-compact">...</p>
+                            </div>
+                            <div id="ritual-ending" class="ritual-stage-compact hidden">
+                                <h3 class="ritual-title-compact">迎贵人</h3>
+                                <p class="ritual-message-compact">好运将至</p>
+                                <div class="mt-3">
+                                    <span class="icon-circle-xl" style="width: 2.5rem; height: 2.5rem; font-size: 1rem;"><i class="fas fa-hands-helping"></i></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-8 text-sm text-gray-500 border-t pt-6">
-                        <p><span class="icon-circle" style="width: 1.25rem; height: 1.25rem; font-size: 0.6rem; vertical-align: middle; margin-right: 0.5rem;"><i class="fas fa-heart"></i></span>仪式完成，愿您心情舒畅，好运连连</p>
+
+                    <!-- 结果页 -->
+                    <div id="beat-evil-result" class="hidden">
+                        <div class="text-center">
+                            <div class="w-14 h-14 mx-auto mb-3 rounded-full flex items-center justify-center border-2 border-green-300" style="background: linear-gradient(135deg, rgba(192, 72, 81, 0.1) 0%, rgba(168, 60, 68, 0.15) 100%);">
+                                <span class="icon-circle-xl" style="width: 2rem; height: 2rem; font-size: 0.85rem;"><i class="fas fa-check-circle"></i></span>
+                            </div>
+                            <h3 class="text-base font-bold text-gray-800 mb-2">仪式完成</h3>
+                            <div id="blessing-text" class="text-gray-700 text-xs leading-relaxed italic p-2 bg-green-50 rounded-lg border-l-2 border-green-400 mb-3">
+                            </div>
+                            <div class="flex gap-2 justify-center">
+                                <button id="restart-ritual-btn" class="beat-evil-btn btn-primary text-white font-bold py-1.5 px-3 rounded-full text-xs shadow-lg hover:shadow-xl transition-all duration-300">
+                                    <i class="fas fa-redo mr-1"></i>再次
+                                </button>
+                                <button id="back-to-home-btn" class="beat-evil-btn btn-primary text-white font-bold py-1.5 px-3 rounded-full text-xs shadow-lg hover:shadow-xl transition-all duration-300">
+                                    <i class="fas fa-home mr-1"></i>返回
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

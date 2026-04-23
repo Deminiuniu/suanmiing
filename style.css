@@ -1275,3 +1275,45 @@ button, .btn {
 .text-blue-500 { color: #3B82F6; }
 .text-red-600 { color: #DC2626; }
 .text-yellow-600 { color: #D97706; }
+
+/* ==================== 紧凑仪式阶段样式 ==================== */
+.ritual-stage-compact {
+    min-height: auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ritual-title-compact {
+    font-size: 1.1rem;
+    color: #C04851;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.ritual-message-compact {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 0.5rem;
+}
+
+.ritual-blessing-compact {
+    font-size: 0.9rem;
+    color: #2E7D32;
+    font-weight: bold;
+    margin: 0.25rem 0;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.ritual-blessing-compact:nth-child(1) { animation-delay: 0.2s; }
+.ritual-blessing-compact:nth-child(2) { animation-delay: 0.4s; }
+.ritual-blessing-compact:nth-child(3) { animation-delay: 0.6s; }
+
+/* 响应式微调 */
+@media (max-width: 1280px) {
+    .card .title-font {
+        font-size: 1.75rem;
+    }
+}
