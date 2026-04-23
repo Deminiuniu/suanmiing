@@ -1317,3 +1317,65 @@ button, .btn {
         font-size: 1.75rem;
     }
 }
+
+/* ==================== 模块标题设计感样式 ==================== */
+.module-title-wrap {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.module-title-line {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #C04851 20%, #C04851 80%, transparent 100%);
+    margin: 0 auto 0.75rem;
+    max-width: 120px;
+    opacity: 0.6;
+}
+
+.module-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.module-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: linear-gradient(135deg, #C04851 0%, #A83C44 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(192, 72, 81, 0.35);
+}
+
+.module-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2C2C2C;
+    letter-spacing: 0.1em;
+}
+
+.module-subtitle {
+    font-size: 0.7rem;
+    color: #C04851;
+    margin-top: 0.4rem;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+/* 标题hover效果 */
+.module-title-wrap:hover .module-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.module-title-wrap:hover .module-title {
+    color: #C04851;
+    transition: color 0.3s ease;
+}
