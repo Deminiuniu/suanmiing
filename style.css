@@ -1379,3 +1379,165 @@ button, .btn {
     color: #C04851;
     transition: color 0.3s ease;
 }
+
+/* ==================== 顶部横幅标题样式 ==================== */
+.main-header {
+    padding: 0;
+}
+
+.header-banner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(135deg, rgba(44, 44, 44, 0.95) 0%, rgba(30, 30, 30, 0.98) 100%);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    overflow: visible;
+}
+
+.header-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(192, 72, 81, 0.03) 10px,
+            rgba(192, 72, 81, 0.03) 20px
+        );
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* 左右装饰线条 */
+.header-decoration {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #C04851, transparent);
+    position: relative;
+}
+
+.header-decoration::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    background: #C04851;
+    border-radius: 50%;
+}
+
+.header-decoration.left::before {
+    right: 0;
+}
+
+.header-decoration.right::before {
+    left: 0;
+}
+
+.header-decoration.left {
+    background: linear-gradient(90deg, transparent, #C04851);
+    margin-right: 1.5rem;
+}
+
+.header-decoration.right {
+    background: linear-gradient(90deg, #C04851, transparent);
+    margin-left: 1.5rem;
+}
+
+/* 标题内容 */
+.header-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.header-content .title-font {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #F5F1E8;
+    letter-spacing: 0.15em;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-subtitle {
+    font-size: 0.9rem;
+    color: rgba(245, 241, 232, 0.7);
+    margin-top: 0.5rem;
+    letter-spacing: 0.2em;
+}
+
+/* 印章装饰 */
+.header-seal {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #C04851 0%, #A83C44 100%);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F5F1E8;
+    box-shadow: 0 4px 12px rgba(192, 72, 81, 0.4);
+    transform: rotate(12deg);
+    border: 2px solid rgba(245, 241, 232, 0.2);
+}
+
+.header-seal::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 1px solid rgba(245, 241, 232, 0.3);
+    border-radius: 2px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .header-banner {
+        padding: 1rem 1.5rem;
+    }
+    
+    .header-decoration {
+        width: 30px;
+    }
+    
+    .header-decoration.left {
+        margin-right: 0.75rem;
+    }
+    
+    .header-decoration.right {
+        margin-left: 0.75rem;
+    }
+    
+    .header-content .title-font {
+        font-size: 1.5rem;
+    }
+    
+    .header-subtitle {
+        font-size: 0.75rem;
+    }
+    
+    .header-seal {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+        top: -8px;
+        right: -8px;
+    }
+}
