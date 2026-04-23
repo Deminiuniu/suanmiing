@@ -679,26 +679,65 @@
     <script src="script.js"></script>
 
     <!-- 五行测算加载动画 -->
-    <div id="five-elements-loading" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-        <div class="relative w-64 h-64">
-            <!-- 八卦图 -->
-            <div id="bagua-spinner" class="absolute inset-0 flex items-center justify-center">
-                <div class="w-32 h-32 rounded-full border-4 border-white border-opacity-50"></div>
-                <div class="absolute w-32 h-32 rounded-full border-4 border-white border-opacity-30" style="clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);"></div>
-                <div class="absolute w-16 h-16 rounded-full bg-white opacity-20 top-8 left-8"></div>
-                <div class="absolute w-16 h-16 rounded-full bg-black opacity-20 bottom-8 right-8"></div>
+    <div id="five-elements-loading" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background: radial-gradient(circle at center, rgba(20, 15, 10, 0.95) 0%, rgba(10, 8, 5, 0.98) 100%);">
+        <div class="compass-container">
+            <!-- 外圈装饰 -->
+            <div class="compass-outer-ring">
+                <!-- Ba Gua 符号 -->
+                <div class="bagua-symbols">
+                    <span class="bagua-symbol">☰</span>
+                    <span class="bagua-symbol">☱</span>
+                    <span class="bagua-symbol">☲</span>
+                    <span class="bagua-symbol">☳</span>
+                    <span class="bagua-symbol">☴</span>
+                    <span class="bagua-symbol">☵</span>
+                    <span class="bagua-symbol">☶</span>
+                    <span class="bagua-symbol">☷</span>
+                </div>
             </div>
-            <!-- 五行光点 -->
-            <div class="absolute inset-0">
-                <div class="five-elements-orb metal"></div>
-                <div class="five-elements-orb wood"></div>
-                <div class="five-elements-orb water"></div>
-                <div class="five-elements-orb fire"></div>
-                <div class="five-elements-orb earth"></div>
+
+            <!-- 中圈金色环 -->
+            <div class="compass-middle-ring"></div>
+
+            <!-- 内圈八卦 -->
+            <div class="compass-inner">
+                <div class="compass-core">
+                    <!-- 中心太极 -->
+                    <div class="taiji">
+                        <div class="taiji-yin"></div>
+                        <div class="taiji-yang"></div>
+                    </div>
+                </div>
+                <!-- 八卦格 -->
+                <div class="bagua-grid">
+                    <div class="bagua-cell">乾</div>
+                    <div class="bagua-cell">坤</div>
+                    <div class="bagua-cell">震</div>
+                    <div class="bagua-cell">巽</div>
+                    <div class="bagua-cell">坎</div>
+                    <div class="bagua-cell">离</div>
+                    <div class="bagua-cell">艮</div>
+                    <div class="bagua-cell">兑</div>
+                </div>
             </div>
-            <div class="absolute bottom-0 left-0 right-0 text-center text-white mt-4">
-                <p class="text-lg">五行测算中...</p>
+
+            <!-- 指针 -->
+            <div class="compass-needle">
+                <div class="needle-center"></div>
             </div>
+
+            <!-- 罗盘边缘装饰 -->
+            <div class="compass-decorations">
+                <span class="decor-dot"></span>
+                <span class="decor-dot"></span>
+                <span class="decor-dot"></span>
+                <span class="decor-dot"></span>
+            </div>
+        </div>
+
+        <div class="compass-text">
+            <p class="compass-title">五行测算中</p>
+            <p class="compass-subtitle">请稍候...</p>
         </div>
     </div>
 </body>

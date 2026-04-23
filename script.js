@@ -735,61 +735,64 @@ function calculateBazi() {
 
         currentBazi = bazi;
 
-        // 显示公历和农历日期
-        document.getElementById('gregorian-date').textContent = date.toLocaleDateString('zh-CN');
-        document.getElementById('lunar-date').textContent = lunar.toString();
+        // 罗盘转动1.5秒后显示结果
+        setTimeout(function() {
+            // 显示公历和农历日期
+            document.getElementById('gregorian-date').textContent = date.toLocaleDateString('zh-CN');
+            document.getElementById('lunar-date').textContent = lunar.toString();
 
-        // 显示四柱八字
-        document.getElementById('year-pillar').textContent = bazi[0] || '未知';
-        document.getElementById('month-pillar').textContent = bazi[1] || '未知';
-        document.getElementById('day-pillar').textContent = bazi[2] || '未知';
-        document.getElementById('hour-pillar').textContent = bazi[3] || '未知';
+            // 显示四柱八字
+            document.getElementById('year-pillar').textContent = bazi[0] || '未知';
+            document.getElementById('month-pillar').textContent = bazi[1] || '未知';
+            document.getElementById('day-pillar').textContent = bazi[2] || '未知';
+            document.getElementById('hour-pillar').textContent = bazi[3] || '未知';
 
-        // 计算五行
-        calculateFiveElements(bazi);
+            // 计算五行
+            calculateFiveElements(bazi);
 
-        // 显示五行能量条
-        updateFiveElementsDisplay();
+            // 显示五行能量条
+            updateFiveElementsDisplay();
 
-        // 计算身强身弱
-        calculateBodyStrength(bazi);
+            // 计算身强身弱
+            calculateBodyStrength(bazi);
 
-        // 生成补救建议
-        generateRemedy();
+            // 生成补救建议
+            generateRemedy();
 
-        // 生成贵人与避嫌建议
-        generateRelationshipAdvice();
+            // 生成贵人与避嫌建议
+            generateRelationshipAdvice();
 
-        // 生成运势推断
-        generateFortune();
+            // 生成运势推断
+            generateFortune();
 
-        // 生成五大维度运势建议
-        generateFiveDimensionAdvice();
+            // 生成五大维度运势建议
+            generateFiveDimensionAdvice();
 
-        // 生成综合开运指南
-        generateLuckyGuide();
+            // 生成综合开运指南
+            generateLuckyGuide();
 
-        // 显示结果区域
-        document.getElementById('results-section').classList.remove('hidden');
-        document.getElementById('results-section').classList.add('fade-in');
+            // 显示结果区域
+            document.getElementById('results-section').classList.remove('hidden');
+            document.getElementById('results-section').classList.add('fade-in');
 
-        // 滚动到结果区域
-        document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+            // 滚动到结果区域
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
 
-        // 隐藏五行测算加载动画
-        const loadingElement = document.getElementById('five-elements-loading');
-        if (loadingElement) {
-            loadingElement.classList.add('hidden');
-        }
+            // 隐藏五行测算加载动画
+            const loadingEl = document.getElementById('five-elements-loading');
+            if (loadingEl) {
+                loadingEl.classList.add('hidden');
+            }
+        }, 1500);
 
     } catch (e) {
         console.error('八字计算错误:', e);
         alert('计算失败: ' + e.message + '\n请检查控制台获取详细信息');
 
         // 隐藏五行测算加载动画
-        const loadingElement = document.getElementById('five-elements-loading');
-        if (loadingElement) {
-            loadingElement.classList.add('hidden');
+        const loadingEl = document.getElementById('five-elements-loading');
+        if (loadingEl) {
+            loadingEl.classList.add('hidden');
         }
     }
 }
