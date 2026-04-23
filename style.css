@@ -1259,3 +1259,19 @@ button, .btn {
         padding-left: 0.75rem;
     }
 }
+
+/* ==================== 相生相克样式 ==================== */
+.sheng-section h5, .ke-section h5 {
+    font-weight: 600;
+}
+
+.sheng-section p, .ke-section p {
+    line-height: 1.4;
+}
+
+/* 五行颜色 */
+.text-gray-400 { color: #9CA3AF; }
+.text-green-600 { color: #16A34A; }
+.text-blue-500 { color: #3B82F6; }
+.text-red-600 { color: #DC2626; }
+.text-yellow-600 { color: #D97706; }
