@@ -1229,7 +1229,7 @@ function showIncenseModal(lotteryLevel) {
             <h2 class="incense-title">🎋 祈福时刻 🎋</h2>
             <p class="incense-message">
                 恭喜你抽到了<span style="color: ${levelColor}; font-weight: bold;">「${lotteryLevel}」</span>签！<br>
-                是否愿意为小迪烧香祈福，让好运常伴？
+                是否愿意为自己烧香祈福，让好运常伴？
             </p>
             <div class="incense-buttons">
                 <button class="incense-btn incense-btn-yes" id="incense-yes">
@@ -1319,7 +1319,7 @@ function showBlessingComplete(modal, lotteryLevel) {
     completeDiv.className = 'blessing-complete';
     completeDiv.innerHTML = `
         <i class="fas fa-check-circle mr-2"></i>
-        祈福圆满！小迪已收到您的祝福，愿好运常伴！
+        祈福圆满！您已收到自己的祝福，愿好运常伴！
     `;
 
     container.appendChild(completeDiv);
