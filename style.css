@@ -1230,6 +1230,86 @@ button, .btn {
 .wu-xing-dot:nth-child(7) { background: #C62828; }
 .wu-xing-dot:nth-child(9) { background: #EF6C00; }
 
+/* 竖排引导样式 */
+.vertical-guide-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    background: linear-gradient(135deg, rgba(192, 72, 81, 0.03) 0%, rgba(168, 60, 68, 0.05) 100%);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(192, 72, 81, 0.1);
+}
+
+.vertical-guide-line {
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(180deg, transparent 0%, #C04851 20%, #C04851 80%, transparent 100%);
+    opacity: 0.4;
+}
+
+.vertical-text-main {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.05rem;
+    color: #2C2C2C;
+    line-height: 2;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+.vertical-text-main p {
+    margin: 0;
+}
+
+.vertical-divider {
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(180deg, transparent 0%, #D4AF37 20%, #D4AF37 80%, transparent 100%);
+    opacity: 0.5;
+}
+
+.guide-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(192, 72, 81, 0.2);
+}
+
+.guide-summary-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #4A4A4A;
+}
+
+.guide-dot {
+    width: 6px;
+    height: 6px;
+    background: #C04851;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .vertical-guide-wrap {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .vertical-text-main {
+        font-size: 0.95rem;
+    }
+    .vertical-guide-line,
+    .vertical-divider {
+        height: 60px;
+    }
+}
+
 /* 导语引用样式 */
 .guide-quote {
     font-style: italic;
