@@ -273,7 +273,9 @@ const embeddedFortunesData = {
         "career": "事业上，适合团队协作或辅助性职位，借助他人力量发展。注意积累经验和人脉。",
         "wealth": "财富方面，宜保守理财，避免高风险投资。注重储蓄，逐步积累财富。",
         "relationship": "姻缘方面，感情较为内敛，需主动表达。适合寻找稳重可靠的伴侣。",
-        "health": "健康方面，注意呼吸道和皮肤保养，多喝水，避免干燥环境。"
+        "health": "健康方面，注意呼吸道和皮肤保养，多喝水，避免干燥环境。",
+        "travel": "金行身弱者的您出行宜选择平稳、安全的交通方式。利往西方，忌往东北方。出行前做好充分准备，量力而行，不宜冒险。",
+        "social": "金行身弱者的您人际交往中需主动出击，利遇金行人相助。朋友中不缺真诚之人，但您可能因内向而错失良机。建议主动表达，多参与社交活动。"
       }
     },
     "wood": {
@@ -282,14 +284,18 @@ const embeddedFortunesData = {
         "career": "事业上，具有成长性和拓展能力，适合新兴行业或创新岗位。注意目标专注，避免分散精力。",
         "wealth": "财富方面，眼光长远，适合投资成长型项目。避免盲目扩张，注意风险控制。",
         "relationship": "姻缘方面，性格温和，善于沟通。感情丰富，需注意平衡付出与索取。",
-        "health": "健康方面，肝脏和眼睛需多关注，建议适量运动，保持情绪舒畅。"
+        "health": "健康方面，肝脏和眼睛需多关注，建议适量运动，保持情绪舒畅。",
+        "travel": "木行身强者的您充满活力，出行运势佳，利往东方或东南方。建议春季出行，多接触大自然。远行有望结识挚友，收获满满。",
+        "social": "木行身强者的您朋友众多，人缘极好，利遇木行人或水行人。您的仁爱之心吸引同好，但需警惕小人借善良之名接近。真诚待人，择善固执。"
       },
       "weak": {
         "study": "学业上，木行身弱者需培养耐心，打好基础。适合循序渐进的学习方式，如语言、文学等。",
         "career": "事业上，适合稳定性较强的岗位，或与他人合作。注意提升专业技能，增强竞争力。",
         "wealth": "财富方面，宜稳健理财，避免借贷。注重日常开支管理，逐步改善经济状况。",
         "relationship": "姻缘方面，感情细腻，需增强自信。适合寻找包容性强的伴侣。",
-        "health": "健康方面，注意肝胆调理，避免熬夜，保持规律作息。"
+        "health": "健康方面，注意肝胆调理，避免熬夜，保持规律作息。",
+        "travel": "木行身弱者的您出行宜选择近途，避免过度劳累。利往东方，多参加户外活动有助于提升运势。出行时注意安全，勿逞强。",
+        "social": "木行身弱者的您人际圈子较小但贵在精。利遇水行人或木行人，可得贵人扶持。切勿因自卑而封闭自己，打开心扉，好运自然来。"
       }
     },
     "water": {
@@ -298,14 +304,18 @@ const embeddedFortunesData = {
         "career": "事业上，善于变通和协调，适合公关、销售、咨询等岗位。注意坚持原则，避免随波逐流。",
         "wealth": "财富方面，财运流动性强，适合短期投资或贸易。注意资金周转，避免过度投机。",
         "relationship": "姻缘方面，感情丰富，善于理解他人。需注意专一性，避免感情波动。",
-        "health": "健康方面，肾脏和泌尿系统需多关注，建议多喝水，避免过度劳累。"
+        "health": "健康方面，肾脏和泌尿系统需多关注，建议多喝水，避免过度劳累。",
+        "travel": "水行身强者的您适应性极强，出行运势极旺，利往北方。无论是商务差旅还是休闲旅游，都能顺利愉快。注意水性安全。",
+        "social": "水行身强者的您善于社交，人脉广泛，利遇水行人或金行人。您如活水源泉，滋养周围之人。但需注意适度，不宜与负能量之人深交。"
       },
       "weak": {
         "study": "学业上，水行身弱者需加强专注力，避免分散。适合需要深入钻研的学科，如研究、技术等。",
         "career": "事业上，适合稳定性强的岗位，或技术类工作。注意积累经验，提升专业深度。",
         "wealth": "财富方面，财运较为平稳，宜储蓄为主。可考虑长期稳健投资，避免冒险。",
         "relationship": "姻缘方面，感情较为含蓄，需主动沟通。适合寻找稳重踏实的伴侣。",
-        "health": "健康方面，注意肾脏保健，避免久坐，适度运动。"
+        "health": "健康方面，注意肾脏保健，避免久坐，适度运动。",
+        "travel": "水行身弱者的您出行宜选择熟悉的路线，不宜去陌生偏远之地。利往北方，出行前详细规划，注意天气变化，避免意外。",
+        "social": "水行身弱者的您朋友不多但知心可贵，利遇水行人或金行人。您的真诚打动少数知己，无需刻意讨好所有人。珍惜身边真心人，足矣。"
       }
     },
     "fire": {
@@ -314,14 +324,18 @@ const embeddedFortunesData = {
         "career": "事业上，具有领导力和感染力，适合演艺、餐饮、营销等行业。注意控制情绪，避免冲动决策。",
         "wealth": "财富方面，财运起伏较大，适合开拓性投资。注意理性消费，避免过度挥霍。",
         "relationship": "姻缘方面，感情热烈，表达直接。需注意对方感受，避免急躁。",
-        "health": "健康方面，心脏和血液循环需多关注，建议保持平和心态，避免过度兴奋。"
+        "health": "健康方面，心脏和血液循环需多关注，建议保持平和心态，避免过度兴奋。",
+        "travel": "火行身强者的您行动力强，出行运势旺盛，利往南方。适合说走就走的旅行，往往有意想不到的好运。但需注意控制情绪，勿冲动。",
+        "social": "火行身强者的您热情开朗，朋友众多，利遇火行人或木行人。您是朋友圈中的能量中心，但需注意控制热心过度，以免烫伤他人。"
       },
       "weak": {
         "study": "学业上，火行身弱者需增强动力，设定小目标。适合需要耐心和细心的学科，如手工、护理等。",
         "career": "事业上，适合支持性岗位或团队协作。注意提升热情，积极参与集体活动。",
         "wealth": "财富方面，财运较为平稳，宜稳步积累。避免高风险投资，注重节俭。",
         "relationship": "姻缘方面，感情较为被动，需增强主动性。适合寻找热情开朗的伴侣。",
-        "health": "健康方面，注意心脏保健，避免过度劳累，保持充足睡眠。"
+        "health": "健康方面，注意心脏保健，避免过度劳累，保持充足睡眠。",
+        "travel": "火行身弱者的您出行宜选择清凉舒适的环境，利往南方的海边或湖泊。避免酷热干燥之地。旅行中保持心态平和，不宜剧烈运动。",
+        "social": "火行身弱者的您虽然朋友不多但都很贴心，利遇火行人或木行人。您的温柔内敛吸引真正关心您的人。切勿因渴望认同而勉强社交。"
       }
     },
     "earth": {
@@ -330,14 +344,18 @@ const embeddedFortunesData = {
         "career": "事业上，可靠务实，适合管理、行政、建筑等岗位。注意灵活变通，避免过于保守。",
         "wealth": "财富方面，财运稳健，适合长期投资和不动产。注重储蓄，避免投机。",
         "relationship": "姻缘方面，感情稳定，重视承诺。需多表达情感，避免沉闷。",
-        "health": "健康方面，脾胃和消化系统需多关注，建议饮食规律，避免暴饮暴食。"
+        "health": "健康方面，脾胃和消化系统需多关注，建议饮食规律，避免暴饮暴食。",
+        "travel": "土行身强者的您稳重务实，出行运势平稳，利往中央或东北方。适合学术考察或文化之旅。注意气候适应，防范过敏。",
+        "social": "土行身强者的您稳重可靠，是朋友圈中的定心丸，利遇土行人或火行人。您待人真诚，值得信赖，但需注意表达方式，勿过于沉默。"
       },
       "weak": {
         "study": "学业上，土行身弱者需增强自信，循序渐进。适合需要耐心和毅力的学科，如历史、地理等。",
         "career": "事业上，适合稳定性强的岗位，或技术类工作。注意打好基础，逐步提升。",
         "wealth": "财富方面，财运较为平稳，宜保守理财。注重开源节流，逐步改善经济状况。",
         "relationship": "姻缘方面，感情较为内向，需多沟通。适合寻找踏实可靠的伴侣。",
-        "health": "健康方面，注意脾胃调理，饮食清淡，避免思虑过度。"
+        "health": "健康方面，注意脾胃调理，饮食清淡，避免思虑过度。",
+        "travel": "土行身弱者的您出行宜选择悠闲慢节奏的行程，利往中央腹地。避免长途颠簸，出行前注意休息，保持充足睡眠，提升出行运势。",
+        "social": "土行身弱者的您不善言辞但内心温暖，利遇土行人或火行人。您用行动证明真心，无需花言巧语。找到懂得欣赏您的人，好运自来。"
       }
     }
   },
@@ -879,8 +897,39 @@ function generateRemedy() {
     `;
 }
 
-// 生成贵人与避嫌建议
+// 显示用户属于哪种行人
+function displayMyWuxingType() {
+    if (!currentDayElement) return;
+
+    const elementNames = { metal: '金', wood: '木', water: '水', fire: '火', earth: '土' };
+    const elementColors = { metal: '#C0C0C0', wood: '#2E7D32', water: '#1565C0', fire: '#C62828', earth: '#EF6C00' };
+    const myElement = currentDayElement;
+    const myElementName = elementNames[myElement];
+    const myElementColor = elementColors[myElement];
+    const personality = elementPersonality[myElement];
+
+    const html = `
+        <div class="flex items-center gap-4">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-3xl font-bold" style="background: linear-gradient(135deg, ${myElementColor}22 0%, ${myElementColor}44 100%); border: 2px solid ${myElementColor};">
+                <span style="color: ${myElementColor};">${myElementName}</span>
+            </div>
+            <div class="flex-1">
+                <p class="text-lg font-medium text-gray-800 mb-1">您属于 <span class="font-bold" style="color: ${myElementColor};">${myElementName}行人</span></p>
+                <p class="text-sm text-gray-600">${personality.description}</p>
+                <div class="mt-2 flex flex-wrap gap-1">
+                    ${personality.traits.map(t => `<span class="px-2 py-0.5 bg-white rounded-full text-xs text-gray-600 border border-gray-200">${t}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+    document.getElementById('my-wuxing-type').innerHTML = html;
+}
+
+// 生成命理五行解读
 function generateRelationshipAdvice() {
+    // 显示"您属于哪种行人"
+    displayMyWuxingType();
+
     // 找到得分最低的五行（喜用神）
     let minElement = 'metal';
     let minScore = currentFiveElements.metal;
@@ -920,8 +969,8 @@ function generateRelationshipAdvice() {
         avoidElements.add(restrainingCycle[favoriteElement]);
     }
 
-    // 生成贵人描述
-    let nobleDesc = `你的喜用神为${favoriteElementName}，以下特征的人可能是你的贵人：`;
+    // 生成助运贵人描述
+    const nobleDesc = `您的喜用神为${favoriteElementName}，与以下五行相处可获能量加持：`;
     const nobleList = document.getElementById('noble-person-list');
     nobleList.innerHTML = '';
 
@@ -936,8 +985,8 @@ function generateRelationshipAdvice() {
 
     document.getElementById('noble-person-desc').textContent = nobleDesc;
 
-    // 生成避嫌描述
-    let avoidDesc = `以下特征的人可能需要适当注意，保持适当距离：`;
+    // 生成耗能注意描述
+    const avoidDesc = `以下五行可能会消耗您的能量，相处时需注意：`;
     const avoidList = document.getElementById('avoid-person-list');
     avoidList.innerHTML = '';
 
@@ -956,12 +1005,12 @@ function generateRelationshipAdvice() {
     if (avoidElements.size === 0) {
         const li = document.createElement('li');
         li.className = 'flex items-start';
-        li.innerHTML = `<span class="mr-2">•</span><span>你的五行较为平衡，没有特别需要避嫌的类型，但人际交往仍需相互尊重。</span>`;
+        li.innerHTML = `<span class="mr-2">•</span><span>您的五行较为平衡，没有特别需要避嫌的类型，但人际交往仍需相互尊重。</span>`;
         avoidList.appendChild(li);
     }
 }
 
-// 生成运势推断
+// 生成多维运势
 function generateFortune() {
     // 检查签诗数据是否加载
     const fortuneSentences = fortunesData && fortunesData.fortuneSentences ? fortunesData.fortuneSentences : [];
@@ -969,12 +1018,12 @@ function generateFortune() {
 
     // 如果日干五行或身强身弱未计算，使用随机话术
     if (!currentDayElement || !currentBodyStrength) {
-        if (fortuneSentences.length === 0) {
-            document.getElementById('fortune-text').textContent = '签诗数据加载中，请稍后...';
-            return;
-        }
-        const randomIndex = Math.floor(Math.random() * fortuneSentences.length);
-        document.getElementById('fortune-text').textContent = fortuneSentences[randomIndex];
+        // 设置默认文本
+        document.getElementById('fortune-travel').textContent = '今日出行运势平稳，注意安全。';
+        document.getElementById('fortune-social').textContent = '今日交友运势一般，真诚待人。';
+        document.getElementById('fortune-finance').textContent = '今日财务运势平稳，量入为出。';
+        document.getElementById('fortune-health').textContent = '今日健康运势良好，注意休息。';
+        document.getElementById('fortune-career').textContent = '今日事业运势平稳，稳扎稳打。';
         return;
     }
 
@@ -982,59 +1031,81 @@ function generateFortune() {
     const strengthKey = currentBodyStrength.includes('强') ? 'strong' : 'weak';
     const elementKey = currentDayElement; // metal, wood, water, fire, earth
 
-    // 检查是否有对应的签诗数据
-    if (fortuneDict[elementKey] && fortuneDict[elementKey][strengthKey]) {
-        const poems = fortuneDict[elementKey][strengthKey];
-        const randomIndex = Math.floor(Math.random() * poems.length);
-        const selectedPoem = poems[randomIndex];
+    // 五行对应的运势描述模板
+    const fortuneTemplates = {
+        travel: {
+            metal: { strong: '今日出行利西方，动作迅速有收获。', weak: '今日出行宜平稳，不宜冒险远行。' },
+            wood: { strong: '今日出行利东方，多接触自然有惊喜。', weak: '今日出行宜近游，不宜过度劳累。' },
+            water: { strong: '今日出行利北方，变动中暗藏机遇。', weak: '今日出行宜守成，不宜去陌生之地。' },
+            fire: { strong: '今日出行利南方，热情行动好运来。', weak: '今日出行宜清凉，避免燥热之地。' },
+            earth: { strong: '今日出行利中宫，务实行动有保障。', weak: '今日出行宜慢游，不宜急躁奔波。' }
+        },
+        social: {
+            metal: { strong: '今日社交运旺盛，利遇贵人，拓展人脉。', weak: '今日社交宜主动，利遇金行人，得人赏识。' },
+            wood: { strong: '今日社交运活跃，利遇木行人，广结善缘。', weak: '今日社交宜真诚，利遇水行人，得贵人助。' },
+            water: { strong: '今日社交运极佳，利遇水金行人，人脉广通。', weak: '今日社交宜精选，真心朋友最珍贵。' },
+            fire: { strong: '今日社交运高涨，利遇火木行人，热情相聚。', weak: '今日社交宜温和，利遇火行人，真情流露。' },
+            earth: { strong: '今日社交运平稳，利遇土火行人，友谊稳固。', weak: '今日社交宜真诚，用行动表达心意。' }
+        },
+        finance: {
+            metal: { strong: '今日财运旺盛，利投资理财，稳健收益。', weak: '今日财运宜保守，不宜高风险投资。' },
+            wood: { strong: '今日财运佳，眼光长远，利成长型投资。', weak: '今日财运宜稳健，积少成多，细水长流。' },
+            water: { strong: '今日财运流动强，利贸易投资，把握时机。', weak: '今日财运宜储蓄，不宜冒险投机。' },
+            fire: { strong: '今日财运起伏大，利开拓投资，理性消费。', weak: '今日财运宜平稳，稳步积累，避免挥霍。' },
+            earth: { strong: '今日财运稳健，利长期投资，置产置业。', weak: '今日财运宜保守，开源节流，逐步改善。' }
+        },
+        health: {
+            metal: { strong: '今日健康运势佳，精力充沛，适合锻炼。', weak: '今日健康宜注意呼吸道，多喝水润肺。' },
+            wood: { strong: '今日健康运势旺，肝胆调和，适量运动。', weak: '今日健康宜注意肝胆，避免熬夜伤身。' },
+            water: { strong: '今日健康运势强，肾功能旺盛，活力十足。', weak: '今日健康宜注意肾脏，避免久坐伤身。' },
+            fire: { strong: '今日健康运势旺，心脏有力，热情洋溢。', weak: '今日健康宜平和心态，避免过度兴奋。' },
+            earth: { strong: '今日健康运势稳，脾胃调和，饮食规律。', weak: '今日健康宜注意脾胃，饮食清淡为宜。' }
+        },
+        career: {
+            metal: { strong: '今日事业运势旺，领导力强，适合开拓。', weak: '今日事业宜借助他人，团队协作得发展。' },
+            wood: { strong: '今日事业运势佳，创造力强，适合创新。', weak: '今日事业宜稳扎稳打，积累经验人脉。' },
+            water: { strong: '今日事业运势强，适应力佳，适合变通。', weak: '今日事业宜深耕专业，提升技术深度。' },
+            fire: { strong: '今日事业运势旺，行动力强，适合表现。', weak: '今日事业宜积极参与，提升热情活力。' },
+            earth: { strong: '今日事业运势稳，务实可靠，适合管理。', weak: '今日事业宜打好基础，逐步提升能力。' }
+        }
+    };
 
-        // 格式化显示签诗
-        const fortuneHTML = `
-            <div class="space-y-4">
-                <div class="text-center">
-                    <h4 class="text-xl font-bold text-gray-800 mb-2">${selectedPoem.title}</h4>
-                    <div class="text-lg italic text-gray-700 leading-relaxed p-4 bg-red-50 rounded-lg border-l-4 border-red-300">
-                        ${selectedPoem.poem}
-                    </div>
-                </div>
-                <div class="text-gray-700 leading-relaxed">
-                    <p class="font-medium text-gray-800 mb-1">解签：</p>
-                    <p>${selectedPoem.explanation}</p>
-                </div>
-            </div>
-        `;
-        document.getElementById('fortune-text').innerHTML = fortuneHTML;
-    } else {
-        // 回退到随机话术
-        const randomIndex = Math.floor(Math.random() * fortuneSentences.length);
-        document.getElementById('fortune-text').textContent = fortuneSentences[randomIndex];
-    }
+    // 设置多维运势
+    document.getElementById('fortune-travel').textContent = fortuneTemplates.travel[elementKey][strengthKey];
+    document.getElementById('fortune-social').textContent = fortuneTemplates.social[elementKey][strengthKey];
+    document.getElementById('fortune-finance').textContent = fortuneTemplates.finance[elementKey][strengthKey];
+    document.getElementById('fortune-health').textContent = fortuneTemplates.health[elementKey][strengthKey];
+    document.getElementById('fortune-career').textContent = fortuneTemplates.career[elementKey][strengthKey];
 }
 
-// 生成五大维度运势建议
+// 生成多维运势建议
 function generateFiveDimensionAdvice() {
     // 检查数据是否加载
     const fiveDimensionAdvice = fortunesData && fortunesData.fiveDimensionAdvice ? fortunesData.fiveDimensionAdvice : null;
     if (!fiveDimensionAdvice || Object.keys(fiveDimensionAdvice).length === 0) {
-        console.warn('五大维度运势建议数据未加载');
+        console.warn('多维运势建议数据未加载');
         // 设置默认文本
         document.getElementById('advice-study').textContent = '学业建议数据加载中...';
         document.getElementById('advice-career').textContent = '事业建议数据加载中...';
         document.getElementById('advice-wealth').textContent = '财富建议数据加载中...';
         document.getElementById('advice-relationship').textContent = '姻缘建议数据加载中...';
         document.getElementById('advice-health').textContent = '健康建议数据加载中...';
+        document.getElementById('advice-travel').textContent = '出行建议数据加载中...';
+        document.getElementById('advice-social').textContent = '交友建议数据加载中...';
         return;
     }
 
     // 如果日干五行或身强身弱未计算，无法生成建议
     if (!currentDayElement || !currentBodyStrength) {
-        console.warn('无法生成五大维度建议：缺少五行或身强身弱数据');
+        console.warn('无法生成多维建议：缺少五行或身强身弱数据');
         // 设置默认文本
         document.getElementById('advice-study').textContent = '请先计算八字五行';
         document.getElementById('advice-career').textContent = '请先计算八字五行';
         document.getElementById('advice-wealth').textContent = '请先计算八字五行';
         document.getElementById('advice-relationship').textContent = '请先计算八字五行';
         document.getElementById('advice-health').textContent = '请先计算八字五行';
+        document.getElementById('advice-travel').textContent = '请先计算八字五行';
+        document.getElementById('advice-social').textContent = '请先计算八字五行';
         return;
     }
 
@@ -1052,14 +1123,18 @@ function generateFiveDimensionAdvice() {
         document.getElementById('advice-wealth').textContent = advice.wealth;
         document.getElementById('advice-relationship').textContent = advice.relationship;
         document.getElementById('advice-health').textContent = advice.health;
+        document.getElementById('advice-travel').textContent = advice.travel;
+        document.getElementById('advice-social').textContent = advice.social;
     } else {
-        console.warn(`未找到${elementKey} ${strengthKey}的五大维度建议数据`);
+        console.warn(`未找到${elementKey} ${strengthKey}的多维建议数据`);
         // 设置默认文本
         document.getElementById('advice-study').textContent = '学业建议数据加载中...';
         document.getElementById('advice-career').textContent = '事业建议数据加载中...';
         document.getElementById('advice-wealth').textContent = '财富建议数据加载中...';
         document.getElementById('advice-relationship').textContent = '姻缘建议数据加载中...';
         document.getElementById('advice-health').textContent = '健康建议数据加载中...';
+        document.getElementById('advice-travel').textContent = '出行建议数据加载中...';
+        document.getElementById('advice-social').textContent = '交友建议数据加载中...';
     }
 }
 
