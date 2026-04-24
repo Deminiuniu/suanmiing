@@ -417,72 +417,35 @@ function loadFortunesData() {
         luckyGuide: null
     };
 
-    // 尝试使用XMLHttpRequest加载（兼容性更好，适用于本地文件）
-    try {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'fortunes.json', false); // 同步请求
-        xhr.send();
+    // 优先使用嵌入的签诗数据，确保摇签功能可用
+    fortunesData = embeddedFortunesData;
+    fortunesLoaded = true;
+    console.log('使用嵌入的签诗数据', embeddedFortunesData);
 
-        if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
+    // 尝试从 fortunes.json 加载（覆盖嵌入数据）
+    fetch('fortunes.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
             fortunesData = data;
             fortunesLoaded = true;
-            console.log('签诗数据加载成功（通过XMLHttpRequest）', data);
-
-            // 启用摇签按钮
+            console.log('签诗数据加载成功（通过fetch）', data);
+        })
+        .catch(fetchError => {
+            console.warn('加载fortunes.json失败，使用嵌入数据:', fetchError);
+        })
+        .finally(() => {
+            // 无论加载成功与否，都启用摇签按钮
             const shakeBtn = document.getElementById('shake-btn');
             if (shakeBtn) {
                 shakeBtn.disabled = false;
                 shakeBtn.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>点击摇签';
             }
-            return;
-        } else {
-            throw new Error(`HTTP error! status: ${xhr.status}`);
-        }
-    } catch (xhrError) {
-        console.warn('XMLHttpRequest加载失败，尝试使用fetch:', xhrError);
-
-        // 尝试使用fetch（异步）
-        fetch('fortunes.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                fortunesData = data;
-                fortunesLoaded = true;
-                console.log('签诗数据加载成功（通过fetch）', data);
-
-                // 启用摇签按钮
-                const shakeBtn = document.getElementById('shake-btn');
-                if (shakeBtn) {
-                    shakeBtn.disabled = false;
-                    shakeBtn.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>点击摇签';
-                }
-            })
-            .catch(fetchError => {
-                console.error('所有加载方式都失败:', fetchError);
-                // 使用嵌入的签诗数据作为回退
-                fortunesData = embeddedFortunesData;
-                fortunesLoaded = true;
-                console.log('使用嵌入的签诗数据作为回退', embeddedFortunesData);
-
-                // 启用摇签按钮
-                const shakeBtn = document.getElementById('shake-btn');
-                if (shakeBtn) {
-                    shakeBtn.disabled = false;
-                    shakeBtn.innerHTML = '<i class="fas fa-hand-point-up mr-3"></i>点击摇签';
-                }
-
-                // 仅在真正失败时显示警告（不是所有file://协议都会失败）
-                // 检查是否通过file://协议访问
-                if (window.location.protocol === 'file:') {
-                    alert('签诗数据加载失败，已使用内置数据。\n\n如果通过file://协议打开页面，请确保fortunes.json文件与网页在同一目录。\n建议使用本地HTTP服务器运行（如Python: python -m http.server 8000）。');
-                }
-            });
-    }
+        });
 }
 
 // 检查库是否加载，如果未加载则尝试加载
